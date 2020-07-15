@@ -30,6 +30,14 @@ const settings = {
       }
     },
     {
+      "name": "@frontity/google-analytics",
+      "state": {
+        "googleAnalytics": {
+          "trackingIds": ['UA-61815763-1']
+        },
+      },
+    },
+    {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
