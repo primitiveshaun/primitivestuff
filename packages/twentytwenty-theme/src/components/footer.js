@@ -1,98 +1,76 @@
 import React from "react";
-import { styled, connect } from "frontity";
-import Link from "./link";
+import { connect, styled } from "frontity";
+import { Container, Row, Col } from "react-bootstrap";
+import Image from "@frontity/components/image";
+import ImgLogo from "../img/footer/primitive.svg";
+import ImgHeart from "../img/footer/heart.svg";
+import ImgFrontity from "../img/footer/frontity.svg";
+import ImgWordpress from "../img/footer/wordpress.svg";
+import { heartbeat } from "./scenes/glamourmagic";
+
 import SectionContainer from "./styles/section-container";
 
-// Component that provides scroll to top functionality
-const BackToTop = () => {
-  // scroll to top function
-  const scrollToTop = (event) => {
-    // prevent the default behaviors
-    event.preventDefault();
-    // scroll to the top smoothly
-    scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  };
-
-  return (
-    <a href="#site-header" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-      <span style={{ marginRight: 8 }}>To the top</span>
-      <span className="arrow" aria-hidden="true">
-        ↑
-      </span>
-    </a>
-  );
-};
+import BackToTop from "./pebbles/backtotop";
+import Credits from "./pebbles/credits";
 
 const Footer = ({ state }) => {
-  const currentYear = new Date().getFullYear();
+
   const { footerBg } = state.theme.colors;
+  const display = state.theme.config.global.footer;
+  if (!display) { return null }
 
   return (
     <SiteFooter bg={footerBg} role="contentinfo">
-      <SiteFooterInner>
-        <Credits>
-          <Copyright>
-            &copy; {currentYear}{" "}
-            <Link link={state.frontity.url}>{state.frontity.title}</Link>
-          </Copyright>
-          <PoweredBy>Powered by Frontity</PoweredBy>
-        </Credits>
-        <BackToTop />
-      </SiteFooterInner>
+
+      <FooterColophon>
+        <Container>
+          <Row>
+            <Col>
+              <Credits />
+              <BackToTop />
+              <p>Website design and build by <a title="Website design and build by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; 2020.</p>
+              <p>Web Hosting and Domains provided by <a title="Web Hosting and Domains from Primitive Hosting" href="https://primitivehosting.uk/">Primitive Hosting</a>.</p>
+            </Col>
+          </Row>
+        </Container>
+      </FooterColophon>
+
     </SiteFooter>
   );
 };
 
 export default connect(Footer);
 
-const SiteFooterInner = styled(SectionContainer)`
-  align-items: baseline;
-  display: flex;
-  justify-content: space-between;
-`;
+
 
 const SiteFooter = styled.footer`
-  margin-top: 5rem;
-  border-color: #dcd7ca;
-  border-style: solid;
-  border-width: 0;
-  padding: 3rem 0;
+
   background-color: ${(props) => props.bg};
-  color: #000000;
 
-  @media (min-width: 700px) {
-    margin-top: 8rem;
-    font-size: 1.8rem;
-    padding: 4.3rem 0;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
 `;
 
-const Credits = styled.div`
-  @media (min-width: 700px) {
-    display: flex;
+const FooterColophon = styled.div`
+  margin-top: 0;
+  padding: 3rem 0 1rem;
+  background-color: #87635C;
+  background: linear-gradient(to bottom,  #87635c 60%,#7b5a54 100%);
+
+  color: #D4AEA6;
+  font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  text-align: center;
+  letter-spacing: 1px;
+  
+  p {
+    margin-bottom: .2rem;
+    letter-spacing:1px;
   }
+
+  a { color: #ededed; }
+  a:hover { color: pink; text-decoration: none; }
+
+
+
 `;
 
-const Copyright = styled.p`
-  font-weight: 600;
-  margin: 0;
 
-  @media (min-width: 700px) {
-    font-weight: 700;
-  }
-`;
 
-const PoweredBy = styled.p`
-  color: #6d6d6d;
-  display: none;
-  margin: 0 0 0 2.4rem;
-
-  @media (min-width: 700px) {
-    display: block;
-  }
-`;
