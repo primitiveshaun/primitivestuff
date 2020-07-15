@@ -79,7 +79,7 @@ const bs = {
 }
 
 
-const colortheme = {
+const themecolor = {
   white:    colors.white,
   black:    colors.black,
 
@@ -93,6 +93,15 @@ const colortheme = {
   green:    primitive.green,
   teal:     primitive.teal,
   cyan:     primitive.cyan,
+
+  primary: primitive.green,
+  secondary: primitive.peach,
+  success: primitive.brightlime,
+  info: primitive.teal,
+  warning: primitive.mustard,
+  danger: primitive.redapple,
+  light: colors.grays.g100,
+  dark: colors.grays.g800,
 
   gray:     colors.grays.g600,
   grays: {
@@ -132,4 +141,4 @@ const colortheme = {
   }
 }
 
-export { colortheme };
+export { themecolor };

@@ -2,7 +2,8 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
 import CustomPageHandlers from "./components/sand/handlers.js";
-import { colortheme } from "./components/dust/_colors.js";
+import { themecolor } from "./components/dust/_colors.js";
+import { themeconfig } from "./components/dust/_config.js";
 //import grid from "./components/dust/_grid.js";
 
 const twentyTwentyTheme = {
@@ -20,7 +21,9 @@ const twentyTwentyTheme = {
      * relevant state. It is scoped to the `theme` namespace.
      */
     theme: {
-      colors: colortheme,
+      colors: themecolor,
+      config: themeconfig,
+
       // Whether to show the search button in page header
       showSearchInHeader: true,
       // Menu links to display in the header
@@ -75,6 +78,9 @@ const twentyTwentyTheme = {
        */
       processors: [image],
     },
+    source: {
+      handlers: CustomPageHandlers
+    }
   },
 };
 
