@@ -2,9 +2,10 @@ const settings = {
   "name": "primitive",
   "state": {
     "frontity": {
-      "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "url": "https://primitivedigital.uk",
+      "title": "Want a Website?",
+      "description": "WordPress Web Sites and Apps",
+      "name": "Primitive Digital"
     }
   },
   "packages": [
@@ -13,26 +14,12 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            [
-              "Home",
-              "/"
-            ],
-            [
-              "Nature",
-              "/category/nature/"
-            ],
-            [
-              "Travel",
-              "/category/travel/"
-            ],
-            [
-              "Japan",
-              "/tag/japan/"
-            ],
-            [
-              "About Us",
-              "/about-us/"
-            ]
+            ["Home", "/"],
+            ["Design", "/web-design"],
+            ["Development", "/web-development"],
+            ["Data", "/data-insights"],
+            ["Marketing", "/marketing"],
+            ["A Nice Log", "/blog"]
           ],
           "featured": {
             "showOnList": false,
@@ -45,7 +32,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://test.frontity.org/wp-json"
+          "api": "https://primitive.press/wp-json"
         }
       }
     },
