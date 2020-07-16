@@ -12,7 +12,7 @@ const TemporalEventMarker = ({ state, item }) => {
     <StyledMarker>
 
       <EventDate
-        highlight={state.theme.colors.bs.warning}
+        highlight={state.theme.colors.warning}
       >
         {item.acf.year}
       </EventDate>
