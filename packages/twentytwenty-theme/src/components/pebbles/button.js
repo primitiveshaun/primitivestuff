@@ -1,7 +1,11 @@
 import { styled } from "frontity";
 import facepaint from 'facepaint'
 
+// insp:
+// https://codesandbox.io/s/emotion-31vwj?file=/src/index.js:132-216
+// https://codesandbox.io/s/j706lzywp9?file=/Emotion.js
 
+/*
 const Button = styled.button`
   background-color: ${(props) => props.bg};
   font-size: 1.7rem;
@@ -18,6 +22,7 @@ const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
 `;
+*/
 
 const mq = facepaint([
   '@media(min-width: 420px)',

@@ -9,10 +9,13 @@ const BackToTop = () => {
   };
 
   return (
-    <a href="#site-header" onClick={scrollToTop} style={{ cursor: "pointer" }}>
-      <span style={{ marginRight: 8 }}>To the top</span>
-      <span className="arrow" aria-hidden="true">
-        ↑
+    <a href="#site-header" onClick={scrollToTop}>
+      <span>The bottom banana</span>
+      <span className="arrow" aria-hidden="true" className="p-1">
+      🍌
+      </span>
+      <span>
+       ...click to slip 🆙
       </span>
     </a>
   );
