@@ -29,16 +29,16 @@ const themeClasses = colors => css`
 
   .fleuron { 
     font-size: 3rem;
-    color:  rgba(${ convert.hex.rgb(colors.bs.primary).join()}, .6) !important;
+    color:  rgba(${ convert.hex.rgb(colors.primary).join()}, .6) !important;
 
     a {
-      color:  rgba(${ convert.hex.rgb(colors.bs.warning).join()}, .6) !important;
+      color:  rgba(${ convert.hex.rgb(colors.warning).join()}, .6) !important;
       text-decoration: none;
       background: transparent !important;
       border: none !important;
 
       &::hover {
-        color:  rgba(${ convert.hex.rgb(colors.bs.danger).join()}, .6) !important;
+        color:  rgba(${ convert.hex.rgb(colors.danger).join()}, .6) !important;
         background: transparent !important;
         border: none !important;
       }

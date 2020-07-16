@@ -19,8 +19,8 @@ const postall = colors => css`
       margin-left: .25rem;
       margin-right: .25rem;
       color: inherit;
-      border-bottom: 2px solid ${colors.bs.warning};
-      background-image: linear-gradient(120deg, ${colors.bs.warning} 0%, ${colors.bs.warning} 100%);
+      border-bottom: 2px solid ${colors.warning};
+      background-image: linear-gradient(120deg, ${colors.warning} 0%, ${colors.warning} 100%);
       background-repeat: no-repeat;
       background-size: 100% 0.0em;
       background-position: 0 100%;
@@ -48,7 +48,7 @@ const postall = colors => css`
       color: ${colors.coal};
 
       a {
-        color: ${colors.bs.secondary}; 
+        color: ${colors.secondary}; 
         border-bottom: none;
         background: none;
         transition: all 0.125s ease-in;
@@ -56,7 +56,7 @@ const postall = colors => css`
         &:hover {
           text-decoration: none;
           background: none;
-          color: ${colors.bs.danger}; 
+          color: ${colors.danger}; 
         }
       }
     }
@@ -65,10 +65,10 @@ const postall = colors => css`
       padding: 1rem 1.2rem;
       font-size: 2rem;
       font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif;
-      color: ${colors.bs.primary};
+      color: ${colors.primary};
   
       a {
-        color: ${colors.bs.primary}; 
+        color: ${colors.primary}; 
         border-bottom: none;
         background: none;
         transition: all 0.125s ease-in;
@@ -76,7 +76,7 @@ const postall = colors => css`
         &:hover {
           text-decoration: none;
           background: none;
-          color: ${colors.bs.info}; 
+          color: ${colors.info}; 
         }
       }
     }
@@ -88,7 +88,7 @@ const postall = colors => css`
       color:  rgba(${ convert.hex.rgb(colors.coal).join()}, .7);
           
       strong, a {
-        color: ${colors.bs.primary}; 
+        color: ${colors.primary}; 
         border-bottom: none;
         background: none;
         transition: all 0.125s ease-in;
@@ -96,7 +96,7 @@ const postall = colors => css`
         &:hover {
           text-decoration: none;
           background: none;
-          color: ${colors.bs.warning}; 
+          color: ${colors.warning}; 
         }
       }
     }
@@ -137,7 +137,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.bs.primary).join()}, .2);
+      background-color: rgba(${ convert.hex.rgb(colors.primary).join()}, .2);
     }
   }
 
@@ -159,7 +159,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, .2);
+      background-color: rgba(${ convert.hex.rgb(colors.secondary).join()}, .2);
     }
   }
 
@@ -169,7 +169,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.bs.warning).join()}, .3);
+    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.warning).join()}, .3);
 
     &::before {
       content: "";
@@ -180,7 +180,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.bs.danger).join()}, .2);
+      background-color: rgba(${ convert.hex.rgb(colors.danger).join()}, .2);
     }
   }
 
@@ -190,7 +190,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.bs.danger).join()}, .3);
+    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.danger).join()}, .3);
 
     &::before {
       content: "";
@@ -201,7 +201,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.bs.warning).join()}, .2);
+      background-color: rgba(${ convert.hex.rgb(colors.warning).join()}, .2);
     }
   }
   
@@ -237,14 +237,14 @@ const postall = colors => css`
 
   .btn-primary {
     text-shadow: 2px 2px 2px rgba(${ convert.hex.rgb(colors.coal).join()}, .2);
-    background-color: ${colors.bs.primary};
-    border: 1px solid ${colors.bs.primary};
-    border-left: 5px solid ${colors.bs.primary};
+    background-color: ${colors.primary};
+    border: 1px solid ${colors.primary};
+    border-left: 5px solid ${colors.primary};
     transition: all .5s ease-in-out;
 
     &:hover, &:active, &:focus {
-      background-color: ${colors.bs.primary};
-      border: 1px solid ${colors.bs.primary};
+      background-color: ${colors.primary};
+      border: 1px solid ${colors.primary};
       max-width: 360px;
     }
 

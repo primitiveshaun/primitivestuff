@@ -1,6 +1,9 @@
 // Variables
 // COLORS
 
+// https://v5.getbootstrap.com/docs/5.0/customize/color/
+// https://v5.getbootstrap.com/docs/5.0/utilities/colors/
+
 // Color system
 
 const colors = {
@@ -67,18 +70,9 @@ const primitive = {
   cyan: "#00a5ba"
 }
 
-const bs = {
-  primary: primitive.green,
-  secondary: primitive.peach,
-  success: primitive.brightlime,
-  info: primitive.teal,
-  warning: primitive.mustard,
-  danger: primitive.redapple,
-  light: colors.grays.g100,
-  dark: colors.grays.g800,
-}
 
 
+// review: https://v5.getbootstrap.com/docs/5.0/customize/color/
 const themecolor = {
   white:    colors.white,
   black:    colors.black,

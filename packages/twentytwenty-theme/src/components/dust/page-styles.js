@@ -7,23 +7,23 @@ import { mq2col } from './_grid';
 const jungleDiscoBG = colors => {
   return {
     bg: {
-      aztec:  css`background-color: ${ colors.bs.dark};
+      aztec:  css`background-color: ${ colors.dark};
       background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0) 45%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 65%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-      linear-gradient(to top, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-      linear-gradient(to right, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-      linear-gradient(to left, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+      linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
+      linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+      linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
       url(https://primitive.press/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
-      oldrock: css`background-color: rgb(${ convert.hex.rgb(colors.bs.dark).join()});
+      oldrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
         background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
+        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         url(https://primitive.press/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`,
-      wallrock: css`background-color: rgb(${ convert.hex.rgb(colors.bs.dark).join()});
+      wallrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
         background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.bs.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.bs.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
+        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         url(https://primitive.press/wp-content/uploads/stone/rockwall-300x300.png) repeat fixed;`
     }
   }
@@ -233,7 +233,7 @@ const pageall = colors => css`
     font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif;
     padding: 1.5rem 5% 3rem;
     font-size: 2.3rem;
-    color: ${colors.bs.primary};
+    color: ${colors.primary};
   }
   .panache {
     font-family: Baskerville, Georgia, serif; 
@@ -242,7 +242,7 @@ const pageall = colors => css`
     color:  rgba(${ convert.hex.rgb(colors.coal).join()}, .7);
 
     strong, a {
-      color: ${colors.bs.primary};
+      color: ${colors.primary};
       font-style: italic;
       text-decoration: none;
     }
@@ -277,14 +277,14 @@ const pageall = colors => css`
   .btn-primary {
     
     text-shadow: 2px 2px 2px rgba(${ convert.hex.rgb(colors.coal).join()}, .2);
-    background-color: ${colors.bs.primary};
-    border: 1px solid ${colors.bs.primary};
-    border-left: 5px solid ${colors.bs.primary};
+    background-color: ${colors.primary};
+    border: 1px solid ${colors.primary};
+    border-left: 5px solid ${colors.primary};
     transition: all .5s ease-in-out;
 
     &:hover {
-      background-color: ${colors.bs.primary};
-      border: 1px solid ${colors.bs.primary};
+      background-color: ${colors.primary};
+      border: 1px solid ${colors.primary};
       max-width: 360px;
     }
     &:active {
@@ -412,15 +412,15 @@ const pageall = colors => css`
   .q-style-1 {
     blockquote { 
 
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.bs.primary).join()}, .8);
+      border-left: 4px solid rgba(${ convert.hex.rgb(colors.primary).join()}, .8);
 
       p {
-        box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.bs.primary).join()}, 0.2); 
-        color: rgba(${ convert.hex.rgb(colors.bs.primary).join()}, 0.8); 
+        box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.primary).join()}, 0.2); 
+        color: rgba(${ convert.hex.rgb(colors.primary).join()}, 0.8); 
       }
 
       &::before {
-        border-left: 5px solid rgba(${ convert.hex.rgb(colors.bs.primary).join()}, .1);
+        border-left: 5px solid rgba(${ convert.hex.rgb(colors.primary).join()}, .1);
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -432,22 +432,22 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.bs.primary).join()}, 0.8);
+        background: rgba(${ convert.hex.rgb(colors.primary).join()}, 0.8);
       }
     }
   }
 
   .q-style-2 {
     blockquote { 
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, 0.8); 
+      border-left: 4px solid rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8); 
 
       p {
-        box-shadow : 0 -6px 0 rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, 0.2); 
-        color : rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, 0.8); 
+        box-shadow : 0 -6px 0 rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.2); 
+        color : rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8); 
       }
 
       &::before {
-        border-left: 5px solid rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, .1);
+        border-left: 5px solid rgba(${ convert.hex.rgb(colors.secondary).join()}, .1);
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -459,7 +459,7 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.bs.secondary).join()}, 0.8);
+        background: rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8);
       }
     }
   } 
@@ -571,7 +571,7 @@ const pageall = colors => css`
     max-width: 450px;
 
     blockquote {
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.bs.info).join()}, 0.8);
+      border-left: 4px solid rgba(${ convert.hex.rgb(colors.info).join()}, 0.8);
 
       p {
         background: rgba(${ convert.hex.rgb(colors.white).join()},0.6);
@@ -600,7 +600,7 @@ const pageall = colors => css`
       }
     
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.bs.info).join()},0.8);
+        background: rgba(${ convert.hex.rgb(colors.info).join()},0.8);
       }
     }
   }
@@ -658,13 +658,13 @@ const pageall = colors => css`
   
       blockquote {
 
-        border-left: 4px solid rgba(${ convert.hex.rgb(colors.bs.warning).join()},0.8);
+        border-left: 4px solid rgba(${ convert.hex.rgb(colors.warning).join()},0.8);
   
         p {
           padding: .5rem 0;
           line-height: 4rem;
           background: rgba(${ convert.hex.rgb(colors.white).join()},0.6);
-          box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.bs.warning).join()}, 0.8);
+          box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.warning).join()}, 0.8);
           color: ${ colors.coal };
           white-space: pre-wrap;
           text-shadow: 0 1px 1px rgba(${ convert.hex.rgb(colors.white).join()}, 0.5);
@@ -691,7 +691,7 @@ const pageall = colors => css`
           text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.coal).join()},0.5);
         }
         &::after {
-          background: rgba(${ convert.hex.rgb(colors.bs.warning).join()},0.8);
+          background: rgba(${ convert.hex.rgb(colors.warning).join()},0.8);
         }
       }
     }
@@ -735,11 +735,11 @@ const pagehome = colors => css`
         margin: 1.2rem auto 0 0;
         width: 5rem;
         height: 3px;
-        background: rgba( ${ convert.hex.rgb(colors.bs.primary).join()}, .8);
+        background: rgba( ${ convert.hex.rgb(colors.primary).join()}, .8);
       }
 
       &:nth-of-type(even)::after {
-        background: rgba( ${ convert.hex.rgb(colors.bs.secondary).join()}, .8);
+        background: rgba( ${ convert.hex.rgb(colors.secondary).join()}, .8);
       }
     }
   }
