@@ -21,20 +21,20 @@ const Footer = ({ state }) => {
 
   return (
     <SiteFooter bg={footerBg} role="contentinfo">
-
       <FooterColophon>
         <Container>
           <Row>
-            <Col>
+            <Col className="text-center">
               <Credits />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <BackToTop />
-              <p>Website design and build by <a title="Website design and build by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; 2020.</p>
-              <p>Web Hosting and Domains provided by <a title="Web Hosting and Domains from Primitive Hosting" href="https://primitivehosting.uk/">Primitive Hosting</a>.</p>
             </Col>
           </Row>
         </Container>
       </FooterColophon>
-
     </SiteFooter>
   );
 };
@@ -44,9 +44,7 @@ export default connect(Footer);
 
 
 const SiteFooter = styled.footer`
-
   background-color: ${(props) => props.bg};
-
 `;
 
 const FooterColophon = styled.div`
