@@ -32,19 +32,12 @@ import Post from "./mountains/post";
 import SearchResults from "./search/search-results";
 
 
-
-
 import PageError from "./page-error";
 //import PageError from "./mountains/page-error";
-
-import Nav from "./rocks/nav";
-
 
 // sk-dev:TESTING think these should be Slots i think...
 import GlobalPromo from "./rocks/global-promo";
 import GlobalSocial from "./rocks/social/social-section";
-
-
 
 
 /*
@@ -122,11 +115,9 @@ const Theme = ({ state }) => {
       </SkipLink>
 
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
+
         {/* Add the header of the site. */}
-        <HeadWrapper className="wrap-header">
-          <Header />
-          <Nav />
-        </HeadWrapper>
+        <Header />
 
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
@@ -168,54 +159,4 @@ const Main = styled.main`
     rgba(66, 174, 228, 0.1),
     rgba(66, 174, 228, 0)
   );
-`;
-
-
-
-// sk-dev: review/update @media
-const HeadWrapper = styled.div`
-  background-color: #87af4e;
-  background: url(https://res.cloudinary.com/primitivedigital/image/upload/f_auto/v1569316857/header/website_header_n1jxds.jpg) #87af4e;
-  background-position-x: 10%;
-  background-position-x: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  .container {
-    background: none;
-  }
-
-  @media screen and (min-width: 576px) {
-    background: none;
-    background-color: #87af4e;
-
-    header a { margin-left: 1rem; }
-
-    .container { background-position-x: 0; }
-    
-    .mast {
-      background: url(https://res.cloudinary.com/primitivedigital/image/upload/f_auto/v1569316857/header/website_header_n1jxds.jpg) #87af4e;
-      background-position-x: 10%;
-      background-position-y: top;
-      background-repeat: no-repeat;
-      background-size: auto;
-    }
-  }
-
-@media screen and (min-width: 768px) {
-  header a { margin-left: 20%; }
-  h4 { font-size: 2rem; }
-  .container { background-position-x: 5%; }
-}
-
-@media screen and (min-width: 992px) {
-  header a { margin-left: 30%; }
-  .container { background-position-x: 10%; }
-}
-
-@media screen and (min-width: 1200px) {
-  header a { margin-left: 35%; }
-  .container { background-position-x: 20%; }
-}
-
 `;
