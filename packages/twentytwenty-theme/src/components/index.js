@@ -4,8 +4,9 @@ import React from "react";
 import SkipLink from "./styles/skip-link";
 import Loading from "./loading";
 //import Loading from "./pebbles/loading";
-import MetaTitle from "./page-meta-title";
-// import MetaTitle from "../pebbles/meta-title";
+
+//import MetaTitle from "./page-meta-title";
+import MetaTitle from "./pebbles/meta-title";
 
 import KnobblyKnees from "./rocks/footer-kudos";
 import FurryBoots from "./rocks/footer-cta";
@@ -39,15 +40,17 @@ import PageError from "./page-error";
 import GlobalPromo from "./rocks/global-promo";
 import GlobalSocial from "./rocks/social/social-section";
 
+// custom post types / tax layouts
+import Timelines from "./timeline/ct-timelines";
+import Timeline from "./timeline";
+import SubTimeline from "./timeline/cpt-subtimeline";
+
 
 /*
 
 import Nav from "../rocks/nav";
 
-// custom post types / tax layouts
-import Timelines from "../timeline/ct-timelines";
-import Timeline from "../timeline";
-import SubTimeline from "../timeline/cpt-subtimeline";
+
 
 import globalStyles from '../dust/global-styles';
 //import FontFaces from "../dust/font-faces";
@@ -131,6 +134,10 @@ const Theme = ({ state }) => {
             <Posts when={data.isPostArchive} />
             <Post when={data.isPost} />
             <Page when={data.isPage} />
+
+            <Timeline when={data.isTemporalEventsArchive} />
+            <SubTimeline when={data.isTimelineType} />
+            <Timelines when={data.isTimelines} />
 
             <PageError when={data.isError} />
           </Switch>
