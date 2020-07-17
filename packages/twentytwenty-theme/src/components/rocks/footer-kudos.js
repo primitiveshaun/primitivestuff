@@ -2,13 +2,13 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "@frontity/components/image";
-import ImgLogo from "../img/footer/primitive.svg";
-import ImgHeart from "../img/footer/heart.svg";
-import ImgFrontity from "../img/footer/frontity.svg";
-import ImgWordpress from "../img/footer/wordpress.svg";
-import { heartbeat } from "./scenes/glamourmagic";
+import ImgLogo from "../../img/footer/primitive.svg";
+import ImgHeart from "../../img/footer/heart.svg";
+import ImgFrontity from "../../img/footer/frontity.svg";
+import ImgWordpress from "../../img/footer/wordpress.svg";
+import { heartbeat } from "../scenes/glamourmagic";
 
-import SectionContainer from "./styles/section-container";
+///import SectionContainer from "./styles/section-container";
 
 const KnobblyKnees = ({ state }) => {
 
