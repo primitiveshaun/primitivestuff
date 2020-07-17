@@ -119,19 +119,6 @@ const themecolor = {
     neongreen: "#01FF89",
     purple: "#7A5FFF",
     blue: "#00a8ff"
-  },
-
-
-
-  bs: {
-    primary: bs.primary,
-    secondary: bs.secondary,
-    success: bs.success,
-    info: bs.info,
-    warning: bs.warning,
-    danger: bs.danger,
-    light: bs.light,
-    dark: bs.dark
   }
 }
 
