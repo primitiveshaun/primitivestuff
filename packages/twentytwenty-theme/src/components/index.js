@@ -42,7 +42,7 @@ import GlobalSocial from "./rocks/social/social-section";
 
 // custom post types / tax layouts
 import Timelines from "./timeline/ct-timelines";
-import Timeline from "./timeline";
+import Timeline from "./timeline/cpt-timeline";
 import SubTimeline from "./timeline/cpt-subtimeline";
 
 
