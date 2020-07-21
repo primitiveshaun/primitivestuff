@@ -1,16 +1,16 @@
 const settings = {
-  "name": "primitive",
+  "name": "primitivestuff",
   "state": {
     "frontity": {
       "url": "https://primitivedigital.uk",
       "title": "Want a Website?",
-      "description": "WordPress Web Sites and Apps",
+      "description": "WordPress + Frontity Things",
       "name": "Primitive Digital"
     }
   },
   "packages": [
     {
-      "name": "@frontity/twentytwenty-theme",
+      "name": "primitive-theme",
       "state": {
         "theme": {
           "menu": [
