@@ -3,8 +3,8 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://primitivedigital.uk",
-      "title": "Want a Website?",
-      "description": "WordPress + Frontity Things",
+      "title": "Makin' a Website?",
+      "description": "WordPress + Frontity Stuff",
       "name": "Primitive Digital"
     }
   },
@@ -14,11 +14,11 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            ["Home", "/"],
+            ["Testing", "/"],
             ["Design", "/web-design"],
             ["Development", "/web-development"],
-            ["Data", "/data-insights"],
-            ["Marketing", "/marketing"],
+            ["Timelines", "/timelines"],
+            ["Stuff", "/marketing"],
             ["A Nice Log", "/blog"]
           ],
           "featured": {
@@ -28,14 +28,6 @@ const settings = {
           }
         }
       }
-    },
-    {
-      "name": "@frontity/google-analytics",
-      "state": {
-        "googleAnalytics": {
-          "trackingIds": ['UA-61815763-1']
-        },
-      },
     },
     {
       "name": "@frontity/wp-source",
