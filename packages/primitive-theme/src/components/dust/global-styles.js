@@ -1,9 +1,13 @@
 import { css } from "frontity";
-import cssReset from "./_reset";
+import cssReboot from "./_reboot";
+import cssGrid from "./_bsgrid";
+import cssUtils from "./_bsutils";
+import cssBootstrap from "./_bscss";
 import themeClasses from "./_theme";
-//import bootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // sk-dev: this causes a warning: https://github.com/emotion-js/emotion/issues/1105
+//import bootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css';
 /*
 The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
 The pseudo class ":nth-last-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-last-of-type".
@@ -15,6 +19,7 @@ The pseudo class ":nth-child" is potentially unsafe when doing server-side rende
 
 
 const bootstrapStyles = css`${bootstrapCSS}`;
+
 */
 
 // sk-dev: x-browser scroll styling is a pain in the donkey, needs work. Fails on mobile
@@ -25,23 +30,18 @@ const bootstrapStyles = css`${bootstrapCSS}`;
 
 const documentSetup = colors => css`
   html {
-    font-size: 13px;
-    width: 100vw;
+    font-size: 100%;
   }
 
   body {
-    box-sizing: border-box;
-    width: auto;
-    min-width: 360px;
-
-    background: ${colors.ivory};
+    font-family: 'Comfortaa';
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5;
     color: ${colors.coal};
+    background: ${colors.ivory};
     
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 1rem;
-    text-align: left;
-
-    /* overflow-y: overlay; */
+    
     overflow-y: overlay;
     overflow-x: hidden;
 
@@ -57,18 +57,16 @@ const documentSetup = colors => css`
     }	
   }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-    word-break: break-word;
-    word-wrap: break-word;
-  }
+
 
   #root {
     overflow: hidden;
     width: auto;
   }
+
+
+
+
 
   .container {
     max-width: 1140px;
@@ -78,7 +76,7 @@ const documentSetup = colors => css`
   /* Small devices (landscape phones, 576px and up) */
   @media screen and (min-width: 576px) {
 
-    html { font-size: 14px; }
+    html { font-size: 15px; }
     .container { max-width: 540px; }
   }
   
@@ -92,7 +90,7 @@ const documentSetup = colors => css`
   /* Large devices (desktops, 992px and up) */
   @media screen and (min-width: 992px) {
 
-    html { font-size: 15px; }
+    html { font-size: 16px; }
 
     body {
       &::-webkit-scrollbar {
@@ -128,19 +126,16 @@ const elementBase = colors => css`
     line-height: 1.2;
   }
   
-  h1, .slab {  font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif; font-size: 3.3rem; }
-  h2, .heading { font-family: 'Amatic SC', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 3rem; }
-  h3, .news { font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif; font-size: 3rem; }
-  h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1.6rem;}
-  h5, .subslab { font-family: 'Slabo 27px', Georgia, 'Times New Roman', Times, serif; font-size: 1.3rem; }
-  h6 { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
-
-.scribe { font-family: 'Pacifico', Georgia, cursive;}
+  h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
+  h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
+  h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
+  h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
+  h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
+  h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
 
   p {
-    margin: 0 0 1rem 0;
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 
   a,
@@ -488,8 +483,10 @@ const tableStyles = colors => css`
 
 const globalStyle = colors =>
   css([
-    cssReset,
-    //bootstrapStyles,
+    cssReboot,
+    cssGrid,
+    cssUtils,
+    cssBootstrap,
     documentSetup(colors),
     accessibilitySettings,
     elementBase(colors),
