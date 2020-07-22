@@ -14,12 +14,12 @@ const settings = {
       "state": {
         "theme": {
           "menu": [
-            ["Testing", "/"],
-            ["Design", "/web-design"],
-            ["Development", "/web-development"],
+            ["Testing", "/stats"],
+            ["Pages", "/web-design"],
+            ["Development", "/frontity-tests"],
             ["Timelines", "/timelines"],
-            ["Stuff", "/marketing"],
-            ["A Nice Log", "/blog"]
+            ["Content", "/blog/a-decade-of-digital-development/"],
+            ["Blog", "/blog"]
           ],
           "featured": {
             "showOnList": true,
