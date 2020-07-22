@@ -4,9 +4,20 @@ import themeClasses from "./_theme";
 //import bootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css';
 
 // sk-dev: this causes a warning: https://github.com/emotion-js/emotion/issues/1105
-//const bootstrapStyles = css`${bootstrapCSS}`;
+/*
+The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
+The pseudo class ":nth-last-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-last-of-type".
+The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
+The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
+The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
+The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
+The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-of-type".
 
-// sk-dev: x-browser scroll is a pain in the donkey, needs work. Fails on mobile
+
+const bootstrapStyles = css`${bootstrapCSS}`;
+*/
+
+// sk-dev: x-browser scroll styling is a pain in the donkey, needs work. Fails on mobile
 // https://css-tricks.com/the-current-state-of-styling-scrollbars/
 
 // sk-dev: min-with causes overflow on mobile

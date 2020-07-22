@@ -8,7 +8,8 @@ import { Global, css, connect } from "frontity";
 /* Kudos to: Google Fonts & http://google-webfonts-helper.herokuapp.com/ */
 /* 500/600/900 = normal/bold/heavy - theses are headers so not used 400 for normal */
 
-// CDN URL: https://fonts.googleapis.com/css?family=
+// GF v1 CDN URL:
+// https://fonts.googleapis.com/css?family=
 // Abril+Fatface|
 // Amatic+SC|
 // Comfortaa|
@@ -18,13 +19,15 @@ import { Global, css, connect } from "frontity";
 
 // 'Playfair Display', Georgia, cursive;
 
+// sk-dev: will there be support for variable ttf fonts
+// https://web.dev/variable-fonts/
+// https://web.dev/fast/#optimize-web-fonts
+
 
 // Import your own font files.
 import heptaSlab from "../../fonts/hepta-slab/hepta-slab-v7-latin-500.woff2";
 import heptaSlabBold from "../../fonts/hepta-slab/hepta-slab-v7-latin-700.woff2";
 import heptaSlabBlack from "../../fonts/hepta-slab/hepta-slab-v7-latin-900.woff2";
-
-import heptaSlabSVG from "../../fonts/hepta-slab/hepta-slab-v7-latin-500.svg";
 
 import amatic from "../../fonts/amatic-sc/amatic-sc-v13-latin-regular.woff2";
 import amaticBold from "../../fonts/amatic-sc/amatic-sc-v13-latin-700.woff2";
@@ -34,6 +37,8 @@ import playfairBold from "../../fonts/playfair-display/playfair-display-v20-lati
 import playfairBlack from "../../fonts/playfair-display/playfair-display-v20-latin-900.woff2";
 
 import comfortaa from "../../fonts/comfortaa/comfortaa-v28-latin-500.woff2";
+
+
 import slabo from "../../fonts/slabo27px/slabo-27px-v6-latin-regular.woff2";
 import abrilFatface from "../../fonts/abril-fatface/abril-fatface-v11-latin-regular.woff2";
 
