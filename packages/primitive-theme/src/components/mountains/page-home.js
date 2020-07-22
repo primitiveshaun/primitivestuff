@@ -20,7 +20,7 @@ const PageHome = ({ state }) => {
   const display = state.theme.config.homepage;
 
   if (state.theme.config.devMode) {
-    console.log("@page-home: display", display );
+    //console.log("@page-home: display", display );
   }
 
   return (
