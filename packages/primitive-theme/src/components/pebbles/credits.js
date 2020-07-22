@@ -1,38 +1,35 @@
 
 import React from "react";
-import { styled, connect } from "frontity";
+import { styled, connect, css } from "frontity";
 import Link from "./link";
+import { Col } from "react-bootstrap";
 
 const Credits = ({ state }) => {
   const currentYear = new Date().getFullYear();
+  const { footerBg } = state.theme.colors;
 
   return (
-    <Colophon>
-
-     <p>Created by <a title="Website design and build by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; 2020.</p>
-     <p>Web Hosting by <a title="Web Hosting and Domains from Primitive Hosting" href="https://primitivehosting.uk/">Primitive Hosting</a>.</p>
+    <Col className="text-center">
+     
      <Copyright>
-        &copy; {currentYear}{" "}
+        Crafted by <a title="Website Design and build by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; {currentYear}{" "}
         <Link link={state.frontity.url}>{state.frontity.title}</Link>
       </Copyright>
-    </Colophon>
+
+      <Text>Hosted by <a title="Web Hosting and Domains from Primitive Hosting" href="https://primitivehosting.uk/">Primitive Hosting</a></Text>
+    
+    </Col>
   );
 };
 
-const Colophon = styled.div`
-  @media (min-width: 700px) {
-    display: flex;
-  }
-`;
-
 const Copyright = styled.p`
   font-weight: 600;
-  margin: 0;
-
-  @media (min-width: 700px) {
-    font-weight: 700;
-  }
+  letter-spacing:1px;
 `;
 
+const Text = styled.p`
+  font-weight: 500;
+  letter-spacing:1px;
+`;
 
 export default connect(Credits);

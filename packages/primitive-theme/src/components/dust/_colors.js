@@ -56,11 +56,11 @@ const primitive = {
   pink: "#FFC0CB",
   plum: "#DDA0DD",
   peach: "#eb966c",
-
   coal: "#0c112b",
   graphite: "#212529",
   midnight: "#0C0B13",
-
+  cardboard: "#87635C",
+  pinkish: "#D4AEA6",
   brightlime: "#d7f36d",
   teal: "#008080",
   watermelon: "#fc6c85",
@@ -87,9 +87,11 @@ const themecolor = {
   green:    primitive.green,
   teal:     primitive.teal,
   cyan:     primitive.cyan,
+  brown:    primitive.cardboard,
 
   primary: primitive.green,
   secondary: primitive.peach,
+  tertiary: primitive.pinkish,
   success: primitive.brightlime,
   info: primitive.teal,
   warning: primitive.mustard,

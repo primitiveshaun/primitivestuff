@@ -1,40 +1,34 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import Image from "@frontity/components/image";
-import ImgLogo from "../img/footer/primitive.svg";
-import ImgHeart from "../img/footer/heart.svg";
-import ImgFrontity from "../img/footer/frontity.svg";
-import ImgWordpress from "../img/footer/wordpress.svg";
-import { heartbeat } from "./scenes/glamourmagic";
 
-import SectionContainer from "./styles/section-container";
+//import SectionContainer from "./styles/section-container";
 
 import BackToTop from "./pebbles/backtotop";
 import Credits from "./pebbles/credits";
 
 const Footer = ({ state }) => {
 
-  const { footerBg } = state.theme.colors;
+  const colors = state.theme.colors;
   const display = state.theme.config.global.footer;
-  if (!display) { return null }
 
   return (
-    <SiteFooter bg={footerBg} role="contentinfo">
-      <FooterColophon>
-        <Container>
+    <SiteFooter
+      bg={colors.brown} 
+      text={colors.tertiary} 
+      role="contentinfo">
+
+        <Container className="p-5">
           <Row>
-            <Col className="text-center">
               <Credits />
-            </Col>
           </Row>
-          <Row>
-            <Col>
+          <Row className="pt-4">
+            <Col className="text-center">
               <BackToTop />
             </Col>
           </Row>
         </Container>
-      </FooterColophon>
+
     </SiteFooter>
   );
 };
@@ -42,33 +36,38 @@ const Footer = ({ state }) => {
 export default connect(Footer);
 
 
-
 const SiteFooter = styled.footer`
-  background-color: ${(props) => props.bg};
-`;
-
-const FooterColophon = styled.div`
-  margin-top: 0;
-  padding: 3rem 0 1rem;
-  background-color: #87635C;
-  background: linear-gradient(to bottom,  #87635c 60%,#7b5a54 100%);
-
-  color: #D4AEA6;
+  background-color: ${(props) => props.bg ? props.bg : 'white'};
+  background: linear-gradient(to bottom, ${(props) => props.bg ? props.bg : 'white'} 60%,#7b5a54 100%);
   font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-  text-align: center;
-  letter-spacing: 1px;
-  
-  p {
-    margin-bottom: .2rem;
-    letter-spacing:1px;
+  color: ${(props) => props.text ? props.text : 'slategray'};
+
+  a {
+    color: ${(props) => props.text ? props.text : 'slategray'}
+    &:hover {
+      color: pink;
+      text-decoration: none;
+    }
   }
-
-  a { color: #ededed; }
-  a:hover { color: pink; text-decoration: none; }
-
-
-
 `;
 
+/*
+const Colophon = styled(Col)`
+  color: ${(props) => props.primary ? 'blue' : 'slategray'}
+`;
 
+const primaryStyle = css`
+  color: blue;
+`;
 
+*/
+
+/*
+const Modifiers = css`
+  color: ${(props) => props.primary ? 'blue' : 'slategray'}
+`;
+*/
+//const dynamicStyle = (props) => css`color: ${props.color}`
+
+//const dynamicStyle = (props) => css`color: ${props.color}`
+//let SomeComponent = styled('div')`${dynamicStyle}`

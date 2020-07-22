@@ -71,8 +71,8 @@ const Theme = ({ state }) => {
 
   // sk-dev: to improve
   if (state.theme.config.devMode) {
-    console.log("@index: data", data);
-    console.log("@index: display", display);
+   // console.log("@index: data", data);
+   // console.log("@index: display", display);
   }
 
   return (
@@ -124,7 +124,7 @@ const Theme = ({ state }) => {
 
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
-        <Main id="main" className="wrap-body">
+        <Main id="main">
           <Switch>
             <Loading when={data.isFetching} />
             <SearchResults when={data.isSearch} />
