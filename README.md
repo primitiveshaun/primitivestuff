@@ -1,4 +1,4 @@
-# Primitive Theme
+# Primitive Stuff for Frontity
 A Headless WordPress (REST API) Theme for Frontity
 
 ![screenshot](img/punky.png)
@@ -13,7 +13,7 @@ Live demo 👉 [Primitive Digital](https://primitivedigital.uk)
 
 New NPM package 🎉 👉 [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
-GitHub Repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
+GitHub repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
 
 
 
@@ -22,7 +22,7 @@ GitHub Repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestu
 
 See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
 
-See [Frontity Primitive Components changelog](packages/primitiverocks/CHANGELOG.md) for release notes.
+
 
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
@@ -30,7 +30,7 @@ See [Frontity Primitive Components changelog](packages/primitiverocks/CHANGELOG.
 ![screenshot](img/webby.png)
 
 ## Setup
----
+
 
 The following pre-requisites should be in place for the theme to work:
 
@@ -38,17 +38,14 @@ The following pre-requisites should be in place for the theme to work:
 2. Have pretty permalinks activated
 
 *Optional*
-3. Set homepage to a static page
-4. Posts permalink set set to: Custom Structure e.g. - `/blog/%postname%/`
+3. Set Homepage to a static page and Posts permalink to: Custom Structure e.g. - `/blog/%postname%/`
+4. Update `frontity.settings.js`
 
 
 
-## Install and Get ur' Dev on...
----
+## Install and get ur' Dev on...
 
-***Follow the Frontity setup outlined in their Docs***
-
-https://docs.frontity.org/getting-started/quick-start-guide
+[Follow the Frontity setup outlined in their Docs](https://docs.frontity.org/getting-started/quick-start-guide)
 
 
 ***Then to use this theme***
@@ -127,8 +124,9 @@ https://github.com/primitiveshaun/primitivestuff/issues
 #### Ω - *the end*
 
 ```     
-ooh, ooh. aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
+ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
 ```     
+
 ```                    
    *                                                                               
  (  `           (              )                                )                  
