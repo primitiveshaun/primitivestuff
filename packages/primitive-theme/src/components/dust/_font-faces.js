@@ -21,14 +21,18 @@ import { Global, css, connect } from "frontity";
 // sk-dev: will there be support for variable ttf fonts?
 // https://web.dev/variable-fonts/
 // https://web.dev/fast/#optimize-web-fonts
+// https://medium.com/@wanjarunkel/using-bootstraps-new-responsive-font-sizes-feature-57abacd595ac
 
-/* 300/500/600/700 = thin/regular/semibold/heavy - theses are headers so not used 400 for normal */
+
+// Import your own font files.
+
+/* 300/500/600/700 = thin/regular/semibold/bold 300 body weight*/
 import comfortaaThin from "../../fonts/comfortaa/comfortaa-v29-latin-300.woff2";
 import comfortaa from "../../fonts/comfortaa/comfortaa-v29-latin-regular.woff2";
 import comfortaaSemiBold from "../../fonts/comfortaa/comfortaa-v29-latin-600.woff2";
 import comfortaaBold from "../../fonts/comfortaa/comfortaa-v29-latin-700.woff2";
 
-// Import your own font files.
+/*  = regular/semibold/heavy - theses are headers so not used 500 for normal */
 import heptaSlab from "../../fonts/hepta-slab/hepta-slab-v7-latin-500.woff2";
 import heptaSlabBold from "../../fonts/hepta-slab/hepta-slab-v7-latin-700.woff2";
 import heptaSlabBlack from "../../fonts/hepta-slab/hepta-slab-v7-latin-900.woff2";
@@ -39,9 +43,6 @@ import amaticBold from "../../fonts/amatic-sc/amatic-sc-v13-latin-700.woff2";
 import playfair from "../../fonts/playfair-display/playfair-display-v20-latin-500.woff2";
 import playfairBold from "../../fonts/playfair-display/playfair-display-v20-latin-700.woff2";
 import playfairBlack from "../../fonts/playfair-display/playfair-display-v20-latin-900.woff2";
-
-
-
 
 import slabo from "../../fonts/slabo27px/slabo-27px-v6-latin-regular.woff2";
 import abrilFatface from "../../fonts/abril-fatface/abril-fatface-v11-latin-regular.woff2";
