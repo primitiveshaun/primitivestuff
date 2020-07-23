@@ -8,8 +8,8 @@ import Loading from "./loading";
 //import MetaTitle from "./page-meta-title";
 import MetaTitle from "./pebbles/meta-title";
 
-import KnobblyKnees from "./rocks/footer-kudos";
-import FurryBoots from "./rocks/footer-cta";
+import KnobblyKnees from "./rocks/footer-cta";
+import FurryBoots from "./rocks/footer-kudos";
 import Feet from "./footer";
 
 //import globalStyles from "./styles/global-styles";
