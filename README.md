@@ -9,15 +9,15 @@ Built on the awesome, itty bitty, Frontity framework: https://frontity.org/
 
 With little help from our friends: Bootstrap 5, GSAP and ScrollMagic. 
 
-Live demo 👉[Primitive Digital](https://primitivedigital.uk)
+Live demo 👉 [Primitive Digital](https://primitivedigital.uk)
 
-GitHub Repo: [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
+New NPM package 🎉 👉 [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
-New NPM package [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
+GitHub Repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
 
 
 
-**NB. This is a test / concept site deployment. I am experimenting / trying to break it! Avaialble on AS-IS basis.**
+**NB. This is a test / concept deployment. I am experimenting. Bootstrap 5 is in alpha! Avaialble on AS-IS basis.**
 
 
 See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
@@ -29,74 +29,80 @@ See [Frontity Primitive Components changelog](packages/primitiverocks/CHANGELOG.
 
 ![screenshot](img/webby.png)
 
-Setup
------
+## Setup
+---
 
 The following pre-requisites should be in place for the theme to work:
 
 1. WordPress install of version 5.0 or later
 2. Have pretty permalinks activated
 
-Optional
-3. Register a domain
-4. Set homepage to a static page
-5. Posts permalink set set to: Custom Structure e.g. - `/blog/%postname%/`
+*Optional*
+3. Set homepage to a static page
+4. Posts permalink set set to: Custom Structure e.g. - `/blog/%postname%/`
 
 
 
-
-Install and Get ur' Dev on...
-------------------------------------
+## Install and Get ur' Dev on...
+---
 
 ***Follow the Frontity setup outlined in their Docs***
 
 https://docs.frontity.org/getting-started/quick-start-guide
 
+
 ***Then to use this theme***
 
-*:: To clone the dev version from Github*
 
-1. `git clone https://github.com/primitiveshaun/primitivestuff`
-2. `cd primitive-theme`
-3. `npm install && npx frontity dev (from the project's root directory)`
+*:: To install the packages*
 
+```
+npm i primitive-theme
+```
 
 *:: To install/create the custom theme and layouts*
 
 _ come back later
 
-*:: To install the packages*
 
-npm i primitive-theme
+*:: To clone from Github*
+
+1. `git clone https://github.com/primitiveshaun/primitivestuff`
+2. `cd primitivestuff`
+3. `npm install && npx frontity dev (from the project's root directory)`
 
 
-***Quick Ref: Commands ***
+***CheatingChimpsCheatSheet: CLI Commands ***
 
+```
 npx frontity dev  
-
 npx frontity build  
+```
 
-- 
 
 [To stay up-to-date >](https://docs.frontity.org/guides/keep-frontity-updated)
-
+```
 npx npm-check-updates -u
 npm install
-
+```
+Or for local packages;
+```
 cd package/my-local-package
 npx npm-check-updates -u
 # DO NOT RUN "npm install" this time!
+cd ../..
+npm install
+```
 
 [See Frontity CLI Docs for more >](https://docs.frontity.org/frontity-cli)
 
 
-Deployment
+## Deployment
 ------------------------------------
 
 *** Follow the Frontity deployment outlined in their Docs ***
 
 https://docs.frontity.org/installation-and-deploy
-
 
 
 ------------------------------------
@@ -111,6 +117,7 @@ Enjoy!
 
 If you find any problems with this theme, please report an issue at:  
 https://github.com/primitiveshaun/primitivestuff/issues
+
 
 #### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
@@ -136,23 +143,10 @@ ooh, ooh. aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 > [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
+---
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 
-
-```
-npx frontity create-package your-custom-theme
-```
-
-Use the command `npx frontity create-package` to create a new package that can be set in your `frontity.settings.js` as your theme
-
-> Have a look at our blog post [How to Create a React WordPress Theme in 30 Minutes](https://frontity.org/blog/how-to-create-a-react-theme-in-30-minutes/)
-
-### Create a production-ready build
-
-```
-npx frontity build
-```
 
 ---
 
