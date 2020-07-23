@@ -104,7 +104,7 @@ https://github.com/primitiveshaun/primitivestuff/issues
 
 
 
-# THEME REBASED FROM 2020
+# THEME REBASED FROM 2020 july 2020
 
 # `@frontity/twentytwenty-theme`
 
