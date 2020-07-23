@@ -7,7 +7,7 @@ import FacebookPage from "./facebook-page";
 import FacebookLike from "./facebook-like";
 import Icon from 'react-fontawesome';
 
-const SocialSection = ({ state }) => {
+const Social = ({ state }) => {
 
   // Get social config from state
   const display = state.theme.config.global.social;
@@ -18,19 +18,21 @@ const SocialSection = ({ state }) => {
   // const youtube = display.pinterest;
 
   return (
-    <StyledSection>
+    <SocialSection>
 
       <Container>
 
         <Row>
-          <SocialIcons>
-            <h3 className="heading">let'z b friends 4eva</h3>
-            <ul>
-              <li> <Icon name="instagram" /> <a href={instagram.url} target="_blank">Instagram </a></li>
-              <li> <Icon name="facebook" /> <a href={facebook.url} target="_blank">Facebook </a></li>
-              <li> <Icon name="twitter" /> <a href={twitter.url} target="_blank">Twitter </a></li>
-            </ul>
-          </SocialIcons>
+          <Col className="p-5">
+            <SocialIcons className="pt-5 pb-5">
+              <h3 className="heading">let'z b friends 4eva</h3>
+              <ul>
+                <li> <Icon name="instagram" /> <a href={instagram.url} target="_blank">Instagram </a></li>
+                <li> <Icon name="facebook" /> <a href={facebook.url} target="_blank">Facebook </a></li>
+                <li> <Icon name="twitter" /> <a href={twitter.url} target="_blank">Twitter </a></li>
+              </ul>
+            </SocialIcons>
+          </Col>
         </Row>
 
         <Row>
@@ -54,32 +56,28 @@ const SocialSection = ({ state }) => {
         </Row>
 
       </Container>
-    </StyledSection>
+    </SocialSection>
   );
 };
 
-export default connect(SocialSection);
+export default connect(Social);
 
-const StyledSection = styled.section`
-  margin: 0;
-  padding: 3rem 0 4rem;
+const SocialSection = styled.section`
+
   background-color: ivory;
   border-top: 6px solid #e8e6cf;
   border-bottom: 6px solid #e8e6cf;
 
-  .container {
-    margin-top: 2rem;
-    border: solid 3px rgba(0,44,44,.3);
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  }
-
 `;
-const SocialIcons = styled(Col)`
-  margin: 0;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+
+const SocialIcons = styled.div`
+
+  border: solid 3px rgba(0,44,44,.3);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+
   font-family: "Hepta Slab";
   text-shadow: 1px 1px rgba(173,216,230,.5);
+
   text-align: center;
   justify-content: center;
 

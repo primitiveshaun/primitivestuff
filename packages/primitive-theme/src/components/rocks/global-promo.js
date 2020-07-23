@@ -5,31 +5,51 @@ import { Container, Row, Col } from "react-bootstrap";
 const Promo = ({ state }) => {
 
   const display = state.theme.config.global.promo;
-  if (!display) {return null}
+  if (!display) { return null }
+
+  const colors = state.theme.colors;
+
+  /*
+  __global-promo: props
+      bg={colors.brown} 
+      text={colors.ivory} 
+  */
 
   return (
-    <section>
+    <PromoSection
+      bg=""
+    >
       <Container>
         <Row>
-          <Content>
-            <PreText>{display.pretext}</PreText>
-            <Text>{display.text}</Text>
-          </Content>
+          <Col className="text-center p-5">
+            <PreText
+              text={colors.ivory}
+            >
+              {display.pretext}
+            </PreText>
+            <Text
+              text={colors.ivory}
+            >
+              {display.text}
+            </Text>
+          </Col>
         </Row>
       </Container>
-    </section>
+    </PromoSection>
   )
 };
 
 export default connect(Promo);
 
-const Content = styled(Col)`
- text-align: center;
+
+const PromoSection = styled.section`
+  background-color: ${(props) => props.bg ? props.bg : 'bisque'};
+  border-top: 6px solid #e8e6cf;
 `;
 
-const PreText = styled.h6`
-  padding: 2rem;
+const PreText = styled.h2`
+  color: ${(props) => props.text ? props.text : 'darkslategrey'};
 `;
-const Text = styled.p`
-  padding: 0 2rem 2rem;
+const Text = styled.h3`
+  color: ${(props) => props.text ? props.text : 'darkslategrey'};
 `;

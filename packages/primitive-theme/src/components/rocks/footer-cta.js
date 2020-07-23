@@ -10,13 +10,14 @@ import Image from "@frontity/components/image";
 
 const FurryBoots = ({ state }) => {
 
-  const { footerBg } = state.theme.colors;
   const display = state.theme.config.global.footer;
   if (!display) { return null }
 
+  const colors = state.theme.colors;
+
   return (
 
-      <FooterCTA bg={footerBg} role="contentinfo">
+      <FooterCTA bg="" role="contentinfo">
         <Container>
           <Row>
             <Col>
@@ -69,7 +70,7 @@ const FooterCTA = styled.section`
 
     span {
       display: block;
-      font-family: 'Amatic SC', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-family: 'Amatic SC', sans-serif;
       color:  #765751;
       font-size: 5rem;
     }
@@ -77,7 +78,7 @@ const FooterCTA = styled.section`
     strong {
       display: block;
       padding-bottom: 0;
-      font-family: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Playfair Display', serif;
       color: #E5D7B7;
       font-size: 4rem;
       line-height: 4rem;
