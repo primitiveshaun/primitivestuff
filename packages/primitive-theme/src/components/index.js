@@ -71,8 +71,8 @@ const Theme = ({ state }) => {
 
   // sk-dev: to improve
   if (state.theme.config.devMode) {
-   // console.log("@index: data", data);
-   // console.log("@index: display", display);
+   console.log("@index: data", data);
+   console.log("@index: display", display);
   }
 
   return (
@@ -97,7 +97,6 @@ const Theme = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
 
-
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Comfortaa|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" rel="stylesheet" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -111,8 +110,6 @@ const Theme = ({ state }) => {
       <SkipLink as="a" href="#main">
         Skip to main content
       </SkipLink>
-
-      <div style={{ minHeight: "calc(100vh - 190px)" }}>
 
         {/* Add the header of the site. */}
         <Header />
@@ -137,7 +134,7 @@ const Theme = ({ state }) => {
             <PageError when={data.isError} />
           </Switch>
         </Main>
-      </div>
+
 
       {display.global.showPromo && <GlobalPromo />}
 
