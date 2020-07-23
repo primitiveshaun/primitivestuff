@@ -1,33 +1,41 @@
 import React from "react";
-import { connect, styled, css } from "frontity";
+import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 
 //import SectionContainer from "./styles/section-container";
 
 import BackToTop from "./pebbles/backtotop";
-import Credits from "./pebbles/credits";
+import Colophon from "./pebbles/credits";
 
 const Footer = ({ state }) => {
 
   const colors = state.theme.colors;
   const display = state.theme.config.global.footer;
 
-  return (
-    <SiteFooter
+  /*
+  __footer: props
       bg={colors.brown} 
-      text={colors.tertiary} 
-      role="contentinfo">
+      text={colors.ivory} 
+      hyper={colors.secondary}
+  */
 
-        <Container className="p-5">
-          <Row>
-              <Credits />
-          </Row>
-          <Row className="pt-4">
-            <Col className="text-center">
-              <BackToTop />
-            </Col>
-          </Row>
-        </Container>
+  return (
+    <SiteFooter role="contentinfo"
+      bg={colors.brown}
+      text={colors.ivory}
+      hyper={colors.secondary}
+    >
+
+      <Container className="p-5">
+        <Row>
+          <Colophon />
+        </Row>
+        <Row className="pt-4">
+          <Col className="text-center">
+            <BackToTop />
+          </Col>
+        </Row>
+      </Container>
 
     </SiteFooter>
   );
@@ -37,15 +45,16 @@ export default connect(Footer);
 
 
 const SiteFooter = styled.footer`
-  background-color: ${(props) => props.bg ? props.bg : 'white'};
-  background: linear-gradient(to bottom, ${(props) => props.bg ? props.bg : 'white'} 60%,#7b5a54 100%);
-  font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-  color: ${(props) => props.text ? props.text : 'slategray'};
+  background-color: ${(props) => props.bg ? props.bg : 'darkslategray'};
+
+  font-family: 'Comfortaa', sans-serif; 
+  color: ${(props) => props.text ? props.text : 'beige'};
 
   a {
-    color: ${(props) => props.text ? props.text : 'slategray'}
+    font-weight: 800;
+    color: ${(props) => props.text ? props.text : 'ivory'};
     &:hover {
-      color: pink;
+      color: ${(props) => props.hyper ? props.hyper : 'gold'};
       text-decoration: none;
     }
   }

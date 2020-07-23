@@ -1,3 +1,4 @@
+import { styled } from "frontity";
 // Component that provides scroll to top functionality
 const BackToTop = () => {
   // scroll to top function
@@ -9,16 +10,26 @@ const BackToTop = () => {
   };
 
   return (
-    <a href="#site-header" onClick={scrollToTop}>
+    <ToTop href="#site-header" onClick={scrollToTop}>
       <span>The bottom banana</span>
-      <span className="arrow" aria-hidden="true" className="p-1">
+      <span className="arrow p-1" aria-hidden="true">
       🍌
       </span>
       <span>
-       ...click to slip 🆙
+       ...click to slip ⬆
       </span>
-    </a>
+    </ToTop>
   );
 };
 
 export default BackToTop;
+
+const ToTop = styled.a`
+  font-weight: 800;
+  letter-spacing:3px;
+  font-size: .8rem;
+
+  .arrow {
+    font-size: 3rem;
+  }
+`;
