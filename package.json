@@ -1,8 +1,8 @@
 {
   "name": "primitivestuff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "description": "Primitive Building Materials: Crafted for WordPress + Frontity use.",
+  "description": "Primitive Building Materials: Crafted for WordPress + Frontity.",
   "keywords": [
     "frontity"
   ],
