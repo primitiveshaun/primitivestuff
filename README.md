@@ -17,12 +17,12 @@ New NPM package [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primiti
 
 
 
-**NB. This is a test / concept site deployment. I am intentially experimenting / trying to break it! Avaialble on AS-IS basis.**
+**NB. This is a test / concept site deployment. I am experimenting / trying to break it! Avaialble on AS-IS basis.**
 
 
-See [Frontity Primitive Theme changelog](packages/primitiveone/CHANGELOG.md) for release notes.
+See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
 
-See [Frontity Primitive Component changelog](packages/primitiverocks/CHANGELOG.md) for release notes.
+See [Frontity Primitive Components changelog](packages/primitiverocks/CHANGELOG.md) for release notes.
 
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
@@ -97,8 +97,6 @@ Deployment
 
 https://docs.frontity.org/installation-and-deploy
 
-npx now  
-npx now --prod  
 
 
 ------------------------------------
@@ -121,11 +119,10 @@ https://github.com/primitiveshaun/primitivestuff/issues
 
 #### Ω - *the end*
 
-<pre> 
- > 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒       
-</pre> 
-<pre>                      
-
+```     
+ooh, ooh. aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
+```     
+```                    
    *                                                                               
  (  `           (              )                                )                  
  )\))(      )   )\ )   (    ( /(  (         )                ( /(    (   (         
@@ -135,34 +132,13 @@ https://github.com/primitiveshaun/primitivestuff/issues
 | |\/| |/ _` |/ _` |/ -_)  | '_ \| || | | '  \()/ _ \| ' \))| / / / -_) | || |(_-< 
 |_|  |_|\__,_|\__,_|\___|  |_.__/ \_, | |_|_|_| \___/|_||_| |_\_\ \___|  \_, |/__/ 
                                   |__/                                   |__/      
-
-</pre>
+```
 > [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 
-#### Table of Contents
-
-- [Launch a development server](#launch-a-development-server)
-- [Create your custom theme](#create-your-custom-theme)
-- [Create a production-ready build](#create-a-production-ready-build)
-- [Deploy](#deploy)
-
-### Launch a development server
-
-```
-npx frontity dev
-```
-
-Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
-
-The site will automatically reload if you make changes inside the `packages` folder. You will see the build errors in the console.
-
-> Have a look at our [Quick Start Guide](https://docs.frontity.org/getting-started/quick-start-guide)
-
-### Create your custom theme
 
 ```
 npx frontity create-package your-custom-theme
@@ -177,8 +153,6 @@ Use the command `npx frontity create-package` to create a new package that can b
 ```
 npx frontity build
 ```
-
-
 
 ---
 
