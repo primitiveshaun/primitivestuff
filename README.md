@@ -24,13 +24,11 @@ See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) 
 
 
 
-
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
 
 ![screenshot](img/webby.png)
 
 ## Setup
-
 
 The following pre-requisites should be in place for the theme to work:
 
@@ -46,7 +44,6 @@ The following pre-requisites should be in place for the theme to work:
 ## Install and get ur' Dev on...
 
 [Follow the Frontity setup outlined in their Docs](https://docs.frontity.org/getting-started/quick-start-guide)
-
 
 ***Then to use this theme***
 
@@ -69,13 +66,12 @@ _ come back later
 3. `npm install && npx frontity dev (from the project's root directory)`
 
 
-***CheatingChimpsCheatSheet: CLI Commands ***
+*CheatingChimpsCheatSheet: CLI Commands*
 
 ```
 npx frontity dev  
 npx frontity build  
 ```
-
 
 [To stay up-to-date >](https://docs.frontity.org/guides/keep-frontity-updated)
 ```
@@ -95,22 +91,16 @@ npm install
 
 
 ## Deployment
-------------------------------------
 
-*** Follow the Frontity deployment outlined in their Docs ***
-
-https://docs.frontity.org/installation-and-deploy
+Follow the Frontity [deployment outlined in their Docs](https://docs.frontity.org/installation-and-deploy)
 
 
-------------------------------------
-
-The code is opensource so play like you mean business.
+🃏 The code is opensource so play like you mean business 🤓
 
 Enjoy!
 
 
 #### Need Support
--------
 
 If you find any problems with this theme, please report an issue at:  
 https://github.com/primitiveshaun/primitivestuff/issues
@@ -138,12 +128,12 @@ ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 |_|  |_|\__,_|\__,_|\___|  |_.__/ \_, | |_|_|_| \___/|_||_| |_\_\ \___|  \_, |/__/ 
                                   |__/                                   |__/      
 ```
-> [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+:: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
 ---
 
-This project was bootstrapped with [Frontity](https://frontity.org/).
+This project was made when [Frontity](https://frontity.org/) and [Bootstrap5](https://v5.getbootstrap.com/) had babies...
 
 
 ---
