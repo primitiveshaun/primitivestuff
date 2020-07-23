@@ -16,15 +16,15 @@ const MainNav = ({ state }) => (
           hover={state.theme.colors.success}
         >
 
-          <Navbar.Brand href="/">
+          <Navbar.Brand className="p-0" href="/">
             <Image src={"https://primitive.press/wp-content/uploads/img/punky_logo_smgreen.png"} alt="Primitive Digital - Web Design &amp; Development" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="site-nav" />
 
           <Navbar.Collapse id="site-nav">
-            <Nav className="mr-auto">
-              <ul className="navbar-nav mr-auto">
+            <Nav className="mx-auto">
+              <ul className="navbar-nav mx-auto">
                 {state.theme.menu.map(([name, link]) => (
                   <Item className="nav-item" key={name} isSelected={state.router.link === link}>
                     <Link link={link}>{name}</Link>
