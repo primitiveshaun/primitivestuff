@@ -9,14 +9,9 @@ import themeClasses from "./_theme";
 // sk-dev: this causes a warning: https://github.com/emotion-js/emotion/issues/1105
 //import bootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css';
 /*
-The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
 The pseudo class ":nth-last-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-last-of-type".
 The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
-The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
-The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
-The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
 The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-of-type".
-
 
 const bootstrapStyles = css`${bootstrapCSS}`;
 
@@ -24,6 +19,7 @@ const bootstrapStyles = css`${bootstrapCSS}`;
 
 // sk-dev: x-browser scroll styling is a pain in the donkey, needs work. Fails on mobile
 // https://css-tricks.com/the-current-state-of-styling-scrollbars/
+
 
 // sk-dev: min-with causes overflow on mobile
 // https://stackoverflow.com/questions/22946264/setting-a-minimum-width-to-fit-on-responsive-website
@@ -42,14 +38,11 @@ const documentSetup = colors => css`
     background: ${colors.ivory};
     
     
-    overflow-y: overlay;
-    overflow-x: hidden;
-
     &::-webkit-scrollbar {
       width:1.2rem; /* scrollbar width */
     }
     &::-webkit-scrollbar-track {
-      background: transparent;
+      background: ${colors.greendark};
       box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     }
     &::-webkit-scrollbar-thumb {
@@ -68,9 +61,7 @@ const documentSetup = colors => css`
 
 
 
-  .container {
-    max-width: 1140px;
-  }
+
   
   /* --- RESPONSIVE --- */
   /* Small devices (landscape phones, 576px and up) */
@@ -120,8 +111,7 @@ const accessibilitySettings = css`
 const elementBase = colors => css`
 
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+
     font-weight: 500;
     line-height: 1.2;
   }
@@ -143,7 +133,7 @@ const elementBase = colors => css`
     text-decoration: none;
   }
   a {
-    color: ${colors.green};
+    color: ${colors.primary};
     text-decoration: none;
     transition: all .5s ease-in-out;
   }
