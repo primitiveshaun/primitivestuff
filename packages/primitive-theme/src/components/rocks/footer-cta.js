@@ -3,9 +3,6 @@ import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "@frontity/components/image";
 
-
-
-
 //import SectionContainer from "./styles/section-container";
 
 const FurryBoots = ({ state }) => {
