@@ -1,3 +1,4 @@
+import { colors } from "./_colors.js";
 const themeconfig = {
         devMode: process.env.NODE_ENV === 'development' ? true : false,
         breakpoints: {
@@ -61,7 +62,7 @@ const themeconfig = {
           template: false
         },
         global: {
-          showPromo: false,
+          showPromo: true,
           showSocial: true,
           promo: {
             rocks: "global-promo",
