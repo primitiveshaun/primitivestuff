@@ -19,10 +19,8 @@ Separation of config / theme + add theme-able footer sections
 
 ## Dev Notes
 
-* dependency errors, depreciation errors
 * frontity.settings is dominant over package/index
 * review licencing
-* ooooh, bootstrap 5...
 
 *Noted Issues / already resolved:*
 * arrays in settings have duplicated values
@@ -56,6 +54,7 @@ Separation of config / theme + add theme-able footer sections
 
 
 - [ ] [SEO: Add Site maps](https://community.frontity.org/t/xml-sitemaps-landing-in-wordpress-core/1153)
+
 - [ ] [SEO: Frontity Blog](https://frontity.org/blog/seo-for-headless-wordpress-themes/)
 - [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
 
@@ -74,20 +73,26 @@ Separation of config / theme + add theme-able footer sections
 
 ## History
 
-v1.0.1 bootstrap cdn removed, implemented bs5 layout + theme-able props
-- [x] BS emotion warnings
+**v1.0.1 > Refine / add theme props (July 23, 2020):**
+- [x] add theme-able props and defaults to footer and lower sections
+- [x] bootstrap cdn removed, implemented bs5 layout
+- [x] move layout control to BS classes
 
-v1.0.0 custom theme merged/rebased
+
+**1.0.0 > Split code to public Frontity Theme repo (July 21, 2020):**
+- [x] resolve dependency errors, depreciation errors
+- [x] resolve BS emotion warnings
+- [x] edited version of bootstrap css imported as CSS-IN-JS (needed for nav/tabs)
+- [x] complied bootstrap css for grid, utils imported as CSS-IN-JS
+- [x] custom theme merged
+- [x] Rebased @ CHANGELOG 1.2.1 see @frontity/twentytwenty-theme
 - [x] Publish to npm
 
 
+####  @primitivedigital/primitiveone
 
-# See @primitivedigital/primitiveone
-# Rebased @ CHANGELOG 1.2.1 see @frontity/twentytwenty-theme
-
-**1.1.6 > Frontity updated (July 12, 2020):**
+**1.1.7 > Frontity updated (July 12, 2020):**
 - [x] Check serch console after domain migration /home/ is the main error url?
-
 
 **1.1.6 > Update (June 28, 2020):**
 - [x] Created bedrock wp twentytwenty child theme 
@@ -108,11 +113,9 @@ v1.0.0 custom theme merged/rebased
 - [x] Update gsap to v3
 - [x] Add dev mode only logging
 
-
 **1.1.2 > Update (May 19, 2020):**
 - [x] Update Frontity / packages
 - [x] Added Google Analytics package (May 10th): [@frontity/google-analytics](https://www.npmjs.com/package/@frontity/google-analytics)
-
 
 **1.1.1 > Update (April 29, 2020):**
 - [x] Develop base theming and config
@@ -137,7 +140,6 @@ v1.0.0 custom theme merged/rebased
 - [x] facebook: like, page
 - [x] Refine use of Bootstrap/CSS Frameworks and global/component CSS-IN-JS (emotion)
 
-
 #### - [x] Intergrate New Frontity Features;
 - [x] Custom Post Types and Taxonomies
 - [x] Added some custom post types / taxonomies content to wp
@@ -145,7 +147,6 @@ v1.0.0 custom theme merged/rebased
 - [x] Done via plugins ACF+CPT UI (I've not modified functions.php at all yet)
 - [x] Switch/router plus hi-jacked some code updates from the twentytwenty theme
 - [x] Added cf7 package and /contact page
-
 
 **1.0.11 > Update (January 15, 2020):**
 - Plan: CPT/Taxonomies, 

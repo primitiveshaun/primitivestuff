@@ -50,7 +50,7 @@ The following pre-requisites should be in place for the theme to work:
 
 *:: To install the packages*
 
-```
+```shell
 npm i primitive-theme
 ```
 
@@ -68,18 +68,18 @@ _ come back later
 
 *CheatingChimpsCheatSheet: CLI Commands*
 
-```
+```shell
 npx frontity dev  
 npx frontity build  
 ```
 
 [To stay up-to-date >](https://docs.frontity.org/guides/keep-frontity-updated)
-```
+```shell
 npx npm-check-updates -u
 npm install
 ```
 Or for local packages;
-```
+```shell
 cd package/my-local-package
 npx npm-check-updates -u
 # DO NOT RUN "npm install" this time!
