@@ -13,14 +13,7 @@ const settings = {
       "name": "primitive-theme",
       "state": {
         "theme": {
-          "menu": [
-            ["Testing", "/stats"],
-            ["Pages", "/web-design"],
-            ["Development", "/frontity-tests"],
-            ["Timelines", "/timelines"],
-            ["Content", "/blog/a-decade-of-digital-development/"],
-            ["Blog", "/blog"]
-          ],
+          "menu": [], // add menu or pull from api...
           "featured": {
             "showOnList": true,
             "showOnPost": true,

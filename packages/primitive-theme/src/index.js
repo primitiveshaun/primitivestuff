@@ -2,6 +2,7 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
 import CustomPageHandlers from "./components/sand/handlers.js";
+
 import { themecolor } from "./components/dust/_colors.js";
 import { themeconfig } from "./components/dust/_config.js";
 //import grid from "./components/dust/_grid.js";
@@ -24,10 +25,17 @@ const primitiveTheme = {
       colors: themecolor,
       config: themeconfig,
 
+      // Default Menu links to display in the header
+      menu: [
+        ["Testing", "/stats"],
+        ["Pages", "/web-design"],
+        ["Development", "/frontity-tests"],
+        ["Timelines", "/timelines"],
+        ["Content", "/blog/a-decade-of-digital-development/"],
+        ["Blog", "/blog"]
+      ],
       // Whether to show the search button in page header
       showSearchInHeader: true,
-      // Menu links to display in the header
-      menu: [],
       // State for the menu on mobile
       isMobileMenuOpen: false,
       // State for the search modal on mobile

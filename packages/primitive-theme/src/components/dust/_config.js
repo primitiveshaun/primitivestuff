@@ -62,12 +62,13 @@ const themeconfig = {
           template: false
         },
         global: {
+          header: "", // "" | "light" | "dark"
           showPromo: true,
           showSocial: true,
           promo: {
             rocks: "global-promo",
             type: "text",
-            pretext: "Big Business and Enterprise",
+            pretext: "Big Business / Enterprise",
             text: "Primitive is not your bag, baby. For consultancy work you want a sknow.it all!",
             link: "https://sknow.it"
           },

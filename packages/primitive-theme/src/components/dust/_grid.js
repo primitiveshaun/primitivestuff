@@ -49,12 +49,15 @@ const mq = facepaint([
   `@media(min-width: ${Grid.breakpoints.lg}px)`,
   `@media(min-width: ${Grid.breakpoints.xl}px)`
 ])
+
 const mq2col = facepaint([
   `@media(min-width: ${Grid.breakpoints.lg}px)`,
 ])
 
+/*
 const demoClassName = css(mq({
   color: ['red', 'green', 'blue', 'darkorchid'],
 }))
+*/
 
-export {mq2col};
+export {mq, mq2col};
