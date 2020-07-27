@@ -122,6 +122,7 @@ const TweenStyled = styled(Container)`
   min-height: 300vh;
   overflow: hidden;
   position: relative;
+  z-index: 5;
 
   #hero {
     width: 100vw;
