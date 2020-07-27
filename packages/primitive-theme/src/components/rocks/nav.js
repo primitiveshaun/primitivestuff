@@ -1,15 +1,17 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "../pebbles/link";
-import { Container, Row, Col, Nav, Navbar, Image } from "react-bootstrap";
+import { Container, Row, Nav, Navbar } from "react-bootstrap";
+import Image from "@frontity/components/image";
 
 const MainNav = ({ state }) => (
 
-  <NavWrap bg="rgba(12,17,43,0.9)" fluid>
+  <NavWrap bg="">
     <Container>
       <Row>
 
         <StyledNavbar
+          collapseOnSelect
           expand="lg"
           aria-label="Main"
           text={state.theme.colors.primary}
@@ -24,16 +26,24 @@ const MainNav = ({ state }) => (
 
           <Navbar.Collapse id="site-nav">
             <Nav className="mx-auto">
-              <ul className="navbar-nav mx-auto">
-                {state.theme.menu.map(([name, link]) => (
-                  <Item className="nav-item" key={name} isSelected={state.router.link === link}>
-                    <Link link={link}>{name}</Link>
-                  </Item>
-                ))}
-              </ul>
-            </Nav>
 
+              {state.theme.menu.map(([name, link]) => (
+                <Nav.Link as={StyledLink}
+                    key={name}
+                    aria-current={link === state.router.link ? "page" : undefined}
+                    link={link}
+                    href={link}
+                    text={state.theme.colors.primary}
+                    hover={state.theme.colors.success}
+                    className="p-3 mr-2 ml-2 ml-lg-2"
+                  >
+                  {name}
+                </Nav.Link>
+              ))}
+    
+            </Nav>
           </Navbar.Collapse>
+
         </StyledNavbar>
 
       </Row>
@@ -47,28 +57,16 @@ const StyledNavbar = styled(Navbar)`
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
   background-color: ${(props) => props.bg ? props.bg : 'rgba(12,17,43,0.9)'};
+  position: relative;
+  z-index: 3;
 
-  a {
-    color: ${(props) => props.text ? props.text : 'gray'};
-
-    &:hover {
-      color: ${(props) => props.hover ? props.hover : 'ivory'};
-      text-decoration: none;
-      border-bottom: 2px solid ${(props) => props.hover ? props.hover : 'ivory'};
-    }
-  }
   a.navbar-brand {
     color:transparent;
     border: none;
-
-    img {
-      max-height: 5rem;
-    }
   }
 `;
 
-const NavWrap = styled(Container)`
-  border-bottom: 3px solid ${(props) => props.bg ? props.bg : 'rgba(12,17,43,0.9)'};
+const NavWrap = styled.div`
   .navbar-toggler {
     color: rgba(0,0,0,.5);
     border-color: rgba(0,0,0,.2);
@@ -76,19 +74,26 @@ const NavWrap = styled(Container)`
   }
 `;
 
-const Item = styled.li`
-
+const StyledLink = styled(Link)`
   font-size: 1rem;
   font-family: 'Hepta Slab', serif;
   font-weight: 600;
   letter-spacing: 1px;
+  text-decoration: none;
 
+  color: ${(props) => props.text ? props.text : 'ivory'} !important;
+  line-height: 1.8rem;
+  border-bottom: 2px solid transparent;
 
-  & > a {
-    display: inline-block;
-    line-height: 1.8rem;
-    border-bottom: 2px solid
-      ${({ isSelected }) => (isSelected ? "#fff" : "transparent")};
+  &:hover {
+    color: ${(props) => props.hover ? props.hover : 'ivory'} !important;
+    border-bottom: 2px solid ${(props) => props.hover ? props.hover : 'ivory'};
   }
+
+  &[aria-current="page"] {
+    color: ${(props) => props.hover ? props.hover : 'ivory'} !important;
+    border-bottom: 2px solid ${(props) => props.hover ? props.hover : 'ivory'};
+  }
+
 `;
 
