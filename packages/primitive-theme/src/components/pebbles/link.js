@@ -1,33 +1,16 @@
-// updated 06/03/20, based on src: https://github.com/frontity/frontity/blob/dev/packages/twentytwenty-theme/src/components/link.js
 import React, { useEffect } from "react";
 import { connect } from "frontity";
 
-/*
-import facepaint from 'facepaint'
-
-const mq = facepaint([
-    '@media(min-width: 420px)',
-    '@media(min-width: 720px)'
-  ])
-
-  const Link = styled.a(props =>
-    mq({
-      display: 'block',
-      margin: 18,
-      padding: 24,
-      color: props.blue
-        ? ['powderblue', 'blue', 'midnightblue']
-        : ['lightgray', 'gray', 'slategray'],
-      backgroundColor: 'currentColor'
-    })
-  )
-  */
-
-
-const Link = ({ state, actions, link, className, children, rel, "aria-current": ariaCurrent, onClick: onClickProp }) => {
-
-  //sk-dev: console.log("@link: link", link);
-
+const Link = ({
+  state,
+  actions,
+  link,
+  className,
+  children,
+  rel,
+  "aria-current": ariaCurrent,
+  onClick: onClickProp,
+}) => {
   // Check if the link is an external or internal link
   const isExternal = link.startsWith("http");
 
@@ -38,10 +21,7 @@ const Link = ({ state, actions, link, className, children, rel, "aria-current": 
     }
   }, []);
 
-  const onClick = event => {
-
-    //sk-dev: console.log("@linkOnClick: link", link);
-
+  const onClick = (event) => {
     // Do nothing if it's an external link
     if (isExternal) return;
 
@@ -64,6 +44,7 @@ const Link = ({ state, actions, link, className, children, rel, "aria-current": 
 
   return (
     <a
+      // ref={ref}
       href={link}
       onClick={onClick}
       className={className}
