@@ -1,101 +1,179 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Link from "../pebbles/link";
-import { randomWord } from "../sand/utils";
 import Nav from "./nav";
+import {mq} from "../dust/_grid";
 //import Nav from "../navigation/navigation";
 
+import { randomWord } from "../sand/utils";
 // sk-dev: random content: Warning: Text content did not match. Server: "Fruity" Client: "Fast"
 //import RandomWord from "../pebbles/random-word";
 
 const Header = ({ state }) => (
-    <HeadWrapper>
-
-      <Container className="mast">
-        <Row className="justify-content-end">
+  <HeadWrapper variant={state.theme.config.global.header}>
+    <div className="mast">
+      <Container>
+        <Row className="justify-content-sm-end">
           <Col className="col-11 col-md-7">
-            <StyledLink link="/web-design/">
+            <StyledLink link="/web-design/" className="pl-4">
               <Title className="mb-1">{state.frontity.title}</Title>
-              <Intro className="subslab"><span className="slab">We Make </span>{ randomWord() }</Intro>
+              <Intro className="subslab"><span className="slab">We Make </span>{randomWord()}</Intro>
               <Description>{state.frontity.description}</Description>
             </StyledLink>
           </Col>
         </Row>
       </Container>
-
-   
-
       <Nav />
-
-    </HeadWrapper>
-
+    </div>
+  </HeadWrapper>
 );
 
 export default connect(Header);
 
 
-const HeadWrapper = styled.header`
-color: #fff;
-a {
-  text-decoration: none;
-  padding: 15px;
-  display: block;
+const ResponsiveLight = css(
+  mq({
+    transform: ['scaleX(-1)', 'none', 'none', 'none'],
+    "backgroundSize": ['cover', 'cover', 'cover', 'contain'],
+    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)'],
+    "backgroundPositionY": ['4rem', '4rem', '4rem', '4rem'],
+    "backgroundPositionX": ['calc(50% - 5rem)', 'center', 'center', 'center']
+  })
+);
 
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-  background-color: #87af4e;
-  background: url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg) #87af4e;
-
-  background-position-x: 10%;
-  background-position-x: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-
-  @media screen and (min-width: 576px) {
-    background: none;
-    background-color: #87af4e;
-
-    header a { margin-left: 1rem; }
-
-    .container { background-position-x: 0; }
-    
-    .mast {
-      background: url(https://primitive.press/wp-content/uploads/header/website_header.jpg) #87af4e;
-      background-position-x: 10%;
-      background-position-y: top;
+const HeadLight = css`
+  color: darkslategray;
+  background-color: #e1dfda;
+  border-bottom: 3px solid rgba(12,17,43,1);
+  
+  .mast {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: url(https://primitive.press/wp-content/uploads/header/light@2x-scaled.jpg);
+      background-position-x: calc(50% - 5rem);
+      background-position-y: 4.5rem;
       background-repeat: no-repeat;
-      background-size: auto;
+      background-size: cover;
+      transform: scaleX(-1);
+
+      ${ResponsiveLight};
+    }
+  }
+`;
+
+
+const ResponsiveDark = css(
+  mq({
+    transform: ['scaleX(-1)', 'none', 'none', 'none'],
+    "backgroundSize": ['cover', 'cover', 'cover', 'contain'],
+    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)'],
+    "backgroundPositionY": ['4rem', '4rem', '4rem', '4rem'],
+    "backgroundPositionX": ['calc(50% + 5rem)', 'calc(50% + 10rem)', 'calc(50% + 12rem)', 'calc(50% + 12rem)']
+  })
+);
+
+const HeadDark = css`
+  background-color: black;
+  color: ivory;
+  border-bottom: 3px solid rgba(12,17,43,1);
+
+  .mast {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: url(https://primitive.press/wp-content/uploads/header/dark@2x-scaled.jpg);
+      background-position-x: calc(50% + 5rem);
+      background-position-y: 4rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: scaleX(-1);
+
+      ${ResponsiveDark};
+    }
+  }
+`;
+
+
+
+const ResponsiveDefault = css(
+  mq({
+    transform: ['scaleX(-1)', 'none', 'none', 'none'],
+    "backgroundSize": ['cover', 'cover', 'revert', 'revert'],
+    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)'],
+    "backgroundPositionY": ['6rem', '6rem', '6rem', '6rem'],
+    "backgroundPositionX": ['calc(50% + 5rem)', '60vw', 'center', 'center']
+  })
+);
+
+const Default = css`
+  color: ivory;
+  background-color: #87af4e;
+  border-bottom: 3px solid 'rgba(12,17,43,0.9)';
+
+  .mast {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image: url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg);
+      background-position-x: calc(50% + 5rem);
+      background-position-y: 6rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: scaleX(-1);
+
+      ${ResponsiveDefault};
     }
   }
 
-@media screen and (min-width: 768px) {
-  header a { margin-left: 20%; }
-  h4 { font-size: 2rem; }
-  .container { background-position-x: 5%; }
-}
+`;
 
-@media screen and (min-width: 992px) {
-  header a { margin-left: 30%; }
-  .container { background-position-x: 10%; }
-}
+// Header variants / modifiers
+const headStyle = {
+  light: HeadLight,
+  dark: HeadDark,
+  default: Default
+};
 
-@media screen and (min-width: 1200px) {
-  header a { margin-left: 35%; }
-  .container { background-position-x: 20%; }
-}
+
+const HeadWrapper = styled.header`
+  overflow: hidden;
+  .mast {
+    position: relative;
+    z-index: 1;
+  }
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ${(props) => headStyle[props.variant] || headStyle["default"]}
 
 `;
 
 const Title = styled.h2`
   color: #fff;
   font-size: 5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   text-shadow: 1px 1px 2px #477C16;
+  position: relative;
+  z-index: 2;
 `;
 
 const Intro = styled.p`
@@ -104,7 +182,8 @@ const Intro = styled.p`
   font-style: italic;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px #477C16;
-  margin-bottom: .5rem;
+  position: relative;
+  z-index: 2;
 
   span {
     color: #fff;
@@ -120,8 +199,12 @@ const Description = styled.h4`
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px #477C16;
+  position: relative;
+  z-index: 2;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 `;
