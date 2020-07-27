@@ -32,7 +32,6 @@ Separation of config / theme + add theme-able footer sections
 - [ ] sort/filters: modify the wp theme funtions.php or use a plugin?
 - [ ] sort/filters subtimeline component: custom cpt/taxonomy content (I can't seem to sort if using WP REST Filter plugin)
 - [ ] sort/filters poststrip component: post and custom cpt/taxonomy content (recent, random, related)
-- [ ] Random content errors
 - [ ] FEAT: Fade in lazy loaded images?
 
 ## WIP
@@ -41,7 +40,6 @@ Separation of config / theme + add theme-able footer sections
 - [ ] TBC. Some Google Fonts gets messed up converting to .woff/.woff2
 - [ ] TBC. Some Fonts gets messed up on prod build?
 
-- [ ] FIX: menu collapse / routing
 - [ ] FIX: preloading
 - [ ] Refine: Optimise for Mobile: Don't serve some animations on mobile, handle click/hover
 - [ ] FIX or FEAT: author list view / profile
@@ -54,7 +52,6 @@ Separation of config / theme + add theme-able footer sections
 
 
 - [ ] [SEO: Add Site maps](https://community.frontity.org/t/xml-sitemaps-landing-in-wordpress-core/1153)
-
 - [ ] [SEO: Frontity Blog](https://frontity.org/blog/seo-for-headless-wordpress-themes/)
 - [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
 
@@ -73,11 +70,15 @@ Separation of config / theme + add theme-able footer sections
 
 ## History
 
+**v1.0.2 > Refine / add theme props (July 27, 2020):**
+- [x] add theme-able modifiers to header
+- [x] feat: use bootrap collapseOnSelect with Link
+- [x] FIX: menu collapse / routing
+
 **v1.0.1 > Refine / add theme props (July 23, 2020):**
 - [x] add theme-able props and defaults to footer and lower sections
 - [x] bootstrap cdn removed, implemented bs5 layout
 - [x] move layout control to BS classes
-
 
 **1.0.0 > Split code to public Frontity Theme repo (July 21, 2020):**
 - [x] resolve dependency errors, depreciation errors
