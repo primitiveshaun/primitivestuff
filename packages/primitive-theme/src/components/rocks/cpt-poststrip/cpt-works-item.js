@@ -5,8 +5,6 @@ import Link from "@frontity/components/link";
 import { Col, Card } from 'react-bootstrap';
 import ACFMedia from "../../timeline/cpt-media";
 
-
-
 const Works = ({ item }) => {
 
   const acfFields = item.acf;
@@ -23,7 +21,7 @@ const Works = ({ item }) => {
 
         <Title>{acfFields.project_type}</Title>
 
-        <Card.Body className="pt-3">
+        <Card.Body className="pt-3 mb-4">
 
           <Project>{acfFields.project}</Project>
 
@@ -40,7 +38,6 @@ const Works = ({ item }) => {
 export default Works;
 
 const StyledCard = styled(Card)`
-  margin-bottom: 2rem;
   border: none;
   text-align: center;
   box-shadow: rgb(239, 239, 239) 3px 3px 9px 6px;

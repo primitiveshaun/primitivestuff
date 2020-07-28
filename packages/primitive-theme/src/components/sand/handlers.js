@@ -2,6 +2,7 @@
 // sk-dev: for further info on creating custom post types and taxonomies in frontity see:
 // https://community.frontity.org/t/frontity-release-support-for-custom-post-types-custom-taxonomies/698
 // https://community.frontity.org/t/how-do-i-get-all-custom-posts-in-the-list-js-to-work/1105/2
+// https://community.frontity.org/t/what-is-the-equivalent-to-the-wordpress-query-and-loop/1078/16
 
 import {getTerm} from "./utils"
 

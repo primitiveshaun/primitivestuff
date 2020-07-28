@@ -1,8 +1,16 @@
 // Variables
 // COLORS
 
+// refs / reading
+// https://convertingcolors.com/blog/article/convert_hex_to_rgb_with_javascript.html
+// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+
+// like this::: https://css-tricks.com/snippets/javascript/lighten-darken-color/
+// https://codepen.io/chriscoyier/pen/EatIr
+
 // https://v5.getbootstrap.com/docs/5.0/customize/color/
 // https://v5.getbootstrap.com/docs/5.0/utilities/colors/
+
 
 // Color system
 

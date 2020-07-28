@@ -3,9 +3,7 @@ import { randomWord } from "../sand/utils";
 
 const RandomWord = () => {
   return (
-    <>
-        { randomWord() }
-    </>
+    <span>{ randomWord() }</span>
   );
 };
 export default RandomWord;

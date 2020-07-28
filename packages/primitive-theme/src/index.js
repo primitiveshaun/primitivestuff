@@ -7,6 +7,7 @@ import { themecolor } from "./components/dust/_colors.js";
 import { themeconfig } from "./components/dust/_config.js";
 //import grid from "./components/dust/_grid.js";
 
+
 const primitiveTheme = {
   name: "primitive-theme",
   roots: {
@@ -24,13 +25,13 @@ const primitiveTheme = {
     theme: {
       colors: themecolor,
       config: themeconfig,
-
+      
       // Whether to show the search button in page header
-      showSearchInHeader: true,
+      //showSearchInHeader: true,
       // State for the menu on mobile
-      isMobileMenuOpen: false,
+      //isMobileMenuOpen: false,
       // State for the search modal on mobile
-      isSearchModalOpen: false,
+      //isSearchModalOpen: false,
       // Whether to show all post content or only excerpt (summary) in archive view
       showAllContentOnArchive: false,
       // Settings for the featured media (image or video)

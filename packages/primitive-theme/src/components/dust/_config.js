@@ -1,5 +1,8 @@
-import { colors } from "./_colors.js";
+//import { colors } from "./_colors.js";
+
 import { Grid } from "./_grid.js";
+import { randomWord } from "../sand/utils";
+
 const themeconfig = {
         devMode: process.env.NODE_ENV === 'development' ? true : false,
         breakpoints: {
@@ -63,7 +66,6 @@ const themeconfig = {
           template: false
         },
         global: {
-          header: "light", // "" | "light" | "dark"
           showPromo: true,
           promo: {
             rocks: "global-promo",
@@ -110,6 +112,12 @@ const themeconfig = {
               behance: "https://www.behance.net/primitiveshaun/"
             }
 
+          },
+          header: {
+            variant: "light", // "" | "light" | "dark"
+            logo: "https://primitive.press/wp-content/uploads/img/punky_logo_smwhite.png",
+            alt: "Primitive Digital - Web Design &amp; Development",
+            random: randomWord()
           },
           footer: {
             rocks: "",

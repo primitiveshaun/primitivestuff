@@ -15,7 +15,7 @@ const Credits = ({ state }) => {
       </Copyright>
 
       <Text>
-        Jus' <Link link={state.frontity.url}>{state.frontity.title}</Link>
+        <Link link={state.frontity.url}>{state.frontity.title}</Link>
       </Text>
 
       <Text>
