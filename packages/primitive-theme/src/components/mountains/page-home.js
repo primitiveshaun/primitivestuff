@@ -31,7 +31,7 @@ const PageHome = ({ state }) => {
       )}
 
       {display.showIntro && (
-        <Intro props={display.introConfig}/>
+        <Intro props={display.intro}/>
       )}
 
       {display.showGold && (
@@ -39,7 +39,7 @@ const PageHome = ({ state }) => {
       )}
 
       {display.showSilver && (
-        <Silver props={display.silverConfig} />
+        <Silver props={display.silver} />
       )}
 
       <Page />

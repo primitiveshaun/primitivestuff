@@ -20,7 +20,7 @@ const Social = ({ state }) => {
   return (
     <SocialSection>
 
-      <Container>
+      <Container className="text-center mt-4">
 
         <Row>
           <Col className="p-5">

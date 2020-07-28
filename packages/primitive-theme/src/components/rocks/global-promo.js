@@ -1,5 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
+import Link from "@frontity/components/link";
 import { Container, Row, Col } from "react-bootstrap";
 
 const Promo = ({ state }) => {
@@ -22,16 +23,18 @@ const Promo = ({ state }) => {
       <Container>
         <Row>
           <Col className="text-center p-5">
-            <PreText
-              text={colors.ivory}
-            >
-              {display.pretext}
-            </PreText>
-            <Text
-              text={colors.ivory}
-            >
-              {display.text}
-            </Text>
+            <StyledLink link={display.link}>
+              <PreText
+                text={colors.ivory}
+              >
+                {display.pretext}
+              </PreText>
+              <Text
+                text={colors.ivory}
+              >
+                {display.text}
+              </Text>
+            </StyledLink>
           </Col>
         </Row>
       </Container>
@@ -50,6 +53,13 @@ const PromoSection = styled.section`
 const PreText = styled.h2`
   color: ${(props) => props.text ? props.text : 'darkslategrey'};
 `;
+
 const Text = styled.h3`
   color: ${(props) => props.text ? props.text : 'darkslategrey'};
+`;
+
+const StyledLink = styled(Link)`
+  &:hover {
+    text-decoration: none;
+  }
 `;
