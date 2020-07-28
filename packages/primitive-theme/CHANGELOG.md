@@ -9,8 +9,9 @@ To whom it may concern. Some odd comments may be documented here.
 
 Commit messages are loosly following [Conventional Commits](https://conventionalcommits.org).
 
-primitive-theme 1.1.0
-Separation of config / theme + add theme-able footer sections
+primitive-theme 1.0.x
+add theme-able header / footer sections
+Separation of config / theme
 
 @primitivedigital/primitiveone 1.1.0: restructured for development of theme-able system. WIP
 
@@ -36,19 +37,17 @@ Separation of config / theme + add theme-able footer sections
 
 ## WIP
 
+- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
 - [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
 - [ ] TBC. Some Google Fonts gets messed up converting to .woff/.woff2
 - [ ] TBC. Some Fonts gets messed up on prod build?
-
-- [ ] FIX: preloading
 - [ ] Refine: Optimise for Mobile: Don't serve some animations on mobile, handle click/hover
-- [ ] FIX or FEAT: author list view / profile
-- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
 
+- [ ] refine: preloaders / postsrips
+- [ ] FIX or FEAT: author list view / profile
 - [ ] Split primitiverocks package
 - [ ] Split primitivescenes package
 - [ ] Split theme / dev staging
-
 
 
 - [ ] [SEO: Add Site maps](https://community.frontity.org/t/xml-sitemaps-landing-in-wordpress-core/1153)
@@ -63,12 +62,17 @@ Separation of config / theme + add theme-able footer sections
 - [ ] Research create a UI/cf7 theme builder vs cli
 - [ ] Research add comments / cf7 / fe content submission
 - [ ] Add post social share
+- [ ] [replace Link](https://community.frontity.org/t/frontity-release-first-stable-version-of-google-analytics-google-tag-manager-and-comscore-packages/2293)
+
 
 - Q: useEffect vs self-invoking
 - Q: imports / conditional / slots?  
 
 
 ## History
+
+**v1.0.3 > Refine / add theme props (July 28, 2020):**
+- [x] docs
 
 **v1.0.2 > Refine / add theme props (July 27, 2020):**
 - [x] add theme-able modifiers to header

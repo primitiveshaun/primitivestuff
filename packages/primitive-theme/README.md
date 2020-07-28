@@ -2,210 +2,153 @@
 # Primitive Theme for Frontity
 A Headless WordPress (REST API) Theme for Frontity
 
-![screenshot](../../img/punky.png)
+![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 
-Created with a little Node.js and React magic. 
+Created with Node.js and React magic. 
 
-Built on the awesome, itty bitty, [Frontity, React for WordPress framework](https://frontity.org/) 
+Built on the awesome, itty bitty, Frontity framework: https://frontity.org/ 
 
 With little help from our friends: Bootstrap 5, GSAP and ScrollMagic. 
 
-Live site: [Primitive Digital](https://primitivedigital.co.uk)
+Live demo 👉 [Primitive Digital](https://primitivedigital.uk)
 
-GitHub Repo: https://github.com/primitiveshaun/primitivestuff
+New NPM package 🎉 👉 [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
+
+GitHub repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
+
+
+
+**NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+*Current experiments in the cave...*
+Migrating to Bootstrap 5 (currently in alpha!)
+Splitting code / config
+Creating config to expose from WP
 
 See [changelog](CHANGELOG.md) for release notes.
 
-## [Created by Primitive Digital](https://primitivedigital.uk)
+## [Crafted by Primitive Digital](https://primitivedigital.uk)
 
-![screenshot](../../img/webby.png)
+![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/webby.png)
 
-Setup
------
-
-*ignore/needs update*
+## Setup
 
 The following pre-requisites should be in place for the theme to work:
 
 1. WordPress install of version 5.0 or later
-2. Optional but highly recommended: register a domain
-3. If deploying to Vercel install WordPress to a sub directory e.g. - wp.example.com
-4. Posts permalink set set to: Custom Structure e.g. - `/posts/%postname%/`
-5. Set homepage to a static page
+2. Have pretty permalinks activated
+
+*Optional*
+3. Set Homepage to a static page and Posts permalink to: Custom Structure e.g. - `/blog/%postname%/`
+4. Update `frontity.settings.js`
 
 
-Installing and beginning development
-------------------------------------
 
-*** Follow the Frontity setup outlined in their Docs ***
+## Install and get ur' Dev on...
 
-https://docs.frontity.org/getting-started/quick-start-guide
+[Follow the Frontity setup outlined in their Docs](https://docs.frontity.org/getting-started/quick-start-guide)
+
+***Then to use this theme***
 
 
-1. `git clone https://github.com/primitiveshaun/primitiveone`
-2. `cd primitiveone`
+*:: To install the packages*
+
+```shell
+npm i primitive-theme
+```
+
+*:: To install/create the custom theme and layouts*
+
+_ come back later
+
+
+*:: To clone from Github*
+
+1. `git clone https://github.com/primitiveshaun/primitivestuff`
+2. `cd primitivestuff`
 3. `npm install && npx frontity dev (from the project's root directory)`
 
-** Quick Ref: Commands **
 
-https://docs.frontity.org/frontity-cli
+*CheatingChimpsCheatSheet: CLI Commands*
 
-*ignore/needs update*
-
+```shell
 npx frontity dev  
-
 npx frontity build  
+```
+
+[To stay up-to-date >](https://docs.frontity.org/guides/keep-frontity-updated)
+```shell
+npx npm-check-updates -u
+npm install
+```
+Or for local packages;
+```shell
+cd package/my-local-package
+npx npm-check-updates -u
+# DO NOT RUN "npm install" this time!
+cd ../..
+npm install
+```
+
+[See Frontity CLI Docs for more >](https://docs.frontity.org/frontity-cli)
 
 
-Deployment
-------------------------------------
+## Deployment
 
-*** Follow the Frontity deployment outlined in their Docs ***
-
-https://docs.frontity.org/deployment
+Follow the Frontity [deployment outlined in their Docs](https://docs.frontity.org/installation-and-deploy)
 
 
+🃏 The code is opensource so play like you mean business 🤓
 
-
-------------------------------------
-
-The code is opensource so play like you mean business.
-
-Enjoy!
 
 
 #### Need Support
--------
 
 If you find any problems with this theme, please report an issue at:  
 https://github.com/primitiveshaun/primitivestuff/issues
 
-#### [Primitive One created by Primitive Digital](https://primitivedigital.uk)
+
+#### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
 
-![screenshot](../../img/haveyouseenit.jpg)
+![](https://github.com/primitiveshaun/primitivestuff/blob/master/img/haveyouseenit.jpg)
 
 #### Ω - *the end*
 
- > 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒       
-<pre>                      
-._ _  _. _| _  |_    ._ _  _ ._ | o _  _  
-| | |(_|(_|(/_ |_)\/ | | |(_)| ||<|(/__>  
-                  /                      
-</pre>
-> [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+```     
+ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
+```     
 
-
-
-
-
-
-
-
-
-
-# THEME REBASED FROM 2020 july 2020
-
-# `@frontity/twentytwenty-theme`
-
-
-The WordPress Twenty Twenty starter theme for Frontity
-
-Full info about this theme can be found in the [docs](https://docs.frontity.org/frontity-themes/frontity-twentytwenty-theme)
-
-![](https://raw.githubusercontent.com/frontity/gitbook-docs/master/docs/.gitbook/assets/screenshot-homepage-view-twentytwenty-frontity-theme.png)
-
-## Table of contents
-
-<!-- toc -->
-
-- [Install](#install)
-- [Usage](#usage)
-- [Feature Discussions](#feature-discussions)
-- [Changelog](#changelog)
-- [Open Source Community](#open-source-community)
-  * [Channels](#channels)
-  * [Get involved](#get-involved)
-
-<!-- tocstop -->
-
-## Install
-
-```sh
-npm i @frontity/twentytwenty-theme
+```                    
+   *                                                                               
+ (  `           (              )                                )                  
+ )\))(      )   )\ )   (    ( /(  (         )                ( /(    (   (         
+((_)()\  ( /(  (()/(  ))\   )\()) )\ )     (      (    (     )\())  ))\  )\ )  (   
+(_()((_) )(_))  ((_))/((_) ((_)\ (()/(     )\  '  )\   )\ ) ((_)\  /((_)(()/(  )\  
+|  \/  |((_)_   _| |(_))   | |(_) )(_))  _((_))  ((_) _(_/( | |(_)(_))   )(_))((_) 
+| |\/| |/ _` |/ _` |/ -_)  | '_ \| || | | '  \()/ _ \| ' \))| / / / -_) | || |(_-< 
+|_|  |_|\__,_|\__,_|\___|  |_.__/ \_, | |_|_|_| \___/|_||_| |_\_\ \___|  \_, |/__/ 
+                                  |__/                                   |__/      
 ```
-
-## Usage
-
-Once installed it should be included in your `frontity.settings.js`.
-The theme options can be specified in the `state.theme` property.
+:: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
-```jsx
-{
-  name: "@frontity/twentytwenty-theme",
-  state: {
-    theme: {
-      menu: [
-        ["Home", "/"],
-        ["Nature", "/category/nature/"],
-        ["Travel", "/category/travel/"],
-        ["Japan", "/tag/japan/"],
-        ["About Us", "/about-us/"]
-      ],
-      colors: {
-        primary: "#E6324B",
-        headerBg: "#ffffff",
-        footerBg: "#ffffff",
-        bodyBg: "#f5efe0"
-      },
-      showSearchInHeader: true,
-      showAllContentOnArchive: false,
-      featuredMedia: {
-        showOnArchive: true,
-        showOnPost: true
-      },
-      autoPreFetch: "hover",
-      fontSets: "us-ascii"
-    }
-  }
-},
-```
+---
 
-Full info about this theme can be found in the [docs](https://docs.frontity.org/frontity-themes/frontity-twentytwenty-theme)
+This project was made when [Frontity](https://frontity.org/) and [Bootstrap5](https://v5.getbootstrap.com/) had babies...
 
-## Feature Discussions
 
-[**Feature Discussions**](https://community.frontity.org/c/feature-discussions/33) about Frontity are public. You can join the discussions, vote for those you're interested in or create new ones.
+---
 
-These are the ones related to this package: https://community.frontity.org/tags/c/feature-discussions/33/twentytwenty-theme
+### » Frontity Channels 🌎
 
-## Changelog
+- 📖 **[Docs](https://docs.frontity.org)**: this is the place to learn how to build amazing sites with Frontity.
+- 👨‍👩‍👧‍👦 **[Community](https://community.frontity.org/)**: use our forum to [ask any questions](https://community.frontity.org/c/dev-talk-questions), feedback and meet great people. This is your place too to share [what are you building with Frontity](https://community.frontity.org/c/showcases)!
+- 🐞 **[GitHub](https://github.com/frontity/frontity)**: we use GitHub for bugs and pull requests. Questions are answered in the [community forum](https://community.frontity.org/)!
+- 🗣 **Social media**: a more informal place to interact with Frontity users, reach out to us on [Twitter](https://twitter.com/frontity).
+- 💌 **Newsletter**: do you want to receive the latest framework updates and news? Subscribe [here](https://frontity.org/)
 
-Have a look at the latest updates of this package in the [CHANGELOG](https://github.com/frontity/frontity/blob/dev/packages/twentytwenty-theme/CHANGELOG.md)
+### » Get involved 🤗
 
-***
+Got questions or feedback about Frontity? We'd love to hear from you. Use our [community forum](https://community.frontity.org) yo ! ❤️
 
-## Open Source Community
-
-### Channels
-
-[![Community Forum Topics](https://img.shields.io/discourse/topics?color=blue&label=community%20forum&server=https%3A%2F%2Fcommunity.frontity.org%2F)](https://community.frontity.org/) [![Twitter: frontity](https://img.shields.io/twitter/follow/frontity.svg?style=social)](https://twitter.com/frontity) ![Frontity Github Stars](https://img.shields.io/github/stars/frontity/frontity?style=social)
-
-Frontity has a number of different channels at your disposal where you can find out more information about the project, join in discussions about it, and also get involved:
-
-- **📖  [Docs](https://docs.frontity.org/):** Frontity's primary documentation resource - this is the place to learn how to build amazing sites with Frontity.
-* **👨‍👩‍👧‍👦  [Community forum](https://community.frontity.org/):** join Frontity's forum and ask questions, share your knowledge, give feedback and meet other cool Frontity people. We'd love to know about what you're building with Frontity, so please do swing by the [forum](https://community.frontity.org/) and tell us about your projects.
-* **🐞  Contribute:** Frontity uses [GitHub](https://github.com/frontity/frontity) for bugs and pull requests. Check out the [Contributing](../contributing/) section to find out how you can help develop Frontity, or improve this documentation.
-* **🗣  Social media**: interact with other Frontity users. Reach out to the Frontity team on [Twitter](https://twitter.com/frontity). Mention us in your tweets about Frontity and what you're building by using **`@frontity`**.
-* 💌  **Newsletter:** do you want to receive the latest news about Frontity and find out as soon as there's an update to the framework? Subscribe to our [newsletter](https://frontity.org/#newsletter).
-
-### Get involved
-
-[![GitHub issues by-label](https://img.shields.io/github/issues/frontity/frontity/good%20first%20issue)](https://github.com/frontity/frontity/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-
-Got questions or feedback about Frontity? We'd love to hear from you in our [community forum](https://community.frontity.org).
-
-Frontity also welcomes contributions. There are many ways to support the project! If you don't know where to start then this guide might help: [How to contribute?](https://docs.frontity.org/contributing/how-to-contribute).
-
-If you would like to start contributing to the code please open a pull request to address one of our [*good first issues*](https://github.com/frontity/frontity/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+Frontity also welcomes contributions. There are many ways to support the project! If you don't know where to start, this guide might help → [How to contribute?](https://docs.frontity.org/contributing/how-to-contribute)

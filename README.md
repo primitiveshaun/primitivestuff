@@ -1,7 +1,7 @@
 # Primitive Stuff for Frontity
 A Headless WordPress (REST API) Theme for Frontity
 
-![screenshot](img/punky.png)
+![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 
 Created with Node.js and React magic. 
 
@@ -17,7 +17,11 @@ GitHub repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestu
 
 
 
-**NB. This is a test / concept deployment. I am experimenting. Bootstrap 5 is in alpha! Avaialble on AS-IS basis.**
+**NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+*Current experiments in the cave...*
+Migrating to Bootstrap 5 (currently in alpha!)
+Splitting code / config
+Creating config to expose from WP
 
 
 See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
@@ -26,7 +30,7 @@ See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) 
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
 
-![screenshot](img/webby.png)
+![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/webby.png)
 
 ## Setup
 
@@ -97,7 +101,6 @@ Follow the Frontity [deployment outlined in their Docs](https://docs.frontity.or
 
 🃏 The code is opensource so play like you mean business 🤓
 
-Enjoy!
 
 
 #### Need Support
@@ -109,7 +112,7 @@ https://github.com/primitiveshaun/primitivestuff/issues
 #### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
 
-![screenshot](img/haveyouseenit.jpg)
+![](https://github.com/primitiveshaun/primitivestuff/blob/master/img/haveyouseenit.jpg)
 
 #### Ω - *the end*
 
