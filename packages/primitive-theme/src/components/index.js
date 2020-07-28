@@ -30,8 +30,7 @@ import Posts from "./mountains/post-list";
 import Post from "./mountains/post";
 
 //import Post from "./post";
-import SearchResults from "./search/search-results";
-
+//import SearchResults from "./search/search-results";
 
 import PageError from "./page-error";
 //import PageError from "./mountains/page-error";
@@ -119,7 +118,7 @@ const Theme = ({ state }) => {
         <Main id="main">
           <Switch>
             <Loading when={data.isFetching} />
-            <SearchResults when={data.isSearch} />
+            { /* <SearchResults when={data.isSearch} /> */ }
 
             <Home when={data.isHome} />
             { /* <Posts when={data.isArchive} /> */}
