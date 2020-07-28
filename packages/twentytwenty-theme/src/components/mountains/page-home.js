@@ -27,7 +27,7 @@ const PageHome = ({ state }) => {
     <HomePage className="page-home">
 
       {display.showHero && (
-        <Hero props={display.heroConfig} />
+        <Hero props={display.hero} />
       )}
 
       {display.showIntro && (

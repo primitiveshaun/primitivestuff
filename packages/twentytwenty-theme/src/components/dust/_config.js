@@ -14,7 +14,7 @@ const themeconfig = {
           showSilver: true,
           showBronze: true,
           showPromo: false,
-          heroConfig: {
+          hero: {
             rocks: "scenes",
             scene: "pd-jungle",
             fluid: "true"

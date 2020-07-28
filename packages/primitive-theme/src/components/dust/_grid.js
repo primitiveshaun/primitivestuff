@@ -60,4 +60,4 @@ const demoClassName = css(mq({
 }))
 */
 
-export {mq, mq2col};
+export {Grid, mq, mq2col};

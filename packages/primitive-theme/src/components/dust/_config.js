@@ -1,13 +1,14 @@
 import { colors } from "./_colors.js";
+import { Grid } from "./_grid.js";
 const themeconfig = {
         devMode: process.env.NODE_ENV === 'development' ? true : false,
         breakpoints: {
-          sm: "",
-          md: "",
-          lg: "",
-          xl: ""
+          sm: Grid.breakpoints.sm,
+          md: Grid.breakpoints.md,
+          lg: Grid.breakpoints.lg,
+          xl: Grid.breakpoints.xl
         },
-        rootEm: "62.5%",
+        rootEm: Grid.rootEm,
         homepage: {
           showHero: true,
           showIntro: true,
@@ -15,18 +16,18 @@ const themeconfig = {
           showSilver: true,
           showBronze: true,
           showPromo: false,
-          heroConfig: {
+          hero: {
             rocks: "scenes",
-            scene: "pd-jungle",
+            scene: "jungle",
             fluid: "true"
           },
-          introConfig: {
+          intro: {
             rocks: "typography"
           },
-          goldConfig: {
+          gold: {
             rocks: "tabs"
           },
-          silverConfig: {
+          silver: {
             rocks: "poststrip",
             posttype: "works",
             mode: "random",
@@ -62,16 +63,16 @@ const themeconfig = {
           template: false
         },
         global: {
-          header: "", // "" | "light" | "dark"
+          header: "light", // "" | "light" | "dark"
           showPromo: true,
-          showSocial: true,
           promo: {
             rocks: "global-promo",
             type: "text",
-            pretext: "Big Business / Enterprise",
+            pretext: "Big Business & Enterprise",
             text: "Primitive is not your bag, baby. For consultancy work you want a sknow.it all!",
             link: "https://sknow.it"
           },
+          showSocial: true,
           social: {
             background: "#fffff0",
             instagram: {
