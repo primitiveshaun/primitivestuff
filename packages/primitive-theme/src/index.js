@@ -25,15 +25,6 @@ const primitiveTheme = {
       colors: themecolor,
       config: themeconfig,
 
-      // Default Menu links to display in the header
-      menu: [
-        ["Testing", "/stats"],
-        ["Pages", "/web-design"],
-        ["Development", "/frontity-tests"],
-        ["Timelines", "/timelines"],
-        ["Content", "/blog/a-decade-of-digital-development/"],
-        ["Blog", "/blog"]
-      ],
       // Whether to show the search button in page header
       showSearchInHeader: true,
       // State for the menu on mobile

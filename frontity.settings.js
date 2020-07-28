@@ -13,7 +13,14 @@ const settings = {
       "name": "primitive-theme",
       "state": {
         "theme": {
-          "menu": [], // add menu or pull from api...
+          "menu": [
+            ["Testing", "/stats"],
+            ["Pages", "/web-design"],
+            ["Development", "/frontity-tests"],
+            ["Timelines", "/timelines"],
+            ["Content", "/blog/a-decade-of-digital-development/"],
+            ["Blog", "/blog"]
+          ], // add menu or pull from api...
           "featured": {
             "showOnList": true,
             "showOnPost": true,
@@ -54,9 +61,7 @@ const settings = {
               "postTypeEndpoint": "/temporal_events", // endpoint from which posts from this taxonomy are fetched
             }
           ]
-          
         }
-
       }
     },
     "@frontity/tiny-router",

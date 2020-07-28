@@ -21,6 +21,6 @@
     "@frontity/wp-source": "^1.8.0",
     "frontity": "^1.10.0",
     "primitive-theme": "./packages/primitive-theme",
-    "frontity-contact-form-7": "^0.1.6"
+    "frontity-contact-form-7": "^0.1.7"
   }
 }
