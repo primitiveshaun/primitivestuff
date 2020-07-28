@@ -1,17 +1,13 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-
-//import SectionContainer from "./styles/section-container";
-
 import BackToTop from "./pebbles/backtotop";
 import Colophon from "./pebbles/credits";
 
 const Footer = ({ state }) => {
 
-  const colors = state.theme.colors;
-  const display = state.theme.config.global.footer;
-
+  const colors = state.theme.colors,
+  display = state.theme.config.global.footer;
   /*
   __footer: props
       bg={colors.brown} 
@@ -28,7 +24,7 @@ const Footer = ({ state }) => {
 
       <Container className="p-5">
         <Row>
-          <Colophon />
+          <Colophon content={display} />
         </Row>
         <Row className="pt-4">
           <Col className="text-center">
@@ -59,24 +55,3 @@ const SiteFooter = styled.footer`
     }
   }
 `;
-
-/*
-const Colophon = styled(Col)`
-  color: ${(props) => props.primary ? 'blue' : 'slategray'}
-`;
-
-const primaryStyle = css`
-  color: blue;
-`;
-
-*/
-
-/*
-const Modifiers = css`
-  color: ${(props) => props.primary ? 'blue' : 'slategray'}
-`;
-*/
-//const dynamicStyle = (props) => css`color: ${props.color}`
-
-//const dynamicStyle = (props) => css`color: ${props.color}`
-//let SomeComponent = styled('div')`${dynamicStyle}`
