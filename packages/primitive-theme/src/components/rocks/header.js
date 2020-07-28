@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled, css } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import Link from "../pebbles/link";
+import Link from "@frontity/components/link";
 import Nav from "./nav";
 import {mq} from "../dust/_grid";
 //import Nav from "../navigation/navigation";

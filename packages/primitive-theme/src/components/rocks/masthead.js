@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import Link from "../pebbles/link";
+import Link from "@frontity/components/link";
 import { randomWord } from "../sand/utils";
 
 import facepaint from 'facepaint'

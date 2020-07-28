@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import Link from "../../pebbles/link";
+import Link from "@frontity/components/link";
 import FeaturedMedia from "../../pebbles/featured-media";
 import CTA from "../../rocks/button-fancy";
 

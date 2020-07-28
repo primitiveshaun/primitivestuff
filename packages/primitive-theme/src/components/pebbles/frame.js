@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "frontity";
-import Link from "./link";
+import Link from "@frontity/components/link";
 
 const Frame = ({ link, className, children }) => {
 

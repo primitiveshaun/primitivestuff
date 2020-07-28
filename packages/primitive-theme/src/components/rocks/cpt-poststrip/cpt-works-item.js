@@ -1,9 +1,10 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
+import Link from "@frontity/components/link";
 
-import Link from "../../pebbles/link";
-import ACFMedia from "../../timeline/cpt-media";
 import { Col, Card } from 'react-bootstrap';
+import ACFMedia from "../../timeline/cpt-media";
+
 
 
 const Works = ({ item }) => {

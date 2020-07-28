@@ -1,6 +1,6 @@
 import React from "react";
 import { styled, css} from "frontity";
-import Link from "../pebbles/link";
+import Link from "@frontity/components/link";
 
 const ButtonFancy = (props) => {
 

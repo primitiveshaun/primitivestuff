@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import postStyles from "../dust/post-styles";
 
 import List from "../rocks/postlist";
-import Link from "../pebbles/link";
+import Link from "@frontity/components/link";
 import FeaturedMedia from "../pebbles/featured-media";
 
 import DiscoPreload from "../scenes/preload-disco";
