@@ -4,7 +4,13 @@
   "private": true,
   "description": "Primitive Building Materials: Crafted for WordPress + Frontity.",
   "keywords": [
-    "frontity"
+    "frontity",
+    "primitive-theme",
+    "primitiverocks",
+    "bedrock",
+    "wordpress",
+    "headless-cms",
+    "theme"
   ],
   "scripts": {
     "dev": "frontity dev",

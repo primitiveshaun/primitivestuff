@@ -3,11 +3,12 @@
   "version": "1.0.3",
   "description": "Primitive Mountains: Theme for Frontity",
   "keywords": [
-    "wordpress",
     "frontity",
     "primitive-theme",
     "primitiverocks",
     "bedrock",
+    "wordpress",
+    "headless-cms",
     "theme"
   ],
   "homepage": "https://primitivedigital.uk",

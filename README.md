@@ -1,19 +1,19 @@
 # Primitive Stuff for Frontity
-A Headless WordPress (REST API) Theme for Frontity
+A Frontity Theme and Block Components for WordPress as a Headless CMS.
 
 ![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 
 Created with Node.js and React magic. 
 
-Built on the awesome, itty bitty, Frontity framework: https://frontity.org/ 
+Built on the awesome, itty bitty, [Frontity](https://frontity.org/) framework.
 
-With little help from our friends: Bootstrap 5, GSAP and ScrollMagic. 
+With little help from our friends: [Bootstrap 5](https://v5.getbootstrap.com/), [GSAP](https://greensock.com/gsap/) and [ScrollMagic](https://scrollmagic.io/). 
 
-Live demo 👉 [Primitive Digital](https://primitivedigital.uk)
+Live demo 👉  [Primitive Digital](https://primitivedigital.uk)
 
-New NPM package 🎉 👉 [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
+New NPM package 🎉  ~  👉  [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
-GitHub repo 👉 [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
+GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
 
 
 
@@ -23,9 +23,7 @@ Migrating to Bootstrap 5 (currently in alpha!)
 Splitting code / config
 Creating config to expose from WP
 
-
 See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
-
 
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
@@ -40,17 +38,17 @@ The following pre-requisites should be in place for the theme to work:
 2. Have pretty permalinks activated
 
 *Optional*
+
 3. Set Homepage to a static page and Posts permalink to: Custom Structure e.g. - `/blog/%postname%/`
 4. Update `frontity.settings.js`
 
 
-
-## Install and get ur' Dev on...
+## To Install and Develop...
 
 [Follow the Frontity setup outlined in their Docs](https://docs.frontity.org/getting-started/quick-start-guide)
 
-***Then to use this theme***
 
+***Then to use this theme***
 
 *:: To install the packages*
 
@@ -70,7 +68,7 @@ _ come back later
 3. `npm install && npx frontity dev (from the project's root directory)`
 
 
-*CheatingChimpsCheatSheet: CLI Commands*
+**CheatingChimpsCheatSheet: CLI Commands**
 
 ```shell
 npx frontity dev  
@@ -131,7 +129,7 @@ ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 |_|  |_|\__,_|\__,_|\___|  |_.__/ \_, | |_|_|_| \___/|_||_| |_\_\ \___|  \_, |/__/ 
                                   |__/                                   |__/      
 ```
-:: [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+**::** [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
 
 ---
