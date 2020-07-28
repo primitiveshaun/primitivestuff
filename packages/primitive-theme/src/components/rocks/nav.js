@@ -1,8 +1,9 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
-import { Container, Row, Nav, Navbar } from "react-bootstrap";
 import Image from "@frontity/components/image";
+import { Container, Row, Nav, Navbar } from "react-bootstrap";
+
 
 const MainNav = ({ state }) => (
 
@@ -19,7 +20,7 @@ const MainNav = ({ state }) => (
         >
 
           <Navbar.Brand className="p-0" href="/">
-            <Image src={"https://primitive.press/wp-content/uploads/img/punky_logo_smgreen.png"} alt="Primitive Digital - Web Design &amp; Development" />
+            <Image src={state.theme.config.global.header.logo} alt={state.theme.config.global.header.alt} />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="site-nav" />
@@ -33,8 +34,9 @@ const MainNav = ({ state }) => (
                     aria-current={link === state.router.link ? "page" : undefined}
                     link={link}
                     href={link}
-                    text={state.theme.colors.primary}
-                    hover={state.theme.colors.success}
+                    text=""
+                    hover={state.theme.colors.pink}
+                    font="Hepta Slab"
                     className="p-3 mr-2 ml-2 ml-lg-2"
                   >
                   {name}
@@ -76,7 +78,7 @@ const NavWrap = styled.div`
 
 const StyledLink = styled(Link)`
   font-size: 1rem;
-  font-family: 'Hepta Slab', serif;
+  font-family: ${(props) => props.font ? props.font : 'Hepta Slab'};
   font-weight: 600;
   letter-spacing: 1px;
   text-decoration: none;

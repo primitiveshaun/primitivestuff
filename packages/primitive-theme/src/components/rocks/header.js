@@ -3,31 +3,48 @@ import { connect, styled, css } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Link from "@frontity/components/link";
 import Nav from "./nav";
-import {mq} from "../dust/_grid";
-//import Nav from "../navigation/navigation";
+import { mq } from "../dust/_grid";
+//import { colors } from "../dust/_colors.js";
 
-import { randomWord } from "../sand/utils";
+// import { randomWord } from "../sand/utils";
 // sk-dev: random content: Warning: Text content did not match. Server: "Fruity" Client: "Fast"
 //import RandomWord from "../pebbles/random-word";
 
-const Header = ({ state }) => (
-  <HeadWrapper variant={state.theme.config.global.header}>
-    <div className="mast">
-      <Container>
-        <Row className="justify-content-sm-end">
-          <Col className="col-11 col-md-7">
-            <StyledLink link="/web-design/" className="pl-4">
-              <Title className="mb-1">{state.frontity.title}</Title>
-              <Intro className="subslab"><span className="slab">We Make </span>{randomWord()}</Intro>
-              <Description>{state.frontity.description}</Description>
-            </StyledLink>
-          </Col>
-        </Row>
-      </Container>
-      <Nav />
-    </div>
-  </HeadWrapper>
-);
+const Header = ({ state }) => {
+
+  return (
+    <HeadWrapper variant={state.theme.config.global.header.variant}>
+      <div className="mast">
+        <Container>
+          <Row className="justify-content-sm-end">
+            <Col className="col-11 col-md-7">
+              <StyledLink link="/web-design/" className="pl-4">
+
+                <Title
+                  color=""
+                  className="news mb-0 pb-0"
+                >
+                  {state.frontity.title}
+                </Title>
+
+                <Intro className="subslab mb-0">
+                  We Make 
+                  {/* <RandomWord /> */}
+                  <span className="slab"> {state.theme.config.global.header.random} </span>
+                </Intro>
+
+                <Description>
+                  {state.frontity.description}
+                </Description>
+              </StyledLink>
+            </Col>
+          </Row>
+        </Container>
+        <Nav />
+      </div>
+    </HeadWrapper>
+  );
+};
 
 export default connect(Header);
 
@@ -35,16 +52,18 @@ export default connect(Header);
 const ResponsiveLight = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
-    "backgroundSize": ['cover', 'cover', 'cover', 'contain'],
-    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)','url(https://primitive.press/wp-content/uploads/header/light.jpg)'],
-    "backgroundPositionY": ['4rem', '4rem', '4rem', '4rem'],
-    "backgroundPositionX": ['calc(50% - 5rem)', 'center', 'center', 'center']
+    backgroundSize: ['cover', 'cover', 'cover', 'contain'],
+    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)'],
+    backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
+    backgroundPositionX: ['calc(50% - 5rem)', 'center', 'center', 'center']
   })
 );
 
 const HeadLight = css`
-  color: darkslategray;
   background-color: #e1dfda;
+  color: darkslategray;
+
+  text-shadow: 1px 1px 2px rgba(0,0,0,.1);
   border-bottom: 3px solid rgba(12,17,43,1);
   
   .mast {
@@ -71,16 +90,18 @@ const HeadLight = css`
 const ResponsiveDark = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
-    "backgroundSize": ['cover', 'cover', 'cover', 'contain'],
-    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)','url(https://primitive.press/wp-content/uploads/header/dark.jpg)'],
-    "backgroundPositionY": ['4rem', '4rem', '4rem', '4rem'],
-    "backgroundPositionX": ['calc(50% + 5rem)', 'calc(50% + 10rem)', 'calc(50% + 12rem)', 'calc(50% + 12rem)']
+    backgroundSize: ['cover', 'cover', 'cover', 'contain'],
+    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)'],
+    backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
+    backgroundPositionX: ['calc(50% + 5rem)', 'calc(50% + 10rem)', 'calc(50% + 12rem)', 'calc(50% + 12rem)']
   })
 );
 
 const HeadDark = css`
   background-color: black;
   color: ivory;
+
+  text-shadow: 1px 1px 2px #477C16;
   border-bottom: 3px solid rgba(12,17,43,1);
 
   .mast {
@@ -108,16 +129,18 @@ const HeadDark = css`
 const ResponsiveDefault = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
-    "backgroundSize": ['cover', 'cover', 'revert', 'revert'],
-    "backgroundImage": ['url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)','url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)'],
-    "backgroundPositionY": ['6rem', '6rem', '6rem', '6rem'],
-    "backgroundPositionX": ['calc(50% + 5rem)', '60vw', 'center', 'center']
+    backgroundSize: ['cover', 'cover', 'revert', 'revert'],
+    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)'],
+    backgroundPositionY: ['6rem', '6rem', '6rem', '6rem'],
+    backgroundPositionX: ['calc(50% + 5rem)', '60vw', 'center', 'center']
   })
 );
 
 const Default = css`
   color: ivory;
   background-color: #87af4e;
+
+  text-shadow: 1px 1px 2px #477C16;
   border-bottom: 3px solid 'rgba(12,17,43,0.9)';
 
   .mast {
@@ -168,37 +191,30 @@ const HeadWrapper = styled.header`
 `;
 
 const Title = styled.h2`
-  color: #fff;
-  font-size: 5rem;
-  letter-spacing: 0;
-  text-shadow: 1px 1px 2px #477C16;
+  color: ${(props) => props.color ? props.color : 'white'};
+  font-size: 4rem;
+
   position: relative;
   z-index: 2;
 `;
 
 const Intro = styled.p`
-  color: #fff;
-  font-size: 1.8rem;
-  font-style: italic;
+  color: ${(props) => props.color ? props.color : 'white'};
+  font-size: 2rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #477C16;
+
   position: relative;
   z-index: 2;
 
   span {
-    color: #fff;
-    font-size: 1.5rem;
-    font-style: normal;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    color: ${(props) => props.color ? props.color : 'white'};
  }
 `;
 
 const Description = styled.h4`
-  color: #fff;
+  color: ${(props) => props.color ? props.color : 'ivory'};
   font-size: 1.5rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #477C16;
   position: relative;
   z-index: 2;
 `;
