@@ -40,9 +40,9 @@ import GlobalPromo from "./rocks/global-promo";
 import GlobalSocial from "./rocks/social/social-section";
 
 // custom post types / tax layouts
-import Timelines from "./timeline/ct-timelines";
-import Timeline from "./timeline/cpt-timeline";
-import SubTimeline from "./timeline/cpt-subtimeline";
+import Timelines from "./mountains/timelines";
+import Timeline from "./mountains/timeline";
+import SubTimeline from "./mountains/subtimeline";
 
 
 /*
