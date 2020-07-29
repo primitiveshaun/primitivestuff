@@ -111,7 +111,7 @@ https://github.com/primitiveshaun/primitivestuff/issues
 #### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
 
-![](https://github.com/primitiveshaun/primitivestuff/blob/master/img/haveyouseenit.jpg)
+![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/haveyouseenit.jpg)
 
 #### Ω - *the end*
 
