@@ -32,8 +32,8 @@ import Post from "./mountains/post";
 //import Post from "./post";
 //import SearchResults from "./search/search-results";
 
-import PageError from "./page-error";
-//import PageError from "./mountains/page-error";
+//import PageError from "./page-error";
+import PageError from "./mountains/page-error";
 
 // sk-dev:TESTING think these should be Slots i think...
 import GlobalPromo from "./rocks/global-promo";
