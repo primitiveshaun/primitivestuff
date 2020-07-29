@@ -1,10 +1,10 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
-import CustomPageHandlers from "./components/sand/handlers.js";
+import CustomPageHandlers from "./components/sand/handlers";
 
-import { themecolor } from "./components/dust/_colors.js";
-import { themeconfig } from "./components/dust/_config.js";
+import { themecolor } from "./components/dust/_colors";
+import { themeconfig } from "./components/dust/_config";
 //import grid from "./components/dust/_grid.js";
 
 
@@ -56,18 +56,10 @@ const primitiveTheme = {
    */
   actions: {
     theme: {
-      openMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = true;
-      },
-      closeMobileMenu: ({ state }) => {
-        state.theme.isMobileMenuOpen = false;
-      },
-      openSearchModal: ({ state }) => {
-        state.theme.isSearchModalOpen = true;
-      },
-      closeSearchModal: ({ state }) => {
-        state.theme.isSearchModalOpen = false;
-      },
+      openMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = true; },
+      closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; },
+      openSearchModal: ({ state }) => { state.theme.isSearchModalOpen = true; },
+      closeSearchModal: ({ state }) => { state.theme.isSearchModalOpen = false; },
     },
   },
   libraries: {
