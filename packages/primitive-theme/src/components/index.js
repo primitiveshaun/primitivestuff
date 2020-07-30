@@ -47,9 +47,6 @@ import SubTimeline from "./mountains/subtimeline";
 
 /*
 
-import Nav from "../rocks/nav";
-
-
 
 import globalStyles from '../dust/global-styles';
 //import FontFaces from "../dust/font-faces";
@@ -134,6 +131,7 @@ const Theme = ({ state }) => {
           </Switch>
         </Main>
 
+      { /* SEO note, the below seems to get picked up by google before Main by default */ }
 
       {display.global.showPromo && <GlobalPromo />}
 
