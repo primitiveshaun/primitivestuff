@@ -12,17 +12,16 @@ const Page = ({ state, actions, libraries }) => {
   // get skeletal data model
   const data = state.source.get(state.router.link);
 
-  // get full skeleton data
+  // get full data
   const page = state.source[data.type][data.id];
   const pageId = data.id;
 
-  // 
   useEffect(() => {
     actions.source.fetch(state.router.link);
     
-    if (state.theme.config.devMode) {
-      console.log("@page: data", data);
-    }
+    //if (state.theme.config.devMode) {
+    //  console.log("@page: data", data);
+    //}
     
   }, []);
 
