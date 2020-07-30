@@ -2,63 +2,41 @@
   "version": 2,
   "builds": [
     {
+      "src": "build/static/**/*",
+      "use": "@now/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@now/static"
+    },
+    {
+      "src": "favicon.ico",
+      "use": "@now/static"
+    },
+    {
+      "src": "build/server.js",
+      "use": "@now/node"
+    },
+
+    {
       "src": "package.json",
-      "use": "@frontity/now"
+      "use": "@now/node-server"
     }
   ],
   "routes": [
-    {
-      "src": "/page301",
-      "status": 301,
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/static/(.*)",
       "headers": {
-        "Location": "https://primitivedigital.uk/stats"
-      }
+        "cache-control": "max-age=31536000,s-maxage=31536000,immutable"
+      },
+      "dest": "/static/$1"
     },
+
     {
-      "src": "/page302",
-      "status": 302,
-      "headers": {
-        "Location": "https://primitivedigital.uk/stats"
-      }
-    },
-    {
-      "src": "/redirect",
-      "dest": "https://primitivedigital.uk/stats"
-    },
-    {
-      "src": "/sitemap.xml",
-      "status": 301,
-      "headers": {
-        "Location": "https://primitive.press/sitemap_index.xml"
-      }
-    },
-    {
-      "src": "/sitemap_index.xml",
-      "status": 301,
-      "headers": {
-        "Location": "https://primitive.press/sitemap_index.xml"
-      }
-    },
-    {
-      "src": "/post-sitemap.xml",
-      "status": 301,
-      "headers": {
-        "Location": "https://primitive.press/post-sitemap.xml"
-      }
-    },
-    {
-      "src": "/page-sitemap.xml",
-      "status": 301,
-      "headers": {
-        "Location": "https://primitive.press/page-sitemap.xml"
-      }
-    },
-    {
-      "src": "/timelines-sitemap.xml",
-      "status": 301,
-      "headers": {
-        "Location": "https://primitive.press/timelines-sitemap.xml"
-      }
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=1,stale-while-revalidate" },
+      "dest": "/build/server.js"
     }
   ]
 }
