@@ -1,6 +1,6 @@
 {
   "name": "primitivestuff",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": true,
   "description": "Primitive Building Materials: Crafted for WordPress + Frontity.",
   "keywords": [
@@ -12,6 +12,9 @@
     "headless-cms",
     "theme"
   ],
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "dev": "frontity dev",
     "build": "frontity build",
@@ -19,13 +22,13 @@
   },
   "prettier": {},
   "dependencies": {
-    "@frontity/core": "^1.7.2",
+    "@frontity/core": "^1.7.3",
     "@frontity/google-analytics": "^1.2.0",
     "@frontity/head-tags": "^1.0.4",
     "@frontity/html2react": "^1.3.4",
     "@frontity/tiny-router": "^1.2.1",
-    "@frontity/wp-source": "^1.8.0",
-    "frontity": "^1.10.0",
+    "@frontity/wp-source": "^1.8.1",
+    "frontity": "^1.10.1",
     "primitive-theme": "./packages/primitive-theme",
     "frontity-contact-form-7": "^0.1.7"
   }
