@@ -20,15 +20,15 @@ Separation of config / theme
 
 ## Dev Notes
 
-* frontity.settings is dominant over package/index
+* frontity.settings is dominant over package/index (you can overwrite the menu in dev but not prod)
 * review licencing
 
 *Noted Issues / already resolved:*
-* arrays in settings have duplicated values
 * vercel(zeit) deployment failure .gitignore, .nowignore - build folder issue with github setup.
-* Some CSS-IN-JS gets messed up on prod build. this could have been an extra '}'?
+
 
 ## Issues
+
 
 - [ ] sort/filters: modify the wp theme funtions.php or use a plugin?
 - [ ] sort/filters subtimeline component: custom cpt/taxonomy content (I can't seem to sort if using WP REST Filter plugin)
@@ -70,6 +70,13 @@ Separation of config / theme
 
 
 ## History
+
+**v1.0.5 > Refine / add theme props (Aug 05, 2020):**
+- [x] fix deployment
+
+
+**v1.0.4 > Refine / add theme props (July 29, 2020):**
+- [x] updates and tests
 
 **v1.0.3 > Refine / add theme props (July 28, 2020):**
 - [x] docs
