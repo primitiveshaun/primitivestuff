@@ -71,11 +71,12 @@ Separation of config / theme
 
 ## History
 
-**v1.0.5 > Refine / add theme props (Aug 05, 2020):**
-- [x] fix deployment
+**v1.0.5 > Refine / add theme props (Aug 11, 2020):**
+- [x] fixed failing vercel deployment
+- [x] fixed redirect/mapped domain ssl issues
+- [x] installed ssl cert for api. works in browser - cert chaining error occurs in node
 
-
-**v1.0.4 > Refine / add theme props (July 29, 2020):**
+**v1.0.4 > Updates (July 29, 2020):**
 - [x] updates and tests
 
 **v1.0.3 > Refine / add theme props (July 28, 2020):**
