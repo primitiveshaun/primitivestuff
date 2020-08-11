@@ -18,8 +18,9 @@ GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivest
 
 
 
-**NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
-*Current experiments in the cave...*
+**NB. This is a test / concept deployment.Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+
+**Current experiments...**
 Migrating to Bootstrap 5 (currently in alpha!)
 Splitting code / config
 Creating config to expose from WP
@@ -120,14 +121,11 @@ ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 ```     
 
 ```                    
+                     _                                 
+ |\/|  _.  _|  _    |_)      |\/|  _  ._  |   _      _ 
+ |  | (_| (_| (/_   |_) \/   |  | (_) | | |< (/_ \/ _> 
+                        /                        /     
 
-  __  __           _        _             __  __             _                  
- |  \/  | __ _  __| | ___  | |__  _   _  |  \/  | ___  _ __ | | _____ _   _ ___ 
- | |\/| |/ _` |/ _` |/ _ \ | '_ \| | | | | |\/| |/ _ \| '_ \| |/ / _ \ | | / __|
- | |  | | (_| | (_| |  __/ | |_) | |_| | | |  | | (_) | | | |   <  __/ |_| \__ \
- |_|  |_|\__,_|\__,_|\___| |_.__/ \__, | |_|  |_|\___/|_| |_|_|\_\___|\__, |___/
-                                  |___/                               |___/     
-  
 ```
 **::** [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 
