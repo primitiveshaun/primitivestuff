@@ -58,8 +58,15 @@ const primitiveTheme = {
     theme: {
       openMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = true; },
       closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; },
-      openSearchModal: ({ state }) => { state.theme.isSearchModalOpen = true; },
-      closeSearchModal: ({ state }) => { state.theme.isSearchModalOpen = false; },
+      beforeSSR: async ({ actions }) => {
+        await actions.source.fetch(`/works/`)
+      },
+      beforeSSR: async ({ actions }) => {
+        await actions.source.fetch(`/temporal_events/`)
+      },
+      beforeSSR: async ({ actions }) => {
+        await actions.source.fetch(`/things/`)
+      }
     },
   },
   libraries: {
