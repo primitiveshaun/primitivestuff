@@ -1,0 +1,7 @@
+# based on wp default
+User-agent: *
+Allow: /
+Disallow: /cave/
+
+#Disallow: /wp-admin/
+#Allow: /wp-admin/admin-ajax.php
