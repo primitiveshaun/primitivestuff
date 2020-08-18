@@ -44,10 +44,7 @@ import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
 
-
 /*
-
-
 import globalStyles from '../dust/global-styles';
 //import FontFaces from "../dust/font-faces";
 
@@ -116,18 +113,18 @@ const Theme = ({ state }) => {
           <Switch>
             <Loading when={data.isFetching} />
             { /* <SearchResults when={data.isSearch} /> */ }
-
+            <PageError when={data.isError} />
             <Home when={data.isHome} />
             { /* <Posts when={data.isArchive} /> */}
             <Posts when={data.isPostArchive} />
             <Post when={data.isPost} />
             <Page when={data.isPage} />
-
+            
             <Timeline when={data.isTemporalEventsArchive} />
             <SubTimeline when={data.isTimelineType} />
             <Timelines when={data.isTimelines} />
 
-            <PageError when={data.isError} />
+            
           </Switch>
         </Main>
 
