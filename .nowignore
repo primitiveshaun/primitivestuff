@@ -1,0 +1,7 @@
+# Ignore everything (folders and files) on root only
+#/*
+# Allow???
+!build
+!server.js
+!/build/**
+!static
