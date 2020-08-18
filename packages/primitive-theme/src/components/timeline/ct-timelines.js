@@ -9,7 +9,7 @@ const Timelines = ({ state, actions }) => {
 
   /*
 
-    Hello, what type of skeleton we workin with?
+    Hello, what we workin with?
 
     : get data skeleton / retrieve info about what kind of content should be rendered for the current path in frontity state.
 
@@ -27,8 +27,12 @@ const Timelines = ({ state, actions }) => {
       : this action fetches all entities related to a link, i.e. the pathname of a URL in your site.
 
     */
+      async function fetchData() {
+        //await actions.source.fetch(`/comics_post/`)
+        await actions.source.fetch(state.router.link)
+      }
+      fetchData();
 
-    actions.source.fetch(state.router.link);
 
     // preloading N/A here?
 

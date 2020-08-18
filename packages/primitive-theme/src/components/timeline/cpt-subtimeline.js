@@ -15,7 +15,10 @@ const SubTimeline = ({ state, actions }) => {
 
   useEffect(() => {
     // fetch data related to this route using side effects (like calling on ComponentDidMount / ComponentDidUpdate )
-    actions.source.fetch(state.router.link);
+    async function fetchData() {
+      await actions.source.fetch(state.router.link)
+    }
+    fetchData();
   }, []);
 
   console.log("@cpt-subtimeline: data", data);
