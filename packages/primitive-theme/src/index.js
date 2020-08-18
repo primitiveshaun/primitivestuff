@@ -57,16 +57,11 @@ const primitiveTheme = {
   actions: {
     theme: {
       openMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = true; },
-      closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; },
-      beforeSSR: async ({ actions }) => {
-        await actions.source.fetch(`/works/`)
-      },
-      beforeSSR: async ({ actions }) => {
-        await actions.source.fetch(`/temporal_events/`)
-      },
-      beforeSSR: async ({ actions }) => {
-        await actions.source.fetch(`/things/`)
-      }
+      closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; }
+
+      //beforeSSR: async ({ actions }) => {
+      //  await actions.source.fetch(`/temporal_events/`)
+      //}
     },
   },
   libraries: {
