@@ -1,0 +1,209 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.44.1",
+  "hash": "97391f8206c2da88f7e6",
+  "publicPath": "/static/",
+  "outputPath": "/Users/sknow/a/primitivestuff/build/static",
+  "assetsByChunkName": {
+    "list": "list.module.js",
+    "primitivestuff": "primitivestuff.module.js",
+    "timeline-cpt-subtimeline": "timeline-cpt-subtimeline.module.js",
+    "timeline-cpt-subtimeline~timeline-cpt-timeline": "timeline-cpt-subtimeline~timeline-cpt-timeline.module.js",
+    "timeline-cpt-timeline": "timeline-cpt-timeline.module.js",
+    "timeline-ct-timelines": "timeline-ct-timelines.module.js"
+  },
+  "assets": [
+    {
+      "name": "images/frontity.svg",
+      "size": 2062,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/heart.svg",
+      "size": 6202,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/primitive.svg",
+      "size": 11176,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "images/wordpress.svg",
+      "size": 1627,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 60935,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "primitivestuff.module.js",
+      "size": 11676335,
+      "chunks": [
+        "primitivestuff"
+      ],
+      "chunkNames": [
+        "primitivestuff"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "timeline-cpt-subtimeline.module.js",
+      "size": 28575,
+      "chunks": [
+        "timeline-cpt-subtimeline"
+      ],
+      "chunkNames": [
+        "timeline-cpt-subtimeline"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "timeline-cpt-subtimeline~timeline-cpt-timeline.module.js",
+      "size": 91448,
+      "chunks": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline"
+      ],
+      "chunkNames": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "timeline-cpt-timeline.module.js",
+      "size": 56159,
+      "chunks": [
+        "timeline-cpt-timeline"
+      ],
+      "chunkNames": [
+        "timeline-cpt-timeline"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "timeline-ct-timelines.module.js",
+      "size": 41502,
+      "chunks": [
+        "timeline-ct-timelines"
+      ],
+      "chunkNames": [
+        "timeline-ct-timelines"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "primitivestuff": {
+      "chunks": [
+        "primitivestuff"
+      ],
+      "assets": [
+        "primitivestuff.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "primitivestuff": {
+      "chunks": [
+        "primitivestuff"
+      ],
+      "assets": [
+        "primitivestuff.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "rocks-postlist-list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "timeline-ct-timelines": {
+      "chunks": [
+        "timeline-ct-timelines"
+      ],
+      "assets": [
+        "timeline-ct-timelines.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "timeline-cpt-timeline": {
+      "chunks": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline",
+        "timeline-cpt-timeline"
+      ],
+      "assets": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline.module.js",
+        "timeline-cpt-timeline.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "timeline-cpt-subtimeline": {
+      "chunks": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline",
+        "timeline-cpt-subtimeline"
+      ],
+      "assets": [
+        "timeline-cpt-subtimeline~timeline-cpt-timeline.module.js",
+        "timeline-cpt-subtimeline.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": []
+}
