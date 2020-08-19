@@ -21,8 +21,6 @@ import globalStyles from './dust/global-styles';
 //import Header from "./header";
 import Header from "./rocks/header";
 
-//import Archive from "./archive";
-
 import Home from './mountains/page-home';
 import Page from "./mountains/page";
 
