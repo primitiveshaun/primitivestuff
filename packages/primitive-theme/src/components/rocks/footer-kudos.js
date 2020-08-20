@@ -2,9 +2,9 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "@frontity/components/image";
+import { LabeledIcon, HeartIt, FrontityLogo } from "../icons";
+
 import ImgLogo from "../../img/footer/primitive.svg";
-import ImgHeart from "../../img/footer/heart.svg";
-import ImgFrontity from "../../img/footer/frontity.svg";
 import ImgWordpress from "../../img/footer/wordpress.svg";
 import { heartbeat } from "../scenes/glamourmagic";
 
@@ -30,11 +30,7 @@ const KnobblyKnees = ({ state }) => {
 
         <Row>
           <Col>
-            <Image
-              className="loveit"
-              src={ImgHeart}
-              alt="Primitive Digital Highly Recommends "
-            />
+            <LabeledIcon icon={HeartIt} label="Primitive Digital Highly Recommends" />
           </Col>
         </Row>
 
@@ -50,11 +46,7 @@ const KnobblyKnees = ({ state }) => {
             <span className="slab">+</span>
 
             <a href="https://frontity.org/">
-              <Image
-                src={ImgFrontity}
-                alt="Frontity is a free and open source framework to build super fast WordPress themes using React."
-                title="Frontity is a free and open source framework to build super fast WordPress themes using React."
-              />
+              <LabeledIcon icon={FrontityLogo} label="Frontity the open source framework to build super fast WordPress+React themes." />
             </a>
           </Col>
 
@@ -73,7 +65,7 @@ const FooterKudos = styled.div`
   background-color: #87635C;
   text-align: center;
 
-  img {
+  img, svg {
     margin: 10px auto;
     max-width: 30%;
     max-height: 140px;
