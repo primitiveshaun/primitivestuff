@@ -26,15 +26,15 @@ const Timelines = ({ state, actions }) => {
       : fetch data related to a path using side effects is similar to calling on ComponentDidMount
       : this action fetches all entities related to a link, i.e. the pathname of a URL in your site.
 
-    */
+   
       async function fetchData() {
-        //await actions.source.fetch(`/comics_post/`)
         await actions.source.fetch(state.router.link)
       }
       fetchData();
 
+       */
 
-    // preloading N/A here?
+      actions.source.fetch(state.router.link);
 
   }, []);
 

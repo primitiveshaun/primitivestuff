@@ -19,12 +19,16 @@ const Timeline = ({ state, actions }) => {
 
   useEffect(() => {
     // 1.b fetch data related to a path using side effects (like calling on ComponentDidMount / ComponentDidMount)
+    
+    /*
     async function fetchData() {
-      //await actions.source.fetch(`/comics_post/`)
       await actions.source.fetch(`/evolution-of-digital-stuff/`)
     }
     fetchData();
-    //List.preload();
+    */
+
+    actions.source.fetch("/evolution-of-digital-stuff/");
+
   }, []);
 
   console.log("@cpt-timeline: data", data);
