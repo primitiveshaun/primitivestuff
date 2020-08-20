@@ -1,9 +1,5 @@
 import { css } from "frontity";
 
-// sk-dev: review resets and base styling use in bootstrap, frontity2020 
-// https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap-reboot.css
-// sk-dev: test bs5 utils 22/jul 2020
-
 /*!
  * Bootstrap Utilities v5.0.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -11,8 +7,7 @@ import { css } from "frontity";
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-
-const cssReboot = css`
+const BootstrapUtils = colors => css`
 
 .align-baseline {
   vertical-align: baseline !important;
@@ -3495,38 +3490,7 @@ const cssReboot = css`
   }
 }
 
-@media print {
-  .d-print-none {
-    display: none !important;
-  }
-  .d-print-inline {
-    display: inline !important;
-  }
-  .d-print-inline-block {
-    display: inline-block !important;
-  }
-  .d-print-block {
-    display: block !important;
-  }
-  .d-print-table {
-    display: table !important;
-  }
-  .d-print-table-row {
-    display: table-row !important;
-  }
-  .d-print-table-cell {
-    display: table-cell !important;
-  }
-  .d-print-flex {
-    display: flex !important;
-  }
-  .d-print-inline-flex {
-    display: inline-flex !important;
-  }
-}
-/*# sourceMappingURL=bootstrap-utilities.css.map */
-
 `;
 
 
-export default cssReboot;
+export default BootstrapUtils;
