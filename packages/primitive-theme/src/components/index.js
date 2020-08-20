@@ -1,43 +1,34 @@
-import { connect, Global, Head, styled } from "frontity";
+import { connect, Global, Head, styled, loadable } from "frontity";
 import Switch from "@frontity/components/switch";
 import React from "react";
-import SkipLink from "./styles/skip-link";
-import Loading from "./loading";
-//import Loading from "./pebbles/loading";
 
-//import MetaTitle from "./page-meta-title";
+import Loading from "./pebbles/loading";
 import MetaTitle from "./pebbles/meta-title";
 
-import KnobblyKnees from "./rocks/footer-cta";
-import FurryBoots from "./rocks/footer-kudos";
-import Feet from "./footer";
-
-//import globalStyles from "./styles/global-styles";
-import globalStyles from './dust/global-styles';
-
-//import FontFaces from "./styles/font-faces";
+import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
 
-//import Header from "./header";
-import Header from "./rocks/header";
-
-import Home from './mountains/page-home';
-import Page from "./mountains/page";
+const Home = loadable(() => import("./mountains/page-home"));
+const Page = loadable(() => import("./mountains/page"));
 
 import Posts from "./mountains/post-list";
-import Post from "./mountains/post";
+const Post = loadable(() => import("./mountains/post"));
+const PageError = loadable(() => import("./mountains/page-error"));
 
-//import Post from "./post";
-//import SearchResults from "./search/search-results";
 
-//import PageError from "./page-error";
-import PageError from "./mountains/page-error";
+import Header from "./rocks/header";
+const KnobblyKnees = loadable(() => import("./rocks/footer-cta"));
+const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
+const Feet = loadable(() => import("./footer"));
 
-// sk-dev:TESTING think these should be Slots i think...
+// sk-dev:TESTING these should be Slots i think...
+
+//const GlobalSocial = loadable(() => import("./rocks/social/social-section"));
+import SkipLink from "./styles/skip-link";
 import GlobalPromo from "./rocks/global-promo";
 import GlobalSocial from "./rocks/social/social-section";
 
-// custom post types / tax layouts
+// custom post types / tax layouts : 3kb
 import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
@@ -110,30 +101,22 @@ const Theme = ({ state }) => {
         <Main id="main">
           <Switch>
             <Loading when={data.isFetching} />
-            { /* <SearchResults when={data.isSearch} /> */ }
-            <PageError when={data.isError} />
             <Home when={data.isHome} />
-            { /* <Posts when={data.isArchive} /> */}
+            <Page when={data.isPage} />
             <Posts when={data.isPostArchive} />
             <Post when={data.isPost} />
-            <Page when={data.isPage} />
-            
             <Timeline when={data.isTemporalEventsArchive} />
             <SubTimeline when={data.isTimelineType} />
             <Timelines when={data.isTimelines} />
-
-            
+            <PageError when={data.isError} />
           </Switch>
         </Main>
 
-      { /* SEO note, the below seems to get picked up by google before Main by default */ }
+      { /* SEO note, the below seems to get picked up by google before Main by default : 15kb */ }
 
       {display.global.showPromo && <GlobalPromo />}
 
       {display.global.showSocial && <GlobalSocial />}
-
-      { /* ??? global sections promo + social stuff - conditional slots/fills ??? data.isHome && <Promo /> */}
-      { /* display.showPromo && <Slot name="slot-1" /> */}
 
       <KnobblyKnees />
       <FurryBoots />
