@@ -1,68 +1,25 @@
 import { css } from "frontity";
+
 import cssReboot from "./_reboot";
+
 import cssGrid from "./_bsgrid";
+
 import cssUtils from "./_bsutils";
+
 import cssBootstrap from "./_bscss";
+
 import themeClasses from "./_theme";
 
-
-// sk-dev: this causes a warning: https://github.com/emotion-js/emotion/issues/1105
-//import bootstrapCSS from 'bootstrap/dist/css/bootstrap.min.css';
-/*
-The pseudo class ":nth-last-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-last-of-type".
-The pseudo class ":first-child" is potentially unsafe when doing server-side rendering. Try changing it to ":first-of-type".
-The pseudo class ":nth-child" is potentially unsafe when doing server-side rendering. Try changing it to ":nth-of-type".
-
-const bootstrapStyles = css`${bootstrapCSS}`;
-
-*/
-
-// sk-dev: x-browser scroll styling is a pain in the donkey, needs work. Fails on mobile
-// https://css-tricks.com/the-current-state-of-styling-scrollbars/
-
-
-// sk-dev: min-with causes overflow on mobile
-// https://stackoverflow.com/questions/22946264/setting-a-minimum-width-to-fit-on-responsive-website
-
 const documentSetup = colors => css`
-  html {
-    font-size: 100%;
-  }
-
-  body {
-    font-family: 'Comfortaa';
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.5;
-    color: ${colors.coal};
-    background: ${colors.ivory};
-    
-    
-    &::-webkit-scrollbar {
-      width:1.2rem; /* scrollbar width */
-    }
-    &::-webkit-scrollbar-track {
-      background: ${colors.greendark};
-      box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    }
-    &::-webkit-scrollbar-thumb {
-      background-color: rgba(12,17,43,.3);
-    }	
-  }
 
 
+h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
+h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
+h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
+h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
+h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
+h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
 
-  #root {
-    overflow: hidden;
-    width: auto;
-  }
-
-
-
-
-
-
-  
   /* --- RESPONSIVE --- */
   /* Small devices (landscape phones, 576px and up) */
   @media screen and (min-width: 576px) {
@@ -108,280 +65,7 @@ const accessibilitySettings = css`
   }
 `;
 
-const elementBase = colors => css`
 
-  h1, h2, h3, h4, h5, h6 {
-
-    font-weight: 500;
-    line-height: 1.2;
-  }
-  
-  h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
-  h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
-  h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
-  h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
-  h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
-  h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-
-  a,
-  a:visited {
-    text-decoration: none;
-  }
-  a {
-    color: ${colors.primary};
-    text-decoration: none;
-    transition: all .5s ease-in-out;
-  }
-  a:hover {
-    color: ${colors.purple};
-    text-decoration: underline;
-  }
-  a:focus {
-    text-decoration: none;
-  }
-  a:not([href]), a:not([href]):hover {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  em,
-  i,
-  q,
-  dfn {
-    font-style: italic;
-  }
-
-  em em,
-  em i,
-  i em,
-  i i,
-  cite em,
-  cite i {
-    font-weight: bolder;
-  }
-
-  big {
-    font-size: 1.2em;
-  }
-
-  small {
-    font-size: 0.75em;
-  }
-
-  b,
-  strong {
-    font-weight: 700;
-  }
-
-  ins {
-    text-decoration: underline;
-  }
-
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-
-  sup {
-    top: -0.5em;
-  }
-
-  sub {
-    bottom: -0.25em;
-  }
-
-  abbr,
-  acronym {
-    cursor: help;
-  }
-
-  abbr[title],
-  abbr[data-original-title] {
-    text-decoration: underline;
-    text-decoration: underline dotted;
-    text-decoration-skip-ink: none;
-  }
-
-  address {
-    margin: 0 0 1rem 0;
-    font-style: normal;
-    line-height: 1.5;
-  }
-
-  hr {
-    display: block;
-    margin: 2.5rem 0;
-    color: inherit;
-    clear:both;
-    border-style: solid;
-    border-width: 0.1rem 0 0 0;
-    opacity: 0.25;
-  }
-  
-  hr:not([size]) {
-    height: 1px;
-  }
-
-
-
-  button:focus {
-    outline: none;
-  }
-
-  main, section {
-    display: block;
-  }
-
-
-`;
-
-const listStyle = css`
-  ol,
-  ul {
-    padding-left: 2rem;
-  }
-
-  ol,
-  ul,
-  dl {
-    margin: 0 0 3rem 3rem;
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  ul ul {
-    list-style: circle;
-  }
-
-  ul ul ul {
-    list-style: square;
-  }
-
-  ol {
-    list-style: decimal;
-  }
-
-  ol ol {
-    list-style: lower-alpha;
-  }
-
-  ol ol ol {
-    list-style: lower-roman;
-  }
-
-  li {
-    line-height: 1.5;
-    margin: 0.5rem 0 0 2rem;
-  }
-
-  li > ul,
-  li > ol {
-    margin: 1rem 0 0 2rem;
-  }
-
-  .reset-list-style,
-  .reset-list-style ul,
-  .reset-list-style ol {
-    list-style: none;
-    margin: 0;
-  }
-
-  .reset-list-style li {
-    margin: 0;
-  }
-
-  dt,
-  dd {
-    line-height: 1.5;
-  }
-
-  dt {
-    font-weight: 700;
-  }
-
-  dt + dd {
-    margin-top: 0.5rem;
-  }
-
-  dd + dt {
-    margin-top: 1.5rem;
-  }
-`;
-
-const quoteStyle = colors => css`
-  blockquote {
-    border-color: ${colors.primary};
-    border-style: solid;
-
-    /*rtl:ignore*/
-    border-width: 0 0 0 0.2rem;
-    color: inherit;
-    font-size: 1em;
-    margin: 4rem 0;
-
-    /*rtl:ignore*/
-    padding: 0.5rem 0 0.5rem 2rem;
-  }
-
-  cite {
-    color: gray;
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.25;
-  }
-
-  blockquote cite {
-    display: block;
-    margin: 2rem 0 0 0;
-  }
-
-  blockquote p:last-child {
-    margin: 0;
-  }
-`;
-
-const codeStyle = colors => css`
-  code,
-  kbd,
-  pre,
-  samp {
-    font-family: monospace;
-    font-size: 0.9em;
-    padding: 0.4rem 0.6rem;
-  }
-
-  code,
-  kbd,
-  samp {
-    background: rgba(0, 0, 0, 0.075);
-    border-radius: 0.2rem;
-  }
-
-  pre {
-    border: 0.1rem solid gray;
-    line-height: 1.5;
-    margin: 4rem 0;
-    overflow: auto;
-    padding: 3rem 2rem;
-    text-align: left;
-  }
-
-  pre code {
-    background: transparent;
-    padding: 0;
-  }
-`;
 
 const mediaStyle = colors => css`
   figure {
@@ -473,16 +157,12 @@ const tableStyles = colors => css`
 
 const globalStyle = colors =>
   css([
-    cssReboot,
+    cssReboot(colors),
     cssGrid,
-    cssUtils,
+    cssUtils(colors), // 50kb
     cssBootstrap,
     documentSetup(colors),
     accessibilitySettings,
-    elementBase(colors),
-    listStyle,
-    quoteStyle(colors),
-    codeStyle(colors),
     mediaStyle(colors),
     tableStyles(colors),
     themeClasses(colors)

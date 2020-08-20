@@ -1,11 +1,7 @@
 import { css } from "frontity";
 
-// sk-dev: review resets and base styling use in bootstrap, frontity2020 
-// https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap-reboot.css
-// sk-dev: test bs5 reboot 22/jul 2020
-
 /*!
- * Bootstrap Reboot v5.0.0-alpha1 (https://getbootstrap.com/)
+ * Based on Bootstrap Reboot v5.0.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -13,7 +9,7 @@ import { css } from "frontity";
  */
 
 
-const cssReboot = css`
+const cssReboot = colors => css`
 
 *,
 *::before,
@@ -21,16 +17,31 @@ const cssReboot = css`
   box-sizing: border-box;
 }
 
+html { font-size: 100%; }
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  font-family: 'Comfortaa', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
-  color: #212529;
-  background-color: #fff;
+  color: ${colors.coal ? colors.coal : '#212529'};
+  background-color: ${colors.ivory ? colors.ivory : '#fff'};
+
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &::-webkit-scrollbar {
+    width:1.2rem; /* scrollbar width */
+  }
+  &::-webkit-scrollbar-track {
+    background: ${colors.greendark};
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(12,17,43,.3);
+  }	
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -54,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
+
 }
 
 h1 {
@@ -107,6 +119,8 @@ h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
 abbr[title],
@@ -155,6 +169,33 @@ dd {
 
 blockquote {
   margin: 0 0 1rem;
+  border-color: ${colors.primary};
+  border-style: solid;
+
+  /*rtl:ignore*/
+  border-width: 0 0 0 0.2rem;
+  color: inherit;
+  font-size: 1em;
+  margin: 4rem 0;
+
+  /*rtl:ignore*/
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+cite {
+  color: gray;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+blockquote cite {
+  display: block;
+  margin: 2rem 0 0 0;
+}
+
+blockquote p:last-child {
+  margin: 0;
 }
 
 b,
@@ -188,12 +229,17 @@ sup {
 }
 
 a {
-  color: #0d6efd;
-  text-decoration: underline;
+  color: ${colors.primary};
+  text-decoration: none;
+  transition: all .5s ease-in-out;
 }
 
 a:hover {
-  color: #024dbc;
+  color: ${colors.purple};
+  text-decoration: none;
+}
+a:focus {
+  text-decoration: none;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -207,7 +253,9 @@ kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
+  padding: 0.4rem 0.6rem;
 }
+
 
 pre {
   display: block;
@@ -228,6 +276,11 @@ code {
   font-size: 0.875em;
   color: #d63384;
   word-wrap: break-word;
+  background: rgba(0, 0, 0, 0.075);
+}
+samp {
+  background: rgba(0, 0, 0, 0.075);
+  border-radius: 0.2rem;
 }
 
 a > code {
@@ -238,7 +291,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
   color: #fff;
-  background-color: #212529;
+  background: rgba(0, 0, 0, 0.075);
   border-radius: 0.2rem;
 }
 
@@ -433,7 +486,6 @@ progress {
 [hidden] {
   display: none !important;
 }
-/*# sourceMappingURL=bootstrap-reboot.css.map */
 
 `;
 
