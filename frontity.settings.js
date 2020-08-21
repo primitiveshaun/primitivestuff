@@ -20,12 +20,16 @@ const settings = {
             ["Timelines", "/timelines"],
             ["Content", "/blog/a-decade-of-digital-development/"],
             ["Blog", "/blog"]
-          ], // add menu or pull from api...
+          ],
           "featured": {
             "showOnList": true,
             "showOnPost": true,
             "showOnPage": true,
-          }
+          },
+          // tbc
+          "archive": {
+            "showExcerpt": false
+          }      
         }
       }
     },
@@ -34,7 +38,7 @@ const settings = {
       "state": {
         "source": {
           "api": "https://primitive.press/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
-          //"api": "https://api.primitivedigital.uk/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
+          //"api": "https://api.primitivedigital.uk/wp-json", //  cert chain issues
           "homepage": "/home/", // optional: set when using a page as the site homepage
           "postsPage": "/blog/", // optional: set when using a page as the site homepage
 
