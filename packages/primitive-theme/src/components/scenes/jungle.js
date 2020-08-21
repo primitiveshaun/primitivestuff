@@ -13,6 +13,7 @@ gsap.registerPlugin(CSSPlugin);
 // https://greensock.com/3-release-notes
 // https://greensock.com/docs/v3/Installation#installer
 // https://greensock.com/docs/v3/GSAP/CorePlugins/CSSPlugin
+// https://greensock.com/ease-visualizer/
 
 // sk-dev: issue with fouc / default positions
 // https://greensock.com/forums/topic/17910-starting-positions-for-animated-elements/
@@ -36,14 +37,14 @@ const TweenComponent = ({ props }) => {
           >
             <Tween
               from={{
-                //duration:1,
+                //duration:2.5,
                 //stagger:3,
                 bottom: '-200px',
-                scale: 2.3,
+                scale: 2.5,
                 ease: "expo.out"
+                //ease: "back.out(1.7)"
+                //ease: "bounce.out"
               }}
-            //ease="Expo.ScaleEase"
-            //ease="expoScale(1, 2)"
             >
               <Midground />
             </Tween>
@@ -82,14 +83,12 @@ const TweenComponent = ({ props }) => {
             </Tween>
 
             <Tween
-              from={{
-                opacity: '0',
-              }}
               to={{
+                duration: 2.5,
                 opacity: '1',
                 width: '60%',
                 height: '60%',
-                ease: "expo.out"
+                ease: "back.out(1.7)"
               }}
             >
               <Logo />
@@ -202,4 +201,5 @@ const Logo = styled(Layer)`
   background: url(https://res.cloudinary.com/primitivedigital/image/upload/f_auto/v1569317281/jungle/logo-day_j5sq08.png);
   background-position: top center;
   background-size: cover;
+  opacity: 0;
 `;
