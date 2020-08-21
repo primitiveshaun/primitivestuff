@@ -1,11 +1,8 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import Image from "@frontity/components/image";
-import { LabeledIcon, HeartIt, FrontityLogo } from "../icons";
+import { LabeledIcon, HeartIt, FrontityLogo, WordPress, PrimitiveLogo } from "../icons";
 
-import ImgLogo from "../../img/footer/primitive.svg";
-import ImgWordpress from "../../img/footer/wordpress.svg";
 import { heartbeat } from "../scenes/glamourmagic";
 
 ///import SectionContainer from "./styles/section-container";
@@ -22,31 +19,25 @@ const KnobblyKnees = ({ state }) => {
 
         <Row>
           <Col>
-            <Image
-              src={ImgLogo}
-              alt="Primitive Digital - Web Design &amp; Development" />
+              <LabeledIcon icon={PrimitiveLogo} label="Primitive Digital - Web Design &amp; Development" />
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <LabeledIcon icon={HeartIt} label="Primitive Digital Highly Recommends" />
+            <LabeledIcon icon={HeartIt} label="Highly Recommends" />
           </Col>
         </Row>
 
         <KissesTo>
 
           <Col>
-            <Image
-              src={ImgWordpress}
-              alt="WordPress Open source software used to create a beautiful websites, blogs and apps."
-              title="WordPress Open source software used to create a beautiful websites, blogs and apps."
-            />
+            <LabeledIcon icon={WordPress} label="Everything WordPress." />
 
             <span className="slab">+</span>
 
             <a href="https://frontity.org/">
-              <LabeledIcon icon={FrontityLogo} label="Frontity the open source framework to build super fast WordPress+React themes." />
+              <LabeledIcon icon={FrontityLogo} label="Plus Frontity the open source framework for super fast WordPress+React themes." />
             </a>
           </Col>
 
@@ -65,7 +56,7 @@ const FooterKudos = styled.div`
   background-color: #87635C;
   text-align: center;
 
-  img, svg {
+  svg {
     margin: 10px auto;
     max-width: 30%;
     max-height: 140px;
@@ -87,7 +78,7 @@ const KissesTo = styled(Row)`
     font-weight: bold;
   }
 
-  img {
+  svg {
     display: inline-block;
     margin: 0;
     max-height: 90px;
