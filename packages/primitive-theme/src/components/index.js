@@ -4,28 +4,24 @@ import React from "react";
 
 import Loading from "./pebbles/loading";
 import MetaTitle from "./pebbles/meta-title";
-
 import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
-
-const Home = loadable(() => import("./mountains/page-home"));
-const Page = loadable(() => import("./mountains/page"));
-
+import Header from "./rocks/header";
 import Posts from "./mountains/post-list";
 const Post = loadable(() => import("./mountains/post"));
+const Home = loadable(() => import("./mountains/page-home"));
+const Page = loadable(() => import("./mountains/page"));
 const PageError = loadable(() => import("./mountains/page-error"));
-
-
-import Header from "./rocks/header";
+// sk-dev:TESTING these should be Slots i think...
 const KnobblyKnees = loadable(() => import("./rocks/footer-cta"));
 const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
 
-// sk-dev:TESTING these should be Slots i think...
 
 //const GlobalSocial = loadable(() => import("./rocks/social/social-section"));
 import SkipLink from "./styles/skip-link";
-import GlobalPromo from "./rocks/global-promo";
+
+const GlobalPromo = loadable(() => import("./rocks/global-promo"));
 import GlobalSocial from "./rocks/social/social-section";
 
 // custom post types / tax layouts : 3kb
@@ -33,11 +29,6 @@ import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
 
-/*
-import globalStyles from '../dust/global-styles';
-//import FontFaces from "../dust/font-faces";
-
-*/
 
 /**
  * Theme is the root React component of our theme. The one we will export

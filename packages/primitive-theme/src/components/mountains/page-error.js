@@ -1,6 +1,7 @@
 import React from "react";
 import { styled, connect } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
+import Link from "@frontity/components/link";
 
 
 const description404 = (
@@ -8,17 +9,17 @@ const description404 = (
     <p>Oh. We can't find a page where you a looking.</p>
     <span role="img" aria-label="confused face">
       😕
-      </span>
+    </span>
     <p>It may have been removed, renamed, or did not exist in the first place.</p>
     <p>
-    Do panic! If this persists, sit down, try drinking tea or <a href="https://primitivedigital.uk/contact"> let us know </a>.
+    Do panic! If this persists, sit down, try drinking tea or <Link link={'/contact'}>let us know</Link>.
   </p>
   </>
 );
 
 const description = (
   <p>
-    Do panic! If this persists, sit down, try drinking tea or <a href="https://primitivedigital.uk/contact"> let us know </a>.
+    Do panic! If this persists, sit down, try drinking tea or <Link link={'/contact'}>let us know</Link>.
   </p>
 );
 
@@ -32,7 +33,6 @@ const ErrorPage = ({ state }) => {
     console.log("@page-error: data", data);
   }
 
-  const errorCode = data.errorStatus
   const title = "Oops, something bad happened";
   const title404 = "Oops! 404";
 

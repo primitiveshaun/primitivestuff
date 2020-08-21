@@ -26,21 +26,7 @@ const primitiveTheme = {
       colors: themecolor,
       config: themeconfig,
       
-      // Whether to show the search button in page header
-      //showSearchInHeader: true,
-      // State for the menu on mobile
-      //isMobileMenuOpen: false,
-      // State for the search modal on mobile
-      //isSearchModalOpen: false,
-      // Whether to show all post content or only excerpt (summary) in archive view
-      showAllContentOnArchive: false,
-      // Settings for the featured media (image or video)
-      featuredMedia: {
-        // Whether to show it on archive view
-        showOnArchive: true,
-        // Whether to show it on post
-        showOnPost: true,
-      },
+      
       // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
       autoPreFetch: "no",
       /**
@@ -56,8 +42,8 @@ const primitiveTheme = {
    */
   actions: {
     theme: {
-      openMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = true; },
-      closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; }
+      //openMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = true; },
+      //closeMobileMenu: ({ state }) => { state.theme.isMobileMenuOpen = false; }
 
       //beforeSSR: async ({ actions }) => {
       //  await actions.source.fetch(`/temporal_events/`)
@@ -69,6 +55,7 @@ const primitiveTheme = {
       /**
        * Add a processor to `html2react` so it processes the `<img>` tags
        * inside the content HTML. You can add your own processors too
+       * sk-dev: not sure how best to use these in the elment.class css styling context
        */
       processors: [image],
     },
