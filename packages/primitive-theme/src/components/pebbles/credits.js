@@ -18,9 +18,11 @@ const Credits = ({ state }) => {
         <Link link={state.frontity.url}>{state.frontity.title}</Link>
       </Text>
 
+      {/*
       <Text>
         Hosted by <a title="Web Hosting by Primitive" href="https://primitivehosting.uk/">Primitive Hosting</a>
       </Text>
+      */}
     
     </Col>
   );
