@@ -13,5 +13,21 @@
       "src": "favicon.ico",
       "use": "@now/static"
     }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "max-age=31536000,s-maxage=31536000,immutable"
+      },
+      "dest": "/static/$1"
+    },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=1,stale-while-revalidate" },
+      "dest": "/server.js"
+    }
   ]
 }
