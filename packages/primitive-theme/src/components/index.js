@@ -29,7 +29,6 @@ import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
 
-
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
