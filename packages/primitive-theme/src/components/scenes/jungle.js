@@ -115,7 +115,7 @@ const TweenComponent = ({ props }) => {
 
 export default TweenComponent;
 
-const TweenStyled = styled(Container)`
+const TweenStyled = styled.section`
   padding: 0;
 
   min-height: 300vh;

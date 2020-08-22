@@ -19,7 +19,7 @@ const Feet = loadable(() => import("./footer"));
 
 
 //const GlobalSocial = loadable(() => import("./rocks/social/social-section"));
-import SkipLink from "./styles/skip-link";
+import SkipLink from "./pebbles/skip-link";
 
 const GlobalPromo = loadable(() => import("./rocks/global-promo"));
 import GlobalSocial from "./rocks/social/social-section";
@@ -117,7 +117,7 @@ const Theme = ({ state }) => {
 
 export default connect(Theme);
 
-const Main = styled.main`
+const Main = styled.div`
   background-image: linear-gradient(
     180deg,
     rgba(66, 174, 228, 0.1),

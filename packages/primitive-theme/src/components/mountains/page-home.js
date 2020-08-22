@@ -4,15 +4,15 @@ import { connect, styled, loadable } from "frontity";
 import Hero from '../scenes/jungle';
 import Intro from '../rocks/page-home-intro';
 import Page from "./page";
+
 import Gold from '../rocks/page-home-tabs';
 import Silver from '../rocks/cpt-poststrip/post-strip';
 import Bronze from "../rocks/page-home-bronze";
-
-
-// sk-dev: need to look further into conditional imports, slots/fills and loadable
-// const Gold = loadable(() => import('./rocks/page-home-tabs'));
-// const Silver = loadable(() => import('./rocks/'));
-// const Bronze = loadable(() => import('./rocks/'));
+// sk-dev: Invariant Violation: loadable: cannot find rocks-page-home-tabs in stats
+//const Page = loadable(() => import("./page"));
+//const Gold = loadable(() => import('../rocks/page-home-tabs'));
+//const Silver = loadable(() => import('../rocks/cpt-poststrip/post-strip'));
+//const Bronze = loadable(() => import('../rocks/page-home-bronze'));
 
 const PageHome = ({ state }) => {
 
