@@ -12,19 +12,19 @@ const jungleDiscoBG = colors => {
       linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
       linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
       linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-      url(https://primitive.press/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
+      url(https://api.primitivedigital.uk/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
       oldrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
         background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
         linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        url(https://primitive.press/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`,
+        url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`,
       wallrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
         background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
         linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
         linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        url(https://primitive.press/wp-content/uploads/stone/rockwall-300x300.png) repeat fixed;`
+        url(https://api.primitivedigital.uk/wp-content/uploads/stone/rockwall-300x300.png) repeat fixed;`
     }
   }
 }
@@ -224,6 +224,20 @@ const pageall = colors => css`
     color: green;
   }
 
+  .has-text-align-left,
+  .wp-block-image .alignleft {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .has-text-align-center,
+  .wp-block-image .aligncenter {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
+
   .intro {
     font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
     padding: 3px 5%;
@@ -303,7 +317,7 @@ const pageall = colors => css`
     list-style-type: none;
     
     background-color: ${colors.coal};
-    background: url(https://primitive.press/wp-content/uploads/stone/grayrock-300x300.png);
+    background: url(https://api.primitivedigital.uk/wp-content/uploads/stone/grayrock-300x300.png);
     
     box-shadow: 0 0 3px rgba(0,0,0,0.6),
                 0 19px 38px rgba(0,0,0,0.30),
@@ -693,6 +707,43 @@ const pageall = colors => css`
         &::after {
           background: rgba(${ convert.hex.rgb(colors.warning).join()},0.8);
         }
+      }
+    }
+
+
+    .fleuron { 
+      font-size: 3rem;
+      color:  rgba(${ convert.hex.rgb(colors.primary).join()}, .6) !important;
+  
+      a {
+        color:  rgba(${ convert.hex.rgb(colors.warning).join()}, .6) !important;
+        text-decoration: none;
+        background: transparent !important;
+        border: none !important;
+  
+        &::hover {
+          color:  rgba(${ convert.hex.rgb(colors.danger).join()}, .6) !important;
+          background: transparent !important;
+          border: none !important;
+        }
+      }
+    }
+    .fleuron.has-text-align-center {
+      margin-top: 2.5rem;
+      text-align: center;
+      
+      a {
+        vertical-align: middle;
+        line-height: 3rem;
+      }
+  
+      em {
+        display: inline-block;
+        color:  ${ colors.coal };
+        font-size: .5rem;
+        letter-spacing: 2px;
+        vertical-align: middle;
+        line-height: 3rem;
       }
     }
 

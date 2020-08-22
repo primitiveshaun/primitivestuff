@@ -8,8 +8,6 @@ import cssUtils from "./_bsutils";
 
 import cssBootstrap from "./_bscss";
 
-import themeClasses from "./_theme";
-
 const documentSetup = colors => css`
 
 
@@ -165,7 +163,7 @@ const globalStyle = colors =>
     accessibilitySettings,
     mediaStyle(colors),
     tableStyles(colors),
-    themeClasses(colors)
+    //themeClasses(colors)
   ]);
 
 export default globalStyle;
