@@ -10,9 +10,11 @@ Built on the awesome, itty bitty, [Frontity](https://frontity.org/) framework.
 
 With little help from our friends: [Bootstrap 5](https://v5.getbootstrap.com/), [GSAP](https://greensock.com/gsap/) and [ScrollMagic](https://scrollmagic.io/). 
 
-Live demo 👉  [Primitive Digital](https://primitivedigital.uk)
+Live Site 👉  [Primitive Digital](https://primitivedigital.uk)
 
-New NPM package 🎉  ~  👉  [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
+Them Demo 👉  [Dev Stuff](https://dev.primitivedigital.uk)
+
+Theme NPM package 🎉  ~  👉  [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
 GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
 

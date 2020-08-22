@@ -20,11 +20,8 @@ Separation of config / theme
 
 ## Dev Notes
 
-* frontity.settings is dominant over package/index (you can overwrite the menu in dev but not prod)
+* frontity.settings is dominant over package/index (you can overwrite the menu in dev but not prod)...
 * review licencing
-
-*Noted Issues / already resolved:*
-* vercel(zeit) deployment failure .gitignore, .nowignore - build folder issue with github setup.
 
 
 ## Issues
@@ -40,11 +37,13 @@ Separation of config / theme
 - [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
 - [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
 - [ ] TBC. Some Google Fonts gets messed up converting to .woff/.woff2
-- [ ] TBC. Some Fonts gets messed up on prod build?
-- [ ] Refine: Optimise for Mobile: Don't serve some animations on mobile, handle click/hover
+- [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
+- [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
+
 
 - [ ] refine: preloaders / postsrips
 - [ ] FIX or FEAT: author list view / profile
+
 - [ ] Split primitiverocks package
 - [ ] Split primitivescenes package
 - [ ] Split theme / dev staging
@@ -53,23 +52,28 @@ Separation of config / theme
 - [ ] [SEO: Add Site maps](https://community.frontity.org/t/xml-sitemaps-landing-in-wordpress-core/1153)
 - [ ] [SEO: Frontity Blog](https://frontity.org/blog/seo-for-headless-wordpress-themes/)
 - [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
+- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
 
 
 ## TODO
 
-- [ ] Research conditional loading of UI cores + theme
-- [ ] Set base CSS to use none/twentytwenty/bootstrap (grid, classes, --modifiers-size/transparency/darken/lighten)
+- [ ] BS CSS > Components (grid)
+- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size/transparency/darken/lighten)
 - [ ] Research create a UI/cf7 theme builder vs cli
 - [ ] Research add comments / cf7 / fe content submission
 - [ ] Add post social share
-- [ ] [replace Link](https://community.frontity.org/t/frontity-release-first-stable-version-of-google-analytics-google-tag-manager-and-comscore-packages/2293)
 
-
-- Q: useEffect vs self-invoking
-- Q: imports / conditional / slots?  
 
 
 ## History
+
+**v1.0.6 > Refine, optimisation (Aug 22, 2020):**
+- [x] investigating vercel timeouts
+- [x] tested / fixed vercel deployment - hopefully!
+- [x] codesplit - halfed entry point size
+- [x] theme / endpoint tests and optimisation
+- [x] update wp url
+- [x] fixed ssl cert chaining error on wp rest api.
 
 **v1.0.5 > Refine / add theme props (Aug 11, 2020):**
 - [x] fixed failing vercel deployment
@@ -105,7 +109,7 @@ Separation of config / theme
 ####  @primitivedigital/primitiveone
 
 **1.1.7 > Frontity updated (July 12, 2020):**
-- [x] Check serch console after domain migration /home/ is the main error url?
+- [x] Check search console after domain migration /home/ is the main error url?
 
 **1.1.6 > Update (June 28, 2020):**
 - [x] Created bedrock wp twentytwenty child theme 
