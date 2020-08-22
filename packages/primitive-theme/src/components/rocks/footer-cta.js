@@ -30,7 +30,7 @@ const FurryBoots = ({ state }) => {
           <Row>
             <Col>
               <Image
-                src={"https://primitive.press/wp-content/uploads/promo/topbanana1.png"}
+                src={"https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png"}
                 alt="Top Banana Web Design and Development"
               />
             </Col>

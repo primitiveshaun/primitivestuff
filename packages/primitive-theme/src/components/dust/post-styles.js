@@ -1,17 +1,10 @@
 import { css } from "frontity";
 import convert from 'color-convert';
 
-// p1: hello world
-
 // do i need the .post to not overide global a?
 const postall = colors => css`
 
   .post {
-
-    /* sk-dev: nested overrides */
-  
-    /* sk-dev: issue - adjacent a tags have no padding */
-    /* sk-dev: test direct selectors */
 
     h2 { margin-top: 2rem; }
 
@@ -249,12 +242,62 @@ const postall = colors => css`
     }
 
   }
+
+  .fleuron { 
+    font-size: 3rem;
+    color:  rgba(${ convert.hex.rgb(colors.primary).join()}, .6) !important;
+
+    a {
+      color:  rgba(${ convert.hex.rgb(colors.warning).join()}, .6) !important;
+      text-decoration: none;
+      background: transparent !important;
+      border: none !important;
+
+      &::hover {
+        color:  rgba(${ convert.hex.rgb(colors.danger).join()}, .6) !important;
+        background: transparent !important;
+        border: none !important;
+      }
+    }
+  }
+  .fleuron.has-text-align-center {
+    margin-top: 2.5rem;
+    text-align: center;
+    
+    a {
+      vertical-align: middle;
+      line-height: 3rem;
+    }
+
+    em {
+      display: inline-block;
+      color:  ${ colors.coal };
+      font-size: .5rem;
+      letter-spacing: 2px;
+      vertical-align: middle;
+      line-height: 3rem;
+    }
+  }
     
 
 `;
 
 // target wp classes
 const wpclasses = colors => css`    
+
+  .has-text-align-left,
+  .wp-block-image .alignleft {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .has-text-align-center,
+  .wp-block-image .aligncenter {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+  }
 
     .overlay-text figure {
       position: relative;
@@ -330,6 +373,8 @@ const wpclasses = colors => css`
     }
 
 `;
+
+
 
 const postStyles = colors =>
   css([

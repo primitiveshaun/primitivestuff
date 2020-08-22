@@ -53,7 +53,7 @@ const ResponsiveLight = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
     backgroundSize: ['cover', 'cover', 'cover', 'contain'],
-    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)', 'url(https://primitive.press/wp-content/uploads/header/light.jpg)'],
+    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)'],
     backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
     backgroundPositionX: ['calc(50% - 5rem)', 'center', 'center', 'center']
   })
@@ -74,7 +74,7 @@ const HeadLight = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-image: url(https://primitive.press/wp-content/uploads/header/light@2x-scaled.jpg);
+      background-image: url(https://api.primitivedigital.uk/wp-content/uploads/header/light@2x-scaled.jpg);
       background-position-x: calc(50% - 5rem);
       background-position-y: 4.5rem;
       background-repeat: no-repeat;
@@ -91,7 +91,7 @@ const ResponsiveDark = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
     backgroundSize: ['cover', 'cover', 'cover', 'contain'],
-    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)', 'url(https://primitive.press/wp-content/uploads/header/dark.jpg)'],
+    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)'],
     backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
     backgroundPositionX: ['calc(50% + 5rem)', 'calc(50% + 10rem)', 'calc(50% + 12rem)', 'calc(50% + 12rem)']
   })
@@ -112,7 +112,7 @@ const HeadDark = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-image: url(https://primitive.press/wp-content/uploads/header/dark@2x-scaled.jpg);
+      background-image: url(https://api.primitivedigital.uk/wp-content/uploads/header/dark@2x-scaled.jpg);
       background-position-x: calc(50% + 5rem);
       background-position-y: 4rem;
       background-repeat: no-repeat;
@@ -130,7 +130,7 @@ const ResponsiveDefault = css(
   mq({
     transform: ['scaleX(-1)', 'none', 'none', 'none'],
     backgroundSize: ['cover', 'cover', 'revert', 'revert'],
-    backgroundImage: ['url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg)'],
+    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)'],
     backgroundPositionY: ['6rem', '6rem', '6rem', '6rem'],
     backgroundPositionX: ['calc(50% + 5rem)', '60vw', 'center', 'center']
   })
@@ -151,7 +151,7 @@ const Default = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-image: url(https://primitive.press/wp-content/uploads/header/website_header@2x.jpg);
+      background-image: url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg);
       background-position-x: calc(50% + 5rem);
       background-position-y: 6rem;
       background-repeat: no-repeat;
