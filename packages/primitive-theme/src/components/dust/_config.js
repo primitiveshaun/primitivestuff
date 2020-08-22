@@ -114,7 +114,7 @@ const themeconfig = {
 
           },
           header: {
-            variant: "light", // "" | "light" | "dark"
+            variant: "dark", // "" | "light" | "dark"
             logo: "https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smwhite.png",
             alt: "Primitive Digital - Web Design &amp; Development",
             random: randomWord()
