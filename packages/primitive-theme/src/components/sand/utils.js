@@ -100,7 +100,7 @@ export function setTitle(ctname) {
 // *
 
 export function randomWord() {
-    const words = ["Fabulous", "Fruity", "Fast", "Damn Hot"];
+    const words = ["Fabulous", "Fruity", "Awesome", "Marvelous"];
     const randomWord = words[Math.floor(Math.random() * words.length)];
     //const randomWord = words[0];
 
