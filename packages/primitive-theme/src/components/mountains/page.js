@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import pageStyles from "../dust/page-styles";
 
-import DiscoPreload from "../scenes/preload-disco"
+import DiscoPreload from "primitivescenes/preload-disco"
 //import DiscoBall from "../scenes/discoball"
 
 const Page = ({ state, actions, libraries }) => {

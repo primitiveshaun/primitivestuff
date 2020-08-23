@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled, css } from "frontity";
+import { styled } from "frontity";
 import { grow } from "./glamourmagic";
 
 const DiscoLoader = ({message}) => {
