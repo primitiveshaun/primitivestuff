@@ -1,13 +1,14 @@
 {
   "name": "primitiverocks",
   "version": "1.0.0",
-  "description": "Frontity package created using the Frontity CLI.",
+  "description": "Primitive Building Blocks",
   "keywords": [
     "frontity",
     "bedrock",
-    "primitiveone",
+    "primitive-theme",
     "primitiverocks"
   ],
+  "homepage": "https://primitivedigital.uk",
   "license": "Apache-2.0",
   "dependencies": {
     "frontity": "^1.10.0"
