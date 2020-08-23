@@ -21,6 +21,7 @@ import SubTimeline from "./mountains/subtimeline";
 
 
 import Header from "./rocks/header";
+
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
@@ -29,7 +30,7 @@ const Feet = loadable(() => import("./footer"));
 //const GlobalSocial = loadable(() => import("./rocks/social/social-section"));
 import SkipLink from "./pebbles/skip-link";
 
-const GlobalPromo = loadable(() => import("./rocks/global-promo"));
+const GlobalPromo = loadable(() => import("primitiverocks/global-promo"));
 
 import GlobalSocial from "./rocks/social/social-section";
 

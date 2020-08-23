@@ -30,8 +30,8 @@ const FurryBoots = ({ state }) => {
           <Row>
             <Col>
               <Image
-                src={image}
-                alt={title}
+                src={display.image}
+                alt={display.title}
               />
             </Col>
           </Row>
@@ -60,9 +60,9 @@ const FooterCTA = styled.section`
 
   h2 {
     padding: 2rem 0 1rem;;
+    color: ${(props) => props.color ? props.color : '#765751'};
     text-align: center;
     line-height: 5rem;
-    color: ${(props) => props.color ? props.color : '#765751'};
     font-size: 3rem;
 
     span {
@@ -84,7 +84,7 @@ const FooterCTA = styled.section`
 
   h3 {
     padding: 1rem 0;
-    color: #765751;
+    color: ${(props) => props.color ? props.color : '#765751'};
   }
 
   strong,
