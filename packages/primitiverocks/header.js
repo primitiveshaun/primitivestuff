@@ -2,13 +2,10 @@ import React from "react";
 import { connect, styled, css } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Link from "@frontity/components/link";
-import Nav from "./nav";
-import { mq } from "../dust/_grid";
-//import { colors } from "../dust/_colors.js";
+import Nav from "primitiverocks/nav";
 
-// import { randomWord } from "../sand/utils";
-// sk-dev: random content: Warning: Text content did not match. Server: "Fruity" Client: "Fast"
-//import RandomWord from "../pebbles/random-word";
+import { mq } from "primitiverocks/_grid";
+//import { colors } from "../dust/_colors.js";
 
 const Header = ({ state }) => {
 
@@ -29,7 +26,6 @@ const Header = ({ state }) => {
 
                 <Intro className="subslab mb-0">
                   We Make 
-                  {/* <RandomWord /> */}
                   <span className="slab"> {state.theme.config.global.header.random} </span>
                 </Intro>
 

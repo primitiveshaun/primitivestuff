@@ -16,7 +16,7 @@ import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
 
-import Header from "./rocks/header";
+import Header from "primitiverocks/header";
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
