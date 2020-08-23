@@ -1,6 +1,6 @@
 
-# Primitive Scenes
-Primitive Theme for Frontity Animation and Interaction.
+# Primitive Pebbles
+Primitive Building Blocks
 
 ![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 

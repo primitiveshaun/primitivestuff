@@ -1,6 +1,6 @@
 
 # Primitive Rocks
-Primitive Theme Frontity Block Components.
+Primitive Building Blocks for the Frontity Primitive Theme
 
 ![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 

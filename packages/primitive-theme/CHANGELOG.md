@@ -36,36 +36,28 @@ Separation of config / theme
 
 - [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
 - [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
-- [ ] TBC. Some Google Fonts gets messed up converting to .woff/.woff2
 - [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
 - [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
-
-
 - [ ] refine: preloaders / postsrips
-- [ ] FIX or FEAT: author list view / profile
-
-- [ ] Split primitiverocks package
-- [ ] Split primitivescenes package
-- [ ] Split theme / dev staging
-
-
-- [ ] [SEO: Add Site maps](https://community.frontity.org/t/xml-sitemaps-landing-in-wordpress-core/1153)
-- [ ] [SEO: Frontity Blog](https://frontity.org/blog/seo-for-headless-wordpress-themes/)
-- [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
-- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
-
-
-## TODO
-
 - [ ] BS CSS > Components (grid)
 - [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size/transparency/darken/lighten)
 - [ ] Research create a UI/cf7 theme builder vs cli
 - [ ] Research add comments / cf7 / fe content submission
 - [ ] Add post social share
+- [ ] FIX or FEAT: author list view / profile
+
+- [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
+- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
 
 
 
 ## History
+
+**v1.0.7 > Create packages (Aug 23, 2020):**
+- [x] Split primitiverocks package
+- [x] Split primitivescenes package
+- [x] Split primitivepebbles package
+- [x] Split theme / dev staging
 
 **v1.0.6 > Refine, optimisation (Aug 22, 2020):**
 - [x] investigating vercel timeouts
