@@ -1,0 +1,20 @@
+{
+  "name": "primitivepebbles",
+  "version": "1.0.0",
+  "description": "Little things that make you happy.",
+  "keywords": [
+    "frontity",
+    "bedrock",
+    "primitive-theme",
+    "primitiverocks",
+    "primitivescenes",
+    "primitivepebbles"
+  ],
+  "homepage": "https://primitivedigital.uk",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "frontity": "^1.10.0",
+    "bootstrap": "^5.0.0-alpha1",
+    "react-bootstrap": "^1.3.0"
+  }
+}
