@@ -7,13 +7,20 @@ import MetaTitle from "./pebbles/meta-title";
 import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
 
-import Header from "./rocks/header";
-import Posts from "./mountains/post-list";
-const Post = loadable(() => import("./mountains/post"));
+
+
 const Home = loadable(() => import("./mountains/page-home"));
+const Post = loadable(() => import("./mountains/post"));
 const Page = loadable(() => import("./mountains/page"));
 const PageError = loadable(() => import("./mountains/page-error"));
+import Posts from "./mountains/post-list";
+// custom post types / tax layouts : 3kb
+import Timelines from "./mountains/timelines";
+import Timeline from "./mountains/timeline";
+import SubTimeline from "./mountains/subtimeline";
 
+
+import Header from "./rocks/header";
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
@@ -23,12 +30,10 @@ const Feet = loadable(() => import("./footer"));
 import SkipLink from "./pebbles/skip-link";
 
 const GlobalPromo = loadable(() => import("./rocks/global-promo"));
+
 import GlobalSocial from "./rocks/social/social-section";
 
-// custom post types / tax layouts : 3kb
-import Timelines from "./mountains/timelines";
-import Timeline from "./mountains/timeline";
-import SubTimeline from "./mountains/subtimeline";
+
 
 /**
  * Theme is the root React component of our theme. The one we will export
