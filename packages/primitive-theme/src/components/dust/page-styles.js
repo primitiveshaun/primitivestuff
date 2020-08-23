@@ -1,5 +1,5 @@
 import { css } from "frontity";
-import { discolight, animatedgradient } from "../scenes/glamourmagic";
+import { discolight, animatedgradient } from "primitivescenes/glamourmagic";
 import convert from 'color-convert';
 import { mq2col } from './_grid';
 

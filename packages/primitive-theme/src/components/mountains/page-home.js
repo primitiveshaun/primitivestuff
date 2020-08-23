@@ -1,12 +1,11 @@
 import React from "react";
 import { connect, styled, loadable } from "frontity";
 
-import Hero from '../scenes/jungle';
+import Hero from 'primitivescenes/jungle';
 import Intro from 'primitiverocks/page-home-intro';
-import Page from "./page";
-
 import Gold from 'primitiverocks/page-home-tabs';
 import Silver from 'primitiverocks/cpt-poststrip/post-strip';
+import Page from "./page";
 import Bronze from "primitiverocks/page-home-bronze";
 // sk-dev: Invariant Violation: loadable: cannot find rocks-page-home-tabs in stats
 //const Page = loadable(() => import("./page"));

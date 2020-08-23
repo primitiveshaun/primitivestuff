@@ -3,11 +3,12 @@ import React from 'react';
 import { connect, styled } from "frontity";
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
-import Item from "../timeline/cpt-item";
 import { gsap } from 'gsap';
 import { CSSPlugin } from "gsap/CSSPlugin.js";
 import { auto } from '@popperjs/core';
 gsap.registerPlugin(CSSPlugin);
+
+import Item from "primitiverocks/timeline/cpt-item";
 
 
 const PostMagic = ({ state, items }) => {
