@@ -1,11 +1,8 @@
 import React from "react";
 import { connect, styled } from "frontity";
-
-
 //import Image from "@frontity/components/image";
 //import { Row, Col, Card } from 'react-bootstrap';
 //import convert from 'color-convert';
-
 
 const TemporalEventMarker = ({ state, item }) => {
   return (

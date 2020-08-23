@@ -4,9 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 //import Item from "./cpt-item-marker";
 import Marker from "./cpt-item-marker";
-import PostMagic from "../scenes/postmagic";
-import Pagination from "../pebbles/pagination";
-import { sortBy } from "../sand/utils"
+import PostMagic from "primitivescenes/postmagic";
+import Pagination from "./pagination";
+//import { sortBy } from "../sand/utils"
 
 // a connected Frontity component to display custom post types:
 const Timeline = ({ state, actions }) => {
@@ -48,7 +48,7 @@ const Timeline = ({ state, actions }) => {
   //console.log("@cpt-timeline: data.items", data.items);
 
   // sk-dev: fe hack / can't filter and sort 
-  data.items.sort(sortBy("year"));
+  //data.items.sort(sortBy("year"));
 
   // render your content
   return (

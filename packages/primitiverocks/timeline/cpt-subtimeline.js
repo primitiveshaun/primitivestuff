@@ -3,9 +3,9 @@ import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 
 import Item from "./cpt-item";
-import PostMagic from "../scenes/postmagic";
-import Pagination from "../pebbles/pagination";
-import { setTitle, getTerm, sortBy } from "../sand/utils"
+//import PostMagic from "primitivescenes/postmagic";
+import Pagination from "./pagination";
+import { setTitle, sortBy } from "./utils"
 
 // a connected Frontity component to display custom post types by custom taxonomies
 const SubTimeline = ({ state, actions }) => {
