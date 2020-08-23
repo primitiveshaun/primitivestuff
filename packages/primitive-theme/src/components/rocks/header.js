@@ -49,13 +49,22 @@ const Header = ({ state }) => {
 export default connect(Header);
 
 
+// Assets
+const headGraphic = {
+  light: 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)',
+  dark: 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)',
+  darkx2: 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark@2x-scaled.jpg)',
+  default: 'url(https://api.primitivedigital.uk/wp-content/uploads/header/default.jpg)',
+  green: 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)'
+};
+
 const ResponsiveLight = css(
   mq({
-    transform: ['scaleX(-1)', 'none', 'none', 'none'],
-    backgroundSize: ['cover', 'cover', 'cover', 'contain'],
-    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/light.jpg)'],
-    backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
-    backgroundPositionX: ['calc(50% - 5rem)', 'center', 'center', 'center']
+    transform: ['scaleX(-1)', 'scaleX(-1)', 'none', 'none', 'none'],
+    backgroundSize: ['cover', 'cover', 'cover', 'cover', 'contain'],
+    backgroundImage: [headGraphic.light, headGraphic.light, headGraphic.light, headGraphic.light, headGraphic.light],
+    backgroundPositionY: ['4rem', '4rem', '4rem', '4rem', '4rem'],
+    backgroundPositionX: ['calc(50% - 12rem)','calc(50% - 15rem)', 'center', 'center', 'center']
   })
 );
 
@@ -74,11 +83,7 @@ const HeadLight = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-position-x: calc(50% - 5rem);
-      background-position-y: 4.5rem;
       background-repeat: no-repeat;
-      background-size: cover;
-      transform: scaleX(-1);
 
       ${ResponsiveLight};
     }
@@ -88,11 +93,11 @@ const HeadLight = css`
 
 const ResponsiveDark = css(
   mq({
-    transform: ['scaleX(-1)', 'scaleX(-1)', 'none', 'none'],
-    backgroundSize: ['cover', 'cover', 'cover', 'contain'],
-    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/dark.jpg)'],
-    backgroundPositionY: ['4rem', '4rem', '4rem', '4rem'],
-    backgroundPositionX: ['calc(50% + 5rem)', 'calc(45% + 1rem)', 'calc(50% + 15rem)', 'calc(50% + 13rem)']
+    transform: ['scaleX(-1)', 'scaleX(-1)', 'scaleX(-1)', 'none', 'none'],
+    backgroundSize: ['cover', 'cover', 'cover', 'cover', 'contain'],
+    backgroundImage: [headGraphic.dark, headGraphic.dark, , headGraphic.dark, headGraphic.dark, headGraphic.dark],
+    backgroundPositionY: ['4rem','4rem', '4rem', '4rem', '4rem'],
+    backgroundPositionX: ['calc(50% + 5rem)','calc(50% + 5rem)', 'calc(80% + 8rem)', 'calc(50% + 15rem)', 'calc(50% + 13rem)']
   })
 );
 
@@ -111,11 +116,7 @@ const HeadDark = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-position-x: calc(50% + 5rem);
-      background-position-y: 4rem;
       background-repeat: no-repeat;
-      background-size: cover;
-      transform: scaleX(-1);
 
       ${ResponsiveDark};
     }
@@ -126,11 +127,11 @@ const HeadDark = css`
 
 const ResponsiveDefault = css(
   mq({
-    transform: ['scaleX(-1)', 'none', 'none', 'none'],
-    backgroundSize: ['cover', 'cover', 'revert', 'revert'],
-    backgroundImage: ['url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)', 'url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg)'],
-    backgroundPositionY: ['6rem', '6rem', '6rem', '6rem'],
-    backgroundPositionX: ['calc(50% + 5rem)', '60vw', 'center', 'center']
+    transform: ['none', 'none', 'scaleX(-1)', 'none', 'none'],
+    backgroundSize: ['cover', 'cover', 'cover', 'revert', 'revert'],
+    backgroundImage: [headGraphic.green, headGraphic.green, headGraphic.green, headGraphic.green, headGraphic.green],
+    backgroundPositionY: ['6rem', '6rem', '6rem', '6rem', '6rem'],
+    backgroundPositionX: ['calc(50% + 60vw)', 'calc(50% + 5rem)', 'calc(50% + 5rem)', 'center', 'center']
   })
 );
 
@@ -149,12 +150,7 @@ const Default = css`
       height: 200%;
       top: -50%;
       left: -50%;
-      background-image: url(https://api.primitivedigital.uk/wp-content/uploads/header/website_header@2x.jpg);
-      background-position-x: calc(50% + 5rem);
-      background-position-y: 6rem;
       background-repeat: no-repeat;
-      background-size: cover;
-      transform: scaleX(-1);
 
       ${ResponsiveDefault};
     }
