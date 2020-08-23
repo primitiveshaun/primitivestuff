@@ -8,7 +8,7 @@ import List from "primitiverocks/postlist";
 import Link from "@frontity/components/link";
 import FeaturedMedia from "primitiverocks/featured-media";
 
-import DiscoPreload from "../scenes/preload-disco";
+import DiscoPreload from "primitivescenes/preload-disco";
 
 const Post = ({ state, actions, libraries }) => {
 
