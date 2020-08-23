@@ -121,6 +121,10 @@ const themeconfig = {
           },
           footer: {
             rocks: "",
+            bg: "#D4AEA6",
+            color: "",
+            image: "https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png",
+            title: "Top Banana Web Design and Development",
             fontfamily: "subslab",
             text1: "- Top Banana -",
             text2: "Web Design",

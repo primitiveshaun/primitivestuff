@@ -1,20 +1,20 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
 import Image from "@frontity/components/image";
-
-//import SectionContainer from "./styles/section-container";
+import { Container, Row, Col } from "react-bootstrap";
 
 const FurryBoots = ({ state }) => {
 
   const display = state.theme.config.global.footer;
   if (!display) { return null }
 
-  const colors = state.theme.colors;
-
   return (
 
-      <FooterCTA bg="" role="contentinfo">
+      <FooterCTA
+        bg={display.bg}
+        color={display.color}
+        role="complementary"
+        className="pt-4 pb-4">
         <Container>
           <Row>
             <Col>
@@ -30,8 +30,8 @@ const FurryBoots = ({ state }) => {
           <Row>
             <Col>
               <Image
-                src={"https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png"}
-                alt="Top Banana Web Design and Development"
+                src={image}
+                alt={title}
               />
             </Col>
           </Row>
@@ -53,22 +53,22 @@ const FurryBoots = ({ state }) => {
 export default connect(FurryBoots);
 
 const FooterCTA = styled.section`
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background-color: #D4AEA6;
+
+  background-color: ${(props) => props.bg ? props.bg : '#D4AEA6'};
+
   text-align: center;
 
   h2 {
     padding: 2rem 0 1rem;;
     text-align: center;
     line-height: 5rem;
-    color: #765751;
+    color: ${(props) => props.color ? props.color : '#765751'};
     font-size: 3rem;
 
     span {
       display: block;
       font-family: 'Amatic SC', sans-serif;
-      color:  #765751;
+      color: ${(props) => props.color ? props.color : '#765751'};
       font-size: 5rem;
     }
 
@@ -76,7 +76,6 @@ const FooterCTA = styled.section`
       display: block;
       padding-bottom: 0;
       font-family: 'Playfair Display', serif;
-      color: #E5D7B7;
       font-size: 4rem;
       line-height: 4rem;
     }
@@ -93,7 +92,7 @@ const FooterCTA = styled.section`
     display: block;
     padding-bottom: 1.5rem;
     font-size: 4rem;
-    color: #3B2622;
+    color: ${(props) => props.color ? props.color : '#765751'};
   }
 
   img {

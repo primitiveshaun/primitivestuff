@@ -6,14 +6,15 @@ import Loading from "./pebbles/loading";
 import MetaTitle from "./pebbles/meta-title";
 import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
+
 import Header from "./rocks/header";
 import Posts from "./mountains/post-list";
 const Post = loadable(() => import("./mountains/post"));
 const Home = loadable(() => import("./mountains/page-home"));
 const Page = loadable(() => import("./mountains/page"));
 const PageError = loadable(() => import("./mountains/page-error"));
-// sk-dev:TESTING these should be Slots i think...
-const KnobblyKnees = loadable(() => import("./rocks/footer-cta"));
+
+const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
 
