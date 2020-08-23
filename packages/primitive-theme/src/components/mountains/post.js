@@ -4,9 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import postStyles from "../dust/post-styles";
 
-import List from "../rocks/postlist";
+import List from "primitiverocks/postlist";
 import Link from "@frontity/components/link";
-import FeaturedMedia from "../pebbles/featured-media";
+import FeaturedMedia from "primitiverocks/featured-media";
 
 import DiscoPreload from "../scenes/preload-disco";
 
