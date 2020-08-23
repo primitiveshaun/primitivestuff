@@ -4,16 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Link from "@frontity/components/link";
 import { randomWord } from "../sand/utils";
 
-import facepaint from 'facepaint'
-
-const mq = facepaint([
-  '@media(min-width: 420px)',
-  '@media(min-width: 720px)'
-])
-
-// sk-dev: random content: Warning: Text content did not match. Server: "Fruity" Client: "Fast"
-//import RandomWord from "../pebbles/random-word";
-
 const MastHead = ({ state }) => (
       <Container className="mast">
         <Row className="justify-content-end">
