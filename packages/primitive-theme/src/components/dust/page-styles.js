@@ -207,7 +207,6 @@ const h3Style = colors => `
 const pageall = colors => css`
 
   h1 {
-    margin: 0 15% 1.5rem;
     padding: 2rem 0 2rem;
     font-size: 4rem;
     text-align: center;
@@ -372,7 +371,9 @@ const pageall = colors => css`
     margin : 5px 0 40px auto; 
     padding : 10px 20px 20px; 
     position : relative; 
-    width : 80%; 
+    max-width: 100vw;
+    overflow: hidden;
+    
 
     blockquote {
       margin : 0; 
