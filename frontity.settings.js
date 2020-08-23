@@ -2,7 +2,7 @@ const settings = {
   "name": "primitivestuff",
   "state": {
     "frontity": {
-      "url": "https://primitivedigital.uk",
+      "url": "https://dev.primitivedigital.uk",
       "title": "Makin' a Website?",
       "description": "WordPress + Frontity Stuff",
       "name": "Primitive Digital"
