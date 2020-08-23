@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 
-//import DiscoPreload from "../../scenes/preload-disco"
+import DiscoPreload from "primitivescenes/preload-disco"
 
 import Post from "./cpt-works-item";
 
@@ -43,8 +43,7 @@ const PostStrip = ({ state, actions, props }) => {
 
   }, []);
 
-  //if (!data.isReady) return <Loading><DiscoPreload message="loading works..." /></Loading>;
-  if (!data.isReady) return <Loading>loading works...</Loading>;
+  if (!data.isReady) return <Loading><DiscoPreload message="loading works..." /></Loading>;
 
   const displaySwitch = (param) => {
     switch (param) {
