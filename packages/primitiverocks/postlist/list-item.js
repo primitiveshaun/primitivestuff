@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
-import FeaturedMedia from "../../pebbles/featured-media";
+import FeaturedMedia from "primitiverocks/featured-media";
 import CTA from "primitiverocks/button-fancy";
 
 
