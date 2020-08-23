@@ -5,8 +5,6 @@ import { Global, css, connect } from "frontity";
 // sk-dev: WEBFONTS REFINE/STANDARD
 // https://community.frontity.org/t/frontity-release-4-november-2019/795
 /* only include latin for now */
-/* Kudos to: Google Fonts & http://google-webfonts-helper.herokuapp.com/ */
-
 
 // GF v1 CDN URL:
 // https://fonts.googleapis.com/css?family=

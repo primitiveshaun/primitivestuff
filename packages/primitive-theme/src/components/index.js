@@ -43,8 +43,8 @@ const Theme = ({ state }) => {
 
   // sk-dev: to improve
   if (state.theme.config.devMode) {
-   console.log("@index: data", data);
-   console.log("@index: display", display);
+   //console.log("@index: data", data);
+   //console.log("@index: display", display);
   }
 
   return (
