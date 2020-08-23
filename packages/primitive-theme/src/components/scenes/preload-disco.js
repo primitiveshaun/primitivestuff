@@ -1,6 +1,3 @@
-// based on codepen by Maryam
-// https://codepen.io/maryamali/pen/aQMEep
-
 import React from 'react';
 import { styled, css } from "frontity";
 import { grow } from "./glamourmagic";
@@ -77,3 +74,6 @@ const StyledDiscoLoader = styled.div`
   }
 
 `;
+
+// kudos: based on original codepen by Maryam
+// https://codepen.io/maryamali/pen/aQMEep
