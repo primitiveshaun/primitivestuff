@@ -1,10 +1,10 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import Frame from "../pebbles/frame";
 import Image from "@frontity/components/image";
+import Frame from "primitiverocks/frame";
 import CTA from "primitiverocks/button-fancy";
-import { jump, animatedgradient, stripedbg } from "../scenes/glamourmagic";
+import { jump, animatedgradient, stripedbg } from "primitivescenes/glamourmagic";
 
 const Bronze = ({ state }) => {
 

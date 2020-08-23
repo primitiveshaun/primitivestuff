@@ -1,8 +1,8 @@
 import React from "react";
 import { styled } from "frontity";
 import { Container, Row, Col, Tabs, Tab } from "react-bootstrap";
-import DataMap from '../scenes/datamap';
-import { underlinewoosh } from "../scenes/glamourmagic";
+import DataMap from 'primitivescenes/datamap';
+import { underlinewoosh } from "primitivescenes/glamourmagic";
 
 const TabBlock = ({ state }) => (
   <StyledSection>
