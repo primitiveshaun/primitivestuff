@@ -1,7 +1,6 @@
 // @hero
 import React from 'react';
 import { styled } from "frontity";
-import { Container } from 'react-bootstrap';
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 import { gsap } from 'gsap';
