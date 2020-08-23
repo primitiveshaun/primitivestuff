@@ -2,7 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Image from "@frontity/components/image";
-import Frame from "primitiverocks/frame";
+import Frame from "primitivepebbles/frame";
 import CTA from "primitiverocks/button-fancy";
 import { jump, animatedgradient, stripedbg } from "primitivescenes/glamourmagic";
 
