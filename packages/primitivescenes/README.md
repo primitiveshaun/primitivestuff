@@ -1,6 +1,6 @@
 
-# Primitive Rocks
-Primitive Theme Frontity Block Components.
+# Primitive Scenes
+Primitive Theme for Frontity Animation and Interaction.
 
 ![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 

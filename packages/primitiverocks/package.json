@@ -6,7 +6,8 @@
     "frontity",
     "bedrock",
     "primitive-theme",
-    "primitiverocks"
+    "primitiverocks",
+    "primitivescenes"
   ],
   "homepage": "https://primitivedigital.uk",
   "license": "Apache-2.0",
