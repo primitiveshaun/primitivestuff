@@ -4,10 +4,13 @@
   "description": "Primitive Building Blocks",
   "keywords": [
     "frontity",
-    "bedrock",
     "primitive-theme",
     "primitiverocks",
-    "primitivescenes"
+    "primitivescenes",
+    "bedrock",
+    "wordpress",
+    "headless-cms",
+    "theme"
   ],
   "homepage": "https://primitivedigital.uk",
   "license": "Apache-2.0",

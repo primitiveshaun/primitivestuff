@@ -4,11 +4,13 @@
   "description": "Little things that make you happy.",
   "keywords": [
     "frontity",
-    "bedrock",
     "primitive-theme",
     "primitiverocks",
     "primitivescenes",
-    "primitivepebbles"
+    "bedrock",
+    "wordpress",
+    "headless-cms",
+    "theme"
   ],
   "homepage": "https://primitivedigital.uk",
   "license": "Apache-2.0",
