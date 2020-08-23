@@ -1,8 +1,8 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import BackToTop from "./pebbles/backtotop";
-import Colophon from "./pebbles/credits";
+import BackToTop from "primitivepebbles/backtotop";
+import Colophon from "primitivepebbles/credits";
 
 const Footer = ({ state }) => {
 

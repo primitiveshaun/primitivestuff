@@ -2,13 +2,12 @@
 import React from "react";
 import { styled, connect, css } from "frontity";
 import Link from "@frontity/components/link";
-import { Col } from "react-bootstrap";
 
 const Credits = ({ state }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Col className="text-center">
+    <div className="col text-center">
      
      <Copyright>
         Crafted by <a title="Digitally re-mastered by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; {currentYear}{" "}
@@ -24,7 +23,7 @@ const Credits = ({ state }) => {
       </Text>
       */}
     
-    </Col>
+    </div>
   );
 };
 

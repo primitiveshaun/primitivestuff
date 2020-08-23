@@ -2,8 +2,8 @@ import { connect, Global, Head, styled, loadable } from "frontity";
 import Switch from "@frontity/components/switch";
 import React from "react";
 
-import Loading from "./pebbles/loading";
-import MetaTitle from "./pebbles/meta-title";
+import Loading from "primitivepebbles/loading";
+import MetaTitle from "primitivepebbles/meta-title";
 import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
 
@@ -15,19 +15,13 @@ import Posts from "./mountains/post-list";
 import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
-
 import Header from "primitiverocks/header";
+import SkipLink from "primitivepebbles/skip-link";
+import GlobalPromo from "primitiverocks/global-promo";
+import GlobalSocial from "primitiverocks/social/social-section";
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("primitiverocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
-
-import SkipLink from "./pebbles/skip-link";
-
-//const GlobalPromo = loadable(() => import("primitiverocks/global-promo"));
-import GlobalPromo from "primitiverocks/global-promo";
-//const GlobalSocial = loadable(() => import("./rocks/social/social-section"));
-import GlobalSocial from "primitiverocks/social/social-section";
-
 
 
 /**
