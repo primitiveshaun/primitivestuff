@@ -12,7 +12,7 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 ## History
 
 **v1.0.0 > Created (Aug 23, 2020):**
-- [x] investigating vercel timeouts
+- [x] Extracted packages from primitive-theme
 
   
 #### Ω - *the end*
