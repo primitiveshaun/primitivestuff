@@ -2,7 +2,7 @@ import React from "react";
 import { connect, styled, loadable } from "frontity";
 
 import Hero from '../scenes/jungle';
-import Intro from '../rocks/page-home-intro';
+import Intro from 'primitiverocks/page-home-intro';
 import Page from "./page";
 
 import Gold from '../rocks/page-home-tabs';
