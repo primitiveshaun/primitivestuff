@@ -18,7 +18,7 @@ import SubTimeline from "./mountains/subtimeline";
 
 import Header from "primitiverocks/header";
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
-const FurryBoots = loadable(() => import("./rocks/footer-kudos"));
+const FurryBoots = loadable(() => import("primitiverocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
 
 import SkipLink from "./pebbles/skip-link";

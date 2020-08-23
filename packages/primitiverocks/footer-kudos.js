@@ -1,9 +1,9 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import { LabeledIcon, HeartIt, FrontityLogo, WordPress, PrimitiveLogo } from "../icons";
+import { LabeledIcon, HeartIt, FrontityLogo, WordPress, PrimitiveLogo } from "./icons-footer";
 
-import { heartbeat } from "../scenes/glamourmagic";
+import { heartbeat } from "primitivescenes/glamourmagic";
 
 ///import SectionContainer from "./styles/section-container";
 
