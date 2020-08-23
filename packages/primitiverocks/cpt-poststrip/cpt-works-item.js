@@ -3,7 +3,7 @@ import { styled } from "frontity";
 import Link from "@frontity/components/link";
 
 import { Col, Card } from 'react-bootstrap';
-import ACFMedia from "../../timeline/cpt-media";
+import ACFMedia from "./cpt-media";
 
 const Works = ({ item }) => {
 

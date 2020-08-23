@@ -6,7 +6,7 @@ import Intro from 'primitiverocks/page-home-intro';
 import Page from "./page";
 
 import Gold from '../rocks/page-home-tabs';
-import Silver from '../rocks/cpt-poststrip/post-strip';
+import Silver from 'primitiverocks/cpt-poststrip/post-strip';
 import Bronze from "../rocks/page-home-bronze";
 // sk-dev: Invariant Violation: loadable: cannot find rocks-page-home-tabs in stats
 //const Page = loadable(() => import("./page"));

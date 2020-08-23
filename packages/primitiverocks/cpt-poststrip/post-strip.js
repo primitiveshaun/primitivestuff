@@ -1,10 +1,21 @@
 import React, { useEffect } from 'react';
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
-import { shuffle } from "../../sand/utils";
 
-import DiscoPreload from "../../scenes/preload-disco"
+//import DiscoPreload from "../../scenes/preload-disco"
+
 import Post from "./cpt-works-item";
+
+const shuffle = (arr, n) => {
+  // Shuffle array
+  const shuffled = arr.sort(() => 0.5 - Math.random());
+
+  // Get sub-array of first n elements after shuffled
+  let selected = shuffled.slice(0, n);
+  
+  return selected;
+}
+
 
 // In a React component that uses "connect":
 const PostStrip = ({ state, actions, props }) => {
@@ -32,7 +43,8 @@ const PostStrip = ({ state, actions, props }) => {
 
   }, []);
 
-  if (!data.isReady) return <Loading><DiscoPreload message="loading works..." /></Loading>;
+  //if (!data.isReady) return <Loading><DiscoPreload message="loading works..." /></Loading>;
+  if (!data.isReady) return <Loading>loading works...</Loading>;
 
   const displaySwitch = (param) => {
     switch (param) {
