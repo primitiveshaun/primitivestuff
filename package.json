@@ -30,6 +30,9 @@
     "@frontity/wp-source": "^1.8.1",
     "frontity": "^1.10.1",
     "frontity-contact-form-7": "^0.1.7",
-    "primitive-theme": "./packages/primitive-theme"
+    "primitive-theme": "./packages/primitive-theme",
+    "primitivepebbles": "./packages/primitivepebbles",
+    "primitiverocks": "./packages/primitiverocks",
+    "primitivescenes": "./packages/primitivescenes"
   }
 }
