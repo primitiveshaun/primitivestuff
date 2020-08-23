@@ -1,3 +1,3 @@
 import { loadable } from "frontity";
 // Codesplit the timelines component
-export default loadable(() => import("../timeline/ct-timelines"));
+export default loadable(() => import("primitiverocks/timeline/ct-timelines"));
