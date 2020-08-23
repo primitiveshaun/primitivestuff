@@ -3,7 +3,7 @@ import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import Frame from "../pebbles/frame";
 import Image from "@frontity/components/image";
-import CTA from "./button-fancy";
+import CTA from "primitiverocks/button-fancy";
 import { jump, animatedgradient, stripedbg } from "../scenes/glamourmagic";
 
 const Bronze = ({ state }) => {

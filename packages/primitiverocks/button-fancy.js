@@ -7,8 +7,6 @@ const ButtonFancy = (props) => {
   const _text = props.text ? props.text : "Find out More";
   const _link = props.link ? props.link : "/";
   
-  //console.log("colours", props.colors);
-
   const color = {
     color: props.colors[0],
     background: props.colors[1],
@@ -35,9 +33,6 @@ const ButtonFancy = (props) => {
 };
 
 export default ButtonFancy;
-
-
-
 
 const StyledButton = styled.div`
   padding: 30px;

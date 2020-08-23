@@ -2,7 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import FeaturedMedia from "../../pebbles/featured-media";
-import CTA from "../../rocks/button-fancy";
+import CTA from "primitiverocks/button-fancy";
 
 
 const Item = ({ state, item }) => {
