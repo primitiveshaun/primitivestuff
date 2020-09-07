@@ -1,12 +1,11 @@
 {
   "name": "primitivescenes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The Primitive Movement",
   "keywords": [
     "frontity",
     "primitive-theme",
     "primitiverocks",
-    "primitivescenes",
     "bedrock",
     "wordpress",
     "headless-cms",
@@ -14,9 +13,17 @@
   ],
   "homepage": "https://primitivedigital.uk",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/primitiveshaun/primitivestuff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/primitiveshaun/primitivestuff/issues"
+  },
   "dependencies": {
-    "frontity": "^1.10.0",
-    "bootstrap": "^5.0.0-alpha1",
-    "react-bootstrap": "^1.3.0"
+    "frontity": "^1.11.0",
+    "gsap": "^3.5.1",
+    "react-gsap": "^2.2.1",
+    "react-scrollmagic": "^2.2.0"
   }
 }

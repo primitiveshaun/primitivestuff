@@ -11,6 +11,9 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
+**v1.0.1 > Fixed all manner of sins (Sept 7, 2020):**
+- [x] correct dependencies
+
 **v1.0.0 > Created (Aug 23, 2020):**
 - [x] Extracted packages from primitive-theme
 
