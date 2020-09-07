@@ -15,10 +15,12 @@ import Posts from "./mountains/post-list";
 import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
+
 import Header from "primitiverocks/header";
 import SkipLink from "primitivepebbles/skip-link";
 import GlobalPromo from "primitiverocks/global-promo";
 import GlobalSocial from "primitiverocks/social/social-section";
+
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("primitiverocks/footer-kudos"));
 const Feet = loadable(() => import("./footer"));
@@ -46,8 +48,9 @@ const Theme = ({ state }) => {
     <>
       {
         /*
-          Add global styles for the whole site, like body or a's or font-faces. 
-          Not classes here because we use CSS-in-JS. Only global HTML tags.
+          Pass theme colors to the reboot
+
+          Ideally you shouldn't add classes here just elements.
 
           sk-dev:TESTING. I'm also adding some classes as I want the wp user to be able to apply a pre-defined set of styles to content.
           - may split this to be post/page specific. that may cause duplicates - not sure of lesser evil.
@@ -55,6 +58,7 @@ const Theme = ({ state }) => {
         */
       }
       <Global styles={globalStyles(state.theme.colors)} />
+
       { /* <FontFaces /> */}
 
       {/* Add some metatags to the <head> of the HTML. */}
@@ -66,7 +70,7 @@ const Theme = ({ state }) => {
         <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Comfortaa|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" rel="stylesheet" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-        <link rel="canonical" href={state.frontity.url} />
+        <link rel="canonical" href="https://primitivedigital.uk" />
         <link rel="dns-prefetch" SameSite="None" Secure href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" SameSite="None" Secure href="http://doubleclick.net" />
       </Head>
