@@ -5,6 +5,7 @@ import CustomPageHandlers from "./components/sand/handlers";
 
 import { themecolor } from "./components/dust/_colors";
 import { themeconfig } from "./components/dust/_config";
+
 //import grid from "./components/dust/_grid.js";
 
 
@@ -33,7 +34,7 @@ const primitiveTheme = {
        * At the moment, we only include the ascii characters of Inter font.
        * Values can be "us-ascii" | "latin" | "all"
        */
-      fontSets: "all",
+      fontSets: "us-ascii",
     },
   },
   /**
@@ -56,6 +57,7 @@ const primitiveTheme = {
        * Add a processor to `html2react` so it processes the `<img>` tags
        * inside the content HTML. You can add your own processors too
        * sk-dev: not sure how best to use these in the elment.class css styling context
+       * do this for `<code>` tags, not sure about quotes/modifiers
        */
       processors: [image],
     },
