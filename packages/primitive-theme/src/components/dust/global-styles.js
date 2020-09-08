@@ -3,56 +3,11 @@ import { css } from "frontity";
 import cssReboot from "./_reboot";
 
 import cssGrid from "./_bsgrid";
+//import cssGrid from "bootstrap/dist/css/bootstrap-grid.min.css";
 
 import cssUtils from "./_bsutils";
 
 import cssBootstrap from "./_bscss";
-
-const documentSetup = colors => css`
-
-
-h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
-h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
-h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
-h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
-h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
-h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
-
-  /* --- RESPONSIVE --- */
-  /* Small devices (landscape phones, 576px and up) */
-  @media screen and (min-width: 576px) {
-
-    html { font-size: 15px; }
-    .container { max-width: 540px; }
-  }
-  
-  /* Medium devices (tablets, 768px and up)  */
-  @media screen and (min-width: 768px) {
-    
-    html { font-size: 15px; }
-    .container { max-width: 720px; }
-  }
-  
-  /* Large devices (desktops, 992px and up) */
-  @media screen and (min-width: 992px) {
-
-    html { font-size: 16px; }
-
-    body {
-      &::-webkit-scrollbar {
-        width:1.5rem;
-      }
-    }
-    .container { max-width: 960px; }
-  }
-  
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media screen and (min-width: 1200px) {
-    html { font-size: 16px; }
-    .container { max-width: 1140px; }
-  }
-
-`;
 
 const accessibilitySettings = css`
   @media (prefers-reduced-motion: reduce) {
@@ -159,10 +114,9 @@ const globalStyle = colors =>
     cssGrid,
     cssUtils(colors), // 50kb
     cssBootstrap,
-    documentSetup(colors),
     accessibilitySettings,
-    mediaStyle(colors),
-    tableStyles(colors),
+    //mediaStyle(colors),
+    //tableStyles(colors),
     //themeClasses(colors)
   ]);
 
