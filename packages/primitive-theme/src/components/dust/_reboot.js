@@ -1,14 +1,5 @@
 import { css } from "frontity";
 
-/*!
- * Based on Bootstrap Reboot v5.0.0-alpha1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
-
-
 const cssReboot = colors => css`
 
 *,
@@ -68,45 +59,80 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
+h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
+h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
+h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
+h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
+h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
+
+  /* --- RESPONSIVE --- */
+  /* Small devices (landscape phones, 576px and up) */
+  @media screen and (min-width: 576px) {
+
+    html { font-size: 15px; }
+    .container { max-width: 540px; }
+  }
+  
+  /* Medium devices (tablets, 768px and up)  */
+  @media screen and (min-width: 768px) {
+    
+    html { font-size: 15px; }
+    .container { max-width: 720px; }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) {
+
+    html { font-size: 16px; }
+
+    body {
+      &::-webkit-scrollbar {
+        width:1.5rem;
+      }
+    }
+    .container { max-width: 960px; }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media screen and (min-width: 1200px) {
+    html { font-size: 16px; }
+    .container { max-width: 1140px; }
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1.75rem;
+    }
+    h4 {
+      font-size: 1.5rem;
+    }
+  }
+
+
 h1 {
   font-size: calc(1.375rem + 1.5vw);
-}
-
-@media (min-width: 1200px) {
-  h1 {
-    font-size: 2.5rem;
-  }
 }
 
 h2 {
   font-size: calc(1.325rem + 0.9vw);
 }
 
-@media (min-width: 1200px) {
-  h2 {
-    font-size: 2rem;
-  }
-}
+
 
 h3 {
   font-size: calc(1.3rem + 0.6vw);
 }
 
-@media (min-width: 1200px) {
-  h3 {
-    font-size: 1.75rem;
-  }
-}
+
 
 h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
 
-@media (min-width: 1200px) {
-  h4 {
-    font-size: 1.5rem;
-  }
-}
 
 h5 {
   font-size: 1.25rem;
@@ -434,19 +460,7 @@ legend + * {
   clear: left;
 }
 
-::-webkit-datetime-edit-fields-wrapper,
-::-webkit-datetime-edit-text,
-::-webkit-datetime-edit-minute,
-::-webkit-datetime-edit-hour-field,
-::-webkit-datetime-edit-day-field,
-::-webkit-datetime-edit-month-field,
-::-webkit-datetime-edit-year-field {
-  padding: 0;
-}
 
-::-webkit-inner-spin-button {
-  height: auto;
-}
 
 [type="search"] {
   outline-offset: -2px;
