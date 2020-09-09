@@ -53,6 +53,11 @@ Separation of config / theme
 
 ## History
 
+**v1.0.8 > Address performance issues (Sept 9, 2020):**
+- [x] Review dependencies
+- [x] Test asset bundle size 
+- [x] Restore BS CDN for now
+
 **v1.0.7 > Create packages (Aug 23, 2020):**
 - [x] Split primitiverocks package
 - [x] Split primitivescenes package
