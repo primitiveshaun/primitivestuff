@@ -2,12 +2,10 @@ import { css } from "frontity";
 
 import cssReboot from "./_reboot";
 
-import cssGrid from "./_bsgrid";
+//import cssGrid from "./_bsgrid";
 //import cssGrid from "bootstrap/dist/css/bootstrap-grid.min.css";
-
-import cssUtils from "./_bsutils";
-
-import cssBootstrap from "./_bscss";
+//import cssUtils from "./_bsutils";
+//import cssBootstrap from "./_bscss";
 
 const accessibilitySettings = css`
   @media (prefers-reduced-motion: reduce) {
@@ -111,9 +109,9 @@ const tableStyles = colors => css`
 const globalStyle = colors =>
   css([
     cssReboot(colors),
-    cssGrid,
-    cssUtils(colors), // 50kb
-    cssBootstrap,
+    //cssGrid,
+    //cssUtils(colors), // 50kb
+    //cssBootstrap,
     accessibilitySettings,
     //mediaStyle(colors),
     //tableStyles(colors),
