@@ -72,8 +72,11 @@ const Theme = ({ state }) => {
        {/*
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css" integrity="sha512-LxlJgXpmW7rJDt1BsGD/MvkFXDAY+t1X5Noou0KaXmmSxY1nduFn+oxhD5kAYnE6vqbkRyWNvucL82xyKOcxlQ==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-utilities.min.css" integrity="sha512-+0y5BXqNmfKh7Q4pMVjxeY92OFgsRUFnZSCjqTwvqUYJEdculrxQz/UM2jbpysBo0crnNvTTw31SFqk8HbT/iA==" crossorigin="anonymous" />
-       */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha512-weZatQD41YXNCVn3Bvl2y1iAZqtH/Y+MlAQUwovog1iwj8cbSEpQMeErMnDp9CBlqIo0oxOcOF8GUEoOZYD4Zg==" crossorigin="anonymous" />
+
+       */}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+
         <link rel="canonical" href="https://primitivedigital.uk" />
         <link rel="dns-prefetch" SameSite="None" Secure href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" SameSite="None" Secure href="http://doubleclick.net" />
