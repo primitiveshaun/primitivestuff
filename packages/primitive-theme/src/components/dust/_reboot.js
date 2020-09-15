@@ -12,7 +12,6 @@ html { font-size: 100%; }
 
 body {
   margin: 0;
-
   font-family: 'Comfortaa', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 300;
@@ -56,90 +55,34 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-
 }
-
-h1, .slab {  font-family: 'Hepta Slab', serif; font-size: 3.3rem; }
-h2, .heading { font-family: 'Amatic SC', sans-serif; font-size: 3rem; }
-h3, .news { font-family: 'Playfair Display', Georgia, serif; font-size: 3rem; }
-h4, .display { font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif; font-size: 1.6rem;}
-h5, .subslab { font-family: 'Slabo 27px', Georgia, serif; font-size: 1.3rem; }
-h6, .scribe { font-family: 'Pacifico', Georgia, cursive; font-size: 1.3rem; }
-
-  /* --- RESPONSIVE --- */
-  /* Small devices (landscape phones, 576px and up) */
-  @media screen and (min-width: 576px) {
-
-    html { font-size: 15px; }
-    .container { max-width: 540px; }
-  }
-  
-  /* Medium devices (tablets, 768px and up)  */
-  @media screen and (min-width: 768px) {
-    
-    html { font-size: 15px; }
-    .container { max-width: 720px; }
-  }
-  
-  /* Large devices (desktops, 992px and up) */
-  @media screen and (min-width: 992px) {
-
-    html { font-size: 16px; }
-
-    body {
-      &::-webkit-scrollbar {
-        width:1.5rem;
-      }
-    }
-    .container { max-width: 960px; }
-  }
-  
-  /* Extra large devices (large desktops, 1200px and up) */
-  @media screen and (min-width: 1200px) {
-    html { font-size: 16px; }
-    .container { max-width: 1140px; }
-    h1 {
-      font-size: 2.5rem;
-    }
-    h2 {
-      font-size: 2rem;
-    }
-    h3 {
-      font-size: 1.75rem;
-    }
-    h4 {
-      font-size: 1.5rem;
-    }
-  }
-
-
-h1 {
-  font-size: calc(1.375rem + 1.5vw);
+h1, .slab { 
+  font-family: 'Hepta Slab', serif;
+  font-size: 3.3rem;
+  /*font-size: calc(1.375rem + 1.5vw);*/
 }
-
-h2 {
+h2, .heading {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 3rem;
   font-size: calc(1.325rem + 0.9vw);
 }
-
-
-
-h3 {
-  font-size: calc(1.3rem + 0.6vw);
+h3, .news {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3rem;
+  /*font-size: calc(1.3rem + 0.6vw);*/
 }
-
-
-
-h4 {
-  font-size: calc(1.275rem + 0.3vw);
+h4, .display {
+  font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif;
+  font-size: 1.6rem;
+  /* font-size: calc(1.275rem + 0.3vw);*/
 }
-
-
-h5 {
-  font-size: 1.25rem;
+h5, .subslab {
+  font-family: 'Slabo 27px', Georgia, serif;
+  font-size: 1.3rem;
 }
-
-h6 {
-  font-size: 1rem;
+h6, .scribe {
+  font-family: 'Pacifico', Georgia, cursive;
+  font-size: 1.2rem;
 }
 
 p {
@@ -148,6 +91,58 @@ p {
   font-size: 1rem;
   line-height: 1.8;
 }
+
+/* --- RESPONSIVE --- */
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) {
+
+  html { font-size: 15px; }
+  .container { max-width: 540px; }
+}
+
+/* Medium devices (tablets, 768px and up)  */
+@media screen and (min-width: 768px) {
+  
+  html { font-size: 15px; }
+  .container { max-width: 720px; }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+  html { font-size: 16px; }
+
+  body {
+    &::-webkit-scrollbar {
+      width:1.5rem;
+    }
+  }
+  .container { max-width: 960px; }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  html { font-size: 16px; }
+  .container { max-width: 1140px; }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  legend {
+    font-size: 1.5rem;
+  }
+}
+
+
+
 
 abbr[title],
 abbr[data-original-title] {
@@ -224,14 +219,8 @@ blockquote p:last-child {
   margin: 0;
 }
 
-b,
-strong {
-  font-weight: bolder;
-}
-
-small {
-  font-size: 0.875em;
-}
+b, strong { font-weight: bold; }
+small { font-size: 0.875em; }
 
 mark {
   padding: 0.2em;
@@ -245,14 +234,8 @@ sup {
   line-height: 0;
   vertical-align: baseline;
 }
-
-sub {
-  bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
-}
+sub { bottom: -.25em; }
+sup { top: -.5em; }
 
 a {
   color: ${colors.primary};
@@ -272,7 +255,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
-
 pre,
 code,
 kbd,
@@ -291,7 +273,6 @@ pre {
   font-size: 0.875em;
   -ms-overflow-style: scrollbar;
 }
-
 pre code {
   font-size: inherit;
   color: inherit;
@@ -450,17 +431,9 @@ legend {
   white-space: normal;
 }
 
-@media (min-width: 1200px) {
-  legend {
-    font-size: 1.5rem;
-  }
-}
-
 legend + * {
   clear: left;
 }
-
-
 
 [type="search"] {
   outline-offset: -2px;
