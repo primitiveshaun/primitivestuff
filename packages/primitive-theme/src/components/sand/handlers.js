@@ -6,7 +6,6 @@
 
 import {getTerm} from "./utils"
 
-
 // a custom handler for custom post types.
 // n.b. just add to frontity.settings, you only need this if you want to modify the data model
 
