@@ -2,12 +2,8 @@ import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 
 import CustomPageHandlers from "./components/sand/handlers";
-
 import { themecolor } from "./components/dust/_colors";
 import { themeconfig } from "./components/dust/_config";
-
-//import grid from "./components/dust/_grid.js";
-
 
 const primitiveTheme = {
   name: "primitive-theme",
