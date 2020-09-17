@@ -1,6 +1,6 @@
 
 import React from "react";
-import { styled, connect, css } from "frontity";
+import { styled, connect } from "frontity";
 import Link from "@frontity/components/link";
 
 const Credits = ({ state }) => {
