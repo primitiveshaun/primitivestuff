@@ -1,14 +1,3 @@
-// private functions
-
-function _getNavigatorLanguage() {
-    if (navigator.languages && navigator.languages.length) {
-        return navigator.languages[0];
-    }
-    else {
-        return navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en';
-    }
-}
-
 /*
 * PUBLIC FUNCTIONS
 */
@@ -129,43 +118,4 @@ export function shuffle(arr, n) {
     let selected = shuffled.slice(0, n);
     
     return selected;
-}
-
-
-
-
-
-
-
-// formatter functions
-
-export function formatPercent(value, decimalPlaces) {
-    if (undefined === decimalPlaces) decimalPlaces = 0;
-    return Number.parseFloat(value).toFixed(decimalPlaces) + '%';
-}
-
-export function formatSeconds(value, decimalPlaces) {
-    if (undefined === decimalPlaces) decimalPlaces = 1;
-    return Number.parseFloat(value).toFixed(decimalPlaces) + 's';
-}
-
-export function formatMinuteAndSeconds(value, decimalPlacesSeconds) {
-    if (undefined === decimalPlacesSeconds) decimalPlacesSeconds = 0;
-    const num = Number.parseFloat(value);
-    const minutes = Math.floor(num / 60);
-    const seconds = (num % 60);
-
-    // console.log(`num=${num} minutes=${minutes} seconds=${seconds} `);
-
-    if (0 !== minutes) {
-        return minutes.toFixed(0) + 'm ' + seconds.toFixed(decimalPlacesSeconds) + 's';
-    }
-    else {
-        return seconds.toFixed(decimalPlacesSeconds) + 's';
-    }
-}
-
-export function formatFraction(value) {
-    // console.log(`formatFraction(${JSON.stringify(value)})`);
-    return `${value.numerator} / ${value.denominator}`;
 }
