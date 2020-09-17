@@ -30,21 +30,32 @@ Separation of config / theme
 - [ ] sort/filters: modify the wp theme funtions.php or use a plugin?
 - [ ] sort/filters subtimeline component: custom cpt/taxonomy content (I can't seem to sort if using WP REST Filter plugin)
 - [ ] sort/filters poststrip component: post and custom cpt/taxonomy content (recent, random, related)
-- [ ] FEAT: Fade in lazy loaded images?
+
+
 
 ## WIP
 
-- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
-- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
-- [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
-- [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
+- [ ] feat: sitemaps / yoast
+- [ ] feat: timelines
+- [ ] test: are error page timeout settings higher than vercel timeout?
 - [ ] refine: preloaders / postsrips
-- [ ] BS CSS > Components (grid)
-- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size/transparency/darken/lighten)
-- [ ] Research create a UI/cf7 theme builder vs cli
-- [ ] Research add comments / cf7 / fe content submission
 - [ ] Add post social share
 - [ ] FIX or FEAT: author list view / profile
+- [ ] FEAT: Fade in lazy loaded images (is this now working)?
+- [ ] FEAT: switch to ts
+
+- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
+- [ ] BS CSS > Components (grid)
+- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size/transparency/darken/lighten)
+
+- [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
+- [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
+
+- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
+
+- [ ] Research create a UI/cf7 theme builder vs cli
+- [ ] Research add comments / cf7 / fe content submission
+
 
 - [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
 - [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
@@ -52,6 +63,11 @@ Separation of config / theme
 
 
 ## History
+
+**v1.0.9 > Address performance issues (Sept 17, 2020):**
+- [x] core updates
+- [x] fix for 'no index' / yoast
+- [x] refine _reboot
 
 **v1.0.8 > Address performance issues (Sept 9, 2020):**
 - [x] Review dependencies
