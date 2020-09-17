@@ -141,9 +141,6 @@ p {
   }
 }
 
-
-
-
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
