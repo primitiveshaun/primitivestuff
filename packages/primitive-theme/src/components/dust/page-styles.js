@@ -1,7 +1,8 @@
 import { css } from "frontity";
 import { discolight, animatedgradient } from "primitivescenes/glamourmagic";
 import convert from 'color-convert';
-import { mq2col } from './_grid';
+//import { mq2col } from './_grid';
+import { mq2col } from "primitivepebbles/grid";
 
 /* Themed variants */
 const jungleDiscoBG = colors => {
@@ -193,7 +194,6 @@ const h3Style = colors => `
 // p2102: data
 // p2128: marketing
 // p2136: housekeeping
-// p
 // p37638: darwin
 
 // sk-dev: tests
