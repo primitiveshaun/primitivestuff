@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Link from "@frontity/components/link";
 import Nav from "primitiverocks/nav";
 
-import { mq } from "primitiverocks/_grid";
+import { mq } from "primitivepebbles/grid";
 //import { colors } from "../dust/_colors.js";
 
 const Header = ({ state }) => {
