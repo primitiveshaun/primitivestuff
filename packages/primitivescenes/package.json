@@ -1,6 +1,6 @@
 {
   "name": "primitivescenes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Primitive Movement",
   "keywords": [
     "frontity",
@@ -21,7 +21,7 @@
     "url": "https://github.com/primitiveshaun/primitivestuff/issues"
   },
   "dependencies": {
-    "frontity": "^1.11.0",
+    "frontity": "^1.11.1",
     "gsap": "^3.5.1",
     "react-gsap": "^2.2.1",
     "react-scrollmagic": "^2.2.0"
