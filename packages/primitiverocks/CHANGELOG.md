@@ -11,6 +11,9 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
+**v1.0.2 > Fixes for safari/yoast/mobile (Sept 17, 2020):**
+- [x] core updates
+
 **v1.0.1 > Fixed all manner of sins (Sept 7, 2020):**
 - [x] correct dependencies
 
