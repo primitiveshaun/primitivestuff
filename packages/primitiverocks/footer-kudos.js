@@ -2,6 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "react-bootstrap";
 import { LabeledIcon, HeartIt, FrontityLogo, WordPress, PrimitiveLogo } from "./icons-footer";
+//const Page = loadable(() => import("./page"));
 
 import { heartbeat } from "primitivescenes/glamourmagic";
 
