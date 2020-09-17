@@ -1,17 +1,27 @@
 //import { colors } from "./_colors.js";
-
-import { Grid } from "./_grid.js";
+//import { Grid } from "./_grid.js";
+//import { Grid } from "primitivepebbles/grid";
 import { randomWord } from "../sand/utils";
 
 const themeconfig = {
         devMode: process.env.NODE_ENV === 'development' ? true : false,
+
         breakpoints: {
-          sm: Grid.breakpoints.sm,
-          md: Grid.breakpoints.md,
-          lg: Grid.breakpoints.lg,
-          xl: Grid.breakpoints.xl
+          sm: 576,
+          md: 768,
+          lg: 992,
+          xl: 1200,
         },
-        rootEm: Grid.rootEm,
+        maxWidths: {
+          sm: 540,
+          md: 720,
+          lg: 960,
+          xl: 1140,
+        },
+        gutters: 15,
+        rootEm: "62.5%",
+        minWidth: "320",
+
         homepage: {
           showHero: true,
           showIntro: true,
@@ -58,6 +68,7 @@ const themeconfig = {
             icon2: ""
           }
         },
+
         page: {
           showBanner: true,
           showGold: true,
@@ -65,6 +76,7 @@ const themeconfig = {
           showBronze: true,
           template: false
         },
+
         global: {
           showPromo: true,
           promo: {
@@ -74,6 +86,7 @@ const themeconfig = {
             text: "Primitive is not your bag, baby. For consultancy work you want a sknow.it all!",
             link: "https://sknow.it"
           },
+          
           showSocial: true,
           social: {
             background: "#fffff0",
@@ -113,12 +126,14 @@ const themeconfig = {
             }
 
           },
+
           header: {
             variant: "", // "" | "light" | "dark"
             logo: "https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smwhite.png",
             alt: "Primitive Digital - Web Design &amp; Development",
             random: randomWord()
           },
+
           footer: {
             rocks: "",
             bg: "#D4AEA6",
@@ -135,6 +150,7 @@ const themeconfig = {
               prompt: "to make beautiful digital stuff together"
             }
           }
+
         }
       }
 export { themeconfig };
