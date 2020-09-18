@@ -3,9 +3,9 @@ const settings = {
   state: {
     frontity: {
       url: "https://dev.primitivedigital.uk",
-      title: "Makin' a Website?",
+      title: "Primitive Digital",
       description: "WordPress + Frontity Stuff",
-      name: "Primitive Digital"
+      name: "Makin' a Website?"
     }
   },
   packages: [
