@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "frontity";
 import Link from "@frontity/components/link";
 
 const Frame = ({ link, className, children }) => {
@@ -22,4 +21,4 @@ const Frame = ({ link, className, children }) => {
 
 };
 
-export default connect(Frame);
+export default Frame;
