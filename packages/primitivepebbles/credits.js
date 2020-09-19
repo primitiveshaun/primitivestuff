@@ -2,39 +2,37 @@
 import React from "react";
 import { styled, connect } from "frontity";
 import Link from "@frontity/components/link";
+import {Col} from "primitivepebbles/grid";
 
 const Credits = ({ state }) => {
   const currentYear = new Date().getFullYear();
+  const display = state.theme.config.global.footer.credit;
 
   return (
-    <div className="col text-center">
+    <Col className="text-center">
      
-     <Copyright>
-        Crafted by <a title="Digitally re-mastered by Primitive Digital" href="https://primitivedigital.uk/">Primitive Digital</a> &copy; {currentYear}{" "}
+      <Copyright>
+        &copy; {currentYear} <Link link={display.link} alt={`&copy; ${currentYear} `} >{display.legal}</Link>
       </Copyright>
 
-      <Text>
-        <Link link={state.frontity.url}>{state.frontity.title}</Link>
-      </Text>
-
-      {/*
-      <Text>
-        Hosted by <a title="Web Hosting by Primitive" href="https://primitivehosting.uk/">Primitive Hosting</a>
-      </Text>
-      */}
+      <Creator>
+        {display.label} <Link link={display.backlink} alt={display.label + " " + display.creator}>{display.creator}</Link>
+      </Creator>
     
-    </div>
+    </Col>
   );
 };
 
-const Copyright = styled.p`
-  font-weight: 700;
+const Text = styled.p`font-weight: 700;`;
+
+const Copyright = styled(Text)`
   letter-spacing:2px;
+  font-size: .9rem;
 `;
 
-const Text = styled.p`
-  font-weight: 600;
-  letter-spacing:2px;
+const Creator = styled(Text)`
+  font-size: .8rem;
+  letter-spacing:3px;
 `;
 
 export default connect(Credits);

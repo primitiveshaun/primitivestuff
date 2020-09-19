@@ -148,6 +148,14 @@ const themeconfig = {
             contact: {
               info: "Phone 0113 314 8880",
               prompt: "to make beautiful digital stuff together"
+            },
+            credit: {
+              legal: "sknow.it ltd.",
+              link: "https://sknow.it",
+              policy: "",
+              label: "Website crafted by ",
+              creator: "Primitive Digital",
+              backlink: "https://primitivedigital.uk"
             }
           }
 
