@@ -11,11 +11,14 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
-**v1.0.3 > Theming (Sept 20, 2020):**
+**v1.0.4 > Theming (Sept 20, 2020):**
 - [x] import extracted bootstrap grid pebbles
 - [x] test heading pebble
 - [x] add theming to tabs
 - [x] refine dependencies / peer dependencies
+
+**v1.0.3 > Maintenance (Sept 17, 2020):**
+- [x] core updates
 
 **v1.0.2 > Fixes for safari/yoast/mobile (Sept 17, 2020):**
 - [x] core updates
