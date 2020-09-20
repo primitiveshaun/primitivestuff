@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import FeaturedMedia from "primitiverocks/featured-media";
 import CTA from "primitiverocks/button-fancy";
+import Heading from "primitivepebbles/heading";
 
 
 const Item = ({ state, item }) => {
@@ -12,28 +13,28 @@ const Item = ({ state, item }) => {
   return (
     <article className="col">
 
-      <Link link={item.link}>
-        <Title dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-      </Link>
+      <header className="text-center">
+        <HeadLink link={item.link}>
+          <Heading text={item.title.rendered} className="align-center" />
+        </HeadLink>
+      </header>
 
-      <Meta>
-        <PostDate>
+      <div className="text-center">
+        <PostDate className="mb-0">
           {date.toDateString()}
         </PostDate>
-        <StyledLink link={author.link}>
-          <Author>
-            <b>{author.name}</b> was 'ere...
-          </Author>
-        </StyledLink>
-      </Meta>
+        <AuthorLink link={author.link}>
+          <p><strong>{author.name}</strong> was 'ere...</p>
+        </AuthorLink>
+      </div>
 
       {state.theme.featured.showOnList && (
-        <StyledLink link={item.link}>
+        <MediaLink link={item.link}>
           <FeaturedMedia id={item.featured_media} />
-        </StyledLink>
+        </MediaLink>
       )}
 
-      <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} />
+      <Excerpt dangerouslySetInnerHTML={{ __html: item.excerpt.rendered }} className="text-center" />
 
       <CTA
         text="Read More"
@@ -47,50 +48,40 @@ const Item = ({ state, item }) => {
 
 export default connect(Item);
 
-const Title = styled.h2`
-  margin: 0;
-  padding: 1rem 1rem 1.5rem;
-  color: rgba(12, 17, 43, 0.9);
-  text-align: center;
+const HeadLink = styled(Link)`
+  display: inline-block;
+  color: rgba(12, 17, 43, 0.6);
 
   &:hover {
-    text-shadow: 2px 1px 0 rgba(255,192,203,.8);
+    color: rgba(12, 17, 43, 0.8);
+    text-shadow: 1px 1px 1px rgba(255,192,203,.6);
     text-decoration: underline;
   }
 `;
 
-const Meta = styled.span`
+const AuthorLink = styled(Link)`
+  display: inline-block;
+
+  p {
+    color: rgba(12, 17, 43, 0.9);
+    font-family: "Amatic SC";
+    font-size: 0.9em;
+  }
+`;
+
+const MediaLink = styled(Link)`
+  display: block;
   text-align: center;
 `;
 
-const Author = styled.span`
-  color: rgba(12, 17, 43, 0.9);
-  font-family: "Amatic SC";
-  font-size: 0.9em;
-`;
-
-const StyledLink = styled(Link)`
-  display: block;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-`;
-
-const PostDate = styled.span`
-  display: block;
-  margin: 0;
-  padding: 0;
-  color: rgba(12, 17, 43, 0.7);
-  font-size: 1rem;
+const PostDate = styled.p`
+  color: rgba(12, 17, 43, 0.5);
   font-family: Courier;
-  text-align: center;
-  line-height: 1.2rem;
 `;
 
 const Excerpt = styled.div`
   padding: 3.2rem 1.5rem 2rem;
   margin-bottom: 5rem;
-  text-align: center;
 
   p {
     color: rgba(12,17,43,.7);
