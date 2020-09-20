@@ -1,6 +1,6 @@
-//import { colors } from "./_colors.js";
 //import { Grid } from "./_grid.js";
 //import { Grid } from "primitivepebbles/grid";
+//import { colors } from "./_colors.js";
 import { randomWord } from "../sand/utils";
 
 const themeconfig = {
@@ -159,6 +159,54 @@ const themeconfig = {
             }
           }
 
+        },
+        tabs: {
+          variant: "",
+          bgcolor: "",
+          one: {
+            bgimg: "https://api.primitivedigital.uk/wp-content/uploads/m/monkey-happy.jpg",
+            title1: "Web Design",
+            text1: "Find your audience",
+            title2: "App &amp; UI Design",
+            text2: "And connect with your users",
+            title3: "Brand &amp; Logo Design",
+            text3: "In creative, beautiful and consistent ways",
+            title4: "Print Design",
+            text4: "Across all platforms"
+          },
+          two: {
+            bgimg: "https://api.primitivedigital.uk/wp-content/uploads/m/monkey-eh.jpg",
+            title1: "Rapid Web Development",
+            text1: "Get online fast",
+            title2: "Application Development",
+            text2: "Meet the needs of your users",
+            title3: "WordPress CMS",
+            text3: "Built on the most popular core",
+            title4: "REST API + CPT",
+            text4: "The possibilities are endless"
+          },
+          three: {
+            bgimg: "https://api.primitivedigital.uk/wp-content/uploads/m/monkey-ooh.jpg",
+            title1: "Analytics and Reporting",
+            text1: "Infomation is beautiful",
+            title2: "Search Engine Optimisation",
+            text2: "Especially climbing the ranks",
+            title3: "Data Visualisation",
+            text3: "So make communication a simple joy",
+            title4: "Testing and Research",
+            text4: "But you can always A/B better"
+          },
+          four: {
+            bgimg: "https://api.primitivedigital.uk/wp-content/uploads/m/monkey-smile.jpg",
+            title1: "Social Media",
+            text1: "Graphics, Banners and Promos",
+            title2: "eMail &amp; eCommerce",
+            text2: "To Sell, sell, sell",
+            title3: "Strategy &amp; Campaigns",
+            text3: "And do it well, well, well",
+            title4: "Triggers &amp; Automation",
+            text4: "With robots and magic buttons"
+          }
         }
       }
 export { themeconfig };
