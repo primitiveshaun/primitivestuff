@@ -12,6 +12,9 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 ## History
 
 **v1.0.4 > Theming (Sept 20, 2020):**
+- [x] fix path
+
+**v1.0.4 > Theming (Sept 20, 2020):**
 - [x] import extracted bootstrap grid pebbles
 - [x] test heading pebble
 - [x] add theming to tabs
