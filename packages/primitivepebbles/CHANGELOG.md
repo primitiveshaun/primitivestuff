@@ -9,11 +9,19 @@ To whom it may concern. Some odd comments may be documented here.
 
 Commit messages are loosly following [Conventional Commits](https://conventionalcommits.org).
 
+## WIP
+
+- [ ] scrollTo support safari/ie
+
 ## History
+
+**v1.0.3 > Theming (Sept 20, 2020):**
+- [x] pass state to credits
+- [x] add heading component
 
 **v1.0.2 > Fixes for safari/yoast/mobile (Sept 17, 2020):**
 - [x] core updates
-- [x] baseline grid components
+- [x] baseline bootstrap grid components
 
 **v1.0.1 > Fixed all manner of sins (Sept 7, 2020):**
 - [x] correct dependencies
