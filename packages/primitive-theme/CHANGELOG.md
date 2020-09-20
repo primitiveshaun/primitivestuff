@@ -64,6 +64,12 @@ Separation of config / theme
 
 ## History
 
+**v1.0.10 > Component updates (Sept 20, 2020):**
+- [x] remove datamap code
+- [x] test heading pebble
+- [x] add some theming to tabs
+- [x] extracted bootrap Grid to pebbles
+
 **v1.0.9 > Address performance issues (Sept 17, 2020):**
 - [x] core updates
 - [x] fix for 'no index' / yoast
