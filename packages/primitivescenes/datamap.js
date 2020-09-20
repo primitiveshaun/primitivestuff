@@ -1,7 +1,7 @@
 // based on codepen by Dave Quah
 // https://codepen.io/Milleus/pen/pozRbKa
 
-// this creates a massive amount of DIVs
+// this creates a massive amount of elements, impacts on psi and has a big ass impact on bundle size
 // to be used for some of the pre/post optimisation benchmarking
 
 import React from 'react';
