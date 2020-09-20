@@ -1,7 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
-//import { Container, Row, Col } from "primitivepebbles/grid";
+import { Container, Row, Col } from "primitivepebbles/grid";
 import BackToTop from "primitivepebbles/backtotop";
 import Colophon from "primitivepebbles/credits";
 
@@ -17,7 +16,8 @@ const Footer = ({ state }) => {
   */
 
   return (
-    <SiteFooter role="contentinfo"
+    <SiteFooter
+      role="contentinfo"
       bg={colors.brown}
       text={colors.ivory}
       hyper={colors.secondary}

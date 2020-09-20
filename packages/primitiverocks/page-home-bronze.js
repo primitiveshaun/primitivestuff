@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 import Image from "@frontity/components/image";
 import Frame from "primitivepebbles/frame";
 import CTA from "primitiverocks/button-fancy";

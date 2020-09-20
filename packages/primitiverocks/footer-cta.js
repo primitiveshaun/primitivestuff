@@ -1,7 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 
 const FurryBoots = ({ state }) => {
 

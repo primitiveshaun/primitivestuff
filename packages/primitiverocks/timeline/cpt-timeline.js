@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 
 //import Item from "./cpt-item-marker";
 import Marker from "./cpt-item-marker";

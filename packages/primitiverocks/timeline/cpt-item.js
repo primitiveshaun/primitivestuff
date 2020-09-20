@@ -2,7 +2,9 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col } from "primitivepebbles/grid";
+
+import Card from 'react-bootstrap/Card';
 
 const TemporalEvent = ({ state, item, layer, headerBg, headerColor }) => {
 

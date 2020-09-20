@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 import { LabeledIcon, HeartIt, FrontityLogo, WordPress, PrimitiveLogo } from "./icons-footer";
 //const Page = loadable(() => import("./page"));
 

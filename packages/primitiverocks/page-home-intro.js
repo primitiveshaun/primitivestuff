@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 
 const Intro = (props) => {
 

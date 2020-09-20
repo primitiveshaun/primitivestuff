@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled, css } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 import Link from "@frontity/components/link";
 import Nav from "primitiverocks/nav";
 
@@ -32,6 +32,7 @@ const Header = ({ state }) => {
                 <Description>
                   {state.frontity.description}
                 </Description>
+                
               </StyledLink>
             </Col>
           </Row>

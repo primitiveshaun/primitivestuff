@@ -2,8 +2,8 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { Container, Row, Nav, Navbar } from "react-bootstrap";
-
+import { Container, Row } from "primitivepebbles/grid";
+import { Nav, Navbar } from "react-bootstrap"
 
 const MainNav = ({ state }) => (
 

@@ -1,8 +1,9 @@
 import React from "react";
 import { styled } from "frontity";
 import Link from "@frontity/components/link";
+import { Col } from "primitivepebbles/grid";
 
-import { Col, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import ACFMedia from "./cpt-media";
 
 const Works = ({ item }) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 import InstagramPost from "./instgram-post";
 //import InstagramFeed from "./instgram-feed";
 import FacebookPage from "./facebook-page";
