@@ -12,7 +12,7 @@ With little help from our friends: [Bootstrap 5](https://v5.getbootstrap.com/), 
 
 Live Site 👉  [Primitive Digital](https://primitivedigital.uk)
 
-Them Demo 👉  [Dev Stuff](https://dev.primitivedigital.uk)
+Theme Demo 👉  [Dev Stuff](https://dev.primitivedigital.uk)
 
 Theme NPM package 🎉  ~  👉  [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
