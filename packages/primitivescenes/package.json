@@ -1,6 +1,6 @@
 {
   "name": "primitivescenes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The Primitive Movement",
   "keywords": [
     "frontity",
@@ -12,6 +12,7 @@
     "theme"
   ],
   "homepage": "https://primitivedigital.uk",
+  "author": "Shaun Knowles <hi@primitivedigital.uk> (https://shaunknowles.uk/)",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
@@ -20,8 +21,11 @@
   "bugs": {
     "url": "https://github.com/primitiveshaun/primitivestuff/issues"
   },
-  "dependencies": {
+  "peerDependencies": {
     "frontity": "^1.11.1",
+    "@frontity/html2react": "^1.4.0"
+  },
+  "dependencies": {
     "gsap": "^3.5.1",
     "react-gsap": "^2.2.1",
     "react-scrollmagic": "^2.2.0"
