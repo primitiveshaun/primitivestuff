@@ -64,6 +64,10 @@ Separation of config / theme
 
 ## History
 
+**v1.0.11 > Component updates (Sept 21, 2020):**
+- [x] remove color-convert
+- [x] remove unused svgs / optimise svgs
+
 **v1.0.10 > Component updates (Sept 20, 2020):**
 - [x] remove datamap code
 - [x] test heading pebble
