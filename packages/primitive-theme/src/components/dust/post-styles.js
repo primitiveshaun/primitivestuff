@@ -1,5 +1,17 @@
 import { css } from "frontity";
-import convert from 'color-convert';
+
+const hexToRGB = (hex, alpha) => {
+  const r = parseInt(hex.slice(1, 3), 16),
+      g = parseInt(hex.slice(3, 5), 16),
+      b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+      return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+  } else {
+      return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
+}
+//hexToRGB('#FF0000', 0.5);
 
 // do i need the .post to not overide global a?
 const postall = colors => css`
@@ -8,7 +20,8 @@ const postall = colors => css`
 
     h2 { margin-top: 2rem; }
 
-    p > a, strong > a {
+    p > a,
+    strong > a {
       margin-left: .25rem;
       margin-right: .25rem;
       color: inherit;
@@ -25,7 +38,6 @@ const postall = colors => css`
         color: black;
       }
     }
-
 
     .intro {
       font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
@@ -78,7 +90,7 @@ const postall = colors => css`
       padding: .5rem 5% .1rem;
       font-size: 1.6rem;
       font-family: Baskerville, Georgia, serif; 
-      color:  rgba(${ convert.hex.rgb(colors.coal).join()}, .7);
+      color:  ${ hexToRGB(colors.coal, 0.7)};
           
       strong, a {
         color: ${colors.primary}; 
@@ -119,7 +131,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, .3);
+    text-shadow: 1px 1px 0 ${ hexToRGB(colors.disco.neongreen, 0.3)};
 
     &::before {
       content: "";
@@ -130,7 +142,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.primary).join()}, .2);
+      background-color: ${ hexToRGB(colors.primary, 0.2)};
     }
   }
 
@@ -141,7 +153,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, .3);
+    text-shadow: 1px 1px 0 ${ hexToRGB(colors.disco.neongreen, 0.3)};
 
     &::before {
       content: "";
@@ -152,7 +164,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.secondary).join()}, .2);
+      background-color: ${ hexToRGB(colors.secondary, 0.2)};
     }
   }
 
@@ -162,7 +174,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.warning).join()}, .3);
+    text-shadow: 1px 1px 0 ${ hexToRGB(colors.warning, 0.3)};
 
     &::before {
       content: "";
@@ -173,7 +185,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.danger).join()}, .2);
+      background-color: ${ hexToRGB(colors.danger, 0.2)};
     }
   }
 
@@ -183,7 +195,7 @@ const postall = colors => css`
     left: -2rem;
     font-family: 'Hepta Slab';
     font-size: 1.3rem;
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.danger).join()}, .3);
+    text-shadow: 1px 1px 0 ${ hexToRGB(colors.danger, 0.3)};
 
     &::before {
       content: "";
@@ -194,7 +206,7 @@ const postall = colors => css`
       width: 6rem;
       height: 6rem;
       border-radius: 50px;
-      background-color: rgba(${ convert.hex.rgb(colors.warning).join()}, .2);
+      background-color: ${ hexToRGB(colors.warning, 0.2)};
     }
   }
   
@@ -229,7 +241,7 @@ const postall = colors => css`
   }
 
   .btn-primary {
-    text-shadow: 2px 2px 2px rgba(${ convert.hex.rgb(colors.coal).join()}, .2);
+    text-shadow: 2px 2px 2px ${ hexToRGB(colors.coal, 0.2)};
     background-color: ${colors.primary};
     border: 1px solid ${colors.primary};
     border-left: 5px solid ${colors.primary};
@@ -245,16 +257,16 @@ const postall = colors => css`
 
   .fleuron { 
     font-size: 3rem;
-    color:  rgba(${ convert.hex.rgb(colors.primary).join()}, .6) !important;
+    color: ${ hexToRGB(colors.primary, 0.6)} !important;
 
     a {
-      color:  rgba(${ convert.hex.rgb(colors.warning).join()}, .6) !important;
+      color: ${ hexToRGB(colors.warning, 0.6)} !important;
       text-decoration: none;
       background: transparent !important;
       border: none !important;
 
       &::hover {
-        color:  rgba(${ convert.hex.rgb(colors.danger).join()}, .6) !important;
+        color: ${ hexToRGB(colors.danger, 0.6)} !important;
         background: transparent !important;
         border: none !important;
       }

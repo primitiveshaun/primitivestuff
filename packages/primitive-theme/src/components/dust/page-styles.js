@@ -1,44 +1,49 @@
 import { css } from "frontity";
 import { discolight, animatedgradient } from "primitivescenes/glamourmagic";
-import convert from 'color-convert';
+
 //import { mq2col } from './_grid';
 import { mq2col } from "primitivepebbles/grid";
+
+const hexToRGB = (hex, alpha) => {
+  const r = parseInt(hex.slice(1, 3), 16),
+    g = parseInt(hex.slice(3, 5), 16),
+    b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+  } else {
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
+}
+//hexToRGB('#FF0000', 0.5);
 
 /* Themed variants */
 const jungleDiscoBG = colors => {
   return {
     bg: {
-      aztec:  css`background-color: ${ colors.dark};
-      background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0) 45%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 65%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-      linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-      linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-      linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+      aztec: css`background-color: ${colors.dark};
+      background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.1)} 45%, ${hexToRGB(colors.coal, 0.3)} 65%, ${hexToRGB(colors.coal, 0.5)} 100%),
+      linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
+      linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
+      linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
       url(https://api.primitivedigital.uk/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
-      oldrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
-        background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+
+      oldrock: css`background-color: ${hexToRGB(colors.dark)};
+        background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.5)} 100%),
+        linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
+        linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
+        linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
         url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`,
-      wallrock: css`background-color: rgb(${ convert.hex.rgb(colors.dark).join()});
-        background: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.coal).join()}, 0) 0%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to top, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 95%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.3) 100%),
-        linear-gradient(to right, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
-        linear-gradient(to left, rgba(${ convert.hex.rgb(colors.dark).join()}, 0.2) 0%, rgba(${convert.hex.rgb(colors.dark).join()}, 0.2) 90%, rgba(${convert.hex.rgb(colors.coal).join()}, 0.5) 100%),
+
+      wallrock: css`background-color: rgb(${hexToRGB(colors.dark)});
+        background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.5)} 100%),
+        linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
+        linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
+        linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
         url(https://api.primitivedigital.uk/wp-content/uploads/stone/rockwall-300x300.png) repeat fixed;`
     }
   }
 }
-
-/*
-const flexRow = css`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-`;
-*/
 
 const flexRow = `
   display: flex;
@@ -80,8 +85,8 @@ const listStyle1 = colors => css`
   ul {
     margin: 1rem 1.5rem 0 5rem;
     padding: 2rem 1rem;
-    background: rgba(${ convert.hex.rgb(colors.white).join()},0.5);
-    border: 2px solid ${ colors.coal };
+    background: ${hexToRGB(colors.white, 0.5)};
+    border: 2px solid ${colors.coal};
   }
 
   li {
@@ -91,8 +96,8 @@ const listStyle1 = colors => css`
     font-size: 1.7rem;
     line-height: 1.6;
     list-style: none;
-    color: ${ colors.coal };
-    text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6);
+    color: ${colors.coal};
+    text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)};
   }
 `;
 
@@ -102,13 +107,13 @@ const h1Style = colors => `
   max-width: 800px;
   position: relative;
 
-  background-color: rgba(${ convert.hex.rgb(colors.white).join()},.4);
-  background-image: linear-gradient(to bottom, rgba(${ convert.hex.rgb(colors.white).join()},.4), rgba(${convert.hex.rgb(colors.white).join()},.6));
-  border: solid 1px rgba(${ convert.hex.rgb(colors.white).join()}, .6);
-  outline: solid 1px rgba(${ convert.hex.rgb(colors.coal).join()}, .1);
+  background-color: ${hexToRGB(colors.white, 0.4)};
+  background-image: linear-gradient(to bottom, ${hexToRGB(colors.white, 0.4)}, ${hexToRGB(colors.white, 0.6)});
+  border: solid 1px ${hexToRGB(colors.white, 0.6)};
+  outline: solid 1px ${hexToRGB(colors.coal, 0.1)};
   outline-offset: -.5rem;
   box-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-             0px -5px 35px rgba(${ convert.hex.rgb(colors.white).join()},0.3);
+             0px -5px 35px ${hexToRGB(colors.white, 0.3)};
 `;
 
 const h2Style = colors => `
@@ -119,12 +124,12 @@ const h2Style = colors => `
   line-height: 4.5rem;
   letter-spacing: 2px;
   font-weight: 400;
-  text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6), 
-  0px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-  1px 0px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-  -1px -1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-  -0px -1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-  -1px -0px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6);
+  text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)}, 
+  0px 1px 0 ${hexToRGB(colors.white, 0.6)},
+  1px 0px 0 ${hexToRGB(colors.white, 0.6)},
+  -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
+  -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
+  -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
 
   span {
     width: 100%;
@@ -132,7 +137,7 @@ const h2Style = colors => `
     font-size:  2rem;
     color: #fff;
     font-family: 'Pacifico';
-    text-shadow: -2px 1px 2px rgba(${ convert.hex.rgb(colors.disco.cyan).join()},.4), 2px -1px 2px rgba(${ convert.hex.rgb(colors.disco.magenta).join()},.4);
+    text-shadow: -2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 2px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
   }
 
   &::before {
@@ -145,7 +150,7 @@ const h2Style = colors => `
     left: 1.5rem;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
-    box-shadow: -2px -1px 2px rgba(${ convert.hex.rgb(colors.disco.cyan).join()},.4), -1px -2px 2px rgba(${ convert.hex.rgb(colors.disco.magenta).join()},.4);
+    box-shadow: -2px -1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, -1px -2px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
   }
 `;
 
@@ -157,12 +162,12 @@ const h3Style = colors => `
   line-height: 4.5rem;
   letter-spacing: 2px;
   color: #000;
-  text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6), 
-    0px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-    1px 0px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-    -1px -1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-    -0px -1px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6),
-    -1px -0px 0 rgba(${ convert.hex.rgb(colors.white).join()}, 0.6);
+  text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)}, 
+  0px 1px 0 ${hexToRGB(colors.white, 0.6)},
+  1px 0px 0 ${hexToRGB(colors.white, 0.6)},
+  -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
+  -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
+  -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
 
   span {
     width: 100%;
@@ -170,7 +175,7 @@ const h3Style = colors => `
     font-size:  2rem;
     color: #fff;
     font-family: 'Pacifico';
-    text-shadow: -2px 1px 2px rgba(${ convert.hex.rgb(colors.disco.cyan).join()},.4), 2px -1px 2px rgba(${ convert.hex.rgb(colors.disco.magenta).join()},.4);
+    text-shadow: -2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 2px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
   }
 
   &::after {
@@ -183,7 +188,7 @@ const h3Style = colors => `
     right: 1.5rem;
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
-    box-shadow: 2px 1px 2px rgba(${ convert.hex.rgb(colors.disco.cyan).join()},.4), 1px 2px 2px rgba(${ convert.hex.rgb(colors.disco.magenta).join()},.4);
+    box-shadow: 2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 1px 2px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
   }
 `;
 
@@ -210,7 +215,7 @@ const pageall = colors => css`
     padding: 2rem 0 2rem;
     font-size: 4rem;
     text-align: center;
-    text-shadow: .15rem .15rem rgba(${ convert.hex.rgb(colors.fluff).join()}, .5);
+    text-shadow: .15rem .15rem ${hexToRGB(colors.fluff)};
   }
 
   p.fsletter::first-letter {
@@ -252,7 +257,7 @@ const pageall = colors => css`
     font-family: Baskerville, Georgia, serif; 
     padding: .5rem 5% .1rem;
     font-size: 1.6rem;
-    color:  rgba(${ convert.hex.rgb(colors.coal).join()}, .7);
+    color: ${hexToRGB(colors.coal, 0.7)};
 
     strong, a {
       color: ${colors.primary};
@@ -289,7 +294,7 @@ const pageall = colors => css`
 
   .btn-primary {
     
-    text-shadow: 2px 2px 2px rgba(${ convert.hex.rgb(colors.coal).join()}, .2);
+    text-shadow: 2px 2px 2px ${hexToRGB(colors.coal, 0.2)};
     background-color: ${colors.primary};
     border: 1px solid ${colors.primary};
     border-left: 5px solid ${colors.primary};
@@ -301,7 +306,7 @@ const pageall = colors => css`
       max-width: 360px;
     }
     &:active {
-      text-shadow: 1px 1px 0px rgba(${ convert.hex.rgb(colors.coal).join()}, .3);
+      text-shadow: 1px 1px 0px ${hexToRGB(colors.coal, 0.3)};
       max-width: 360px;
     }
   }
@@ -333,7 +338,7 @@ const pageall = colors => css`
         font-size: 1.3rem;
         font-family: 'Abril Fatface', Georgia, cursive; 
         font-weight: 700;
-        color: ${ colors.coal };
+        color: ${colors.coal};
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -343,7 +348,7 @@ const pageall = colors => css`
           7px 4px 2px rgba(0,0,0,0.3);
     
         background-color: #232b2b;
-        border: solid 2px ${ colors.coal };
+        border: solid 2px ${colors.coal};
       }
 
       li:nth-of-type(odd) {
@@ -382,7 +387,7 @@ const pageall = colors => css`
       position : relative; 
       padding-left: 1.5rem;
       background-color: transparent;
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.gray).join()}, .8);
+      border-left: 4px solid ${hexToRGB(colors.gray, 0.8)};
 
       p {
         margin : 0;
@@ -412,7 +417,7 @@ const pageall = colors => css`
         left: 50%;
 
         color: rgba(255,255,255, 0.5);
-        background: rgba(${ convert.hex.rgb(colors.gray).join()}, 0.8);
+        background: ${hexToRGB(colors.gray, 0.8)};
         border-radius: 50% 50% 50% 50%;
         
         font-family: 'icons';
@@ -427,15 +432,15 @@ const pageall = colors => css`
   .q-style-1 {
     blockquote { 
 
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.primary).join()}, .8);
+      border-left: 4px solid ${hexToRGB(colors.primary, 0.8)};
 
       p {
-        box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.primary).join()}, 0.2); 
-        color: rgba(${ convert.hex.rgb(colors.primary).join()}, 0.8); 
+        box-shadow: 0 -6px 0 ${hexToRGB(colors.primary, 0.2)}; 
+        color: ${hexToRGB(colors.primary, 0.8)}; 
       }
 
       &::before {
-        border-left: 5px solid rgba(${ convert.hex.rgb(colors.primary).join()}, .1);
+        border-left: 5px solid ${hexToRGB(colors.primary, 0.1)};
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -447,22 +452,22 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.primary).join()}, 0.8);
+        background: ${hexToRGB(colors.primary, 0.8)};
       }
     }
   }
 
   .q-style-2 {
     blockquote { 
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8); 
+      border-left: 4px solid ${hexToRGB(colors.secondary, 0.8)}; 
 
       p {
-        box-shadow : 0 -6px 0 rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.2); 
-        color : rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8); 
+        box-shadow: 0 -6px 0 ${hexToRGB(colors.secondary, 0.2)}; 
+        color: ${hexToRGB(colors.secondary, 0.8)}; 
       }
 
       &::before {
-        border-left: 5px solid rgba(${ convert.hex.rgb(colors.secondary).join()}, .1);
+        border-left: 5px solid ${hexToRGB(colors.secondary, 0.1)};
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -474,22 +479,22 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.secondary).join()}, 0.8);
+        background: ${hexToRGB(colors.secondary, 0.8)};
       }
     }
   } 
 
   .q-style-3 {
       
-    ${ quoteStyle1 } 
-    ${ flexCol, flex2Col } 
+    ${quoteStyle1} 
+    ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.6);
+      border-left: 4px solid ${hexToRGB(colors.disco.neongreen, 0.6)};
 
       p {
-        box-shadow: 0 -6px 0  rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.6);
-        color: ${ colors.coal };
+        box-shadow: 0 -6px 0 ${hexToRGB(colors.disco.neongreen, 0.6)};
+        color: ${colors.coal};
 
         span {
           display: inline-block;
@@ -503,28 +508,28 @@ const pageall = colors => css`
         margin-right: auto;
         max-width: 40%;
         font-size: 1.8rem;
-        color: ${ colors.coal };
-        text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()},0.5);
-        background: rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.4);
+        color: ${colors.coal};
+        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
+        background: ${hexToRGB(colors.disco.neongreen, 0.4)};
       }
     
       &::after {
-          background: rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.8);
+          background: ${hexToRGB(colors.disco.neongreen, 0.8)};
       }
     }
   } 
 
   .q-style-4 {
         
-    ${ quoteStyle1 } 
-    ${ flexCol, flex2Col } 
+    ${quoteStyle1} 
+    ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.disco.purple).join()},0.8);
+      border-left: 4px solid ${hexToRGB(colors.disco.purple, 0.8)};
 
       p {
-        box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.disco.purple).join()},0.8);
-        color: ${ colors.coal };
+        box-shadow: 0 -6px 0 ${hexToRGB(colors.disco.purple, 0.8)};
+        color: ${colors.coal};
 
         span {
           display: inline-block;
@@ -538,28 +543,28 @@ const pageall = colors => css`
         margin-right: auto;
         max-width: 40%;
         font-size: 1.8rem;
-        color: ${ colors.coal };
-        text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()},0.5);
-        background: rgba(${ convert.hex.rgb(colors.disco.purple).join()}, 0.4);        
+        color: ${colors.coal};
+        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
+        background: ${hexToRGB(colors.disco.purple, 0.4)};  
       }
     
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.disco.purple).join()},0.8);
+        background: ${hexToRGB(colors.disco.purple, 0.8)};
       }
     }
   }
 
   .q-style-5 {
       
-    ${ quoteStyle1 } 
-    ${ flexCol, flex2Col } 
+    ${quoteStyle1} 
+    ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.6);
+      border-left: 4px solid ${hexToRGB(colors.disco.blue, 0.6)};
 
       p {
-        box-shadow: -3px -6px 0 rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.6), 3px 3px 0 rgba(255,0,180,0.6);
-        color: ${ colors.coal };
+        box-shadow: -3px -6px 0 ${hexToRGB(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
+        color: ${colors.coal};
 
         span {
           display: inline-block;
@@ -570,12 +575,12 @@ const pageall = colors => css`
 
       cite {
         font-size: 1.8rem;
-        color: ${ colors.coal };
-        text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()},0.5);
+        color: ${colors.coal};
+        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
       }
     
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.7);
+        background: ${hexToRGB(colors.disco.blue, 0.7)};
       }
     }
   } 
@@ -586,11 +591,11 @@ const pageall = colors => css`
     max-width: 450px;
 
     blockquote {
-      border-left: 4px solid rgba(${ convert.hex.rgb(colors.info).join()}, 0.8);
+      border-left: 4px solid ${hexToRGB(colors.info, 0.8)};
 
       p {
-        background: rgba(${ convert.hex.rgb(colors.white).join()},0.6);
-        color: ${ colors.coal };
+        background: ${hexToRGB(colors.white, 0.6)};
+        color: ${colors.coal};
 
         span {
           display: inline-block;
@@ -610,32 +615,32 @@ const pageall = colors => css`
 
       cite {
         font-size: 1.8rem;
-        color: ${ colors.white };
-        text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.coal).join()},0.5);
+        color: ${colors.white};
+        text-shadow: 1px 1px 0 ${hexToRGB(colors.coal, 0.5)};
       }
     
       &::after {
-        background: rgba(${ convert.hex.rgb(colors.info).join()},0.8);
+        background: ${hexToRGB(colors.info, 0.8)};
       }
     }
   }
 
   .q-style-7 {
       
-    ${ quoteStyle1 } 
-    ${ flexCol, flex2Col } 
+    ${quoteStyle1} 
+    ${flexCol, flex2Col} 
 
       blockquote {
-        border-left: 4px solid rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.6);
+        border-left: 4px solid ${hexToRGB(colors.disco.blue, 0.6)};
 
         p {
           padding: .5rem 0;
           line-height: 4rem;
-          background: rgba(${ convert.hex.rgb(colors.white).join()},0.6);
-          box-shadow: -3px -6px 0 rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.6), 3px 3px 0 rgba(255,0,180,0.6);
-          color: ${ colors.coal };
+          background: ${hexToRGB(colors.white, 0.6)};
+          box-shadow: -3px -6px 0 ${hexToRGB(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
+          color: ${colors.coal};
           white-space: pre-wrap;
-          text-shadow: 0 1px 1px rgba(${ convert.hex.rgb(colors.white).join()},0.5);
+          text-shadow: 0 1px 1px ${hexToRGB(colors.white, 0.5)};
           border-width: 0.5rem 0;
 
           span {
@@ -656,12 +661,12 @@ const pageall = colors => css`
 
         cite {
           font-size: 1.8rem;
-          color: ${ colors.coal };
-          text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.white).join()},0.5);
+          color: ${colors.coal};
+          text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
         }
     
         &::after {
-          background: rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.7);
+          background: ${hexToRGB(colors.disco.blue, 0.7)};
         }
       }
     }
@@ -673,16 +678,16 @@ const pageall = colors => css`
   
       blockquote {
 
-        border-left: 4px solid rgba(${ convert.hex.rgb(colors.warning).join()},0.8);
+        border-left: 4px solid ${hexToRGB(colors.warning, 0.8)};
   
         p {
           padding: .5rem 0;
           line-height: 4rem;
-          background: rgba(${ convert.hex.rgb(colors.white).join()},0.6);
-          box-shadow: 0 -6px 0 rgba(${ convert.hex.rgb(colors.warning).join()}, 0.8);
-          color: ${ colors.coal };
+          background: ${hexToRGB(colors.white, 0.6)};
+          box-shadow: 0 -6px 0 ${hexToRGB(colors.warning, 0.8)};
+          color: ${colors.coal};
           white-space: pre-wrap;
-          text-shadow: 0 1px 1px rgba(${ convert.hex.rgb(colors.white).join()}, 0.5);
+          text-shadow: 0 1px 1px ${hexToRGB(colors.white, 0.5)};
           border-width: 0.5rem 0;
   
           span {
@@ -702,11 +707,11 @@ const pageall = colors => css`
         }
         cite {
           font-size: 1.8rem;
-          color: ${ colors.white };
-          text-shadow: 1px 1px 0 rgba(${ convert.hex.rgb(colors.coal).join()},0.5);
+          color: ${colors.white};
+          text-shadow: 1px 1px 0 ${hexToRGB(colors.coal, 0.5)};
         }
         &::after {
-          background: rgba(${ convert.hex.rgb(colors.warning).join()},0.8);
+          background: ${hexToRGB(colors.warning, 0.8)};
         }
       }
     }
@@ -714,16 +719,16 @@ const pageall = colors => css`
 
     .fleuron { 
       font-size: 3rem;
-      color:  rgba(${ convert.hex.rgb(colors.primary).join()}, .6) !important;
+      color: ${hexToRGB(colors.primary, 0.6)} !important;
   
       a {
-        color:  rgba(${ convert.hex.rgb(colors.warning).join()}, .6) !important;
+        color: ${hexToRGB(colors.warning, 0.6)} !important;
         text-decoration: none;
         background: transparent !important;
         border: none !important;
   
         &::hover {
-          color:  rgba(${ convert.hex.rgb(colors.danger).join()}, .6) !important;
+          color: ${hexToRGB(colors.danger, 0.6)} !important;
           background: transparent !important;
           border: none !important;
         }
@@ -740,7 +745,7 @@ const pageall = colors => css`
   
       em {
         display: inline-block;
-        color:  ${ colors.coal };
+        color:  ${colors.coal};
         font-size: .5rem;
         letter-spacing: 2px;
         vertical-align: middle;
@@ -779,7 +784,7 @@ const pagehome = colors => css`
       margin-bottom: 1.2rem;
 
       font-weight: bold;
-      color: rgba( ${ convert.hex.rgb(colors.coal).join()}, 0.9);
+      color: ${hexToRGB(colors.coal, 0.9)};
 
       &::after {
         content: " ";
@@ -787,11 +792,11 @@ const pagehome = colors => css`
         margin: 1.2rem auto 0 0;
         width: 5rem;
         height: 3px;
-        background: rgba( ${ convert.hex.rgb(colors.primary).join()}, .8);
+        background: ${hexToRGB(colors.primary, 0.8)};
       }
 
       &:nth-of-type(even)::after {
-        background: rgba( ${ convert.hex.rgb(colors.secondary).join()}, .8);
+        background: ${hexToRGB(colors.secondary, 0.8)};
       }
     }
   }
@@ -801,20 +806,20 @@ const pagehome = colors => css`
 const pagedesign = colors => css`
   #page-8 {
 
-    ${ jungleDiscoBG(colors).bg.aztec }  
+    ${jungleDiscoBG(colors).bg.aztec}  
 
     .content {
-      ${ flexRow }
+      ${flexRow}
     }
                      
     h1 {
-      ${ h1Style(colors) }
+      ${h1Style(colors)}
   
       font-family: 'Abril Fatface', Georgia, cursive; 
       font-size: 4.3rem;
-      color: rgba(${ convert.hex.rgb(colors.coal).join()}, .9);
-      text-shadow: -8px 1px 2px rgba(${ convert.hex.rgb(colors.disco.cyan).join()}, .4),
-                    8px -1px 2px rgba(${ convert.hex.rgb(colors.disco.magenta).join()}, .4);
+      color: ${hexToRGB(colors.coal, 0.9)};
+      text-shadow: -8px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)},
+                    8px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
 
       &::after {
         content: " ";
@@ -824,8 +829,9 @@ const pagedesign = colors => css`
         display: block;
         border-top: 2px solid black;
         opacity: .8;
-        box-shadow: -10px 2px 5px rgba(${ convert.hex.rgb(colors.disco.cyan).join()}, .4), 10px -2px 5px rgba(${ convert.hex.rgb(colors.disco.magenta).join()}, .4);
-        background-image: linear-gradient(90deg, rgba(${ convert.hex.rgb(colors.disco.magenta).join()}, 0.8) 15%, rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.6) 35%, rgba(${ convert.hex.rgb(colors.disco.purple).join()}, 0.8) 85%);
+        box-shadow: -10px 2px 5px ${hexToRGB(colors.disco.cyan, 0.4)},
+                    10px -2px 5px ${hexToRGB(colors.disco.magenta, 0.4)};
+        background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.magenta, 0.8)} 15%, ${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
       }
 
       &::before {
@@ -836,18 +842,19 @@ const pagedesign = colors => css`
         display: block;
         border-top: 2px solid black;
         opacity: .8;
-        box-shadow: -10px 2px 5px rgba(${ convert.hex.rgb(colors.disco.cyan).join()}, .4), 10px -2px 5px rgba(${ convert.hex.rgb(colors.disco.magenta).join()}, .4);
-        background-image: linear-gradient(90deg, rgba(${ convert.hex.rgb(colors.disco.magenta).join()}, 0.8) 15%, rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.6) 35%, rgba(${ convert.hex.rgb(colors.disco.purple).join()}, 0.8) 85%);
+        box-shadow: -10px 2px 5px ${hexToRGB(colors.disco.cyan, 0.4)}, 
+                    10px -2px 5px ${hexToRGB(colors.disco.magenta, 0.4)};
+        background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.magenta, 0.8)} 15%, ${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
       }
     }
 
     .list-style-1 {
 
-      ${ listStyle1(colors) } 
-      ${ flexCol, flex2Col } 
+      ${listStyle1(colors)} 
+      ${flexCol, flex2Col} 
 
-      h2 { ${ h2Style(colors) } }
-      h3 { ${ h3Style(colors) } }
+      h2 { ${h2Style(colors)} }
+      h3 { ${h3Style(colors)} }
 
       li:last-of-type {
         font-size: 2rem;
@@ -862,12 +869,12 @@ const pagedesign = colors => css`
 const pagedev = colors => css`
 #page-1904 {
 
-  ${ jungleDiscoBG(colors).bg.aztec }  
+  ${jungleDiscoBG(colors).bg.aztec}  
     
-  .content { ${ flexRow } }
+  .content { ${flexRow} }
   
   h1 {
-    ${ h1Style(colors) }
+    ${h1Style(colors)}
 
     font-family: "Hepta Slab";
     font-weight: bold;
@@ -880,10 +887,11 @@ const pagedev = colors => css`
       width: 70%;
       height: 12px;
       display: block;
-      border-top: 1px solid rgba(${ convert.hex.rgb(colors.coal).join()},.6);
-      border-left: 1px solid rgba(${ convert.hex.rgb(colors.coal).join()},.6);
-      box-shadow: 1px 1px 0 rgba(238, 238, 238, .6), 3px 2px 0 rgba(	112, 112, 112, .6);
-      background-image: linear-gradient(90deg, rgba(${ convert.hex.rgb(colors.disco.purple).join()}, 0.8) 15%, rgba(${ convert.hex.rgb(colors.disco.neongreen).join()}, 0.6) 35%, rgba(${ convert.hex.rgb(colors.disco.purple).join()}, 0.8) 85%);
+      border-top: 1px solid ${hexToRGB(colors.coal, 0.6)};
+      border-left: 1px solid ${hexToRGB(colors.coal, 0.6)};
+      box-shadow: 1px 1px 0 rgba(238, 238, 238, .6),
+                  3px 2px 0 rgba(	112, 112, 112, .6);
+      background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.purple, 0.8)} 15%,${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
       
       /* animation: ${animatedgradient} 6s linear infinite;
       animation-direction: alternate; */
@@ -891,19 +899,19 @@ const pagedev = colors => css`
   }
 
     .list-style-1 {
-      ${ listStyle1(colors) } 
-      ${ flexCol, flex2Col } 
+      ${listStyle1(colors)} 
+      ${flexCol, flex2Col} 
 
-      h2 { ${ h2Style(colors) } }
-      h3 { ${ h3Style(colors) } }
+      h2 { ${h2Style(colors)} }
+      h3 { ${h3Style(colors)} }
     } 
 
     .list-style-2 {
-      ${ listStyle1(colors) } 
-      ${ flexCol, flex2Col } 
+      ${listStyle1(colors)} 
+      ${flexCol, flex2Col} 
 
-      h2 { ${ h2Style(colors) } }
-      h3 { ${ h3Style(colors) } }
+      h2 { ${h2Style(colors)} }
+      h3 { ${h3Style(colors)} }
     } 
   }
 `;
@@ -912,17 +920,18 @@ const pagedev = colors => css`
 const pagedata = colors => css`
 #page-2102 {
 
-  ${ jungleDiscoBG(colors).bg.aztec }  
+  ${jungleDiscoBG(colors).bg.aztec}  
     
-  .content { ${ flexRow } }
+  .content { ${flexRow} }
 
   h1 {
-    ${ h1Style(colors) }
+    ${h1Style(colors)}
 
     font-family: "Playfair Display";
     font-weight: bold;
-    color: rgba(${ convert.hex.rgb(colors.coal).join()}, .9);
-    text-shadow: 2px 1px 0 #fff, -2px -3px 1px rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.5), 4px 3px 1px rgba(255,0,180,0.5);
+    color: ${hexToRGB(colors.coal, 0.9)};
+    text-shadow: 2px 1px 0 #fff, -2px -3px 1px ${hexToRGB(colors.disco.blue, 0.5)},
+                  4px 3px 1px rgba(255,0,180,0.5);
 
     &::after {
       content: " ";
@@ -930,17 +939,18 @@ const pagedata = colors => css`
       width: 70%;
       height: 12px;
       display: block;
-      border-top: 1px solid rgba(${ convert.hex.rgb(colors.coal).join()},.6);
-      border-left: 1px solid rgba(${ convert.hex.rgb(colors.coal).join()},.6);
+      border-top: 1px solid ${hexToRGB(colors.coal, 0.6)};
+      border-left: 1px solid ${hexToRGB(colors.coal, 0.6)};
       background: linear-gradient(
-      -45deg, 
-      rgba(255,0,180,0.5) 25%, 
-      rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.5) 25%, 
-      rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.5) 50%, 
-      rgba(255,0,180,0.5) 50%, 
-      rgba(255,0,180,0.5) 75%, 
-      rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.5) 75%, 
-      rgba(${ convert.hex.rgb(colors.disco.blue).join()},0.5));
+        -45deg, 
+        rgba(255,0,180,0.5) 25%, 
+        ${hexToRGB(colors.disco.blue, 0.5)} 25%, 
+        ${hexToRGB(colors.disco.blue, 0.5)} 50%, 
+        rgba(255,0,180,0.5) 50%, 
+        rgba(255,0,180,0.5) 75%, 
+        ${hexToRGB(colors.disco.blue, 0.5)} 75%, 
+        ${hexToRGB(colors.disco.blue, 0.5)}
+      );
       background-size: 20px 20px;
       background-position: 0 0;
       box-shadow: 1px 1px 0 rgba(238, 238, 238, .6), 3px 2px 0 rgba(	112, 112, 112, .6);
@@ -951,11 +961,11 @@ const pagedata = colors => css`
   }
 
   .list-style-1 {
-    ${ listStyle1(colors) } 
-    ${ flexCol, flex2Col } 
+    ${listStyle1(colors)} 
+    ${flexCol, flex2Col} 
 
-    h2 { ${ h2Style(colors) } }
-    h3 { ${ h3Style(colors) } }
+    h2 { ${h2Style(colors)} }
+    h3 { ${h3Style(colors)} }
   } 
 }`;
 
@@ -963,29 +973,29 @@ const pagedata = colors => css`
 const pagemarketing = colors => css`
 #page-2128 {
 
-  ${ jungleDiscoBG(colors).bg.aztec }  
+  ${jungleDiscoBG(colors).bg.aztec}  
     
-  .content { ${ flexRow } }
+  .content { ${flexRow} }
                    
   h1 {
-    ${ h1Style(colors) }
+    ${h1Style(colors)}
 
     font-family: "Abril Fatface";
     font-weight: bold;
     letter-spacing: 1px;
-    color: rgba(${ convert.hex.rgb(colors.coal).join()}, .9);
+    color: ${hexToRGB(colors.coal, 0.9)};
     text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-                  0px -5px 35px rgba(${ convert.hex.rgb(colors.white).join()},0.3);
+                  0px -5px 35px ${hexToRGB(colors.white, 0.3)};
 
   }
 
   .list-style-1 {
 
-    ${ listStyle1(colors) } 
-    ${ flexCol, flex2Col } 
+    ${listStyle1(colors)} 
+    ${flexCol, flex2Col} 
 
-    h2 { ${ h2Style(colors) } }
-    h3 { ${ h3Style(colors) } }
+    h2 { ${h2Style(colors)} }
+    h3 { ${h3Style(colors)} }
 
     li:last-of-type {
       padding: 1rem;
