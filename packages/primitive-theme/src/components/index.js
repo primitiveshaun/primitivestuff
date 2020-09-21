@@ -1,6 +1,6 @@
+import React from "react";
 import { connect, Global, Head, styled, loadable } from "frontity";
 import Switch from "@frontity/components/switch";
-import React from "react";
 
 import Loading from "primitivepebbles/loading";
 import MetaTitle from "primitivepebbles/meta-title";
