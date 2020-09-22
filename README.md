@@ -9,7 +9,7 @@ Built on the awesome, itty bitty, [Frontity](https://frontity.org/) framework.
 
 With little help from our friends: [Bootstrap 5](https://v5.getbootstrap.com/), [GSAP](https://greensock.com/gsap/) and [ScrollMagic](https://scrollmagic.io/). 
 
-Live demo 👉  [Primitive Digital](https://primitivedigital.uk)
+Live site 👉  [primitivedigital.uk](https://primitivedigital.uk)
 
 New NPM package 🎉  ~  👉  [primitive-theme (v1.0.x)](https://www.npmjs.com/package/primitive-theme)
 
@@ -18,6 +18,7 @@ GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivest
 
 
 **NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+
 *Current experiments in the cave...*
 Migrating to Bootstrap 5 (currently in alpha!)
 Splitting code / config
