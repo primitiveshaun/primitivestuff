@@ -19,9 +19,9 @@ const Page = ({ state, actions, libraries }) => {
   useEffect(() => {
     actions.source.fetch(state.router.link);
     
-    //if (state.theme.config.devMode) {
-    //  console.log("@page: data", data);
-    //}
+    if (state.theme.config.devMode) {
+      console.log("@page: page", page);
+    }
     
   }, []);
 
