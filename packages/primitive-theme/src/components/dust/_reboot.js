@@ -1,5 +1,19 @@
 import { css } from "frontity";
 
+// jsbench best performance out of stackoverflow options
+const hexToRGB = (hex, alpha) => {
+  const r = parseInt(hex.slice(1, 3), 16),
+    g = parseInt(hex.slice(3, 5), 16),
+    b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
+  } else {
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+  }
+}
+//use, 6 digit only: hexToRGB('#FF0000', 0.5);
+
 const cssReboot = colors => css`
 
 *,
@@ -186,35 +200,56 @@ dd {
 }
 
 blockquote {
-  margin: 0 0 1rem;
-  border-color: ${colors.primary};
-  border-style: solid;
+  position : relative; 
+  margin: 5rem 0 2rem auto; 
+  padding: 150px 50px 1.5rem 1.5rem; 
+  width: 33vw;
+  max-width: 600px;
+  min-width: 300px;
+  background-color: transparent;
+  border-left: 4px solid ${hexToRGB(colors.gray, 0.8)};
 
-  /*rtl:ignore*/
-  border-width: 0 0 0 0.2rem;
-  color: inherit;
-  font-size: 1em;
-  margin: 4rem 0;
 
-  /*rtl:ignore*/
-  padding: 0.5rem 0 0.5rem 2rem;
-}
-cite {
-  color: gray;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 1.25;
-}
+  p {
+    margin : 0;
+    padding : .3rem 0;
+    display: inline; 
 
-blockquote cite {
-  display: block;
-  margin: 2rem 0 0 0;
-}
+    color: ${hexToRGB(colors.gray, 0.6)};
+    font-family: Baskerville,Georgia,serif;
+    font-style: italic; 
+    font-size: 2.1rem; 
+    line-height: 3.8rem; 
+    text-shadow: 0 1px 1px rgba(255,255,255, 0.5);  
+  }
+  cite {
+    display: block;
+    padding: 1rem 1rem 1rem 0;
+    font-size : 1.5rem; 
+    font-style : normal;
+    font-family: 'Amatic SC', sans-serif;
+  } 
 
-blockquote p:last-child {
-  margin: 0;
-}
+  &::after {
+    content: "❞";
+    margin-left: -65px;
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    top: 0;
+    left: 50%;
+
+    color: rgba(255,255,255, 0.5);
+    background: ${hexToRGB(colors.gray, 0.8)};
+    border-radius: 50% 50% 50% 50%;
+    
+    font-family: 'icons';
+    text-align: center;
+    font-size: 70px;
+    line-height: 130px;
+    text-shadow: 0 1px 1px rgba(255,255,255, 0.1);
+  }
+} 
 
 b, strong { font-weight: bold; }
 small { font-size: 0.875em; }
