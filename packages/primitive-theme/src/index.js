@@ -1,5 +1,7 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
+import iframe from "@frontity/html2react/processors/iframe";
+import quote from "./processors/blockquote";
 
 import CustomPageHandlers from "./components/sand/handlers";
 import { themecolor } from "./components/dust/_colors";
@@ -55,7 +57,7 @@ const primitiveTheme = {
        * sk-dev: not sure how best to use these in the elment.class css styling context
        * do this for `<code>` tags, not sure about quotes/modifiers
        */
-      processors: [image],
+      processors: [image, iframe, quote],
     },
     source: {
       handlers: CustomPageHandlers
