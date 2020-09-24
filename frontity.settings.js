@@ -14,12 +14,12 @@ const settings = {
       state: {
         theme: {
           menu: [
-            ["Testing", "/stats"],
+            ["Stats/config", "/stats"],
+            ["Content", "/frontity-tests"],
+            ["CPTs", "/timelines"],
             ["Pages", "/web-design"],
-            ["Development", "/frontity-tests"],
-            ["Timelines", "/timelines"],
-            ["Content", "/blog/a-decade-of-digital-development"],
-            ["Blog", "/blog"]
+            ["Post", "/blog/a-decade-of-digital-development"],
+            ["Posts", "/blog"]
           ],
           menufooter: [
             ["Contact", "/contact"],
