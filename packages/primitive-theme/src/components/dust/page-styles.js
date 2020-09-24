@@ -1,9 +1,11 @@
 import { css } from "frontity";
 import { discolight, animatedgradient } from "primitivescenes/glamourmagic";
+//import { colors } from "./_colors.js";
 
 //import { mq2col } from './_grid';
 import { mq2col } from "primitivepebbles/grid";
 
+// jsbench best performance out of stackoverflow options
 const hexToRGB = (hex, alpha) => {
   const r = parseInt(hex.slice(1, 3), 16),
     g = parseInt(hex.slice(3, 5), 16),
@@ -15,7 +17,7 @@ const hexToRGB = (hex, alpha) => {
     return "rgb(" + r + ", " + g + ", " + b + ")";
   }
 }
-//hexToRGB('#FF0000', 0.5);
+//use, 6 digit only: hexToRGB('#FF0000', 0.5);
 
 /* Themed variants */
 const jungleDiscoBG = colors => {
@@ -63,18 +65,7 @@ const flex2Col = css(mq2col({
   flex: ['0 0 100%', '0 0 50%'],
 }))
 
-const quoteStyle1 = css`
-  margin : 9rem 0 40px; 
-  padding : 10px 20px 20px; 
-  position : relative;
 
-  blockquote {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-`;
 
 const listStyle1 = colors => css`
   margin : 5px 0 40px; 
@@ -163,11 +154,11 @@ const h3Style = colors => `
   letter-spacing: 2px;
   color: #000;
   text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)}, 
-  0px 1px 0 ${hexToRGB(colors.white, 0.6)},
-  1px 0px 0 ${hexToRGB(colors.white, 0.6)},
-  -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
-  -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
-  -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
+    0px 1px 0 ${hexToRGB(colors.white, 0.6)},
+    1px 0px 0 ${hexToRGB(colors.white, 0.6)},
+    -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
+    -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
+    -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
 
   span {
     width: 100%;
@@ -189,6 +180,18 @@ const h3Style = colors => `
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
     box-shadow: 2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 1px 2px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
+  }
+`;
+
+const quoteStyle1 = css`
+  margin : 9rem 0 40px; 
+  padding : 10px 20px 20px; 
+  position : relative;
+
+  blockquote {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 
@@ -218,6 +221,8 @@ const pageall = colors => css`
     text-shadow: .15rem .15rem ${hexToRGB(colors.fluff)};
   }
 
+
+
   p.fsletter::first-letter {
     font-weight: bold;
     color: red;
@@ -226,20 +231,6 @@ const pageall = colors => css`
   p.fsline::first-line
     font-weight: bold;
     color: green;
-  }
-
-  .has-text-align-left,
-  .wp-block-image .alignleft {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .has-text-align-center,
-  .wp-block-image .aligncenter {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: justify;
   }
 
   .intro {
@@ -264,6 +255,23 @@ const pageall = colors => css`
       font-style: italic;
       text-decoration: none;
     }
+  }
+
+
+
+  
+  .has-text-align-left,
+  .wp-block-image .alignleft {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .has-text-align-center,
+  .wp-block-image .aligncenter {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
   }
 
   .btn {
@@ -377,59 +385,11 @@ const pageall = colors => css`
     padding : 10px 20px 20px; 
     position : relative; 
     max-width: 100vw;
-    overflow: hidden;
-    
 
-    blockquote {
-      margin : 0; 
-      padding : 0; 
-      padding-top : 150px; 
-      position : relative; 
-      padding-left: 1.5rem;
-      background-color: transparent;
-      border-left: 4px solid ${hexToRGB(colors.gray, 0.8)};
-
-      p {
-        margin : 0;
-        padding : .3rem 0;
-        display: inline; 
-        background: rgba(255,255,255, 0.5); 
-        font-family: Baskerville,Georgia,serif;
-        font-style: italic; 
-        font-size: 28px; 
-        line-height: 3.5rem; 
-        text-shadow: 0 1px 1px rgba(255,255,255, 0.5);  
-      }
-      cite {
-        padding: 3px 6px 3px 20px;
-        font-size : 1.5rem; 
-        font-style : normal;
-        font-family: 'Amatic SC', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      } 
-
-      &::after {
-        content: "❞";
-        margin-left: -65px;
-        position: absolute;
-        height: 130px;
-        width: 130px;
-        top: 0;
-        left: 50%;
-
-        color: rgba(255,255,255, 0.5);
-        background: ${hexToRGB(colors.gray, 0.8)};
-        border-radius: 50% 50% 50% 50%;
-        
-        font-family: 'icons';
-        text-align: center;
-        font-size: 70px;
-        line-height: 130px;
-        text-shadow: 0 1px 1px rgba(255,255,255, 0.1);
-      }
-    } 
   } 
 
   .q-style-1 {
+
     blockquote { 
 
       border-left: 4px solid ${hexToRGB(colors.primary, 0.8)};
