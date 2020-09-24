@@ -18,8 +18,16 @@ const settings = {
             ["Pages", "/web-design"],
             ["Development", "/frontity-tests"],
             ["Timelines", "/timelines"],
-            ["Content", "/blog/a-decade-of-digital-development/"],
+            ["Content", "/blog/a-decade-of-digital-development"],
             ["Blog", "/blog"]
+          ],
+          menufooter: [
+            ["Contact", "/contact"],
+            ["Startup Offers", "/darwin-project"],
+            ["Advetures in Time", "/timelines"],
+            ["The Cave of Wonders", "/cave"],
+            ["Primitive Theme for Frontity", "https://www.npmjs.com/package/primitive-theme"],
+            ["Privicy Policy", "/privicy"],
           ],
           featured: {
             "showOnList": true,
@@ -28,7 +36,7 @@ const settings = {
           },
           // tbc
           archive: {
-            "showExcerpt": false
+            "showExcerpt": true
           }
         }
       }
