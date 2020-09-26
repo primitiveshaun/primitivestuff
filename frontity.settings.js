@@ -16,7 +16,8 @@ const settings = {
           menu: [
             ["Stats/config", "/stats"],
             ["Content", "/frontity-tests"],
-            ["CPTs", "/timelines"],
+            ["CPTs", "/evolution-of-digital-stuff"],
+            ["CTs", "/timelines"],
             ["Pages", "/web-design"],
             ["Post", "/blog/a-decade-of-digital-development"],
             ["Posts", "/blog"]
