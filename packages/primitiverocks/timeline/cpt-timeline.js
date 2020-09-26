@@ -1,35 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "primitivepebbles/grid";
-
-//import Item from "./cpt-item-marker";
-import Marker from "./cpt-item-marker";
 import PostMagic from "primitivescenes/postmagic";
-import Pagination from "./pagination";
-//import { sortBy } from "../sand/utils"
+import {sortBy} from "./utils"
+import Marker from "./cpt-item-marker";
 
 // a connected Frontity component to display custom post types:
 const Timeline = ({ state, actions }) => {
 
-  // 1.a fetch the data related to a path ( this path should be set in frontity.settings.js ??? )
-  // actions.source.fetch("/temporal_events/");
-
-  // 2. get the data from frontity state
-  const data = state.source.get("/evolution-of-digital-stuff/");
-
-  useEffect(() => {
-    // 1.b fetch data related to a path using side effects (like calling on ComponentDidMount / ComponentDidMount)
-    
-    /*
-    async function fetchData() {
-      await actions.source.fetch(`/evolution-of-digital-stuff/`)
-    }
-    fetchData();
-    */
-
-    actions.source.fetch("/evolution-of-digital-stuff/");
-
-  }, []);
+  const data = state.source.get(state.router.link);
 
   console.log("@cpt-timeline: data", data);
 
@@ -48,26 +27,25 @@ const Timeline = ({ state, actions }) => {
   //console.log("@cpt-timeline: data.items", data.items);
 
   // sk-dev: fe hack / can't filter and sort 
-  //data.items.sort(sortBy("year"));
+  data.items.sort(sortBy("year"));
 
-  // render your content
+  // return content to render
   return (
-    <StyledList className="container-fluid">
+    <main>
 
       <PageHeader>
         <Container>
           <Row>
             <Col>
-              <h1><span className="scribe">The Evolution of </span>Digital Stuff and Other Things</h1>
+              <h1><span className="scribe">The Evolution of </span>Digital Stuff &amp; Other Things</h1>
             </Col>
           </Row>
         </Container>
       </PageHeader>
 
-      <PageBody>
         <Container>
 
-          {/* If the list is a taxonomy, we render a title. */}
+          {/* If the list is a taxonomy, render a title. */}
           {data.isTaxonomy && (
             <TimelineHeader>
               {data.taxonomy}: {state.source[data.taxonomy][data.id].name}
@@ -101,11 +79,10 @@ const Timeline = ({ state, actions }) => {
 
         </Container>
 
-      </PageBody>
 
-      <Pagination />
+      {/*<Pagination />*/}
 
-    </StyledList>
+    </main>
   );
 
   //}
@@ -114,29 +91,23 @@ const Timeline = ({ state, actions }) => {
 
 export default connect(Timeline);
 
-const StyledList = styled.main`
-  background-color: transparent;
-  border-top: 3px solid rgba(12,17,43,0.9);
-`;
+
 
 const PageHeader = styled.header`
   .container {
-    padding-left: 2rem;
-    padding-right: 2rem;
+
   
     div {
       margin-top: 1rem;
       padding: 1rem;
       
       text-align: center;
+
       color: ivory;
 
       background: rgba(12,17,43,0.9);
       border-radius: 5rem;
 
-      h1 {
-        font-weight: 400;
-      }
   
       h1 span {
         display: block;
@@ -159,9 +130,6 @@ const PageHeader = styled.header`
   }
 `;
 
-const PageBody = styled.section`
-  
-`;
 const Midground = styled.div`
   z-index: -10;
 `;

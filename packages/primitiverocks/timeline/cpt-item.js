@@ -1,47 +1,41 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, decode } from "frontity";
+
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
+
 import { Row, Col } from "primitivepebbles/grid";
 
 import Card from 'react-bootstrap/Card';
 
-const TemporalEvent = ({ state, item, layer, headerBg, headerColor }) => {
+const TemporalEvent = ({ state, item, layer, headbg, headcolor }) => {
 
-  //console.log("@cpt-item: colors", state.theme.colors);
+  //console.log("@cpt-item: item", state);
+  const withSource = <a href={item.acf.source}><Card.Img src={item.acf.image} className="card-img" /></a>;
+  const noSource = <Card.Img src={item.acf.image} className="card-img" />;
+  const checkSource = item.acf.source ? withSource : noSource;
 
   return (
-    <StyledBlock
-      className="card"
-      layer={layer}
-      headerBg={headerBg}
-    >
+    <StyledPost bg={headbg} as="article" layer={layer} >
 
-      <Card.Header>
-
-        <EventDate
-          dateColor={headerColor}
-          //dateBg='#d0f0dd'
-          dateBg='linear-gradient(180deg, rgba(208,240,221,1) 0%, rgba(135,175,78,1) 25%, rgba(135,175,78,1) 40%, rgba(135,175,78,1) 60%, rgba(208,240,221,1) 100%), #d0f0dd;'
-        >
-          <b>{item.acf.year}</b>
-        </EventDate>
+      <Header bg={headbg} >
+        <Date color={headcolor} bg={state.theme.colors.primary} className="pl-4 pr-4">
+          <b className="p-4">{item.acf.year}</b>
+        </Date>
 
         <Title
-          headerColor={headerColor}
-          headerBg={headerBg}
+          color={headcolor}
+          bg={state.theme.colors.primary}
+          className="text-center"
           dangerouslySetInnerHTML={{ __html: item.title.rendered }}
         />
-
-      </Card.Header>
+      </Header>
 
       <Row>
 
         <Col>
           {item.acf.image && (
-            <Link link={item.acf.source}>
-              <Card.Img src={item.acf.image} />
-            </Link>
+            checkSource
           )}
         </Col>
 
@@ -49,32 +43,24 @@ const TemporalEvent = ({ state, item, layer, headerBg, headerColor }) => {
           <Card.Body>
 
             {item.acf.significance && (
-              <Row>
-                <h3 dangerouslySetInnerHTML={{ __html: item.acf.significance }} />
-              </Row>
+              <h3 dangerouslySetInnerHTML={{ __html: item.acf.significance }} />
             )}
 
             {item.acf.info && (
-              <Row>
-                <p dangerouslySetInnerHTML={{ __html: item.acf.info }} />
-              </Row>
+              <p dangerouslySetInnerHTML={{ __html: item.acf.info }} />
             )}
 
             {item.acf.who && (
-              <Row>
-                <h5>Blamed on: 
-                  <Link link={item.acf.who_link}>
-                    <span dangerouslySetInnerHTML={{ __html: item.acf.who }} />
-                  </Link>
-                </h5>
-              </Row>
+              <h5>
+                Blamed on: <a href={item.acf.who_link} dangerouslySetInnerHTML={{ __html: item.acf.who }} />
+              </h5>
             )}
 
             {item.acf.tit_bits && (
-              <Row>
-                <h6>Fun facts:</h6>
+              <div className="mt-3">
+                <h6>Fun facts: </h6>
                 <p dangerouslySetInnerHTML={{ __html: item.acf.tit_bits }} />
-              </Row>
+              </div>
             )}
 
             {item.acf.further_info && (
@@ -87,7 +73,7 @@ const TemporalEvent = ({ state, item, layer, headerBg, headerColor }) => {
         </Col>
       </Row>
 
-    </StyledBlock>
+    </StyledPost>
   );
 };
 
@@ -96,7 +82,7 @@ export default connect(TemporalEvent);
 /*
 // sk-dev: test alternate styling
 // https://emotion.sh/docs/styled
-const StyledBlock = styled.article({
+const StyledPost = styled.article({
   margin: '1rem',
   minWidth: '180px'
   },
@@ -104,80 +90,56 @@ const StyledBlock = styled.article({
 );
 */
 
-//const StyledBlock = props => styled.article`
 
-const StyledBlock = styled.article`
-  margin: 1rem;
-  min-width: 180px;
-  z-index: ${ props => props.layer};
-  color: ${ props => props.headerBg};
-  border: 2px solid white;
+const StyledPost = styled(Card)`
+
+  color: ${props => props.bg};
+  border: 2px solid rgba(255,255,255, 0.1);
   border-radius: .6rem;
-  box-shadow: 0 8px 8px -12px rgba(0, 0, 0, 0.3), 0 15px 18px -6px rgba(0, 0, 0, 0.6);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.1), 
+             -15px -15px 30px rgba(0, 0, 0, 0.1);
+
+  z-index: ${props => props.layer};
   overflow: hidden;
-
-  h3 {
-    font-size: 1.6rem;
-  }
-  h5 span { padding-left: .5rem;}
   
-  .card-header {
-    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.738) 19%,
-      rgba(0, 0, 0, 0.541) 34%,
-      rgba(0, 0, 0, 0.382) 47%,
-      rgba(0, 0, 0, 0.278) 56.5%,
-      rgba(0, 0, 0, 0.194) 65%,
-      rgba(0, 0, 0, 0.126) 73%,
-      rgba(0, 0, 0, 0.075) 80.2%,
-      rgba(0, 0, 0, 0.042) 86.1%,
-      rgba(0, 0, 0, 0.021) 91%,
-      rgba(0, 0, 0, 0.008) 95.2%,
-      rgba(0, 0, 0, 0.002) 98.2%,
-      transparent 100%),
-      ${ props => props.headerBg};
-  }
-
   .card-img {
     height: 100%;
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
+    min-height: 100px;
     object-fit: cover;
     border-radius: 0;
   }
 
 `;
 
-const EventDate = styled.div`
+const Header = styled(Card.Header)`
+  background-color: ${props => props.bg};
+`;
+
+const Date = styled.div`
   margin: -.8rem auto 1.5rem;
-  padding: 0 1rem;
-  background: ${props => props.dateBg};
-  border-radius: 0 0 .3rem .3rem;
-  color: ${props => props.dateColor};;
-  font-size: 2rem;
+
+  color: ${props => props.color};
+  font-size: 2.2rem;
   font-family: 'Slabo 27px';
-  box-shadow: 0px 0px 0 #40ff22,
-    0px 0px 4px #30ff1f,
-    0px 0px 8px #20ff1b,
-    0px 0px 16px #10ff18;
+
+  background: ${props => props.bg};
+  border-radius: 0 0 .3rem .3rem;
+  box-shadow: 0px 0px 3px rgba(0,0,0,.3);
 
   b {
     padding: 1.5rem;
-    text-shadow: 1px 1px 0 #ddd;
-    background: #d0f0dd;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+    background: ${props => props.bg};
     border-radius: 50%;
-
-    box-shadow: 0px 0px 0 #40ff22,
-    0px 0px 4px #30ff1f,
-    0px 0px 8px #20ff1b,
-    0px 0px 16px #10ff18;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
   }
 `;
 
 const Title = styled.h2`
-  padding: 1.5rem;
-  color: ${ props => props.headerColor};
-  text-align: center;
-  text-shadow: 1px 1px 0 black;
+  color: ${props => props.color};
+  font-size: 2.8rem;
 `;
 
 /*
