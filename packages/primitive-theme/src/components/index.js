@@ -32,48 +32,35 @@ const Feet = loadable(() => import("./footer"));
  */
 const Theme = ({ state }) => {
 
-  // get skeletal data model / information about the current URL.
+  // get skeletal data for current URL.
   const data = state.source.get(state.router.link);
 
   // get the theme config from state
   const display = state.theme.config;
 
-  // sk-dev: to improve
-  if (state.theme.config.devMode) {
+  if (state.frontity.debug) {
    //console.log("@index: data", data);
    //console.log("@index: display", display);
   }
 
   return (
     <>
-      {
-        /*
-          Pass theme colors to the reboot
 
-          Ideally you shouldn't add classes here just elements.
-
-          sk-dev:TESTING. I'm also adding some classes as I want the wp user to be able to apply a pre-defined set of styles to content.
-          - may split this to be post/page specific. that may cause duplicates - not sure of lesser evil.
-          - these will be made availble via the wysiwyg ui by the wp theme
-        */
-      }
-      <Global styles={globalStyles(state.theme.colors)} />
+      <Global styles={globalStyles(state.theme.colors)} /> {/* reboot and style elements */}
 
       { /* <FontFaces /> */}
 
-      {/* Add some metatags to the <head> of the HTML. */}
-      <MetaTitle />
+      <MetaTitle /> {/* Add metatags */}
+
       <Head>
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Comfortaa|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"/>
        {/*
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css" integrity="sha512-LxlJgXpmW7rJDt1BsGD/MvkFXDAY+t1X5Noou0KaXmmSxY1nduFn+oxhD5kAYnE6vqbkRyWNvucL82xyKOcxlQ==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-utilities.min.css" integrity="sha512-+0y5BXqNmfKh7Q4pMVjxeY92OFgsRUFnZSCjqTwvqUYJEdculrxQz/UM2jbpysBo0crnNvTTw31SFqk8HbT/iA==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha512-weZatQD41YXNCVn3Bvl2y1iAZqtH/Y+MlAQUwovog1iwj8cbSEpQMeErMnDp9CBlqIo0oxOcOF8GUEoOZYD4Zg==" crossorigin="anonymous" />
-
        */}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
 
@@ -87,8 +74,7 @@ const Theme = ({ state }) => {
         Skip to main content
       </SkipLink>
 
-        {/* Add the header of the site. */}
-        <Header />
+        <Header />{/* Add site header. */}
 
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
@@ -122,6 +108,7 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 
 const Main = styled.div`
+  border-top: 3px solid rgba(12,17,43,0.9);
   background-image: linear-gradient(
     180deg,
     rgba(66, 174, 228, 0.1),
