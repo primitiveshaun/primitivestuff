@@ -2,10 +2,18 @@ import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "primitivepebbles/grid";
 
-import Item from "./cpt-item";
-//import PostMagic from "primitivescenes/postmagic";
+//import Item from "./cpt-item";
+import PostMagic from "primitivescenes/postmagic";
 import Pagination from "./pagination";
-import { setTitle, sortBy } from "./utils"
+
+const setTitle = (ctname) => {
+  if (ctname === "timelines") {
+    return (<h1><span className="scribe">Adventures in...</span> Time</h1>);
+  }
+
+  ctname = ctname.replace("-", ' ');
+  return (<h1><span className="scribe">Evolution of... </span> {ctname}</h1>);
+}
 
 // a connected Frontity component to display custom post types by custom taxonomies
 const SubTimeline = ({ state, actions }) => {
@@ -54,17 +62,21 @@ const SubTimeline = ({ state, actions }) => {
           {/* Sort available data items */}
 
           {/* Animated display - iterate over the items of the list and wrap in tween component. */}
-          {/* <PostMagic items={data.items} /> */}
+          <PostMagic items={data.items} />
 
           {/* Regular display - iterate over the items of the list. */}
-          {data.items.map(({ type, id }) => {
+          {
+          /*
+          data.items.map(({ type, id }) => {
             const item = state.source[type][id];
 
             // console.log(item);
 
             // Render one Item component for each item.
             return <Item key={item.id} item={item} />;
-          })}
+          })
+          */
+          }
 
         </Container>
       </PageBody>

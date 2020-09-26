@@ -1,16 +1,22 @@
 import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "primitivepebbles/grid";
-import { setTitle } from "./utils";
 import CustomTaxonomyItem from "./ct-item";
+
+const setTitle = (ctname) => {
+  if (ctname === "timelines") {
+    return (<h1><span className="scribe">Adventures in...</span> Time</h1>);
+  }
+
+  ctname = ctname.replace("-", ' ');
+  return (<h1><span className="scribe">Evolution of... </span> {ctname}</h1>);
+}
 
 // a connected Frontity component to display custom taxonomies:
 const Timelines = ({ state, actions }) => {
 
   /*
-
     Hello, what we workin with?
-
     : get data skeleton / retrieve info about what kind of content should be rendered for the current path in frontity state.
 
   */
@@ -50,7 +56,7 @@ const Timelines = ({ state, actions }) => {
   */
 
   return (
-    <StyledTimelines className="container-fluid">
+    <EventTimelines className="container-fluid">
 
       <PageHeader>
         <Container>
@@ -78,7 +84,7 @@ const Timelines = ({ state, actions }) => {
         </Container>
       </PageBody>
 
-    </StyledTimelines>
+    </EventTimelines>
   );
 };
 
@@ -90,9 +96,8 @@ export default connect(Timelines);
 
   */
 
-const StyledTimelines = styled.main`
+const EventTimelines = styled.main`
   background-color: transparent;
-  border-top: 3px solid rgba(12,17,43,0.9);
 `;
 
 const PageHeader = styled.header`
