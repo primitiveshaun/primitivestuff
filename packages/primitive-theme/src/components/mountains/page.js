@@ -9,7 +9,7 @@ import DiscoPreload from "primitivescenes/preload-disco"
 
 const Page = ({ state, actions, libraries }) => {
 
-  // get skeletal data model
+  // get skeletal data 
   const data = state.source.get(state.router.link);
 
   // get full data
@@ -20,7 +20,8 @@ const Page = ({ state, actions, libraries }) => {
     actions.source.fetch(state.router.link);
     
     if (state.theme.config.devMode) {
-      console.log("@page: page", page);
+      console.log("@page: data", data);
+      //console.log("@page: page", page);
     }
     
   }, []);

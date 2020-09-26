@@ -19,8 +19,8 @@ const Footer = ({ state }) => {
     <SiteFooter
       role="contentinfo"
       bg={colors.brown}
-      text={colors.ivory}
-      hyper={colors.secondary}
+      color={colors.ivory}
+      hover={colors.secondary}
     >
 
       <Container className="p-5">
@@ -43,15 +43,12 @@ export default connect(Footer);
 
 const SiteFooter = styled.footer`
   background-color: ${(props) => props.bg ? props.bg : 'darkslategray'};
-
-  font-family: 'Comfortaa', sans-serif; 
-  color: ${(props) => props.text ? props.text : 'beige'};
+  color: ${(props) => props.color ? props.color : 'beige'};
 
   a {
-    font-weight: 800;
-    color: ${(props) => props.text ? props.text : 'ivory'};
+    color: ${(props) => props.color ? props.color : 'ivory'};
     &:hover {
-      color: ${(props) => props.hyper ? props.hyper : 'gold'};
+      color: ${(props) => props.hover ? props.hover : 'gold'};
       text-decoration: none;
     }
   }

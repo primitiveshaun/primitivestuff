@@ -122,7 +122,6 @@ const StyledLink = styled(Link)`
   white-space: nowrap;
 
   color: ${ color  => color };
-  font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.6rem;
   letter-spacing: 1px;

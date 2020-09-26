@@ -40,7 +40,7 @@ const postall = colors => css`
     }
 
     .intro {
-      font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+      font-family: 'Hepta Slab';
       text-align: center;
       padding: 3px 5%;
       font-size: 1.3rem;
@@ -48,7 +48,7 @@ const postall = colors => css`
 
     .hello {
       padding: 1rem 1.2rem;
-      font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Hepta Slab';
       font-size: 2rem;
       color: ${colors.coal};
 
@@ -69,7 +69,7 @@ const postall = colors => css`
     .blurb {
       padding: 1rem 1.2rem;
       font-size: 2rem;
-      font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Hepta Slab', Georgia;
       color: ${colors.primary};
   
       a {
@@ -356,7 +356,6 @@ const wpclasses = colors => css`
       position: relative;
 
       cite {
-        font-family: "Comfortaa";
         font-size: .7rem;
         letter-spacing: 3px;
 

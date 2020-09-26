@@ -7,7 +7,6 @@ import { gsap } from 'gsap';
 import { CSSPlugin } from "gsap/CSSPlugin.js";
 //import { auto } from '@popperjs/core';
 gsap.registerPlugin(CSSPlugin);
-
 import Item from "primitiverocks/timeline/cpt-item";
 
 
@@ -26,7 +25,7 @@ const PostMagic = ({ state, items }) => {
           pin={delorean.seatbelt} // sticky
           triggerHook='0.0' // .1 = 10%
           duration={delorean.fuel}
-          indicators={true}
+          indicators={false}
           //offset={-100}
         >
           <Timeline
@@ -69,9 +68,8 @@ const PostMagic = ({ state, items }) => {
                           item={item}
                           layer={i}
                           key={item.id} 
-                          color='blue'
-                          headerBg={state.theme.colors.coal}
-                          headerColor={state.theme.colors.white}
+                          headbg={state.theme.colors.coal}
+                          headcolor={state.theme.colors.ivory}
                         />
                       </Post>
                     </Tween>

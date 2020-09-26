@@ -23,7 +23,7 @@ const Credits = ({ state }) => {
   );
 };
 
-const Text = styled.p`font-weight: 700;`;
+const Text = styled.p`font-weight: 500;`;
 
 const Copyright = styled(Text)`
   letter-spacing:2px;

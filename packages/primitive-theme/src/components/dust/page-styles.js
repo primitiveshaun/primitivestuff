@@ -234,12 +234,12 @@ const pageall = colors => css`
   }
 
   .intro {
-    font-family: 'Comfortaa', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-family: 'Hepta Slab', sans-serif;
     padding: 3px 5%;
     font-size: 1.3rem;
   }
   .motto {
-    font-family: 'Hepta Slab', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Hepta Slab', sans-serif;
     padding: 1.5rem 5% 3rem;
     font-size: 2.3rem;
     color: ${colors.primary};

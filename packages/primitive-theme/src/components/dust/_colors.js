@@ -4,10 +4,8 @@
 // refs / reading
 // https://convertingcolors.com/blog/article/convert_hex_to_rgb_with_javascript.html
 // https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-
 // like this::: https://css-tricks.com/snippets/javascript/lighten-darken-color/
 // https://codepen.io/chriscoyier/pen/EatIr
-
 // https://v5.getbootstrap.com/docs/5.0/customize/color/
 // https://v5.getbootstrap.com/docs/5.0/utilities/colors/
 
@@ -18,14 +16,14 @@ const colors = {
   black: "#000000",
   white: "#ffffff",
 
-  blue: "#0d6efd",
+  blue: "#0f52ba",
   indigo: "#6610f2",
   purple: "#6f42c1",
   pink: "#d63384",
-  red: "#dc3545",
-  orange: "#fd7e14",
+  red: "#cd2653",
+  orange: "#F05E23",
   yellow: "#ffc107",
-  green: "#28a745",
+  green: "#87af4e",
   teal: "#20c997",
   cyan: "#17a2b8",
 
@@ -45,16 +43,7 @@ const colors = {
   }
 }
 
-
-//light: "#CCC5B3",
-//dark: "#0C0B13",
-
 const primitive = {
-  red: "#cd2653",
-  blue: "#0f52ba",
-  orange: "#F05E23",
-  green: "#87af4e",
-
   redapple: "#E1623F",
   fluff: "#ADD8E6",
   mustard: "#ffdb58",
@@ -89,7 +78,7 @@ const themecolor = {
   indigo:   colors.indigo,
   purple:   primitive.plum,
   pink:     primitive.pink,
-  red:      primitive.red,
+  red:      colors.red,
   orange:   primitive.mango,
   yellow:   primitive.mustard,
   green:    primitive.green,
@@ -97,7 +86,7 @@ const themecolor = {
   cyan:     primitive.cyan,
   brown:    primitive.cardboard,
 
-  primary: primitive.green,
+  primary: colors.green,
   secondary: primitive.peach,
   tertiary: primitive.pinkish,
   success: primitive.brightlime,
@@ -115,8 +104,8 @@ const themecolor = {
   },
 
   coal:     primitive.coal,
-  ivory:    primitive.ivory,
-  cream:    primitive.cream,
+  ivory:    "#fffff0",
+  cream:    "fffdd0",
   peach:    primitive.peach,
   fluff:    primitive.fluff,
   lime: primitive.lime,

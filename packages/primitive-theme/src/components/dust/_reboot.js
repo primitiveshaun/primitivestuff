@@ -26,7 +26,7 @@ html { font-size: 100%; }
 
 body {
   margin: 0;
-  font-family: 'Comfortaa', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Verdana, "Segoe UI", "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
@@ -86,7 +86,7 @@ h3, .news {
   /*font-size: calc(1.3rem + 0.6vw);*/
 }
 h4, .display {
-  font-family: 'Comfortaa', 'Franklin Gothic Medium', sans-serif;
+  font-family: 'Hepta Slab', serif;
   font-size: 1.6rem;
   /* font-size: calc(1.275rem + 0.3vw);*/
 }
@@ -95,7 +95,7 @@ h5, .subslab {
   font-size: 1.3rem;
 }
 h6, .scribe {
-  font-family: 'Pacifico', Georgia, cursive;
+  font-family: 'Pacifico', cursive;
   font-size: 1.2rem;
 }
 
