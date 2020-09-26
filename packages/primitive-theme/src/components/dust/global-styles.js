@@ -7,6 +7,8 @@ import cssReboot from "./_reboot";
 //import cssUtils from "./_bsutils";
 //import cssBootstrap from "./_bscss";
 
+//sk-dev: missing css animation now - check safari / mobile
+
 const accessibilitySettings = css`
   @media (prefers-reduced-motion: reduce) {
     * {
