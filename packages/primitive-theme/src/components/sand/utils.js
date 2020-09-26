@@ -75,14 +75,6 @@ export function getTerm(route) {
     return term;
 }
 
-export function setTitle(ctname) {
-    if (ctname === "timelines") {
-        return (<h1><span className="scribe">Adventures in...</span> Time</h1>);
-    }
-    ctname = ctname.replace("-", ' ');
-    return (<h1><span className="scribe">Evolution of... </span> {ctname}</h1>);
-}
-
 
 // *
 // JS array utils
