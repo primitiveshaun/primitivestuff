@@ -7,7 +7,7 @@ import Colophon from "primitivepebbles/credits";
 const Footer = ({ state }) => {
 
   const colors = state.theme.colors,
-        display = state.theme.config.global.footer;
+        display = state.theme.config.footer;
   /*
   __footer: props
       bg={colors.brown} 

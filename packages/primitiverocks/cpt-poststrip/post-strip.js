@@ -37,7 +37,7 @@ const PostStrip = ({ state, actions, props }) => {
     //actions.source.fetch(`/${posttype}/`);
     //actions.source.fetch("/"+posttype+"/");
 
-    if (state.theme.config.devMode) {
+    if (state.theme.debug) {
       console.log("@post-strip: data", data);
     }
 

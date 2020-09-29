@@ -4,7 +4,6 @@
 import { randomWord } from "../sand/utils";
 
 const themeconfig = {
-        devMode: process.env.NODE_ENV === 'development' ? true : false,
 
         breakpoints: {
           sm: 576,
@@ -22,13 +21,53 @@ const themeconfig = {
         rootEm: "62.5%",
         minWidth: "320",
 
+        header: {
+          variant: "", // "" | "light" | "dark"
+          logo: "https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smgreen.png",
+          alt: "Primitive Digital - Web Design &amp; Development",
+          random: randomWord()
+        },
+
+        page: {
+          showBanner: true,
+          showGold: true,
+          showSilver: true,
+          showBronze: true,
+          template: false
+        },
+
+        footer: {
+          rocks: "",
+          bg: "#D4AEA6",
+          color: "",
+          image: "https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png",
+          title: "Top Banana Web Design and Development",
+          fontfamily: "subslab",
+          text1: "- Top Banana -",
+          text2: "Web Design",
+          text3: "&",
+          text4: "Development",
+          contact: {
+            info: "Phone 0113 314 8880",
+            prompt: "to make beautiful digital stuff together"
+          },
+          credit: {
+            legal: "sknow.it ltd.",
+            link: "https://sknow.it",
+            policy: "",
+            label: "Website crafted by ",
+            creator: "Primitive Digital",
+            backlink: "https://primitivedigital.uk"
+          }
+        },
+
         homepage: {
           showHero: true,
           showIntro: true,
           showGold: true,
           showSilver: true,
           showBronze: true,
-          showPromo: false,
+          showBanner: false,
           hero: {
             rocks: "scenes",
             scene: "jungle",
@@ -69,97 +108,6 @@ const themeconfig = {
           }
         },
 
-        page: {
-          showBanner: true,
-          showGold: true,
-          showSilver: true,
-          showBronze: true,
-          template: false
-        },
-
-        global: {
-          showPromo: true,
-          promo: {
-            rocks: "global-promo",
-            type: "text",
-            pretext: "Big Business & Enterprise",
-            text: "Primitive is not your bag, baby. For consultancy work you want a sknow.it all!",
-            link: "https://sknow.it"
-          },
-          
-          showSocial: true,
-          social: {
-            background: "#fffff0",
-            instagram: {
-              type: "none", // "none" | "posts" | "feed"
-              url: "https://www.instagram.com/primitivedigital/",
-              postids: ["B9HhnSSj5NX", "B9JXQ7WDpll"],
-              maxwidth: 320
-            },
-            facebook: {
-              type: "like", // "none" | "page" | "like" | "feed"
-              url: "https://www.facebook.com/primitivedigital",
-              settings: {
-                src: "https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fprimitivedigital&width=150&layout=button_count&action=like&size=large&share=true&height=46&appId=2317056035225898",
-                width: "150",
-                height: "46",
-                style: "border:none;overflow:hidden;",
-                scrolling: "no",
-                frameborder: "0",
-                allowTransparency: "true",
-                allow: "encrypted-media"
-              }
-            }, 
-            twitter: {
-              type: "none",
-              url: "https://twitter.com/primitivestuff"
-            },
-            pinterest: {
-              type: "none"
-            },
-            profiles: {
-              instagram: "https://www.instagram.com/primitivedigital/",
-              facebook: "https://www.facebook.com/primitivedigital",
-              twitter: "https://twitter.com/primitivestuff",
-              github: "https://github.com/primitiveshaun",
-              behance: "https://www.behance.net/primitiveshaun/"
-            }
-
-          },
-
-          header: {
-            variant: "", // "" | "light" | "dark"
-            logo: "https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smwhite.png",
-            alt: "Primitive Digital - Web Design &amp; Development",
-            random: randomWord()
-          },
-
-          footer: {
-            rocks: "",
-            bg: "#D4AEA6",
-            color: "",
-            image: "https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png",
-            title: "Top Banana Web Design and Development",
-            fontfamily: "subslab",
-            text1: "- Top Banana -",
-            text2: "Web Design",
-            text3: "&",
-            text4: "Development",
-            contact: {
-              info: "Phone 0113 314 8880",
-              prompt: "to make beautiful digital stuff together"
-            },
-            credit: {
-              legal: "sknow.it ltd.",
-              link: "https://sknow.it",
-              policy: "",
-              label: "Website crafted by ",
-              creator: "Primitive Digital",
-              backlink: "https://primitivedigital.uk"
-            }
-          }
-
-        },
         tabs: {
           variant: "",
           bgcolor: "",
@@ -207,6 +155,55 @@ const themeconfig = {
             title4: "Triggers &amp; Automation",
             text4: "With robots and magic buttons"
           }
+        },
+
+        globalPromo: true,
+        promo: {
+          rocks: "global-promo",
+          type: "text",
+          pretext: "Business / Enterprise",
+          text: "Primitive provides people-friendly, packages only. ",
+          link: "https://sknow.it/bookings"
+        },
+
+        showSocial: true,
+        social: {
+          background: "#fffff0",
+          instagram: {
+            type: "none", // "none" | "posts" | "feed"
+            url: "https://www.instagram.com/primitivedigital/",
+            postids: ["B9HhnSSj5NX", "B9JXQ7WDpll"],
+            maxwidth: 320
+          },
+          facebook: {
+            type: "like", // "none" | "page" | "like" | "feed"
+            url: "https://www.facebook.com/primitivedigital",
+            settings: {
+              src: "https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fprimitivedigital&width=150&layout=button_count&action=like&size=large&share=true&height=46&appId=2317056035225898",
+              width: "150",
+              height: "46",
+              style: "border:none;overflow:hidden;",
+              scrolling: "no",
+              frameborder: "0",
+              allowTransparency: "true",
+              allow: "encrypted-media"
+            }
+          }, 
+          twitter: {
+            type: "none",
+            url: "https://twitter.com/primitivestuff"
+          },
+          pinterest: {
+            type: "none"
+          },
+          profiles: {
+            instagram: "https://www.instagram.com/primitivedigital/",
+            facebook: "https://www.facebook.com/primitivedigital",
+            twitter: "https://twitter.com/primitivestuff",
+            github: "https://github.com/primitiveshaun",
+            behance: "https://www.behance.net/primitiveshaun/"
+          }
         }
+
       }
 export { themeconfig };

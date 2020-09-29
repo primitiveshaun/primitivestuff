@@ -10,7 +10,7 @@ import { mq } from "primitivepebbles/grid";
 const Header = ({ state }) => {
 
   return (
-    <HeadWrapper variant={state.theme.config.global.header.variant}>
+    <HeadWrapper variant={state.theme.config.header.variant}>
       <div className="mast">
         <Container>
           <Row className="justify-content-sm-end">
@@ -26,7 +26,7 @@ const Header = ({ state }) => {
 
                 <Intro className="subslab mb-0">
                   We Make 
-                  <span className="slab"> {state.theme.config.global.header.random} </span>
+                  <span className="slab"> {state.theme.config.header.random} </span>
                 </Intro>
 
                 <Description>

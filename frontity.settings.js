@@ -13,6 +13,7 @@ const settings = {
       name: "primitive-theme",
       state: {
         theme: {
+          debug: process.env.NODE_ENV === 'development' ? true : false,
           menu: [
             ["Stats/config", "/stats"],
             ["Content", "/frontity-tests"],

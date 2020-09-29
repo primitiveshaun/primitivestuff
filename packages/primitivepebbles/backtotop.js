@@ -14,7 +14,7 @@ const BackToTop = ({ state }) => {
     scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
-  //const display = state.theme.config.global.footer.credit;
+  //const display = state.theme.config.footer.totop;
 
   return (
     <ToTop href="#site-header" onClick={scrollToTop}>

@@ -5,7 +5,7 @@ import { Container, Row, Col } from "primitivepebbles/grid";
 
 const FurryBoots = ({ state }) => {
 
-  const display = state.theme.config.global.footer;
+  const display = state.theme.config.footer;
   if (!display) { return null }
 
   return (

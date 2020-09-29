@@ -6,7 +6,7 @@ import {Col} from "primitivepebbles/grid";
 
 const Credits = ({ state }) => {
   const currentYear = new Date().getFullYear();
-  const display = state.theme.config.global.footer.credit;
+  const display = state.theme.config.footer.credit;
 
   return (
     <Col className="text-center">

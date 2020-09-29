@@ -10,7 +10,7 @@ import Icon from 'react-fontawesome';
 const Social = ({ state }) => {
 
   // Get social config from state
-  const display = state.theme.config.global.social;
+  const display = state.theme.config.social;
   const instagram = display.instagram;
   const facebook = display.facebook;
   const twitter = display.twitter;
@@ -67,7 +67,6 @@ const SocialSection = styled.section`
   background-color: ivory;
   border-top: 6px solid #e8e6cf;
   border-bottom: 6px solid #e8e6cf;
-
 `;
 
 const SocialIcons = styled.div`

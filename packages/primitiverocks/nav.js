@@ -20,7 +20,7 @@ const MainNav = ({ state }) => (
         >
 
           <Navbar.Brand className="p-0" href="/">
-            <Image src={state.theme.config.global.header.logo} alt={state.theme.config.global.header.alt} />
+            <Image src={state.theme.config.header.logo} alt={state.theme.config.header.alt} />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="site-nav" />

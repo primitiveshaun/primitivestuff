@@ -31,7 +31,7 @@ const Post = ({ state, actions, libraries }) => {
     actions.source.fetch("/");
     List.preload();
 
-    if (state.theme.config.devMode) {
+    if (state.theme.debug) {
       console.log("@post: state", state );
     }
 

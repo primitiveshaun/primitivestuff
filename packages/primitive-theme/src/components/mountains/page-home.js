@@ -19,7 +19,7 @@ const PageHome = ({ state }) => {
   // get the theme config from state
   const display = state.theme.config.homepage;
 
-  //if (state.theme.config.devMode) { console.log("@page-home: display", display ); }
+  //if (state.theme.debug) { console.log("@page-home: display", display ); }
 
   return (
     <HomePage>

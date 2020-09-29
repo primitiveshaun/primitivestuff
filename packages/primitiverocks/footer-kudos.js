@@ -11,7 +11,7 @@ import { heartbeat } from "primitivescenes/glamourmagic";
 const KnobblyKnees = ({ state }) => {
 
   const { footerBg } = state.theme.colors;
-  const display = state.theme.config.global.footer;
+  const display = state.theme.config.footer;
   if (!display) { return null }
 
   return (

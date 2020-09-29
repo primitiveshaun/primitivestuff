@@ -29,7 +29,7 @@ const description = (
 const ErrorPage = ({ state }) => {
   const data = state.source.get(state.router.link);
 
-  if (state.theme.config.devMode) {
+  if (state.theme.debug) {
     console.log("@page-error: data", data);
   }
 
