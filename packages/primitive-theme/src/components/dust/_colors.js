@@ -8,14 +8,20 @@
 // https://codepen.io/chriscoyier/pen/EatIr
 // https://v5.getbootstrap.com/docs/5.0/customize/color/
 // https://v5.getbootstrap.com/docs/5.0/utilities/colors/
+// _varaibles.scss
+
+// basic 6charaters only with #
+const hexToRGB = (hex) => {
+  const r = parseInt(hex.slice(1, 3), 16),
+        g = parseInt(hex.slice(3, 5), 16),
+        b = parseInt(hex.slice(5, 7), 16);
+  return (`${r, g, b}`)
+};
 
 
 // Color system
 
 const colors = {
-  black: "#000000",
-  white: "#ffffff",
-
   blue: "#0f52ba",
   indigo: "#6610f2",
   purple: "#6f42c1",
@@ -26,6 +32,9 @@ const colors = {
   green: "#87af4e",
   teal: "#20c997",
   cyan: "#17a2b8",
+
+  white: "#ffffff",
+  black: "#000000",
 
   grays: {
     base: "#6D6D6D",
@@ -68,23 +77,40 @@ const primitive = {
 }
 
 
-
-// review: https://v5.getbootstrap.com/docs/5.0/customize/color/
 const themecolor = {
-  white:    colors.white,
-  black:    colors.black,
+  blue: colors.blue,
+  indigo: colors.indigo,
+  purple: primitive.plum,
+  pink: primitive.pink,
+  red: colors.red,
+  orange: primitive.mango,
+  yellow: primitive.mustard,
+  green: primitive.green,
+  teal: primitive.teal,
+  cyan: primitive.cyan,
 
-  blue:     colors.blue,
-  indigo:   colors.indigo,
-  purple:   primitive.plum,
-  pink:     primitive.pink,
-  red:      colors.red,
-  orange:   primitive.mango,
-  yellow:   primitive.mustard,
-  green:    primitive.green,
-  teal:     primitive.teal,
-  cyan:     primitive.cyan,
-  brown:    primitive.cardboard,
+  brown: primitive.cardboard,
+
+  white: colors.white,
+  black: colors.black,
+  light: colors.grays.g100,
+  dark: colors.grays.g800,
+  gray: colors.grays.g600,
+
+  grays: {
+    base: colors.grays.base,
+    light: colors.grays.light,
+    lighter: colors.grays.lighter
+  },
+
+  coal: primitive.coal,
+  ivory: "#fffff0",
+  cream: "fffdd0",
+  peach: primitive.peach,
+  fluff: primitive.fluff,
+  lime: primitive.lime,
+  mustard: primitive.mustard,
+  greendark: primitive.greendark,
 
   primary: colors.green,
   secondary: primitive.peach,
@@ -93,24 +119,16 @@ const themecolor = {
   info: primitive.teal,
   warning: primitive.mustard,
   danger: primitive.redapple,
-  light: colors.grays.g100,
-  dark: colors.grays.g800,
 
-  gray:     colors.grays.g600,
-  grays: {
-    base: colors.grays.base,
-    light: colors.grays.light,
-    lighter: colors.grays.lighter
+  rgb: {
+    primary: hexToRGB(colors.green),
+    secondary: hexToRGB(primitive.peach),
+    tertiary: hexToRGB(primitive.pinkish),
+    success: hexToRGB(primitive.brightlime),
+    info: hexToRGB(primitive.teal),
+    warning: hexToRGB(primitive.mustard),
+    danger: hexToRGB(primitive.redapple),
   },
-
-  coal:     primitive.coal,
-  ivory:    "#fffff0",
-  cream:    "fffdd0",
-  peach:    primitive.peach,
-  fluff:    primitive.fluff,
-  lime: primitive.lime,
-  mustard: primitive.mustard,
-  greendark: primitive.greendark,
 
   disco: {
     cyan: "#00FFFF",
@@ -118,7 +136,7 @@ const themecolor = {
     neongreen: "#01FF89",
     purple: "#7A5FFF",
     blue: "#00a8ff"
-  }
+  },
 }
 
 export { themecolor };
