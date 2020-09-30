@@ -11,6 +11,7 @@ const Home = loadable(() => import("./mountains/page-home"));
 const Post = loadable(() => import("./mountains/post"));
 const Page = loadable(() => import("./mountains/page"));
 const PageError = loadable(() => import("./mountains/page-error"));
+
 import Posts from "./mountains/post-list";
 import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
@@ -18,6 +19,7 @@ import SubTimeline from "./mountains/subtimeline";
 
 import Header from "primitiverocks/header";
 import SkipLink from "primitivepebbles/skip-link";
+
 import GlobalPromo from "primitiverocks/global-promo";
 import GlobalSocial from "primitiverocks/social/social-section";
 
@@ -36,12 +38,12 @@ const Theme = ({ state }) => {
   const display = state.theme.config;
 
   if (state.theme.debug) {
-    //console.log("@index: data", data);
+    console.log("@index: data", data);
     //console.log("@index: display", display);
   }
 
   return (
-    <Root>
+    <App>
 
       <Global styles={globalStyles(state.theme.colors)} /> {/* reboot and styled html elements */}
 
@@ -59,7 +61,7 @@ const Theme = ({ state }) => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css" integrity="sha512-LxlJgXpmW7rJDt1BsGD/MvkFXDAY+t1X5Noou0KaXmmSxY1nduFn+oxhD5kAYnE6vqbkRyWNvucL82xyKOcxlQ==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-utilities.min.css" integrity="sha512-+0y5BXqNmfKh7Q4pMVjxeY92OFgsRUFnZSCjqTwvqUYJEdculrxQz/UM2jbpysBo0crnNvTTw31SFqk8HbT/iA==" crossorigin="anonymous" />
        */}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
 
         <link rel="canonical" href="https://primitivedigital.uk" />
 
@@ -96,13 +98,13 @@ const Theme = ({ state }) => {
       <KnobblyKnees /> { /* CTA section: (optional) */}
       <FurryBoots /> { /* Assurance section: brands/reviws/offers (optional) */}
       <Feet /> { /* footer */}
-    </Root>
+    </App>
   );
 };
 
 export default connect(Theme);
 
-const Root = styled.div`
+const App = styled.div`
   overflow-x: hidden;
 `;
 
