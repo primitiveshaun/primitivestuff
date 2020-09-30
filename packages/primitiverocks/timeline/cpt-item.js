@@ -10,10 +10,14 @@ import Card from 'react-bootstrap/Card';
 
 const TemporalEvent = ({ state, item, layer, headbg, headcolor }) => {
 
-  //console.log("@cpt-item: item", state);
-  const withSource = <a href={item.acf.source}><Card.Img src={item.acf.image} className="card-img" /></a>;
-  const noSource = <Card.Img src={item.acf.image} className="card-img" />;
-  const checkSource = item.acf.source ? withSource : noSource;
+  if (state.theme.debug) {
+    //console.log("@cpt-item: state", state);
+    console.log("@cpt-item: item", item);
+  }
+
+  const withSource = <a href={item.acf.source}><Card.Img src={item.acf.image} className="card-img" /></a>,
+  noSource = <Card.Img src={item.acf.image} className="card-img" />,
+  checkSource = item.acf.source ? withSource : noSource;
 
   return (
     <StyledPost bg={headbg} as="article" layer={layer} >
