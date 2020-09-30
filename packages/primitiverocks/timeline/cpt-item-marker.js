@@ -34,7 +34,7 @@ const EventDate = styled.div`
   position: relative;
   font-family: 'Slabo 27px';
   font-size: 6rem;
-  color: ${ props => props.highlight };
+  color: ${props => props.highlight};
   opacity: .5;
 
   &:before {
@@ -61,14 +61,12 @@ const EventDate = styled.div`
     background: white;
     opacity: .8;
     border-radius: 15rem / 8rem;
-    box-shadow: -2px -4px 3px #efefef, 1px 1px 4px ${ props => props.highlight };
+    box-shadow: -2px -4px 3px #efefef, 1px 1px 4px ${props => props.highlight};
   }
-
-
 `;
 
 const Title = styled.h3`
   font-size: 6rem;
-  color: ${ props => props.color };
+  color: ${props => props.color};
   opacity: .1;
 `;
