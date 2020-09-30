@@ -10,23 +10,14 @@ const Timeline = ({ state, actions }) => {
 
   const data = state.source.get(state.router.link);
 
-  console.log("@cpt-timeline: data", data);
+  console.log("@cpt-timeline: state", state);
 
-  // the category entity ???
-  // const category = state.source.category[data.id];
 
-  // posts from that category ???
-  // const posts = data.items.map(
-  //  ({ type, id }) => state.source[type][id]
-  // );
 
-  //console.log("@cpt-timeline: actions", actions);
-  //console.log("@cpt-timeline: actions", JSON.stringify(actions));
-  //console.log(data.input_data['price-row_122']); 
 
   //console.log("@cpt-timeline: data.items", data.items);
 
-  // sk-dev: fe hack / can't filter and sort 
+  // sk-dev: tbc where/when best to filter/sort 
   data.items.sort(sortBy("year"));
 
   // return content to render
