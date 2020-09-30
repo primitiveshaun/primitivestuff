@@ -2,7 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "primitivepebbles/grid";
 import PostMagic from "primitivescenes/postmagic";
-import {sortBy} from "./utils"
+import { sortBy } from "./utils"
 import Marker from "./cpt-item-marker";
 
 // a connected Frontity component to display custom post types:
@@ -34,41 +34,41 @@ const Timeline = ({ state, actions }) => {
         </Container>
       </PageHeader>
 
-        <Container>
+      <Container>
 
-          {/* If the list is a taxonomy, render a title. */}
-          {data.isTaxonomy && (
-            <TimelineHeader>
-              {data.taxonomy}: {state.source[data.taxonomy][data.id].name}
-            </TimelineHeader>
-          )}
+        {/* If the list is a taxonomy, render a title. */}
+        {data.isTaxonomy && (
+          <TimelineHeader>
+            {data.taxonomy}: {state.source[data.taxonomy][data.id].name}
+          </TimelineHeader>
+        )}
 
-          {/* Sort available data items */}
+        {/* Sort available data items */}
 
 
-          {/* PostMagic display - iterate over the items of the list. */}
-          <PostMagic items={data.items} />
+        {/* PostMagic display - iterate over the items of the list. */}
+        <PostMagic items={data.items} />
 
-          {/* Regular display - iterate over the items of the list. */}
-          {
-            /*
-            data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              return <Item key={item.id} item={item} />;
-            })
-            */
-          }
+        {/* Regular display - iterate over the items of the list. */}
+        {
+          /*
+          data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            return <Item key={item.id} item={item} />;
+          })
+          */
+        }
 
-          <Midground>
-            {/* relative marker display - iterate over items of the list. */}
-            {data.items.map(({ type, id }) => {
-              const item = state.source[type][id];
-              // render one Marker component for each item.
-              return <Marker key={item.id} item={item} />;
-            })}
-          </Midground>
+        <Midground>
+          {/* relative marker display - iterate over items of the list. */}
+          {data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            // render one Marker component for each item.
+            return <Marker key={item.id} item={item} />;
+          })}
+        </Midground>
 
-        </Container>
+      </Container>
 
 
       {/*<Pagination />*/}
