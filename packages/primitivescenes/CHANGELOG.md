@@ -11,6 +11,9 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
+**v1.0.5 > Housekeeping (Oct 04, 2020):**
+- [x] remove local img dir / update readme
+
 **v1.0.4 > Theming / Test CPT/CT (Oct 04, 2020):**
 - [x] frontity updates
 - [x] test postmagic component
