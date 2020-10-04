@@ -1,5 +1,5 @@
 # Primitive Stuff for Frontity
-A Frontity Theme and Block Components for WordPress as a Headless CMS.
+Homelands of the Primitive Theme and Components for Frontity / WordPress as a Headless CMS.
 
 ![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
 
@@ -19,10 +19,11 @@ GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivest
 
 **NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
 
-*Current experiments in the cave...*
-Migrating to Bootstrap 5 (currently in alpha!)
-Splitting code / config
-Creating config to expose from WP
+### Current experiments in the cave... ###
+
+- Splitting code / config
+- Theme extraction/semantics: Bootstrap 5 / Rebass / react-bootstrap
+- Theme config extraction
 
 See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) for release notes.
 
