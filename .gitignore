@@ -1,3 +1,10 @@
 node_modules
+dist
 build
+analyze
+**/package-lock.json
+npm-debug.log*
+.DS_Store
+.env
+.vscode
 .vercel
