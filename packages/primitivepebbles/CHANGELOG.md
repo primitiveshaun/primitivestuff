@@ -11,9 +11,16 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## WIP
 
-- [ ] scrollTo support safari/ie
+- [ ] review scrollTo support safari/ie
 
 ## History
+
+**v1.0.4 > Theming, Processors, CPTs (Oct 5, 2020):**
+- [x] remove local img dir / update readme
+- [x] update to bootstrap alpha2
+- [x] core updates
+- [x] update theme object + store rgb in state
+- [x] refine styles/naming/reduce fonts
 
 **v1.0.3 > Theming (Sept 20, 2020):**
 - [x] pass state to credits
