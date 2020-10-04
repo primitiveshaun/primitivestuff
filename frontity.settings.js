@@ -13,7 +13,7 @@ const settings = {
       name: "primitive-theme",
       state: {
         theme: {
-          debug: process.env.NODE_ENV === 'development' ? true : false,
+          debug: process.env.NODE_ENV==='development'?true:false,
           menu: [
             ["Stats/config", "/stats"],
             ["Content", "/frontity-tests"],
@@ -64,14 +64,12 @@ const settings = {
               endpoint: "temporal_events", // REST API endpoint
               archive: "/evolution-of-digital-stuff" // link where this custom posts are listed
             }
-            /*
             ,
             {
               type: "things", // custom post type slug
               endpoint: "things", // REST API endpoint
               archive: "/things" // link where this custom posts are listed
             }
-            */
           ],
           taxonomies: [
             {
