@@ -11,12 +11,18 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
-**v1.0.5 > Theming and CPTs (Oct 04, 2020):**
+**v1.0.7 > Housekeeping (Oct 04, 2020):**
+- [x] remove local img dir / update readme
+
+**v1.0.6 > Theming and CPTs (Oct 04, 2020):**
 - [x] core updates
 - [x] update theme object
 - [x] timelines (temporal_events) CPT
 - [x] refine styles/naming/reduce fonts
 - [x] fix path
+
+**v1.0.5 > Fix (Sept 20, 2020):**
+- [x] docs / npm timeouts
 
 **v1.0.4 > Theming (Sept 20, 2020):**
 - [x] import extracted bootstrap grid pebbles

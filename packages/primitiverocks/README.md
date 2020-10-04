@@ -1,8 +1,8 @@
 
 # Primitive Rocks
-Primitive Building Blocks for the Frontity Primitive Theme
+Primitive Digital's Building Blocks | Components for the Frontity Primitive Theme
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smcoral.png)
 
 Created with Node.js and React magic. 
 
@@ -29,7 +29,7 @@ See [changelog](CHANGELOG.md) for release notes.
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/webby.png)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/webby.png)
 
 
 ## Deployment
@@ -50,7 +50,7 @@ https://github.com/primitiveshaun/primitivestuff/issues
 #### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/haveyouseenit.jpg)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/haveyouseenit.jpg)
 
 #### Ω - *the end*
 
