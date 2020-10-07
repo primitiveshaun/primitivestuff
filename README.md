@@ -1,7 +1,7 @@
 # Primitive Stuff for Frontity
-Homelands of the Primitive Theme and Components for Frontity / WordPress as a Headless CMS.
+Homeland of Primitive Digital's Theme and Components for deploying WordPress as a Headless CMS on the Frontity framework.
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/punky.png)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smcoral.png)
 
 Created with Node.js and React magic. 
 
@@ -30,7 +30,7 @@ See [Frontity Primitive Theme changelog](packages/primitive-theme/CHANGELOG.md) 
 
 ## [Crafted by Primitive Digital](https://primitivedigital.uk)
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/webby.png)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/webby.png)
 
 ## Setup
 
@@ -112,7 +112,7 @@ https://github.com/primitiveshaun/primitivestuff/issues
 #### [Primitive Theme created by Primitive Digital](https://primitivedigital.uk)
 
 
-![](https://raw.githubusercontent.com/primitiveshaun/primitivestuff/master/img/haveyouseenit.jpg)
+![](https://api.primitivedigital.uk/wp-content/uploads/img/haveyouseenit.jpg)
 
 #### Ω - *the end*
 
