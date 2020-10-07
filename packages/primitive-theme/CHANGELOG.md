@@ -10,7 +10,7 @@ To whom it may concern. Some odd comments may be documented here.
 Commit messages are loosly following [Conventional Commits](https://conventionalcommits.org).
 
 primitive-theme 1.0.x
-add theme-able header / footer sections
+add theme-able sections
 Separation of config / theme
 
 @primitivedigital/primitiveone 1.1.0: restructured for development of theme-able system. WIP
@@ -20,49 +20,62 @@ Separation of config / theme
 
 ## Dev Notes
 
-* frontity.settings is dominant over package/index (you can overwrite the menu in dev but not prod)...
-* review licencing
+- frontity.settings seems dominant over package/index (you can overwrite the menu in dev but not prod?)...
+- need to review licence
 
+*Hosting tests:* Can this type of site be hosted on our standard WP hosting?
+Therchnically 
 
-## Issues
+- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
 
-
-- [ ] sort/filters: modify the wp theme funtions.php or use a plugin?
-- [ ] sort/filters subtimeline component: custom cpt/taxonomy content (I can't seem to sort if using WP REST Filter plugin)
-- [ ] sort/filters poststrip component: post and custom cpt/taxonomy content (recent, random, related)
-
+*
 
 
 ## WIP
 
-- [ ] feat: sitemaps / yoast
-- [ ] feat: timelines
-- [ ] test: are error page timeout settings higher than vercel timeout?
-- [ ] refine: preloaders / postsrips
-- [ ] Add post social share
-- [ ] FIX or FEAT: author list view / profile
-- [ ] FEAT: Fade in lazy loaded images (is this now working)?
-- [ ] FEAT: switch to ts
-
 - [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
-- [ ] BS CSS > Components (grid)
-- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size/transparency/darken/lighten)
+
+- [ ] refine: theme BS CSS > Components (grid)
+- [ ] BS CSS > CSS-IN-JS (transparency/darken/lighten)
+- [ ] BS CSS > CSS-IN-JS (darken/lighten)
+- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size)
+
 
 - [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
 - [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
 
-- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
+- [ ] test: are error page timeout settings higher than vercel timeout?
+- [ ] refine: preloaders / postsrips
+- [ ] fix: strong formatting and link/reload on header image
 
+- [ ] feat: timelines
+- [ ] fix: sort/filters: modify the wp theme funtions.php or use a plugin?
+- [ ] fix: sort/filters subtimeline component: custom cpt/taxonomy content (I can't seem to sort if using WP REST Filter plugin)
+- [ ] fix: multi/level/urls break if accessed directly
+
+- [ ] feat: poststrip
+- [ ] sort/filters poststrip component: post and custom cpt/taxonomy content (recent, random, related)
+
+
+## P2
+
+- [ ] feat: add post social share
+- [ ] feat: Fade in lazy loaded images (is this now working)?
+- [ ] feat: switch to ts
+- [ ] feat: author list view / profile
+
+- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
 - [ ] Research create a UI/cf7 theme builder vs cli
 - [ ] Research add comments / cf7 / fe content submission
 
-
-- [ ] [Theme: WP Theme Bridge](https://community.frontity.org/t/theme-bridge/1432/12)
-- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
-
-
-
 ## History
+
+**v1.0.12 > Refine styles (Oct 7, 2020):**
+- [x] workaround for missing isHome flag
+- [x] remove images from repo
+- [x] update theme object
+- [x] add blockquote processor(s)
+- [x] import iframe processor
 
 **v1.0.11 > Component updates (Sept 21, 2020):**
 - [x] remove color-convert

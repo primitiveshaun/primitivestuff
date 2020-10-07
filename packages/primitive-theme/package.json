@@ -1,7 +1,7 @@
 {
   "name": "primitive-theme",
   "version": "1.0.12",
-  "description": "Primitive Mountains: Beautiful Views made for Frontity",
+  "description": "Primitive Theme's rolling Mountains (a.k.a. beautiful views) for Frontity",
   "keywords": [
     "frontity",
     "primitive-theme",
@@ -21,14 +21,17 @@
   "bugs": {
     "url": "https://github.com/primitiveshaun/primitivestuff/issues"
   },
+  "peerDependencies": {
+    "primitivepebbles": "^1.0.4",
+    "primitiverocks": "^1.0.6",
+    "primitivescenes": "^1.0.5"
+  },
   "dependencies": {
     "@frontity/components": "^1.5.0",
     "@frontity/html2react": "^1.4.0",
-    "frontity": "^1.11.1",
-    "primitivepebbles": "^1.0.3",
-    "primitiverocks": "^1.0.5",
-    "primitivescenes": "^1.0.3",
-    "bootstrap": "^5.0.0-alpha1",
+    "frontity": "^1.12.0",
+
+    "bootstrap": "^5.0.0-alpha2",
     "react-bootstrap": "^1.3.0",
     "facepaint": "^1.2.1"
   }
