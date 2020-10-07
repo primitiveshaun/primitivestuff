@@ -23,14 +23,13 @@
   },
   "peerDependencies": {
     "primitivepebbles": "^1.0.4",
-    "primitiverocks": "^1.0.6",
+    "primitiverocks": "^1.0.7",
     "primitivescenes": "^1.0.5"
   },
   "dependencies": {
     "@frontity/components": "^1.5.0",
     "@frontity/html2react": "^1.4.0",
     "frontity": "^1.12.0",
-
     "bootstrap": "^5.0.0-alpha2",
     "react-bootstrap": "^1.3.0",
     "facepaint": "^1.2.1"

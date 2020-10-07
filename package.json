@@ -31,8 +31,8 @@
     "frontity": "^1.12.0",
     "frontity-contact-form-7": "^0.1.7",
     "primitive-theme": "./packages/primitive-theme",
-    "primitivepebbles": "./packages/primitivepebbles",
-    "primitiverocks": "^1.0.6",
+    "primitivepebbles": "^1.0.4",
+    "primitiverocks": "^1.0.7",
     "primitivescenes": "^1.0.5"
   }
 }
