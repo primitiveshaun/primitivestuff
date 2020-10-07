@@ -70,7 +70,7 @@ Therchnically
 
 ## History
 
-**v1.0.12 > Refine styles (Oct 7, 2020):**
+**v1.0.12 > Refine Styling, Theming, Processors, CPTs (Oct 7, 2020):**
 - [x] workaround for missing isHome flag
 - [x] remove images from repo
 - [x] update theme object
