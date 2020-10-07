@@ -35,14 +35,7 @@ const jungleDiscoBG = colors => {
         linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
         linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
         linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`,
-
-      wallrock: css`background-color: rgb(${hexToRGB(colors.dark)});
-        background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
-        linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        url(https://api.primitivedigital.uk/wp-content/uploads/stone/rockwall-300x300.png) repeat fixed;`
+        url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`
     }
   }
 }
@@ -100,6 +93,7 @@ const h1Style = colors => `
 
   background-color: ${hexToRGB(colors.white, 0.4)};
   background-image: linear-gradient(to bottom, ${hexToRGB(colors.white, 0.4)}, ${hexToRGB(colors.white, 0.6)});
+
   border: solid 1px ${hexToRGB(colors.white, 0.6)};
   outline: solid 1px ${hexToRGB(colors.coal, 0.1)};
   outline-offset: -.5rem;
@@ -204,10 +198,6 @@ const quoteStyle1 = css`
 // p2136: housekeeping
 // p37638: darwin
 
-// sk-dev: tests
-// ::first-letter = ok
-// ::first-line = no-k
-
 // sk-dev: to check
 // https://css-tricks.com/almanac/selectors/g/general-sibling/
 // https://css-tricks.com/almanac/selectors/a/adjacent-sibling/
@@ -220,8 +210,6 @@ const pageall = colors => css`
     text-align: center;
     text-shadow: .15rem .15rem ${hexToRGB(colors.fluff)};
   }
-
-
 
   p.fsletter::first-letter {
     font-weight: bold;
@@ -774,38 +762,11 @@ const pagedesign = colors => css`
                      
     h1 {
       ${h1Style(colors)}
-  
-      font-family: 'Abril Fatface', Georgia, cursive; 
-      font-size: 4.3rem;
       color: ${hexToRGB(colors.coal, 0.9)};
-      text-shadow: -8px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)},
-                    8px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
-
-      &::after {
-        content: " ";
-        margin: .9rem auto .6rem;
-        width: 60%;
-        height: 5px;
-        display: block;
-        border-top: 2px solid black;
-        opacity: .8;
-        box-shadow: -10px 2px 5px ${hexToRGB(colors.disco.cyan, 0.4)},
-                    10px -2px 5px ${hexToRGB(colors.disco.magenta, 0.4)};
-        background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.magenta, 0.8)} 15%, ${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
-      }
-
-      &::before {
-        content: " ";
-        margin: .6rem auto .6rem;
-        width: 40%;
-        height: 5px;
-        display: block;
-        border-top: 2px solid black;
-        opacity: .8;
-        box-shadow: -10px 2px 5px ${hexToRGB(colors.disco.cyan, 0.4)}, 
-                    10px -2px 5px ${hexToRGB(colors.disco.magenta, 0.4)};
-        background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.magenta, 0.8)} 15%, ${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
-      }
+      font-family: "Abril Fatface";
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
     }
 
     .list-style-1 {
@@ -835,30 +796,17 @@ const pagedev = colors => css`
   
   h1 {
     ${h1Style(colors)}
-
-    font-family: "Hepta Slab";
+    color: ${hexToRGB(colors.coal, 0.9)};
+    font-family: "Abril Fatface";
     font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: 2px 1px 0 #eee, 4px 3px 0 #707070;
-
-    &::after {
-      content: " ";
-      margin: 1.2rem auto 0;
-      width: 70%;
-      height: 12px;
-      display: block;
-      border-top: 1px solid ${hexToRGB(colors.coal, 0.6)};
-      border-left: 1px solid ${hexToRGB(colors.coal, 0.6)};
-      box-shadow: 1px 1px 0 rgba(238, 238, 238, .6),
-                  3px 2px 0 rgba(	112, 112, 112, .6);
-      background-image: linear-gradient(90deg, ${hexToRGB(colors.disco.purple, 0.8)} 15%,${hexToRGB(colors.disco.neongreen, 0.6)} 35%, ${hexToRGB(colors.disco.purple, 0.8)} 85%);
-      
-      /* animation: ${animatedgradient} 6s linear infinite;
-      animation-direction: alternate; */
-    }
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
   }
 
-    .list-style-1 {
+
+
+
+  .list-style-1 {
       ${listStyle1(colors)} 
       ${flexCol, flex2Col} 
 
@@ -886,38 +834,11 @@ const pagedata = colors => css`
 
   h1 {
     ${h1Style(colors)}
-
-    font-family: "Playfair Display";
-    font-weight: bold;
     color: ${hexToRGB(colors.coal, 0.9)};
-    text-shadow: 2px 1px 0 #fff, -2px -3px 1px ${hexToRGB(colors.disco.blue, 0.5)},
-                  4px 3px 1px rgba(255,0,180,0.5);
-
-    &::after {
-      content: " ";
-      margin: 1.2rem auto 0;
-      width: 70%;
-      height: 12px;
-      display: block;
-      border-top: 1px solid ${hexToRGB(colors.coal, 0.6)};
-      border-left: 1px solid ${hexToRGB(colors.coal, 0.6)};
-      background: linear-gradient(
-        -45deg, 
-        rgba(255,0,180,0.5) 25%, 
-        ${hexToRGB(colors.disco.blue, 0.5)} 25%, 
-        ${hexToRGB(colors.disco.blue, 0.5)} 50%, 
-        rgba(255,0,180,0.5) 50%, 
-        rgba(255,0,180,0.5) 75%, 
-        ${hexToRGB(colors.disco.blue, 0.5)} 75%, 
-        ${hexToRGB(colors.disco.blue, 0.5)}
-      );
-      background-size: 20px 20px;
-      background-position: 0 0;
-      box-shadow: 1px 1px 0 rgba(238, 238, 238, .6), 3px 2px 0 rgba(	112, 112, 112, .6);
-
-      /* animation: ${animatedgradient} 6s linear infinite;
-      animation-direction: alternate; */
-    }
+    font-family: "Abril Fatface";
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
   }
 
   .list-style-1 {
@@ -934,19 +855,16 @@ const pagemarketing = colors => css`
 #page-2128 {
 
   ${jungleDiscoBG(colors).bg.aztec}  
-    
+
   .content { ${flexRow} }
                    
   h1 {
     ${h1Style(colors)}
-
+    color: ${hexToRGB(colors.coal, 0.9)};
     font-family: "Abril Fatface";
     font-weight: bold;
     letter-spacing: 1px;
-    color: ${hexToRGB(colors.coal, 0.9)};
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-                  0px -5px 35px ${hexToRGB(colors.white, 0.3)};
-
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
   }
 
   .list-style-1 {
@@ -966,6 +884,19 @@ const pagemarketing = colors => css`
 
   
   }`;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Contact Page: p19466 */
 const pagecontact = colors => css`
