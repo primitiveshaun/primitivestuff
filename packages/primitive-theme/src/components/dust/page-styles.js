@@ -1,6 +1,5 @@
 import { css } from "frontity";
 import { hexToRGBcss } from "../hooks/color-utils";
-import { discolight } from "primitivescenes/glamourmagic";
 import { mq2col } from "primitivepebbles/grid";
 //import { colors } from "./_colors.js";
 //import { mq2col } from './_grid';
@@ -11,12 +10,11 @@ const darkGray = (colors) => {
   const darker = rgbShade(-0.4, colors.gray);
   return darker;
 }
-
 console.log(darkGray(colors));
 */
 
-/* Dark/Light variants */
-const jungleDiscoBG = colors => {
+/* Theme with Dark/Light variants */
+const jungleStyles = colors => {
   return {
     bg: {
       dark: css`background-color: ${colors.gray};
@@ -253,6 +251,8 @@ const pageall = colors => css`
     text-align: justify;
   }
 
+
+
   .btn {
     display: block;
     max-width: 300px;
@@ -278,7 +278,6 @@ const pageall = colors => css`
       opacity: 1;
     }
   }
-
   .btn-primary {
     
     text-shadow: 2px 2px 2px rgba(${colors.rgb.black}, 0.2);
@@ -299,64 +298,7 @@ const pageall = colors => css`
   }
 
 
-  .thinglist {
-    display: flex;
-    margin: 1rem auto;
-    padding: 1rem;
-    flex: 0 0 90%;
-    flex-wrap: wrap;
-    list-style-type: none;
-    
-    background-color: ${colors.coal};
-    background: url(https://api.primitivedigital.uk/wp-content/uploads/stone/grayrock-300x300.png);
-    
-    box-shadow: 0 0 3px rgba(0,0,0,0.6),
-                0 19px 38px rgba(0,0,0,0.30),
-                0 15px 12px rgba(0,0,0,0.22),
-                inset 0 0 6px rgba(0,0,0,0.3);
 
-      li {
-        display: flex;
-        margin: 0;
-        padding: .2rem .3rem .6rem;
-        min-height: 130px;
-        flex: 33%;
-
-        font-size: 1.3rem;
-        font-family: 'Abril Fatface', Georgia, cursive; 
-        font-weight: 700;
-        color: ${colors.coal};
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        text-shadow: 1px 0 6px #fff,
-          1px 1px 0px #fff,
-          7px 4px 2px rgba(0,0,0,0.3);
-    
-        background-color: #232b2b;
-        border: solid 2px ${colors.coal};
-      }
-
-      li:nth-of-type(odd) {
-        /* will-change: background, box-shadow; */
-        animation: ${discolight} 5s ease-out infinite;
-        animation-direction: alternate;
-      }
-      li:nth-of-type(even) {
-        /* will-change: background, box-shadow; */
-        animation: ${discolight} 5s ease-out infinite;
-        animation-direction: alternate;
-      }
-
-      li:nth-of-type(2) { animation-delay: .2s; }
-      li:nth-of-type(3) { animation-delay: .4s; }
-      li:nth-of-type(4) { animation-delay: .6s; }
-      li:nth-of-type(5) { animation-delay: .8s; }
-      li:nth-of-type(6) { animation-delay: 1s; }
-      li:nth-of-type(7) { animation-delay: 1.2s; }
-      li:nth-of-type(8) { animation-delay: 1.4s; }
-      li:nth-of-type(9) { animation-delay: 1.6s; }
-  }
 
 
 
@@ -700,9 +642,6 @@ const pageall = colors => css`
     }
   }
   @media screen and (min-width: 768px) {
-    .thinglist {
-      width: 80%;
-    }
     .split-col {
       column-count: 2;
     }
@@ -750,7 +689,7 @@ const pagehome = colors => css`
 const landingPages = colors => css`
   #page-8, #page-1904, #page-2102, #page-2128 {
 
-    ${jungleDiscoBG(colors).bg.dark}         
+    ${jungleStyles(colors).bg.dark}         
     h1 { ${pageHeader(colors)} }
     .content { ${flexRow} }  
 
