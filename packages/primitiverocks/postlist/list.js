@@ -18,7 +18,9 @@ const PostList = ({ state }) => {
 
         <Row>
           <Col>
-            <PageHead>Cavetalk</PageHead>
+            <PageHead className="mb-4 text-center">
+              Cavetalk
+            </PageHead>
           </Col>
         </Row>
 
@@ -53,7 +55,6 @@ export default connect(PostList);
 
 const StyledMain = styled.main`
   background-color: transparent;
-  padding: 2rem 0 3rem;
 
   h2 {
     font-family: "Playfair Display";
@@ -61,9 +62,7 @@ const StyledMain = styled.main`
 `;
 
 const PageHead = styled.h1`
-  margin-bottom: 1rem;
   color: rgba(12, 17, 43, 0.7);
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.2rem;
   font-size: 1.5rem;
@@ -72,7 +71,7 @@ const PageHead = styled.h1`
 `;
 
 const Header = styled.h2`
+  color: rgba(12, 17, 43, 0.9);
   font-weight: 300;
   text-transform: capitalize;
-  color: rgba(12, 17, 43, 0.9);
 `;

@@ -23,9 +23,9 @@ const Item = ({ state, item }) => {
         <PostDate className="mb-0">
           {date.toDateString()}
         </PostDate>
-        <AuthorLink link={author.link}>
+        <AuthorName>
           <p><strong>{author.name}</strong> was 'ere...</p>
-        </AuthorLink>
+        </AuthorName>
       </div>
 
       {state.theme.featured.showOnList && (
@@ -59,7 +59,7 @@ const HeadLink = styled(Link)`
   }
 `;
 
-const AuthorLink = styled(Link)`
+const AuthorName = styled.p`
   display: inline-block;
 
   p {

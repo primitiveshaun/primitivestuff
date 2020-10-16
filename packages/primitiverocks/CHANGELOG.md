@@ -11,6 +11,13 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
+**v1.0.8 > Theming, Refine Color system (Oct 16, 2020):**
+- [x] core/dependency updates
+- [x] refine list/list-item
+- [x] load svgs as source images
+- [x] remove large svg imports
+- [x] core/dependency updates
+
 **v1.0.7 > Housekeeping (Oct 04, 2020):**
 - [x] remove local img dir / update readme
 
