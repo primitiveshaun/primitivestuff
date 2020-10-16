@@ -1,6 +1,6 @@
 {
   "name": "primitivestuff",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "private": true,
   "description": "Primitive Building Materials: Created for WordPress + Frontity.",
   "keywords": [
@@ -25,14 +25,14 @@
     "@frontity/core": "^1.9.0",
     "@frontity/google-analytics": "^1.3.0",
     "@frontity/html2react": "^1.4.0",
-    "@frontity/tiny-router": "^1.2.1",
-    "@frontity/wp-source": "^1.9.0",
+    "@frontity/tiny-router": "^1.2.2",
+    "@frontity/wp-source": "^1.9.1",
     "@frontity/yoast": "^2.0.0",
     "frontity": "^1.12.0",
     "frontity-contact-form-7": "^0.1.7",
-    "primitive-theme": "./packages/primitive-theme",
+    "primitive-theme": "^1.0.13",
     "primitivepebbles": "^1.0.4",
-    "primitiverocks": "^1.0.7",
+    "primitiverocks": "^1.0.8",
     "primitivescenes": "^1.0.5"
   }
 }

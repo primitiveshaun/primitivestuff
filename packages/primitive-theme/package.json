@@ -1,6 +1,6 @@
 {
   "name": "primitive-theme",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Primitive Theme's rolling Mountains (a.k.a. beautiful views) for Frontity",
   "keywords": [
     "frontity",
@@ -23,11 +23,11 @@
   },
   "peerDependencies": {
     "primitivepebbles": "^1.0.4",
-    "primitiverocks": "^1.0.7",
+    "primitiverocks": "^1.0.8",
     "primitivescenes": "^1.0.5"
   },
   "dependencies": {
-    "@frontity/components": "^1.5.0",
+    "@frontity/components": "^1.5.1",
     "@frontity/html2react": "^1.4.0",
     "frontity": "^1.12.0",
     "bootstrap": "^5.0.0-alpha2",

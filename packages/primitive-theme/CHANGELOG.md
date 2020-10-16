@@ -70,6 +70,13 @@ Therchnically
 
 ## History
 
+**v1.0.13 > Theming, Refine Color system (Oct 16, 2020):**
+- [x] core updates
+- [x] store/get rgb values from state
+- [x] refine colour system
+- [x] refine post/page/global styles and colour - 1st pass
+- [x] remove workaround: isHome / homepage
+
 **v1.0.12 > Refine Styling, Theming, Processors, CPTs (Oct 7, 2020):**
 - [x] workaround for missing isHome flag
 - [x] remove images from repo
