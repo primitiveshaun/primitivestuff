@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect, styled, Global } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 
 import postStyles from "../dust/post-styles";
 
@@ -100,7 +100,9 @@ const Loading = styled.div`
 `;
 
 const StyledMain = styled.main`
-  padding: 1rem;
+
+
+
 `;
 
 const StyledLink = styled(Link)`

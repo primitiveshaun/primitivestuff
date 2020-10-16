@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { connect, styled, Global } from "frontity";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "primitivepebbles/grid";
 
 import pageStyles from "../dust/page-styles";
 
