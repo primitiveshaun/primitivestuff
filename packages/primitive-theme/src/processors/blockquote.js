@@ -1,28 +1,14 @@
 import React from 'react'
 import { styled } from "frontity";
+import { hexToRGBcss } from "../components/hooks/color-utils";
 //import { themecolor } from "../components/dust/_colors";
 
-// this doesn't work
-
-// dupe - needs moving
-const hexToRGB = (hex, alpha) => {
-  const r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16);
-
-  if (alpha) {
-    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-  } else {
-    return "rgb(" + r + ", " + g + ", " + b + ")";
-  }
-}
-
 const PrimaryStyles = () => `
-  border-left: 4px solid ${hexToRGB('#87af4e', 0.8)};
+  border-left: 4px solid ${hexToRGBcss('#87af4e', 0.8)};
 
   p {
-    color: ${hexToRGB('#87af4e', 0.8)}; 
-    box-shadow: 0 -6px 0 ${hexToRGB('#87af4e', 0.2)}; 
+    color: ${hexToRGBcss('#87af4e', 0.8)}; 
+    box-shadow: 0 -6px 0 ${hexToRGBcss('#87af4e', 0.2)}; 
   }
 
   &::before {
@@ -33,27 +19,27 @@ const PrimaryStyles = () => `
     position: absolute;
     top: -50px;
     left: -50px;
-    border-left: 5px solid ${hexToRGB('#87af4e', 0.1)};
+    border-left: 5px solid ${hexToRGBcss('#87af4e', 0.1)};
     border-radius: 50% 50% 50% 50%;
     z-index: -1;
     overflow:hidden;
   }
 
   &::after {
-    background: ${hexToRGB('#87af4e', 0.8)};
+    background: ${hexToRGBcss('#87af4e', 0.8)};
   }
 `;
 
 const SecondaryStyles = () => `
-  border-left: 4px solid ${hexToRGB('#eb966c', 0.8)}; 
+  border-left: 4px solid ${hexToRGBcss('#eb966c', 0.8)}; 
 
   p {
-    box-shadow: 0 -6px 0 ${hexToRGB('#eb966c', 0.2)}; 
-    color: ${hexToRGB('#eb966c', 0.8)}; 
+    box-shadow: 0 -6px 0 ${hexToRGBcss('#eb966c', 0.2)}; 
+    color: ${hexToRGBcss('#eb966c', 0.8)}; 
   }
 
   &::before {
-    border-left: 5px solid ${hexToRGB('#eb966c', 0.1)};
+    border-left: 5px solid ${hexToRGBcss('#eb966c', 0.1)};
     border-radius: 50% 50% 50% 50%;
     content: "";
     height: 500px;
@@ -65,7 +51,7 @@ const SecondaryStyles = () => `
   }
 
   &::after {
-    background: ${hexToRGB('#eb966c', 0.8)};
+    background: ${hexToRGBcss('#eb966c', 0.8)};
   }
 `;
 
