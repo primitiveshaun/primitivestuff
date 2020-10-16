@@ -38,8 +38,9 @@ const Theme = ({ state }) => {
   const display = state.theme.config;
 
   if (state.theme.debug) {
-    console.log("@index: data", data);
-    console.log("@index: display", display);
+    //console.log("@index: data", data);
+    //console.log("@index: display", display);
+    //console.log("@index: colors", state.theme.colors);
   }
 
   return (
@@ -78,9 +79,8 @@ const Theme = ({ state }) => {
       <Main id="main">
         <Switch>
           <Loading when={data.isFetching} />
-          {/* <Home when={data.isHome} /> */}
-          <Home when={data.isPage&&data.id===139} />
-          <Page when={data.isPage&&data.id!==139} />
+          <Home when={data.isHome} />
+          <Page when={data.isPage} />
           <Posts when={data.isPostArchive} />
           <Post when={data.isPost} />
           <Timeline when={data.isTemporalEventsArchive} />
