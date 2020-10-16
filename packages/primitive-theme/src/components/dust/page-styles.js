@@ -1,41 +1,35 @@
 import { css } from "frontity";
-import { discolight, animatedgradient } from "primitivescenes/glamourmagic";
-//import { colors } from "./_colors.js";
-
-//import { mq2col } from './_grid';
+import { hexToRGBcss } from "../hooks/color-utils";
+import { discolight } from "primitivescenes/glamourmagic";
 import { mq2col } from "primitivepebbles/grid";
+//import { colors } from "./_colors.js";
+//import { mq2col } from './_grid';
 
-// jsbench best performance out of stackoverflow options
-const hexToRGB = (hex, alpha) => {
-  const r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16);
-
-  if (alpha) {
-    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-  } else {
-    return "rgb(" + r + ", " + g + ", " + b + ")";
-  }
+/*
+const darkGray = (colors) => {
+  debugger;
+  const darker = rgbShade(-0.4, colors.gray);
+  return darker;
 }
-//use, 6 digit only: hexToRGB('#FF0000', 0.5);
 
-/* Themed variants */
+console.log(darkGray(colors));
+*/
+
+/* Dark/Light variants */
 const jungleDiscoBG = colors => {
   return {
     bg: {
-      aztec: css`background-color: ${colors.dark};
-      background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.1)} 45%, ${hexToRGB(colors.coal, 0.3)} 65%, ${hexToRGB(colors.coal, 0.5)} 100%),
-      linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
-      linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-      linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-      url(https://api.primitivedigital.uk/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
+      dark: css`background-color: ${colors.gray};
+      background: linear-gradient(to bottom, rgba(${colors.rgb.black}, 0.01) 0%, rgba(${colors.rgb.black}, 0.1) 45%, rgba(${colors.rgb.black}, 0.3) 65%, rgba(${colors.rgb.black}, 0.5) 100%),
+        linear-gradient(to right, rgba(${colors.rgb.black}, 0.2) 0%, rgba(${colors.rgb.black}, 0.2) 90%, rgba(${colors.rgb.black}, 0.5) 100%),
+        linear-gradient(to left, rgba(${colors.rgb.black}, 0.2) 0%, rgba(${colors.rgb.black}, 0.2) 90%, rgba(${colors.rgb.black}, 0.5) 100%),
+        url(https://api.primitivedigital.uk/wp-content/uploads/stone/aztec-300x300.png) repeat fixed;`,
 
-      oldrock: css`background-color: ${hexToRGB(colors.dark)};
-        background: linear-gradient(to bottom, ${hexToRGB(colors.coal, 0.01)} 0%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        linear-gradient(to top, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 95%, ${hexToRGB(colors.coal, 0.3)} 100%),
-        linear-gradient(to right, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        linear-gradient(to left, ${hexToRGB(colors.dark, 0.2)} 0%, ${hexToRGB(colors.dark, 0.2)} 90%, ${hexToRGB(colors.coal, 0.5)} 100%),
-        url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`
+      light: css`background-color: ${colors.gray};
+        background: linear-gradient(to bottom, rgba(${colors.rgb.black}, 0.01) 0%, rgba(${colors.rgb.black}, 0.5) 100%),
+          linear-gradient(to right, rgba(${colors.rgb.black}, 0.2) 0%, rgba(${colors.rgb.black}, 0.2) 90%, rgba(${colors.rgb.black}, 0.5) 100%),
+          linear-gradient(to left, rgba(${colors.rgb.black}, 0.2) 0%, rgba(${colors.rgb.black}, 0.2) 90%, rgba(${colors.rgb.black}, 0.5) 100%),
+          url(https://api.primitivedigital.uk/wp-content/uploads/stone/junglerock-300x261.png) repeat fixed;`
     }
   }
 }
@@ -47,13 +41,11 @@ const flexRow = `
   flex-wrap: wrap;
   width: 100%;
 `;
-
 const flexCol = `
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
 `;
-
 const flex2Col = css(mq2col({
   flex: ['0 0 100%', '0 0 50%'],
 }))
@@ -69,52 +61,56 @@ const listStyle1 = colors => css`
   ul {
     margin: 1rem 1.5rem 0 5rem;
     padding: 2rem 1rem;
-    background: ${hexToRGB(colors.white, 0.5)};
+    background: rgba(${colors.rgb.white}, 0.5);
     border: 2px solid ${colors.coal};
   }
 
   li {
     margin: 0;
     padding: .2rem .5rem;
-    font-family: 'Slabo 27px', Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Slabo 27px', Georgia, serif;
     font-size: 1.7rem;
     line-height: 1.6;
     list-style: none;
     color: ${colors.coal};
-    text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)};
+    text-shadow: 1px 1px 0 rgba(rgba(${colors.rgb.white}, 0.6));
   }
 `;
 
-const h1Style = colors => `
+const pageHeader = colors => `
   margin: 2rem auto;
   padding: 3rem 2.5rem;
   max-width: 800px;
-  position: relative;
 
-  background-color: ${hexToRGB(colors.white, 0.4)};
-  background-image: linear-gradient(to bottom, ${hexToRGB(colors.white, 0.4)}, ${hexToRGB(colors.white, 0.6)});
+  color: rgba(${colors.rgb.black}, 0.9);
+  font-family: "Abril Fatface";
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 8px 6px rgba(${colors.rgb.black}, 0.2), 0px -5px 35px rgba(${colors.rgb.black}, 0.3);
 
-  border: solid 1px ${hexToRGB(colors.white, 0.6)};
-  outline: solid 1px ${hexToRGB(colors.coal, 0.1)};
-  outline-offset: -.5rem;
-  box-shadow: 2px 8px 6px rgba(0,0,0,0.2),
-             0px -5px 35px ${hexToRGB(colors.white, 0.3)};
+  background-color: rgba(${colors.rgb.white}, 0.4);
+  background-image: linear-gradient(to bottom, rgba(${colors.rgb.white}, 0.4), rgba(${colors.rgb.white}, 0.6));
+  border: solid 1px rgba(${colors.rgb.white}, 0.6);
+  outline: solid 1px rgba(${colors.rgb.black}, 0.1);
+  outline-offset: -0.5rem;
+  box-shadow: 2px 8px 6px rgba(${colors.rgb.black}, 0.2), 0px -5px 33px rgba(${colors.rgb.white}, 0.3);
 `;
 
-const h2Style = colors => `
+const oronymTop = colors => `
   position: relative;
   font-family: 'Playfair Display'; 
-  color: #000;
+  color: ${colors.black};
+
   font-size:  5rem;
   line-height: 4.5rem;
   letter-spacing: 2px;
   font-weight: 400;
-  text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)}, 
-  0px 1px 0 ${hexToRGB(colors.white, 0.6)},
-  1px 0px 0 ${hexToRGB(colors.white, 0.6)},
-  -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
-  -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
-  -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
+  text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.6), 
+    0px 1px 0 rgba(${colors.rgb.white}, 0.6),
+    1px 0px 0 rgba(${colors.rgb.white}, 0.6),
+    -1px -1px 0 rgba(${colors.rgb.white}, 0.6),
+    -0px -1px 0 rgba(${colors.rgb.white}, 0.6),
+    -1px -0px 0 rgba(${colors.rgb.white}, 0.6);
 
   span {
     width: 100%;
@@ -122,7 +118,8 @@ const h2Style = colors => `
     font-size:  2rem;
     color: #fff;
     font-family: 'Pacifico';
-    text-shadow: -2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 2px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
+    text-shadow: -2px 1px 2px ${hexToRGBcss(colors.disco.cyan, 0.4)},
+                 2px -1px 2px ${hexToRGBcss(colors.disco.magenta, 0.4)};
   }
 
   &::before {
@@ -135,24 +132,26 @@ const h2Style = colors => `
     left: 1.5rem;
     border-top: 1px solid #fff;
     border-left: 1px solid #fff;
-    box-shadow: -2px -1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, -1px -2px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
+    box-shadow: -2px -1px 2px ${hexToRGBcss(colors.disco.cyan, 0.4)},
+                -1px -2px 2px ${hexToRGBcss(colors.disco.magenta, 0.4)};
   }
 `;
 
-const h3Style = colors => `
+const oronymBottom = colors => `
   margin-top: 0;
   margin-bottom: 3rem;
   padding-top: 0;
+
   font-size:  5rem;
   line-height: 4.5rem;
   letter-spacing: 2px;
   color: #000;
-  text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.6)}, 
-    0px 1px 0 ${hexToRGB(colors.white, 0.6)},
-    1px 0px 0 ${hexToRGB(colors.white, 0.6)},
-    -1px -1px 0 ${hexToRGB(colors.white, 0.6)},
-    -0px -1px 0 ${hexToRGB(colors.white, 0.6)},
-    -1px -0px 0 ${hexToRGB(colors.white, 0.6)};
+  text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.6), 
+    0px 1px 0 rgba(${colors.rgb.white}, 0.6),
+    1px 0px 0 rgba(${colors.rgb.white}, 0.6),
+    -1px -1px 0 rgba(${colors.rgb.white}, 0.6),
+    -0px -1px 0 rgba(${colors.rgb.white}, 0.6),
+    -1px -0px 0 rgba(${colors.rgb.white}, 0.6);
 
   span {
     width: 100%;
@@ -160,7 +159,7 @@ const h3Style = colors => `
     font-size:  2rem;
     color: #fff;
     font-family: 'Pacifico';
-    text-shadow: -2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 2px -1px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
+    text-shadow: -2px 1px 2px ${hexToRGBcss(colors.disco.cyan, 0.4)}, 2px -1px 2px ${hexToRGBcss(colors.disco.magenta, 0.4)};
   }
 
   &::after {
@@ -173,7 +172,7 @@ const h3Style = colors => `
     right: 1.5rem;
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
-    box-shadow: 2px 1px 2px ${hexToRGB(colors.disco.cyan, 0.4)}, 1px 2px 2px ${hexToRGB(colors.disco.magenta, 0.4)};
+    box-shadow: 2px 1px 2px ${hexToRGBcss(colors.disco.cyan, 0.4)}, 1px 2px 2px ${hexToRGBcss(colors.disco.magenta, 0.4)};
   }
 `;
 
@@ -191,16 +190,8 @@ const quoteStyle1 = css`
 
 
 // p139: homepage
-// p8: design
-// p1904: dev
-// p2102: data
-// p2128: marketing
 // p2136: housekeeping
 // p37638: darwin
-
-// sk-dev: to check
-// https://css-tricks.com/almanac/selectors/g/general-sibling/
-// https://css-tricks.com/almanac/selectors/a/adjacent-sibling/
 
 const pageall = colors => css`
 
@@ -208,7 +199,7 @@ const pageall = colors => css`
     padding: 2rem 0 2rem;
     font-size: 4rem;
     text-align: center;
-    text-shadow: .15rem .15rem ${hexToRGB(colors.fluff)};
+    text-shadow: .1rem .1rem ${colors.fluff};
   }
 
   p.fsletter::first-letter {
@@ -236,7 +227,7 @@ const pageall = colors => css`
     font-family: Baskerville, Georgia, serif; 
     padding: .5rem 5% .1rem;
     font-size: 1.6rem;
-    color: ${hexToRGB(colors.coal, 0.7)};
+    color: rgba(${colors.rgb.black} 0.7);
 
     strong, a {
       color: ${colors.primary};
@@ -290,7 +281,7 @@ const pageall = colors => css`
 
   .btn-primary {
     
-    text-shadow: 2px 2px 2px ${hexToRGB(colors.coal, 0.2)};
+    text-shadow: 2px 2px 2px rgba(${colors.rgb.black}, 0.2);
     background-color: ${colors.primary};
     border: 1px solid ${colors.primary};
     border-left: 5px solid ${colors.primary};
@@ -302,7 +293,7 @@ const pageall = colors => css`
       max-width: 360px;
     }
     &:active {
-      text-shadow: 1px 1px 0px ${hexToRGB(colors.coal, 0.3)};
+      text-shadow: 1px 1px 0px rgba(${colors.rgb.black}, 0.3);
       max-width: 360px;
     }
   }
@@ -338,8 +329,7 @@ const pageall = colors => css`
         text-align: center;
         align-items: center;
         justify-content: center;
-        text-shadow:
-          1px 0 6px #fff,
+        text-shadow: 1px 0 6px #fff,
           1px 1px 0px #fff,
           7px 4px 2px rgba(0,0,0,0.3);
     
@@ -368,6 +358,8 @@ const pageall = colors => css`
       li:nth-of-type(9) { animation-delay: 1.6s; }
   }
 
+
+
   .q-wrap {
     margin : 5px 0 40px auto; 
     padding : 10px 20px 20px; 
@@ -380,15 +372,15 @@ const pageall = colors => css`
 
     blockquote { 
 
-      border-left: 4px solid ${hexToRGB(colors.primary, 0.8)};
+      border-left: 4px solid rgba(${colors.rgb.secondary}, 0.8);
 
       p {
-        box-shadow: 0 -6px 0 ${hexToRGB(colors.primary, 0.2)}; 
-        color: ${hexToRGB(colors.primary, 0.8)}; 
+        box-shadow: 0 -6px 0 rgba(${colors.rgb.secondary}, 0.2); 
+        color: rgba(${colors.rgb.secondary}, 0.8); 
       }
 
       &::before {
-        border-left: 5px solid ${hexToRGB(colors.primary, 0.1)};
+        border-left: 5px solid rgba(${colors.rgb.secondary}, 0.1);
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -400,22 +392,23 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: ${hexToRGB(colors.primary, 0.8)};
+        background: rgba(${colors.rgb.secondary}, 0.8);
       }
+
     }
   }
 
   .q-style-2 {
     blockquote { 
-      border-left: 4px solid ${hexToRGB(colors.secondary, 0.8)}; 
+      border-left: 4px solid rgba(${colors.rgb.secondary}, 0.8);
 
       p {
-        box-shadow: 0 -6px 0 ${hexToRGB(colors.secondary, 0.2)}; 
-        color: ${hexToRGB(colors.secondary, 0.8)}; 
+        box-shadow: 0 -6px 0 rgba(${colors.rgb.secondary}, 0.2); 
+        color: rgba(${colors.rgb.secondary}, 0.8); 
       }
 
       &::before {
-        border-left: 5px solid ${hexToRGB(colors.secondary, 0.1)};
+        border-left: 5px solid rgba(${colors.rgb.secondary}, 0.1);
         border-radius: 50% 50% 50% 50%;
         content: "";
         height: 500px;
@@ -427,7 +420,7 @@ const pageall = colors => css`
       }
 
       &::after {
-        background: ${hexToRGB(colors.secondary, 0.8)};
+        background: rgba(${colors.rgb.secondary}, 0.8);
       }
     }
   } 
@@ -438,10 +431,10 @@ const pageall = colors => css`
     ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid ${hexToRGB(colors.disco.neongreen, 0.6)};
+      border-left: 4px solid ${hexToRGBcss(colors.disco.neongreen, 0.6)};
 
       p {
-        box-shadow: 0 -6px 0 ${hexToRGB(colors.disco.neongreen, 0.6)};
+        box-shadow: 0 -6px 0 ${hexToRGBcss(colors.disco.neongreen, 0.6)};
         color: ${colors.coal};
 
         span {
@@ -457,12 +450,12 @@ const pageall = colors => css`
         max-width: 40%;
         font-size: 1.8rem;
         color: ${colors.coal};
-        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
-        background: ${hexToRGB(colors.disco.neongreen, 0.4)};
+        text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.5);
+        background: ${hexToRGBcss(colors.disco.neongreen, 0.4)};
       }
     
       &::after {
-          background: ${hexToRGB(colors.disco.neongreen, 0.8)};
+          background: ${hexToRGBcss(colors.disco.neongreen, 0.8)};
       }
     }
   } 
@@ -473,10 +466,10 @@ const pageall = colors => css`
     ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid ${hexToRGB(colors.disco.purple, 0.8)};
+      border-left: 4px solid ${hexToRGBcss(colors.disco.purple, 0.8)};
 
       p {
-        box-shadow: 0 -6px 0 ${hexToRGB(colors.disco.purple, 0.8)};
+        box-shadow: 0 -6px 0 ${hexToRGBcss(colors.disco.purple, 0.8)};
         color: ${colors.coal};
 
         span {
@@ -492,12 +485,12 @@ const pageall = colors => css`
         max-width: 40%;
         font-size: 1.8rem;
         color: ${colors.coal};
-        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
-        background: ${hexToRGB(colors.disco.purple, 0.4)};  
+        text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.5);
+        background: ${hexToRGBcss(colors.disco.purple, 0.4)};  
       }
     
       &::after {
-        background: ${hexToRGB(colors.disco.purple, 0.8)};
+        background: ${hexToRGBcss(colors.disco.purple, 0.8)};
       }
     }
   }
@@ -508,10 +501,10 @@ const pageall = colors => css`
     ${flexCol, flex2Col} 
 
     blockquote {
-      border-left: 4px solid ${hexToRGB(colors.disco.blue, 0.6)};
+      border-left: 4px solid ${hexToRGBcss(colors.disco.blue, 0.6)};
 
       p {
-        box-shadow: -3px -6px 0 ${hexToRGB(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
+        box-shadow: -3px -6px 0 ${hexToRGBcss(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
         color: ${colors.coal};
 
         span {
@@ -524,11 +517,11 @@ const pageall = colors => css`
       cite {
         font-size: 1.8rem;
         color: ${colors.coal};
-        text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
+        text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.5);
       }
     
       &::after {
-        background: ${hexToRGB(colors.disco.blue, 0.7)};
+        background: ${hexToRGBcss(colors.disco.blue, 0.7)};
       }
     }
   } 
@@ -539,10 +532,10 @@ const pageall = colors => css`
     max-width: 450px;
 
     blockquote {
-      border-left: 4px solid ${hexToRGB(colors.info, 0.8)};
+      border-left: 4px solid rgba(${colors.rgb.info}, 0.8);
 
       p {
-        background: ${hexToRGB(colors.white, 0.6)};
+        background: rgba(${colors.rgb.white}, 0.6);
         color: ${colors.coal};
 
         span {
@@ -564,11 +557,11 @@ const pageall = colors => css`
       cite {
         font-size: 1.8rem;
         color: ${colors.white};
-        text-shadow: 1px 1px 0 ${hexToRGB(colors.coal, 0.5)};
+        text-shadow: 1px 1px 0 rgba(${colors.coal}, 0.5);
       }
     
       &::after {
-        background: ${hexToRGB(colors.info, 0.8)};
+        background: rgba(${colors.rgb.info}, 0.8);
       }
     }
   }
@@ -579,16 +572,16 @@ const pageall = colors => css`
     ${flexCol, flex2Col} 
 
       blockquote {
-        border-left: 4px solid ${hexToRGB(colors.disco.blue, 0.6)};
+        border-left: 4px solid ${hexToRGBcss(colors.disco.blue, 0.6)};
 
         p {
           padding: .5rem 0;
           line-height: 4rem;
-          background: ${hexToRGB(colors.white, 0.6)};
-          box-shadow: -3px -6px 0 ${hexToRGB(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
+          background: rgba(${colors.rgb.white} 0.6);
+          box-shadow: -3px -6px 0 ${hexToRGBcss(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
           color: ${colors.coal};
           white-space: pre-wrap;
-          text-shadow: 0 1px 1px ${hexToRGB(colors.white, 0.5)};
+          text-shadow: 0 1px 1px ${hexToRGBcss(colors.white, 0.5)};
           border-width: 0.5rem 0;
 
           span {
@@ -610,11 +603,11 @@ const pageall = colors => css`
         cite {
           font-size: 1.8rem;
           color: ${colors.coal};
-          text-shadow: 1px 1px 0 ${hexToRGB(colors.white, 0.5)};
+          text-shadow: 1px 1px 0 rgba(${colors.rgb.white}, 0.5);
         }
     
         &::after {
-          background: ${hexToRGB(colors.disco.blue, 0.7)};
+          background: ${hexToRGBcss(colors.disco.blue, 0.7)};
         }
       }
     }
@@ -626,16 +619,16 @@ const pageall = colors => css`
   
       blockquote {
 
-        border-left: 4px solid ${hexToRGB(colors.warning, 0.8)};
+        border-left: 4px solid rgba(${colors.rgb.warning}, 0.8);
   
         p {
           padding: .5rem 0;
           line-height: 4rem;
-          background: ${hexToRGB(colors.white, 0.6)};
-          box-shadow: 0 -6px 0 ${hexToRGB(colors.warning, 0.8)};
+          background: rgba(${colors.rgb.white}, 0.6);
+          box-shadow: 0 -6px 0 rgba(${colors.rgb.warning}, 0.8);
           color: ${colors.coal};
           white-space: pre-wrap;
-          text-shadow: 0 1px 1px ${hexToRGB(colors.white, 0.5)};
+          text-shadow: 0 1px 1px rgba(${colors.rgb.white}, 0.5);
           border-width: 0.5rem 0;
   
           span {
@@ -656,10 +649,10 @@ const pageall = colors => css`
         cite {
           font-size: 1.8rem;
           color: ${colors.white};
-          text-shadow: 1px 1px 0 ${hexToRGB(colors.coal, 0.5)};
+          text-shadow: 1px 1px 0 rgba(${colors.coal}, 0.5);
         }
         &::after {
-          background: ${hexToRGB(colors.warning, 0.8)};
+          background:  rgba(${colors.rgb.warning}, 0.8);
         }
       }
     }
@@ -667,16 +660,16 @@ const pageall = colors => css`
 
     .fleuron { 
       font-size: 3rem;
-      color: ${hexToRGB(colors.primary, 0.6)} !important;
+      color: rgba(${colors.rgb.primary}, 0.6) !important;
   
       a {
-        color: ${hexToRGB(colors.warning, 0.6)} !important;
+        color: rgba(${colors.rgb.warning}, 0.6) !important;
         text-decoration: none;
         background: transparent !important;
         border: none !important;
   
         &::hover {
-          color: ${hexToRGB(colors.danger, 0.6)} !important;
+          color: rgba(${colors.rgb.danger}, 0.6) !important;
           background: transparent !important;
           border: none !important;
         }
@@ -730,9 +723,8 @@ const pagehome = colors => css`
   #page-139 {
     h3 {
       margin-bottom: 1.2rem;
-
       font-weight: bold;
-      color: ${hexToRGB(colors.coal, 0.9)};
+      color: rgba(${colors.rgb.black}, 0.9);
 
       &::after {
         content: " ";
@@ -740,162 +732,46 @@ const pagehome = colors => css`
         margin: 1.2rem auto 0 0;
         width: 5rem;
         height: 3px;
-        background: ${hexToRGB(colors.primary, 0.8)};
+        background: rgba(${colors.rgb.primary}, 0.8);
       }
 
       &:nth-of-type(even)::after {
-        background: ${hexToRGB(colors.secondary, 0.8)};
+        background: rgba(${colors.rgb.secondary}, 0.8);
       }
     }
   }
 `;
 
+// STYLED LANDING PAGES
 /* Design Page: p8 */
-const pagedesign = colors => css`
-  #page-8 {
+/* Development Page: p1904 */
+/* Data Page: p2102 */
+/* Marketing Page: p2128 */
+const landingPages = colors => css`
+  #page-8, #page-1904, #page-2102, #page-2128 {
 
-    ${jungleDiscoBG(colors).bg.aztec}  
-
-    .content {
-      ${flexRow}
-    }
-                     
-    h1 {
-      ${h1Style(colors)}
-      color: ${hexToRGB(colors.coal, 0.9)};
-      font-family: "Abril Fatface";
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
-    }
+    ${jungleDiscoBG(colors).bg.dark}         
+    h1 { ${pageHeader(colors)} }
+    .content { ${flexRow} }  
 
     .list-style-1 {
-
       ${listStyle1(colors)} 
       ${flexCol, flex2Col} 
-
-      h2 { ${h2Style(colors)} }
-      h3 { ${h3Style(colors)} }
-
-      li:last-of-type {
-        font-size: 2rem;
-        font-family: "Pacifico";
-      }
-    } 
-
-  }
-`;
-
-/* Development Page: p1904 */
-const pagedev = colors => css`
-#page-1904 {
-
-  ${jungleDiscoBG(colors).bg.aztec}  
-    
-  .content { ${flexRow} }
   
-  h1 {
-    ${h1Style(colors)}
-    color: ${hexToRGB(colors.coal, 0.9)};
-    font-family: "Abril Fatface";
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
-  }
-
-
-
-
-  .list-style-1 {
-      ${listStyle1(colors)} 
-      ${flexCol, flex2Col} 
-
-      h2 { ${h2Style(colors)} }
-      h3 { ${h3Style(colors)} }
+      h2 { ${oronymTop(colors)} }
+      h3 { ${oronymBottom(colors)} }
     } 
 
     .list-style-2 {
       ${listStyle1(colors)} 
       ${flexCol, flex2Col} 
 
-      h2 { ${h2Style(colors)} }
-      h3 { ${h3Style(colors)} }
+      h2 { ${oronymTop(colors)} }
+      h3 { ${oronymBottom(colors)} }
     } 
+
   }
 `;
-
-/* Data Page: p2102 */
-const pagedata = colors => css`
-#page-2102 {
-
-  ${jungleDiscoBG(colors).bg.aztec}  
-    
-  .content { ${flexRow} }
-
-  h1 {
-    ${h1Style(colors)}
-    color: ${hexToRGB(colors.coal, 0.9)};
-    font-family: "Abril Fatface";
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
-  }
-
-  .list-style-1 {
-    ${listStyle1(colors)} 
-    ${flexCol, flex2Col} 
-
-    h2 { ${h2Style(colors)} }
-    h3 { ${h3Style(colors)} }
-  } 
-}`;
-
-/* Marketing Page: p2128 */
-const pagemarketing = colors => css`
-#page-2128 {
-
-  ${jungleDiscoBG(colors).bg.aztec}  
-
-  .content { ${flexRow} }
-                   
-  h1 {
-    ${h1Style(colors)}
-    color: ${hexToRGB(colors.coal, 0.9)};
-    font-family: "Abril Fatface";
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px ${hexToRGB(colors.white, 0.3)};
-  }
-
-  .list-style-1 {
-
-    ${listStyle1(colors)} 
-    ${flexCol, flex2Col} 
-
-    h2 { ${h2Style(colors)} }
-    h3 { ${h3Style(colors)} }
-
-    li:last-of-type {
-      padding: 1rem;
-      font-size: 1rem;
-      font-family: "Pacifico";
-    }
-  } 
-
-  
-  }`;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Contact Page: p19466 */
@@ -1082,10 +958,7 @@ const pageStyles = colors =>
   css([
     pageall(colors),
     pagehome(colors),
-    pagedesign(colors),
-    pagedev(colors),
-    pagedata(colors),
-    pagemarketing(colors),
+    landingPages(colors),
     pagecontact(colors)
   ]);
 
