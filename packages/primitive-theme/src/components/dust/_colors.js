@@ -1,26 +1,17 @@
-// Variables
-// COLORS
-
-// refs / reading
-// https://convertingcolors.com/blog/article/convert_hex_to_rgb_with_javascript.html
-// https://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
-// like this::: https://css-tricks.com/snippets/javascript/lighten-darken-color/
-// https://codepen.io/chriscoyier/pen/EatIr
-// https://v5.getbootstrap.com/docs/5.0/customize/color/
-// https://v5.getbootstrap.com/docs/5.0/utilities/colors/
-// _varaibles.scss
+// Primitive Theme Variables
+// COLOURS/COLORS
 
 // basic 6charaters only with #
 const hexToRGB = (hex) => {
   const r = parseInt(hex.slice(1, 3), 16),
         g = parseInt(hex.slice(3, 5), 16),
         b = parseInt(hex.slice(5, 7), 16);
-  return (`${r, g, b}`)
+  const string = [r, g, b].toString();
+  return string;
 };
 
 
-// Color system
-
+// Base Colour system
 const colors = {
   blue: "#0f52ba",
   indigo: "#6610f2",
@@ -34,24 +25,11 @@ const colors = {
   cyan: "#17a2b8",
 
   white: "#ffffff",
-  black: "#000000",
-
-  grays: {
-    base: "#6D6D6D",
-    light: "#DCD7CA",
-    lighter: "#F5EFE0",
-    g100: "#f8f9fa",
-    g200: "#e9ecef",
-    g300: "#dee2e6",
-    g400: "#ced4da",
-    g500: "#adb5bd",
-    g600: "#6c757d",
-    g700: "#495057",
-    g800: "#807c7d",
-    g900: "#212529"
-  }
+  gray: "#6c757d",
+  black: "#000000"  
 }
 
+// Brand Colour system
 const primitive = {
   redapple: "#E1623F",
   fluff: "#ADD8E6",
@@ -73,7 +51,9 @@ const primitive = {
   salmom: "#ff8c69",
   tomato: "#ff6347",
   coral: "#E1623F",
-  cyan: "#00a5ba"
+  cyan: "#00a5ba",
+  ivory: "#fffff0",
+  cream: "fffdd0"
 }
 
 
@@ -85,27 +65,16 @@ const themecolor = {
   red: colors.red,
   orange: primitive.mango,
   yellow: primitive.mustard,
-  green: primitive.green,
+  green: colors.green,
   teal: primitive.teal,
   cyan: primitive.cyan,
-
   brown: primitive.cardboard,
-
-  white: colors.white,
   black: colors.black,
-  light: colors.grays.g100,
-  dark: colors.grays.g800,
-  gray: colors.grays.g600,
-
-  grays: {
-    base: colors.grays.base,
-    light: colors.grays.light,
-    lighter: colors.grays.lighter
-  },
-
+  gray: colors.gray,
+  white: colors.white,
   coal: primitive.coal,
-  ivory: "#fffff0",
-  cream: "fffdd0",
+  ivory: primitive.ivory,
+  cream: primitive.cream,
   peach: primitive.peach,
   fluff: primitive.fluff,
   lime: primitive.lime,
@@ -128,6 +97,9 @@ const themecolor = {
     info: hexToRGB(primitive.teal),
     warning: hexToRGB(primitive.mustard),
     danger: hexToRGB(primitive.redapple),
+    black: hexToRGB(primitive.coal),
+    gray: hexToRGB(colors.gray),
+    white: hexToRGB(colors.white)
   },
 
   disco: {

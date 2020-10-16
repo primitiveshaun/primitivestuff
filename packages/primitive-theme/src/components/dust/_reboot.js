@@ -1,19 +1,5 @@
 import { css } from "frontity";
 
-// jsbench best performance out of stackoverflow options
-const hexToRGB = (hex, alpha) => {
-  const r = parseInt(hex.slice(1, 3), 16),
-    g = parseInt(hex.slice(3, 5), 16),
-    b = parseInt(hex.slice(5, 7), 16);
-
-  if (alpha) {
-    return "rgba(" + r + ", " + g + ", " + b + ", " + alpha + ")";
-  } else {
-    return "rgb(" + r + ", " + g + ", " + b + ")";
-  }
-}
-//use, 6 digit only: hexToRGB('#FF0000', 0.5);
-
 const cssReboot = colors => css`
 
 *,
@@ -105,6 +91,8 @@ p {
   font-size: 1rem;
   line-height: 1.8;
 }
+
+
 
 /* --- RESPONSIVE --- */
 /* Small devices (landscape phones, 576px and up) */
@@ -207,7 +195,7 @@ blockquote {
   max-width: 600px;
   min-width: 300px;
   background-color: transparent;
-  border-left: 4px solid ${hexToRGB(colors.gray, 0.8)};
+  border-left: 4px solid rgba(${colors.rgb.gray}, 0.8);
 
 
   p {
@@ -215,7 +203,7 @@ blockquote {
     padding : .3rem 0;
     display: inline; 
 
-    color: ${hexToRGB(colors.gray, 0.6)};
+    color: rgba(${colors.rgb.gray}, 0.6);
     font-family: Baskerville,Georgia,serif;
     font-style: italic; 
     font-size: 2.1rem; 
@@ -239,15 +227,14 @@ blockquote {
     top: 0;
     left: 50%;
 
-    color: rgba(255,255,255, 0.5);
-    background: ${hexToRGB(colors.gray, 0.8)};
+    color: rgba(${colors.rgb.white}, 0.5);
+    background: rgba(${colors.rgb.gray}, 0.8);
     border-radius: 50% 50% 50% 50%;
     
     font-family: 'icons';
     text-align: center;
     font-size: 70px;
     line-height: 130px;
-    text-shadow: 0 1px 1px rgba(255,255,255, 0.1);
   }
 } 
 
@@ -274,7 +261,6 @@ a {
   text-decoration: none;
   transition: all .5s ease-in-out;
 }
-
 a:hover {
   color: ${colors.purple};
   text-decoration: none;
@@ -282,17 +268,22 @@ a:hover {
 a:focus {
   text-decoration: none;
 }
-
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
   text-decoration: none;
 }
+a + a {
+  margin-left: 5px;
+}
+
+
+
 pre,
 code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 1em;
+  font-size: 1rem;
   padding: 0.4rem 0.6rem;
 }
 
