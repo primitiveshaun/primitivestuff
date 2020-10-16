@@ -1,6 +1,6 @@
 
 # Primitive Scenes
-Primitive Digital's Animated/Intereactive Blocks | Components for the Frontity Primitive Theme
+Primitive Digital's Animated/Interactive Blocks | Components for the Frontity Primitive Theme
 
 ![](https://api.primitivedigital.uk/wp-content/uploads/img/punky_logo_smcoral.png)
 
