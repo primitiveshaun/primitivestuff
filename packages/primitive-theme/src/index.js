@@ -1,9 +1,11 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
-//import quote from "./processors/blockquote";
-import pQuote from "./processors/q-primary";
-import sQuote from "./processors/q-secondary";
+import wpBlockColumns from "./processors/wp-block-columns";
+import quoteBook from "./processors/blockquote-book";
+import listDisco from "./processors/list-thinglist";
+//import pQuote from "./processors/q-primary";
+//import sQuote from "./processors/q-secondary";
 
 import CustomPageHandlers from "./components/sand/handlers";
 import { themecolor } from "./components/dust/_colors";
@@ -27,7 +29,6 @@ const primitiveTheme = {
       colors: themecolor,
       config: themeconfig,
       
-
       // Whether to auto-fetch links on a page. Values can be "no" | "all" | "in-view" | "hover"
       autoPreFetch: "in-view",
       /**
@@ -56,10 +57,8 @@ const primitiveTheme = {
       /**
        * Add a processor to `html2react` so it processes the `<img>` tags
        * inside the content HTML. You can add your own processors too
-       * sk-dev: not sure how best to use these in the elment.class css styling context
-       * do this for `<code>` tags, not sure about quotes/modifiers
        */
-      processors: [image, iframe, pQuote, sQuote],
+      processors: [image, iframe, wpBlockColumns, quoteBook, listDisco],
     },
     source: {
       handlers: CustomPageHandlers
