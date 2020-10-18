@@ -1,12 +1,12 @@
 // Primitive Theme Variables
 // COLOURS/COLORS
 
-// basic 6charaters only with #
+// basic 6charater hex only with #
 const hexToRGB = (hex) => {
   const r = parseInt(hex.slice(1, 3), 16),
         g = parseInt(hex.slice(3, 5), 16),
-        b = parseInt(hex.slice(5, 7), 16);
-  const string = [r, g, b].toString();
+        b = parseInt(hex.slice(5, 7), 16),
+      string = [r, g, b].toString();
   return string;
 };
 
@@ -23,10 +23,9 @@ const colors = {
   green: "#87af4e",
   teal: "#20c997",
   cyan: "#17a2b8",
-
   white: "#ffffff",
   gray: "#6c757d",
-  black: "#000000"  
+  black: "#000000"
 }
 
 // Brand Colour system
@@ -53,7 +52,10 @@ const primitive = {
   coral: "#E1623F",
   cyan: "#00a5ba",
   ivory: "#fffff0",
-  cream: "fffdd0"
+  cream: "fffdd0",
+  lightgray: "#e3e1dc",
+  blackish: "#253d2d",
+  olive: "#697138"
 }
 
 
@@ -69,9 +71,7 @@ const themecolor = {
   teal: primitive.teal,
   cyan: primitive.cyan,
   brown: primitive.cardboard,
-  black: colors.black,
-  gray: colors.gray,
-  white: colors.white,
+
   coal: primitive.coal,
   ivory: primitive.ivory,
   cream: primitive.cream,
@@ -81,6 +81,9 @@ const themecolor = {
   mustard: primitive.mustard,
   greendark: primitive.greendark,
 
+  black: colors.black,
+  gray: colors.gray,
+  white: colors.white,
   primary: colors.green,
   secondary: primitive.peach,
   tertiary: primitive.pinkish,
