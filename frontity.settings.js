@@ -49,33 +49,33 @@ const settings = {
         source: {
           api: "https://api.primitivedigital.uk/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
           
-          homepage: "/home/", // optional: set when using a page as the site homepage (wp hp settings ignored)
-          postsPage: "/blog/", // optional: set when using a page as the site homepage
+          homepage: "/home", // optional: set when using a page as the site homepage (wp hp settings ignored)
+          postsPage: "/blog", // optional: set when using a page as the site homepage
 
           // optional: define CPTs
           postTypes: [
             {
               type: "works", // custom post type slug
-              endpoint: "works", // REST API endpoint
-              archive: "/works" // DO I NEED THIS???
+              endpoint: "works", // WP REST API endpoint
+              archive: "/works" // router link: do i want to use this?
             },
             {
               type: "temporal_events", // custom post type slug
-              endpoint: "temporal_events", // REST API endpoint
-              archive: "/evolution-of-digital-stuff" // link where this custom posts are listed
+              endpoint: "temporal_events", // WP REST API endpoint
+              archive: "/evolution-of-digital-stuff" // router link: list view of these custom post types
             }
             ,
             {
               type: "things", // custom post type slug
-              endpoint: "things", // REST API endpoint
-              archive: "/things" // link where this custom posts are listed
+              endpoint: "things", // WP REST API endpoint
+              archive: "/things" // router link: list view of these custom post types
             }
           ],
           taxonomies: [
             {
               taxonomy: "timelines", // custom taxonomy slug
-              endpoint: "timelines", // REST API endpoint
-              postTypeEndpoint: "/temporal_events", // endpoint from which posts from this taxonomy are fetched
+              endpoint: "timelines", // WP REST API endpoint
+              postTypeEndpoint: "/temporal_events", // endpoint for (custom) post types to query
             }
           ]
         }
@@ -83,7 +83,6 @@ const settings = {
     },
     "@frontity/tiny-router",
     "@frontity/html2react",
-    //"@frontity/head-tags",
     "@frontity/yoast",
     "frontity-contact-form-7"
   ]
