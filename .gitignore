@@ -1,6 +1,7 @@
 node_modules
 dist
 build
+build_v1.0.13
 analyze
 **/package-lock.json
 npm-debug.log*
