@@ -26,8 +26,8 @@ const KnobblyKnees = ({ state }) => {
           <Col>
             {/* <LabeledIcon icon={PrimitiveLogo} label="" /> */}
             <Image
-              alt={"Primitive Digital - Web Design &amp; Development"}
-              src={"https://gist.githubusercontent.com/primitiveshaun/0ed73e662218497565fc4c59464f05db/raw/fa54ac683c60a7576f254daf82225d7c52291b16/pd_primitive.svg"}
+              alt={display.kudos.alt1}
+              src={display.kudos.src1}
             />
           </Col>
         </Row>
@@ -36,8 +36,8 @@ const KnobblyKnees = ({ state }) => {
           <Col>
             <Image
               className="loveit"
-              alt={"Highly Recommends"}
-              src={"https://gist.githubusercontent.com/primitiveshaun/58b74f472e0f11d9fe202056322f3a83/raw/5055725c1b0f103c9338a99ef7bacfa1013e99af/pd_heartit.svg"}
+              alt={display.kudos.alt2}
+              src={display.kudos.src2}
             />
           </Col>
         </Row>
@@ -46,16 +46,16 @@ const KnobblyKnees = ({ state }) => {
 
           <Col>
             <Image
-              alt={"Everything WordPress"}
-              src={"https://gist.githubusercontent.com/primitiveshaun/e7370d6c413e04240158e032f8ac06ab/raw/88cbc672a1bcccc1b74007b4dd164bc01844baa7/pd_wordpress.svg"}
+              alt={display.kudos.alt3}
+              src={display.kudos.src3}
             />
 
             <span className="slab">+</span>
 
-            <a href="https://frontity.org/">
+            <a href={display.kudos.link}>
               <Image
-                alt={"Plus Frontity the framework for super fast WordPress+React themes"}
-                src={"https://gist.githubusercontent.com/primitiveshaun/69d1ac57b037931ea645629fa2bce642/raw/7c36d73c5ce8161a56dfc13deaac5b0e813b4e8a/pd_frontity.svg"}
+                alt={display.kudos.alt4}
+                src={display.kudos.src4}
               />
             </a>
           </Col>

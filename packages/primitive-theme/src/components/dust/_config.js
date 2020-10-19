@@ -39,7 +39,7 @@ const themeconfig = {
         footer: {
           rocks: "",
           bg: "#D4AEA6",
-          color: "",
+          color: "#87635C",
           image: "https://api.primitivedigital.uk/wp-content/uploads/promo/topbanana1.png",
           title: "Top Banana Web Design and Development",
           fontfamily: "subslab",
@@ -51,10 +51,20 @@ const themeconfig = {
             info: "Phone 0113 314 8880",
             prompt: "to make beautiful digital stuff together"
           },
+          kudos: {
+            alt1: "Primitive Digital - Web Design &amp; Development",
+            src1: "https://gist.githubusercontent.com/primitiveshaun/0ed73e662218497565fc4c59464f05db/raw/fa54ac683c60a7576f254daf82225d7c52291b16/pd_primitive.svg",
+            alt2: "Highly Recommends",
+            src2: "https://gist.githubusercontent.com/primitiveshaun/58b74f472e0f11d9fe202056322f3a83/raw/5055725c1b0f103c9338a99ef7bacfa1013e99af/pd_heartit.svg",
+            alt3: "Everything WordPress",
+            src3: "https://gist.githubusercontent.com/primitiveshaun/e7370d6c413e04240158e032f8ac06ab/raw/88cbc672a1bcccc1b74007b4dd164bc01844baa7/pd_wordpress.svg",
+            alt4: "Plus Frontity the framework for super fast WordPress+React themes",
+            src4: "https://gist.githubusercontent.com/primitiveshaun/69d1ac57b037931ea645629fa2bce642/raw/7c36d73c5ce8161a56dfc13deaac5b0e813b4e8a/pd_frontity.svg",
+            link: "https://frontity.org/"
+          },
           credit: {
             legal: "sknow.it ltd.",
             link: "https://sknow.it",
-            policy: "",
             label: "Website crafted by ",
             creator: "Primitive Digital",
             backlink: "https://primitivedigital.uk"
