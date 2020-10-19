@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from "frontity";
-import { hexToRGBcss } from "../components/hooks/color-utils";
+import { hexToRGBcss } from "../components/sand/color-utils";
 //import { themecolor } from "../components/dust/_colors";
 
 const PrimaryStyles = () => `
