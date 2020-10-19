@@ -4,23 +4,25 @@ import { Container, Row, Col } from "primitivepebbles/grid";
 import Image from "@frontity/components/image";
 import Frame from "primitivepebbles/frame";
 import CTA from "primitiverocks/button-fancy";
+
 import { jump, animatedgradient, stripedbg } from "primitivescenes/glamourmagic";
 
 const Bronze = ({ state }) => {
 
   const display = state.theme.config.homepage.bronzeConfig;
-  //console.log("@page-home-bronze: state.theme", state.theme.colors);
 
   return (
-    <StyledSection>
-
-      <PromoOne className="footer-promo1">
-
+    <PromoSection>
+      <PromoOne className="pt-4 pb-4">
         <Container>
+
           <Row>
 
-            <Col lg="6" className="nip">
-              <StyledFrame className={display.imageFrame1} link="/">
+            <Col xs={12} md={6} className="text-center">
+              <StyledFrame
+                className={display.imageFrame1}
+                link={display.link1}
+              >
 
                 <Image
                   alt={display.title1}
@@ -28,12 +30,13 @@ const Bronze = ({ state }) => {
                   className={"img-fluid"}
                 //srcSet={srcset}
                 />
-
               </StyledFrame>
             </Col>
 
-            <Col lg={6}>
-              <StyledFrame className={display.listFrame1} link="/">
+            <Col>
+              <StyledFrame
+                className={display.listFrame1}
+                link={display.link1}>
                 <TitleOne>{display.title1}</TitleOne>
                 <ul>
                   {
@@ -46,6 +49,7 @@ const Bronze = ({ state }) => {
             </Col>
 
           </Row>
+
           <Row>
             <Col className="align-content-center pt-5 pb-0">
               <CTA
@@ -55,17 +59,20 @@ const Bronze = ({ state }) => {
               />
             </Col>
           </Row>
-        </Container>
 
+        </Container>
       </PromoOne>
 
-      <PromoTwo className="footer-promo2">
-
+      <PromoTwo className="pt-4 pb-4">
         <Container>
+
           <Row>
 
-            <Col lg={6} className="nip">
-              <StyledFrame className={display.imageFrame2} link="/">
+            <Col xs={12} md={6} className="text-center">
+              <StyledFrame
+                className={display.imageFrame2}
+                link={display.link2}
+              >
 
                 <Image
                   alt={display.title2}
@@ -77,7 +84,7 @@ const Bronze = ({ state }) => {
               </StyledFrame>
             </Col>
 
-            <Col lg={6}>
+            <Col>
 
               <StyledFrame className={display.listFrame2} link={display.link2}>
                 <TitleTwo>{display.title2}</TitleTwo>
@@ -93,6 +100,7 @@ const Bronze = ({ state }) => {
             </Col>
 
           </Row>
+
           <Row>
             <Col className="align-content-center pt-5 pb-3">
               <CTA
@@ -102,11 +110,10 @@ const Bronze = ({ state }) => {
               />
             </Col>
           </Row>
+
         </Container>
-
       </PromoTwo>
-
-    </StyledSection>
+    </PromoSection>
   )
 };
 
@@ -115,14 +122,10 @@ export default connect(Bronze);
 // refine
 // https://stackoverflow.com/questions/48713421/target-child-element-styled-components
 
-const StyledSection = styled.section`
+const PromoSection = styled.section`
 
   border: none;
   background-color: #7a9e47;
-
-  .nip {
-    text-align: center;
-  }
   
   .fancy-frame {
     margin: 2rem auto;
@@ -144,9 +147,6 @@ const StyledSection = styled.section`
   }
 
   @media screen and (min-width: 992px) {
-    .nip {
-      text-align: right;
-    }
     .fancy-frame { 
       margin-top: 4rem; 
     }
@@ -176,8 +176,6 @@ const StyledFrame = styled(Frame)`
 `;
 
 const PromoOne = styled.div`
-  margin-top: 3rem;
-  padding: 4rem 1rem;
   background-color: #7a9e47;
   background: linear-gradient(to bottom,  #7a9e47 52%,#5e822c 100%); 
   border: none;
@@ -213,7 +211,7 @@ const PromoOne = styled.div`
         height: .3rem;
         width: 100%;
         position: absolute;
-        top: 5.5rem;
+        bottom: -1rem;
         left: 0;
         
         background: linear-gradient(
@@ -263,7 +261,6 @@ const PromoOne = styled.div`
 `;
 
 const PromoTwo = styled.div`
-  padding: 4rem 1rem;
   background-color: ivory;
   background: linear-gradient(to top,  #7a9e47 42%,#5e822c 100%); 
   border: none;
