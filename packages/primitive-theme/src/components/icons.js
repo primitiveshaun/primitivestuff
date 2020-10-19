@@ -1,6 +1,6 @@
 import React from "react";
 
-// Generic, reusable component for displaying icon and label
+// Generic, component for displaying icon and label
 export const LabeledIcon = ({ icon: Icon, label }) => (
     <Icon title={label} alt={label} />
 );
