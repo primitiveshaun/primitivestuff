@@ -1,5 +1,5 @@
 import { css } from "frontity";
-//import { hexToRGBcss } from "../hooks/color-utils";
+//import { hexToRGBcss } from "../sand/color-utils";
 
 const postall = colors => css`
 .post {
