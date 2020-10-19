@@ -14,7 +14,7 @@ const FurryBoots = ({ state }) => {
         bg={display.bg}
         color={display.color}
         role="complementary"
-        className="pt-4 pb-4">
+        className="pt-4 pb-4 text-center">
         <Container>
           <Row>
             <Col>
@@ -55,8 +55,6 @@ export default connect(FurryBoots);
 const FooterCTA = styled.section`
 
   background-color: ${(props) => props.bg ? props.bg : '#D4AEA6'};
-
-  text-align: center;
 
   h2 {
     padding: 2rem 0 1rem;;
