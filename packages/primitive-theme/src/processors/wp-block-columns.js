@@ -36,7 +36,7 @@ const wpBlockColumns = ({ columns }) => {
 const wpColumns = {
   name: 'wp-block-columns',
   priority: 11,
-  test: ({ component, props }) => component === "div" && props.className.includes("wp-block-columns"),
+  test: ({ component, props }) => component === "div" && (props.className && props.className.includes("wp-block-columns")),
   processor: ({ node }) => {
 
     //console.log('node:', node.children[0].children);
