@@ -21,7 +21,7 @@ Components NPM package 🎉  ~  👉  [primitiverocks (v1.0.x)](https://www.npmj
 GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivestuff)
 
 
-**NB. This is a test / concept deployment.Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+**NB. This is a test / concept deployment. Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
 
 
 See [changelog](CHANGELOG.md) for release notes.
@@ -70,7 +70,9 @@ ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 
 ---
 
-This project was made when [Frontity](https://frontity.org/) and [Bootstrap5](https://v5.getbootstrap.com/) had babies...
+This project was made when [Frontity](https://frontity.org/), [Bootstrap5](https://v5.getbootstrap.com/) and [React Bootstrap](https://react-bootstrap.github.io/) had a wild night with lots of [Emotion](https://emotion.sh/docs/introduction).
+
+Bootstrap then had a fight with [Rebass](https://rebassjs.org/) and it all got a bit freaky... 🤡
 
 
 ---

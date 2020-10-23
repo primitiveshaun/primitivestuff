@@ -11,6 +11,12 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 
 ## History
 
+**v1.0.9 > Theming, Refine Color system (Oct 23, 2020):**
+- [x] refine social section styles/themeing
+- [x] move header to theme
+- [x] refine footer styles
+- [x] refine bronze section
+
 **v1.0.8 > Theming, Refine Color system (Oct 16, 2020):**
 - [x] core/dependency updates
 - [x] refine list/list-item
