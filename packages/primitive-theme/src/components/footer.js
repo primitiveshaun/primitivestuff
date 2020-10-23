@@ -9,12 +9,6 @@ const Footer = ({ state }) => {
 
   const colors = state.theme.colors,
         display = state.theme.config.footer;
-  /*
-  __footer: props
-      bg={colors.brown} 
-      text={colors.ivory} 
-      hyper={colors.secondary}
-  */
 
   return (
     <SiteFooter
