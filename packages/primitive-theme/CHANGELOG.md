@@ -23,30 +23,33 @@ Separation of config / theme
 - frontity.settings seems dominant over package/index (you can overwrite the menu in dev but not prod?)...
 - need to review licence
 
-*Hosting tests:* Can this type of site be hosted on our standard WP hosting?
-Therchnically 
+*Hosting tests:* Can this type of site be hosted on our standard WP Linux hosting?
+Theoretically - Yes.
+Clone to staging and other features work ok.
+Host ideally needs to support A records on the route domain with Vercel.
+I have to set nameservers to point at Vercel.
+This invalidates free SSL certs.
+
 
 - [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
 
-*
+*Hosting tests:* Need to upgrade to Vercel teams or move to AWS
+Vercel seems a bit MVP in places.
+
 
 
 ## WIP
 
-- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
-
-- [ ] refine: theme BS CSS > Components (grid)
-- [ ] BS CSS > CSS-IN-JS (transparency/darken/lighten)
-- [ ] BS CSS > CSS-IN-JS (darken/lighten)
-- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size)
-
-
-- [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
 - [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
-
 - [ ] test: are error page timeout settings higher than vercel timeout?
 - [ ] refine: preloaders / postsrips
 - [ ] fix: strong formatting and link/reload on header image
+- [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size)
+- [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
+- [ ] refine: theme BS CSS > Components (grid)
+
+- [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
+
 
 - [ ] feat: timelines
 - [ ] fix: sort/filters: modify the wp theme funtions.php or use a plugin?
@@ -69,6 +72,15 @@ Therchnically
 - [ ] Research add comments / cf7 / fe content submission
 
 ## History
+
+**v1.0.14 > Fixes, Theming, Refine Color system (Oct 23, 2020):**
+- [x] test wp column, list and cf7 form processors
+- [x] add theme vars to index
+- [x] move header to theme
+- [x] extract footer-kudos config 
+- [x] housekeeping: centalised helpers/utils/hooks (sand)
+- [x] add footer menu
+- [x] tested (transparency/darken/lighten)
 
 **v1.0.13 > Theming, Refine Color system (Oct 16, 2020):**
 - [x] core updates

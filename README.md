@@ -70,11 +70,12 @@ _ come back later
 3. `npm install && npx frontity dev (from the project's root directory)`
 
 
-**CheatingChimpsCheatSheet: CLI Commands**
+**ChimpsCheatSheet: CLI Commands**
 
 ```shell
 npx frontity dev  
-npx frontity build  
+npx frontity dev --production
+npx frontity build
 ```
 
 [To stay up-to-date >](https://docs.frontity.org/guides/keep-frontity-updated)
@@ -97,6 +98,11 @@ npm install
 ## Deployment
 
 Follow the Frontity [deployment outlined in their Docs](https://docs.frontity.org/installation-and-deploy)
+
+```shell
+vercel
+vercel --prod
+```
 
 
 🃏 The code is opensource so play like you mean business 🤓
@@ -136,8 +142,9 @@ ooh, ooh, aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒
 
 ---
 
-This project was made when [Frontity](https://frontity.org/) and [Bootstrap5](https://v5.getbootstrap.com/) had babies...
+This project was made when [Frontity](https://frontity.org/), [Bootstrap5](https://v5.getbootstrap.com/) and [React Bootstrap](https://react-bootstrap.github.io/) had a wild night with lots of [Emotion](https://emotion.sh/docs/introduction).
 
+Bootstrap then had a fight with [Rebass](https://rebassjs.org/) and it all got a bit freaky... 🤡 ...
 
 ---
 
