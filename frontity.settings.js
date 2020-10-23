@@ -26,7 +26,7 @@ const settings = {
           menufooter: [
             ["Contact", "/contact"],
             ["Startup Offers", "/darwin-project"],
-            ["Advetures in Time", "/timelines"],
+            ["Adventures in Time", "/timelines"],
             ["The Cave of Wonders", "/cave"],
             ["Primitive Theme for Frontity", "https://www.npmjs.com/package/primitive-theme"],
             ["Privicy Policy", "/privicy"],
