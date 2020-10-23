@@ -10,7 +10,6 @@ const hexToRGB = (hex) => {
   return string;
 };
 
-
 // Base Colour system
 const colors = {
   blue: "#0f52ba",

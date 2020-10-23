@@ -1,7 +1,6 @@
 import { css } from "frontity";
 
 // sk-dev: review resets and base styling use in bootstrap, frontity2020 
-// https://github.com/twbs/bootstrap/blob/master/dist/css/bootstrap-reboot.css
 // sk-dev: test bs5 css 22/jul 2020
 
 /*!
@@ -14,23 +13,11 @@ import { css } from "frontity";
 
 const cssBootrap = css`
 
-.fade {
-  transition: opacity 0.15s linear;
-}
+.fade { transition: opacity 0.15s linear; }
+.fade:not(.show) { opacity: 0; }
 
-.fade:not(.show) {
-  opacity: 0;
-}
-
-.collapse:not(.show) {
-  display: none;
-}
-
-.collapsing {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.35s ease;
-}
+.collapse:not(.show) { display: none;}
+.collapsing { height: 0; overflow: hidden; transition: height 0.35s ease; }
 
 .nav {
   display: flex;
@@ -46,40 +33,32 @@ const cssBootrap = css`
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .nav-link {
-    transition: none;
-  }
-}
-
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;
   cursor: default;
 }
 
+
+
+
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
-
 .nav-tabs .nav-link {
   margin-bottom: -1px;
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
 }
-
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
   background-color: transparent;
   border-color: transparent;
 }
-
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: #495057;
@@ -87,11 +66,6 @@ const cssBootrap = css`
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
-.nav-tabs .dropdown-menu {
-  margin-top: -1px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
 
 .nav-pills .nav-link {
   border-radius: 0.25rem;
@@ -466,7 +440,7 @@ const cssBootrap = css`
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
-.card > .list-group:last-child {
+.card > .list-group:last-of-type {
   border-bottom-width: 0;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
@@ -491,7 +465,7 @@ const cssBootrap = css`
   margin-bottom: 0;
 }
 
-.card-text:last-child {
+.card-text:last-of-type {
   margin-bottom: 0;
 }
 
@@ -520,7 +494,7 @@ const cssBootrap = css`
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.card-footer:last-child {
+.card-footer:last-of-type {
   border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
@@ -581,16 +555,16 @@ const cssBootrap = css`
     margin-left: 0;
     border-left: 0;
   }
-  .card-group > .card:not(:last-child) {
+  .card-group > .card:not(:last-of-type) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-top,
-  .card-group > .card:not(:last-child) .card-header {
+  .card-group > .card:not(:last-of-type) .card-img-top,
+  .card-group > .card:not(:last-of-type) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-  .card-group > .card:not(:last-child) .card-footer {
+  .card-group > .card:not(:last-of-type) .card-img-bottom,
+  .card-group > .card:not(:last-of-type) .card-footer {
     border-bottom-right-radius: 0;
   }
   .card-group > .card:not(:first-of-type) {
@@ -743,7 +717,100 @@ const cssBootrap = css`
 }
 
 
+.list-group {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+}
 
+.list-group-item-action {
+  width: 100%;
+  color: #495057;
+  text-align: inherit;
+}
+
+.list-group-item-action:hover, .list-group-item-action:focus {
+  z-index: 1;
+  color: #495057;
+  text-decoration: none;
+  background-color: #f8f9fa;
+}
+
+.list-group-item-action:active {
+  color: #212529;
+  background-color: #e9ecef;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.list-group-item:first-of-type {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.list-group-item:last-of-type {
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+
+.list-group-item.disabled, .list-group-item:disabled {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.list-group-item + .list-group-item {
+  border-top-width: 0;
+}
+
+.list-group-item + .list-group-item.active {
+  margin-top: -1px;
+  border-top-width: 1px;
+}
+
+.list-group-horizontal {
+  flex-direction: row;
+}
+
+.list-group-horizontal > .list-group-item:first-of-type {
+  border-bottom-left-radius: 0.25rem;
+  border-top-right-radius: 0;
+}
+
+.list-group-horizontal > .list-group-item:last-of-type {
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0;
+}
+
+.list-group-horizontal > .list-group-item.active {
+  margin-top: 0;
+}
+
+.list-group-horizontal > .list-group-item + .list-group-item {
+  border-top-width: 1px;
+  border-left-width: 0;
+}
+
+.list-group-horizontal > .list-group-item + .list-group-item.active {
+  margin-left: -1px;
+  border-left-width: 1px;
+}
 
 
 

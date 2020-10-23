@@ -1,14 +1,11 @@
 import { css } from "frontity";
-
 import cssReboot from "./_reboot";
+import { Grid } from "./_grid";
+import bsStyles from "./_bscss";
 
-//import cssGrid from "./_bsgrid";
-//import cssGrid from "bootstrap/dist/css/bootstrap-grid.min.css";
-//import cssUtils from "./_bsutils";
-//import cssBootstrap from "./_bscss";
 
 //sk-dev: missing css animation now - check safari / mobile
-
+/*
 const accessibilitySettings = css`
   @media (prefers-reduced-motion: reduce) {
     * {
@@ -17,36 +14,91 @@ const accessibilitySettings = css`
     }
   }
 `;
+*/
 
+const typeSetting = colors => css`
 
+html {
+  font-size: 100%;
+  font-size: calc(3vw);
+}
 
-const mediaStyle = colors => css`
-  figure {
-    display: block;
-    margin: 0;
-  }
+body {
+  font-family: Verdana, "Segoe UI", "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: ${colors.coal ? colors.coal : '#212529'};
+}
 
-  iframe {
-    display: block;
-    max-width: 100%;
-  }
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+h1, .slab { 
+  font-family: 'Hepta Slab', serif;
+  font-size: 3.3rem;
+  /*font-size: calc(1.375rem + 1.5vw);*/
+}
+h2, .heading {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 3rem;
+  font-size: calc(1.325rem + 0.9vw);
+}
+h3, .news {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.8rem;
+  /*font-size: calc(1.3rem + 0.6vw);*/
+}
+h4, .display {
+  font-family: 'Hepta Slab', serif;
+  font-size: 1.6rem;
+  /* font-size: calc(1.275rem + 0.3vw);*/
+}
+h5, .subslab {
+  font-family: 'Slabo 27px', Georgia, serif;
+  font-size: 1.3rem;
+}
+h6, .scribe {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
 
-  video {
-    display: block;
-  }
+/* --- RESPONSIVE --- */
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up)  */
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
 
-  svg,
-  img,
-  embed,
-  object {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
+@media screen and (min-width: 576px) {
+  html { font-size: 14px; }
+}
+@media screen and (min-width: 768px) {
+  html { font-size: 15px; }
+}
+@media screen and (min-width: 992px) {
+  html { font-size: 16px; }
+}
+@media screen and (min-width: 1200px) {
+  html { font-size: 18px; }
+
+}
+
+`;
+
+const globalStyles = colors => css`
 
   figcaption,
   .wp-caption-text {
-    color: ${colors.grays.base};
+    color: ${colors.gray};
     display: block;
     font-size: 1.5rem;
     font-weight: 500;
@@ -58,66 +110,24 @@ const mediaStyle = colors => css`
   .wp-caption-text a {
     color: inherit;
   }
+
+  .navbar-brand a {
+    width: 200px;
+  }
+
+
 `;
 
-const tableStyles = colors => css`
-  table {
-    border: 0.1rem solid ${colors.grays.light};
-    border-collapse: collapse;
-    border-spacing: 0;
-    empty-cells: show;
-    font-size: 1.6rem;
-    margin: 4rem 0;
-    max-width: 100%;
-    overflow: hidden;
-    width: 100%;
-  }
 
-  .alignleft > table {
-    margin: 0;
-  }
-
-  .alignright > table {
-    margin: 0;
-  }
-
-  th,
-  td {
-    border: 0.1rem solid ${colors.grays.light};
-    line-height: 1.4;
-    margin: 0;
-    overflow: visible;
-    padding: 0.5em;
-  }
-
-  caption {
-    background: ${colors.grays.light};
-    font-weight: 600;
-    padding: 0.5em;
-    text-align: center;
-  }
-
-  thead {
-    vertical-align: bottom;
-    white-space: nowrap;
-  }
-
-  th {
-    font-weight: 700;
-  }
-`;
 
 
 const globalStyle = colors =>
   css([
     cssReboot(colors),
-    //cssGrid,
-    //cssUtils(colors), // 50kb
-    //cssBootstrap,
-    accessibilitySettings,
-    //mediaStyle(colors),
-    //tableStyles(colors),
-    //themeClasses(colors)
+    typeSetting(colors),
+    bsStyles,
+    //accessibilitySettings,
+    globalStyles(colors)
   ]);
 
 export default globalStyle;
