@@ -1,6 +1,6 @@
 {
   "name": "primitive-theme",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Primitive Theme's rolling Mountains (a.k.a. beautiful views) for Frontity",
   "keywords": [
     "frontity",
@@ -22,8 +22,8 @@
     "url": "https://github.com/primitiveshaun/primitivestuff/issues"
   },
   "peerDependencies": {
-    "primitivepebbles": "^1.0.4",
-    "primitiverocks": "^1.0.8",
+    "primitivepebbles": "^1.0.5",
+    "primitiverocks": "^1.0.9",
     "primitivescenes": "^1.0.5"
   },
   "dependencies": {
