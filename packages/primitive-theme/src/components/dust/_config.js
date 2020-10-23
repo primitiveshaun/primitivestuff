@@ -1,25 +1,10 @@
-//import { Grid } from "./_grid.js";
-//import { Grid } from "primitivepebbles/grid";
-//import { colors } from "./_colors.js";
+import { Grid } from "./_grid.js";
+import { themecolor } from "./_colors.js";
 import { randomWord } from "../sand/utils";
 
 const themeconfig = {
 
-        breakpoints: {
-          sm: 576,
-          md: 768,
-          lg: 992,
-          xl: 1200,
-        },
-        maxWidths: {
-          sm: 540,
-          md: 720,
-          lg: 960,
-          xl: 1140,
-        },
-        gutters: 15,
-        rootEm: "62.5%",
-        minWidth: "320",
+        grid: Grid,
 
         header: {
           variant: "", // "" | "light" | "dark"
@@ -27,15 +12,11 @@ const themeconfig = {
           alt: "Primitive Digital - Web Design &amp; Development",
           random: randomWord()
         },
-
-        page: {
-          showBanner: true,
-          showGold: true,
-          showSilver: true,
-          showBronze: true,
-          template: false
+        main: {
+          bg: "linear-gradient(180deg, rgba(66, 174, 228, 0.1), rgba(66, 174, 228, 0) )",
+          bordertop: "3px solid rgba(12,17,43,0.9)",
+          borderbottom: ""
         },
-
         footer: {
           rocks: "",
           bg: "#D4AEA6",
@@ -71,6 +52,13 @@ const themeconfig = {
           }
         },
 
+        page: {
+          showBanner: true,
+          showGold: true,
+          showSilver: true,
+          showBronze: true,
+          template: false
+        },
         homepage: {
           showHero: true,
           showIntro: true,
@@ -178,7 +166,8 @@ const themeconfig = {
 
         showSocial: true,
         social: {
-          background: "#fffff0",
+          bg: "#fffff0",
+          color: themecolor.coal,
           instagram: {
             type: "none", // "none" | "posts" | "feed"
             url: "https://www.instagram.com/primitivedigital/",
