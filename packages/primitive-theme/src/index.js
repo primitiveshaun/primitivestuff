@@ -1,9 +1,12 @@
 import Theme from "./components";
 import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
+
 import wpBlockColumns from "./processors/wp-block-columns";
+import form from "./processors/wpcf7";
+
 import quoteBook from "./processors/blockquote-book";
-import listDisco from "./processors/list-thinglist";
+import listDisco from "./processors/ul-discolist";
 //import pQuote from "./processors/q-primary";
 //import sQuote from "./processors/q-secondary";
 
@@ -58,7 +61,7 @@ const primitiveTheme = {
        * Add a processor to `html2react` so it processes the `<img>` tags
        * inside the content HTML. You can add your own processors too
        */
-      processors: [image, iframe, wpBlockColumns, quoteBook, listDisco],
+      processors: [image, iframe, wpBlockColumns, quoteBook, listDisco, form],
     },
     source: {
       handlers: CustomPageHandlers
