@@ -11,8 +11,7 @@ import Card from 'react-bootstrap/Card';
 const TemporalEvent = ({ state, item, layer, headbg, headcolor }) => {
 
   if (state.theme.debug) {
-    //console.log("@cpt-item: state", state);
-    console.log("@cpt-item: item", item);
+    //console.log("@cpt-item: item", item);
   }
 
   const withSource = <a href={item.acf.source}><Card.Img src={item.acf.image} className="card-img" /></a>,
@@ -145,13 +144,3 @@ const Title = styled.h2`
   color: ${props => props.color};
   font-size: 2.8rem;
 `;
-
-/*
-const StyledImage = styled(Image)`
-  display: block;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  max-width: 300px;
-`;
-*/
