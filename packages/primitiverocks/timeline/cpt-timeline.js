@@ -11,10 +11,6 @@ const Timeline = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
 
   console.log("@cpt-timeline: state", state);
-
-
-
-
   //console.log("@cpt-timeline: data.items", data.items);
 
   // sk-dev: tbc where/when best to filter/sort 
