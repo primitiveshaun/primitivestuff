@@ -17,7 +17,7 @@ import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
 import SubTimeline from "./mountains/subtimeline";
 
-import Header from "primitiverocks/header";
+import Header from "./header";
 import SkipLink from "primitivepebbles/skip-link";
 
 import GlobalPromo from "primitiverocks/global-promo";
@@ -50,7 +50,7 @@ const Theme = ({ state }) => {
 
       { /* <FontFaces /> */}
 
-      <MetaTitle /> {/* Add metatags */}
+      <MetaTitle /> {/* Adds metatags */}
 
       <Head>
         <meta name="description" content={state.frontity.description} />
@@ -58,25 +58,33 @@ const Theme = ({ state }) => {
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap-grid.min.css" integrity="sha512-Jn+RkWIYxM5Cn3mfAWyV7CgxFnDFxe3EBh93974boKdhcAUE9TSr7qJTJNlzt+J2wG6a3sLYnEyRF+1/o01u9Q==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap-utilities.min.css" integrity="sha512-mkkoFJEfBE2cFvIICxddh2VS0uB//H6/hf7siESrN2H7NiyzoGwZ5Rk3Ta12mPxlNOVq5IjhQ97YBK11vldYug==" crossorigin="anonymous" />
+        
         {/*
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-grid.min.css" integrity="sha512-LxlJgXpmW7rJDt1BsGD/MvkFXDAY+t1X5Noou0KaXmmSxY1nduFn+oxhD5kAYnE6vqbkRyWNvucL82xyKOcxlQ==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap-utilities.min.css" integrity="sha512-+0y5BXqNmfKh7Q4pMVjxeY92OFgsRUFnZSCjqTwvqUYJEdculrxQz/UM2jbpysBo0crnNvTTw31SFqk8HbT/iA==" crossorigin="anonymous" />
-       */}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
+        all bs
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
+        */}
 
         <link rel="canonical" href="https://primitivedigital.uk" />
-
-        <link rel="dns-prefetch" SameSite="None" Secure href="https://www.google-analytics.com" />
+        <link rel="preconnect" SameSite="None" Secure href="https://www.google-analytics.com" />
+        { /* <link rel="dns-prefetch" SameSite="None" Secure href="https://www.google-analytics.com" /> */ }
         <link rel="dns-prefetch" SameSite="None" Secure href="http://doubleclick.net" />
       </Head>
 
-      
       <SkipLink as="a" href="#main">Skip to main content</SkipLink> {/* Accessibility: skip to main content */}
 
-      <Header /> { /* header */}
+      <Header /> { /* Load global Nav/Header */}
 
-      {/* Render the appropriate content for the post(s), page, cpt(s) */}
-      <Main id="main">
+      {/* Render content for the post(s), page, cpt(s) here */}
+      <Main
+        id="main"
+        bg={display.main.bg}
+        bordertop={display.main.bordertop}
+        borderbottom={display.main.borderbottom}
+      >
+
         <Switch>
           <Loading when={data.isFetching} />
           <Home when={data.isHome} />
@@ -88,9 +96,8 @@ const Theme = ({ state }) => {
           <Timelines when={data.isTimelines} />
           <PageError when={data.isError} />
         </Switch>
-      </Main>
 
-      { /* sk-seo: v1. it appears by default google picks up the below content before the Main switch */}
+      </Main>
 
       {display.showPromo && <GlobalPromo />} { /* Promo section: (optional) */}
 
@@ -99,6 +106,7 @@ const Theme = ({ state }) => {
       <KnobblyKnees /> { /* CTA section: (optional) */}
       <FurryBoots /> { /* Assurance section: brands/reviws/offers (optional) */}
       <Feet /> { /* footer */}
+
     </App>
   );
 };
@@ -107,14 +115,12 @@ export default connect(Theme);
 
 const App = styled.div`
   overflow-x: hidden;
+  height: 100%;
 `;
 
 const Main = styled.div`
-  border-top: 3px solid rgba(12,17,43,0.9);
-
-  background-image: linear-gradient(
-    180deg,
-    rgba(66, 174, 228, 0.1),
-    rgba(66, 174, 228, 0)
-  );
+  border-top:  ${(props) => props.bordertop ? props.bordertop : 'none'};
+  border-bottom:  ${(props) => props.borderbottom ? props.borderbottom : 'none'};
+  background: ${(props) => props.bg ? props.bg : 'Baby Powder'};
+  overflow: hidden;
 `;
