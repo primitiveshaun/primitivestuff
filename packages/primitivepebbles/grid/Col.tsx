@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import { useBootstrapPrefix } from './ThemeProvider';
+
 import {
   BsPrefixPropsWithChildren,
   BsPrefixRefForwardingComponent,
@@ -45,6 +46,8 @@ const DEVICE_SIZES = [
   'sm' as const,
   'xs' as const,
 ];
+
+
 const colSize = PropTypes.oneOfType([
   PropTypes.bool,
   PropTypes.number,
@@ -125,12 +128,14 @@ const Col: BsPrefixRefForwardingComponent<'div', ColProps> = React.forwardRef(
       let offset: NumberAttr | undefined;
       let order: ColOrder | undefined;
 
+      //sk-dev: console.log(propValue);
+
       if (typeof propValue === 'object' && propValue != null) {
         ({ span = true, offset, order } = propValue);
       }
       else {
-        //sk-dev: this gives error
-        //span = propValue;
+        //sk-dev: this gives ts error
+        span = propValue;
       }
 
       const infix = brkPoint !== 'xs' ? `-${brkPoint}` : '';
@@ -147,6 +152,8 @@ const Col: BsPrefixRefForwardingComponent<'div', ColProps> = React.forwardRef(
     if (!spans.length) {
       spans.push(prefix); // plain 'col'
     }
+
+    //console.log(className, ...spans, ...classes)
 
     return (
       <Component
