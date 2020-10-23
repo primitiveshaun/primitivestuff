@@ -16,7 +16,7 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 ## History
 
 **v1.0.5 > Fix Col (Oct 23, 2020):**
-- [x] fix col / uncomment
+- [x] fix responsiveness
 
 **v1.0.4 > Theming, Processors, CPTs (Oct 5, 2020):**
 - [x] remove local img dir / update readme
