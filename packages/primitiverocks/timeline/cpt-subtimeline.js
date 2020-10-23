@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { connect, styled } from "frontity";
 import { Container, Row, Col } from "primitivepebbles/grid";
-
-//import Item from "./cpt-item";
 import PostMagic from "primitivescenes/postmagic";
+import { sortBy } from "./utils"
+//import Item from "./cpt-item";
+
 import Pagination from "./pagination";
 
 const setTitle = (ctname) => {
   if (ctname === "timelines") {
     return (<h1><span className="scribe">Adventures in...</span> Time</h1>);
   }
-
   ctname = ctname.replace("-", ' ');
   return (<h1><span className="scribe">Evolution of... </span> {ctname}</h1>);
 }
@@ -21,18 +21,7 @@ const SubTimeline = ({ state, actions }) => {
   // get the data from frontity state
   const data = state.source.get(state.router.link);
 
-  useEffect(() => {
-    // fetch data related to this route using side effects (like calling on ComponentDidMount / ComponentDidUpdate )
-    
-    /*
-    async function fetchData() {
-      await actions.source.fetch(state.router.link)
-    }
-    fetchData();
-    */
 
-    actions.source.fetch(state.router.link);
-  }, []);
 
   console.log("@cpt-subtimeline: data", data);
   //console.log("@cpt-subtimeline: state", state);
@@ -40,11 +29,11 @@ const SubTimeline = ({ state, actions }) => {
   //console.log("@cpt-subtimeline: data.items", data.items);
 
   // fe sort, to be replaced
-  data.items.sort(sortBy("year"));
+  //data.items.sort(sortBy("year"));
 
   // render your content
   return (
-    <StyledList className="container-fluid">
+    <main>
 
       <PageHeader>
         <Container>
@@ -66,39 +55,31 @@ const SubTimeline = ({ state, actions }) => {
 
           {/* Regular display - iterate over the items of the list. */}
           {
-          /*
-          data.items.map(({ type, id }) => {
-            const item = state.source[type][id];
-
-            // console.log(item);
-
-            // Render one Item component for each item.
-            return <Item key={item.id} item={item} />;
-          })
-          */
+            /*
+            data.items.map(({ type, id }) => {
+              const item = state.source[type][id];
+  
+              // console.log(item);
+  
+              // Render one Item component for each item.
+              return <Item key={item.id} item={item} />;
+            })
+            */
           }
 
         </Container>
       </PageBody>
 
       <Pagination />
-
-    </StyledList>
+      
+    </main>
   );
 };
 
 export default connect(SubTimeline);
 
-/*
 
-  Vally of the wardrobe mistress
 
-*/
-
-const StyledList = styled.main`
-  background-color: transparent;
-  border-top: 3px solid rgba(12,17,43,0.9);
-`;
 
 const PageHeader = styled.header`
   .container {
