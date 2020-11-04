@@ -15,13 +15,13 @@ const settings = {
         theme: {
           debug: process.env.NODE_ENV==='development'?true:false,
           menu: [
-            ["Stats/config", "/stats"],
             ["Content", "/frontity-tests"],
-            ["CPTs", "/evolution-of-digital-stuff"],
-            ["CTs", "/timelines"],
             ["Pages", "/web-design"],
             ["Post", "/blog/a-decade-of-digital-development"],
-            ["Posts", "/blog"]
+            ["Posts", "/blog"],
+            ["CPTs", "/evolution-of-digital-stuff"],
+            ["CTs", "/timelines"],
+            ["Stats/config", "/stats"],
           ],
           menufooter: [
             ["Contact", "/contact"],
@@ -29,7 +29,7 @@ const settings = {
             ["Adventures in Time", "/timelines"],
             ["The Cave of Wonders", "/cave"],
             ["Primitive Theme for Frontity", "https://www.npmjs.com/package/primitive-theme"],
-            ["Privicy Policy", "/privicy"],
+            ["Privacy Policy", "privacy-policy"]
           ],
           featured: {
             "showOnList": true,
@@ -63,8 +63,7 @@ const settings = {
               type: "temporal_events", // custom post type slug
               endpoint: "temporal_events", // WP REST API endpoint
               archive: "/evolution-of-digital-stuff" // router link: list view of these custom post types
-            }
-            ,
+            },
             {
               type: "things", // custom post type slug
               endpoint: "things", // WP REST API endpoint
