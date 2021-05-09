@@ -4,8 +4,7 @@ const settings = {
     frontity: {
       url: "https://dev.primitivedigital.uk",
       title: "Primitive Digital",
-      description: "WordPress + Frontity Stuff",
-      name: "Makin' a Website?"
+      description: "WordPress + Frontity Stuff"
     }
   },
   packages: [
@@ -14,6 +13,7 @@ const settings = {
       state: {
         theme: {
           debug: process.env.NODE_ENV==='development'?true:false,
+          canonical: "https://primitivedigital.uk",
           menu: [
             ["Content", "/frontity-tests"],
             ["Pages", "/web-design"],
@@ -25,7 +25,7 @@ const settings = {
           ],
           menufooter: [
             ["Contact", "/contact"],
-            ["Startup Offers", "/darwin-project"],
+            ["Startups", "/darwin-project"],
             ["Adventures in Time", "/timelines"],
             ["The Cave of Wonders", "/cave"],
             ["Primitive Theme for Frontity", "https://www.npmjs.com/package/primitive-theme"],
