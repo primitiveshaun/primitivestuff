@@ -1,6 +1,12 @@
 import { css } from "frontity";
 import facepaint from 'facepaint'
 
+/* --- RESPONSIVE --- */
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up)  */
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+
 /* ®ead > */
 
 // https://emotion.sh/docs/media-queries

@@ -1,6 +1,5 @@
 import { css } from "frontity";
 
-// sk-dev: review resets and base styling use in bootstrap, frontity2020 
 // sk-dev: test bs5 css 22/jul 2020
 
 /*!
