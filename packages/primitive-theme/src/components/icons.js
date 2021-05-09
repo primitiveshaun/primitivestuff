@@ -24,7 +24,7 @@ export const TagIcon = () => (
   </svg>
 );
 
-// large svg icons: seems to have more impact on bundle size
+// large svg: impacts on bundle size
 export const HeartIt = () => (
   <svg width="332" height="140" aria-hidden="true" className="svg-icon loveit" focusable="false" role="img" viewBox="0 0 171.94 150.18" xmlns="http://www.w3.org/2000/svg">
     <g data-name="Layer 2">
