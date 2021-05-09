@@ -1,5 +1,4 @@
 import { css } from "frontity";
-
 // sk-dev: test bs5 grid 22/jul 2020
 
 /*!
@@ -9,10 +8,10 @@ import { css } from "frontity";
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+ // sk-dev: moved to container
 
-const cssGrid = css`
-
-.container,
+ /*
+ .container,
 .container-fluid,
 .container-sm,
 .container-md,
@@ -55,10 +54,16 @@ const cssGrid = css`
     max-width: 1320px;
   }
 }
+*/
+
+
+const cssGrid = css`
+
 
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
+
   display: flex;
   flex: 1 0 100%;
   flex-wrap: wrap;
@@ -115,6 +120,21 @@ const cssGrid = css`
   flex: 0 0 auto;
   width: 16.666667%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .col-auto {
   flex: 0 0 auto;
