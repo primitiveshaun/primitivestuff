@@ -14,22 +14,22 @@ gsap.registerPlugin(CSSPlugin);
 // https://greensock.com/docs/v3/GSAP/CorePlugins/CSSPlugin
 // https://greensock.com/ease-visualizer/
 
-// sk-dev: issue with fouc / default positions
+// sk-dev: issue with fouc / default positions / ssr
 // https://greensock.com/forums/topic/17910-starting-positions-for-animated-elements/
 
-const TweenComponent = ({ props }) => {
+const JungleIntro = ({ props }) => {
 
   const fullWidth = props.fluid ? props.fluid : false;
   const fullFlush = props.flush ? props.flush : false;
 
   return (
-    <TweenStyled fluid={fullWidth}>
+    <Stage fluid={fullWidth}>
       <Controller>
         <Scene
           triggerHook="onLeave"
           duration="300%"
           pin={true}
-          //indicators={true}
+        //indicators={true}
         >
           <Timeline
             wrapper={<div id="hero" />}
@@ -67,7 +67,7 @@ const TweenComponent = ({ props }) => {
                 ease: "expo.out"
               }}
             >
-              <Stage />
+              <StageBottom />
             </Tween>
 
             <Tween
@@ -108,15 +108,14 @@ const TweenComponent = ({ props }) => {
 
       </Controller>
       <div />
-    </TweenStyled>
+    </Stage>
   );
 };
 
-export default TweenComponent;
+export default JungleIntro;
 
-const TweenStyled = styled.section`
+const Stage = styled.section`
   padding: 0;
-
   min-height: 300vh;
   overflow: hidden;
   position: relative;
@@ -156,7 +155,8 @@ const Layer = styled.div`
     overflow:hidden;
   }
 `;
-const Stage = styled(Layer)`
+
+const StageBottom = styled(Layer)`
   bottom: 0;
   background: url(https://res.cloudinary.com/primitivedigital/image/upload/f_auto/v1569317309/jungle/PD_JungleBottom_2560x1440px_geyhrc.png);
   background-position: bottom center;
