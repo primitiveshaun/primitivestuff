@@ -1,11 +1,12 @@
 import { css } from "frontity";
-
+// based on Bootstrap's reboot
 // test: * selector
-// test: CSS variables;
+
+// * CSS variables * 
 // currentColor - https://css-tricks.com/currentcolor/
+// vendor prefixing: emotion uses Stylis: https://emotion.sh/docs/@emotion/cache#prefix
 
-
-const cssReboot = colors => css`
+const cssReboot = (config, colors) => css`
 
 *,
 *::before,
@@ -22,10 +23,10 @@ html {
 
 body {
   margin: 0;
-  background-color: ${colors.ivory ? colors.ivory : '#fff'};
-
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0px; 
+  width: 100%;
+  height: 100%; 
+  background-color: ${config.style.body.bg ? config.style.body.bg : 'ivory'};
 
   &::-webkit-scrollbar { width:1.2rem; }
   &::-webkit-scrollbar-track {
@@ -33,7 +34,7 @@ body {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(12,17,43,.3);
+    background-color: rgba(${colors.rgb.black}, .3);
   }	
 
 }
@@ -53,38 +54,13 @@ hr:not([size]) { height: 1px; }
 
 
 
-/* --- RESPONSIVE --- */
-/* Small devices (landscape phones, 576px and up) */
-@media screen and (min-width: 576px) {
-  .container { max-width: 540px; }
-}
 
-/* Medium devices (tablets, 768px and up)  */
-@media screen and (min-width: 768px) {
-
-  .container { max-width: 720px; }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-
-  .container { max-width: 960px; }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media screen and (min-width: 1200px) {
-
-  .container { max-width: 1140px; }
-
-}
 
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 

@@ -5,6 +5,18 @@ import { randomWord } from "../sand/utils";
 const themeconfig = {
 
         grid: Grid,
+        style: {
+          body: {
+            bg: "white",
+            font: {
+              size: "1rem",
+              family: 'Verdana',
+              color: "",
+              weight: "300",
+              lineheight: ""
+            }
+          },
+        },
 
         header: {
           variant: "", // "" | "light" | "dark"

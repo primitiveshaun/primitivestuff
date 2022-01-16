@@ -1,7 +1,9 @@
 import { css } from "frontity";
+//import { Grid } from "./_grid";
+import { themeconfig } from "./_config";
 import cssReboot from "./_reboot";
-import { Grid } from "./_grid";
 import bsStyles from "./_bscss";
+
 
 
 //sk-dev: missing css animation now - check safari / mobile
@@ -16,7 +18,7 @@ const accessibilitySettings = css`
 `;
 */
 
-const typeSetting = colors => css`
+const typeSetting = (config, colors) => css`
 
 html {
   font-size: 100%;
@@ -24,11 +26,12 @@ html {
 }
 
 body {
-  font-family: Verdana, "Segoe UI", "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 300;
-  line-height: 1.5;
-  color: ${colors.coal ? colors.coal : '#212529'};
+  text-size-adjust: 100%;
+  font-family: ${config.style.body.font.family ? config.style.body.font.family : '"Segoe UI", "Helvetica Neue", Arial, system-ui, -apple-system, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'};
+  font-size: ${config.style.body.font.size ? config.style.body.font.size : '1rem'};
+  font-weight: ${config.style.body.font.weight ? config.style.body.font.weight : '300'};
+  line-height: ${config.style.body.font.lineheight ? config.style.body.font.lineheight : '1.5'};
+  color: ${config.style.body.font.color ? config.style.body.font.color : '#212529'};
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,11 +75,7 @@ p {
   line-height: 1.8;
 }
 
-/* --- RESPONSIVE --- */
-/* Small devices (landscape phones, 576px and up) */
-/* Medium devices (tablets, 768px and up)  */
-/* Large devices (desktops, 992px and up) */
-/* Extra large devices (large desktops, 1200px and up) */
+
 
 @media screen and (min-width: 576px) {
   html { font-size: 14px; }
@@ -121,11 +120,11 @@ const globalStyles = colors => css`
 
 
 
-const globalStyle = colors =>
+const globalStyle = (config, colors) =>
   css([
-    cssReboot(colors),
-    typeSetting(colors),
-    bsStyles,
+    cssReboot(config, colors),
+    typeSetting(config, colors),
+    bsStyles, //20kb
     //accessibilitySettings,
     globalStyles(colors)
   ]);

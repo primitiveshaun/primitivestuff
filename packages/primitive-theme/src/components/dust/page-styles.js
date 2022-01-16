@@ -319,6 +319,7 @@ const pageall = colors => css`
       p {
         box-shadow: 0 -6px 0 rgba(${colors.rgb.secondary}, 0.2); 
         color: rgba(${colors.rgb.secondary}, 0.8); 
+        background: rgba(${colors.rgb.white}, 0.5);
       }
 
       &::before {
@@ -378,6 +379,7 @@ const pageall = colors => css`
       p {
         box-shadow: 0 -6px 0 ${hexToRGBcss(colors.disco.neongreen, 0.6)};
         color: ${colors.coal};
+        background: rgba(${colors.rgb.white}, 0.5);
 
         span {
           display: inline-block;
@@ -413,6 +415,7 @@ const pageall = colors => css`
       p {
         box-shadow: 0 -6px 0 ${hexToRGBcss(colors.disco.purple, 0.8)};
         color: ${colors.coal};
+        background: rgba(${colors.rgb.white}, 0.5);
 
         span {
           display: inline-block;
@@ -448,6 +451,7 @@ const pageall = colors => css`
       p {
         box-shadow: -3px -6px 0 ${hexToRGBcss(colors.disco.blue, 0.6)}, 3px 3px 0 rgba(255,0,180,0.6);
         color: ${colors.coal};
+        background: rgba(${colors.rgb.white}, 0.5);
 
         span {
           display: inline-block;
