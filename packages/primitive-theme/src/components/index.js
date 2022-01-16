@@ -20,7 +20,7 @@ import SubTimeline from "./mountains/subtimeline";
 import Header from "./header";
 import SkipLink from "primitivepebbles/skip-link";
 import GlobalPromo from "primitiverocks/global-promo";
-import GlobalSocial from "primitiverocks/src/social/social-section";
+import GlobalSocial from "primitiverocks/social/social-section";
 
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("primitiverocks/footer-kudos"));
