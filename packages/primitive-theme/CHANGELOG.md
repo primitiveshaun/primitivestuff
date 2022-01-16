@@ -5,48 +5,25 @@
 
  🔥️ HOT 🥔 POTATO,  🔥️ HOT 🥔 POTATO,  🔥️ HOT 🥔 POTATO.
 
-To whom it may concern. Some odd comments may be documented here.
-
-Commit messages are loosly following [Conventional Commits](https://conventionalcommits.org).
-
-primitive-theme 1.0.x
-add theme-able sections
-Separation of config / theme
-
-@primitivedigital/primitiveone 1.1.0: restructured for development of theme-able system. WIP
-
-@primitivedigital/primitiveone 1.0.0: customised theme based on early release of frontity mars theme. published to npm.
-
-
-## Dev Notes
-
-- frontity.settings seems dominant over package/index (you can overwrite the menu in dev but not prod?)...
-- need to review licence
-
-*Hosting tests:* Can this type of site be hosted on our standard WP Linux hosting?
-Theoretically - Yes.
-Clone to staging and other features work ok.
-Host ideally needs to support A records on the route domain with Vercel.
-I have to set nameservers to point at Vercel.
-This invalidates free SSL certs.
-
-
-- [ ] [Embed Mode](https://github.com/frontity/frontity-embedded-proof-of-concept)
-
-*Hosting tests:* Need to upgrade to Vercel teams or move to AWS
-Vercel seems a bit MVP in places.
-
+Commit messages loosly follow [Conventional Commits](https://conventionalcommits.org).
 
 
 ## WIP
 
-- [ ] Optimise for Mobile: fix quotes, multi-line padding, disco
+- [ ] es5 bundle
+
+- [ ] Optimise Mobile: fix quotes, multi-line padding, discolist
+
 - [ ] test: are error page timeout settings higher than vercel timeout?
-- [ ] refine: preloaders / postsrips
+- [ ] need to review licence
+
+- [ ] refine: preloaders
+
 - [ ] fix: strong formatting and link/reload on header image
+
 - [ ] BS CSS > CSS-IN-JS (classes, --modifiers-size)
 - [ ] Create *shoelace* theme (grid, size, color, breakpoints) + fragments
-- [ ] refine: theme BS CSS > Components (grid)
+- [ ] refine: theme BS/Rebass Components (grid)
 
 - [ ] Optimise for Mobile: Don't serve some animations on mobile, handle click/hover vs pointer events
 
@@ -67,11 +44,16 @@ Vercel seems a bit MVP in places.
 - [ ] feat: switch to ts
 - [ ] feat: author list view / profile
 
-- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well
+
 - [ ] Research create a UI/cf7 theme builder vs cli
 - [ ] Research add comments / cf7 / fe content submission
 
+- [ ] WebFonts: Tested as per docs. Implementation works but some google fonts don't convert well. You also have to be very selective due to impact on bundle size.
+
 ## History
+
+**v1.0.15 >  (May 09, 2021):**
+- [x] core/package updates
 
 **v1.0.14 > Fixes, Theming, Refine Color system (Oct 23, 2020):**
 - [x] test wp column, list and cf7 form processors
@@ -258,8 +240,9 @@ Vercel seems a bit MVP in places.
   
 #### Ω - *the end*
 
-```     
-ooh, ooh. aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
+```   
+  
+< - 🐒 - 🐒 - 🐒 - >
 ```     
 ```                                                                              
  _____       _        _                        _               

@@ -20,10 +20,11 @@ GitHub repo 👉  [primitivestuff](https://github.com/primitiveshaun/primitivest
 
 
 
-**NB. This is a test / concept deployment.Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.**
+**NB. This is a test / concept deployment.**
+Codebase will be opensource, it's made available on AS-IS basis while I remove licenced/branded elements, please don't use them.
 
 **Current experiments...**
-Migrating to Bootstrap 5 (currently in alpha!)
+Migrating to  (Bootstrap 5 currently in alpha!)
 Splitting code / config
 Creating config to expose from WP
 
@@ -76,6 +77,7 @@ _ come back later
 
 ```shell
 npx frontity dev  
+npx frontity dev --production
 npx frontity build  
 ```
 

@@ -29,7 +29,6 @@
     "@frontity/wp-source": "^1.11.4",
     "@frontity/yoast": "^2.1.1",
     "frontity": "^1.15.0",
-    "frontity-contact-form-7": "^0.1.7",
     "primitive-theme": "./packages/primitive-theme",
     "primitivepebbles": "./packages/primitivepebbles",
     "primitiverocks": "./packages/primitiverocks",

@@ -7,11 +7,11 @@ import MetaTitle from "primitivepebbles/meta-title";
 import globalStyles from "./dust/global-styles";
 //import FontFaces from "./dust/_font-faces";
 
+
 const Home = loadable(() => import("./mountains/page-home"));
 const Post = loadable(() => import("./mountains/post"));
 const Page = loadable(() => import("./mountains/page"));
 const PageError = loadable(() => import("./mountains/page-error"));
-
 import Posts from "./mountains/post-list";
 import Timelines from "./mountains/timelines";
 import Timeline from "./mountains/timeline";
@@ -19,9 +19,8 @@ import SubTimeline from "./mountains/subtimeline";
 
 import Header from "./header";
 import SkipLink from "primitivepebbles/skip-link";
-
 import GlobalPromo from "primitiverocks/global-promo";
-import GlobalSocial from "primitiverocks/social/social-section";
+import GlobalSocial from "primitiverocks/src/social/social-section";
 
 const KnobblyKnees = loadable(() => import("primitiverocks/footer-cta"));
 const FurryBoots = loadable(() => import("primitiverocks/footer-kudos"));
@@ -33,7 +32,7 @@ const Feet = loadable(() => import("./footer"));
  */
 const Theme = ({ state }) => {
 
-  // get skeletal data for current URL.
+  // get the skeletal data associated with the current URL.
   const data = state.source.get(state.router.link);
   const display = state.theme.config;
 
@@ -41,20 +40,27 @@ const Theme = ({ state }) => {
     //console.log("@index: data", data);
     //console.log("@index: display", display);
     //console.log("@index: colors", state.theme.colors);
+    //console.log("@index: config", state.theme.config);
+    console.log('canonical', state.theme.canonical);
   }
 
   return (
     <App>
 
-      <Global styles={globalStyles(state.theme.colors)} /> {/* reboot and styled html elements */}
+      <Global styles={globalStyles(state.theme.config, state.theme.colors)} /> 
+      {/* reboot and styled html elements */}
 
       { /* <FontFaces /> */}
 
-      <MetaTitle /> {/* Adds metatags */}
+      <MetaTitle />
+      {/* Adds metatags */}
 
       <Head>
+        
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
+
+        <link rel="canonical" href={state.theme.canonical} />
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Amatic+SC|Hepta+Slab|Pacifico|Playfair+Display:700|Slabo+27px&display=swap" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" />
@@ -62,20 +68,17 @@ const Theme = ({ state }) => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap-grid.min.css" integrity="sha512-Jn+RkWIYxM5Cn3mfAWyV7CgxFnDFxe3EBh93974boKdhcAUE9TSr7qJTJNlzt+J2wG6a3sLYnEyRF+1/o01u9Q==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha2/css/bootstrap-utilities.min.css" integrity="sha512-mkkoFJEfBE2cFvIICxddh2VS0uB//H6/hf7siESrN2H7NiyzoGwZ5Rk3Ta12mPxlNOVq5IjhQ97YBK11vldYug==" crossorigin="anonymous" />
         
-        {/*
-        all bs
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
-        */}
-
-        <link rel="canonical" href="https://primitivedigital.uk" />
         <link rel="preconnect" SameSite="None" Secure href="https://www.google-analytics.com" />
         { /* <link rel="dns-prefetch" SameSite="None" Secure href="https://www.google-analytics.com" /> */ }
         <link rel="dns-prefetch" SameSite="None" Secure href="http://doubleclick.net" />
+        
       </Head>
 
-      <SkipLink as="a" href="#main">Skip to main content</SkipLink> {/* Accessibility: skip to main content */}
+      {/* Accessibility: skip to main content */}
+      <SkipLink as="a" href="#main">Skip to main content</SkipLink>
 
-      <Header /> { /* Load global Nav/Header */}
+      { /* Load global Nav/Header */}
+      <Header />
 
       {/* Render content for the post(s), page, cpt(s) here */}
       <Main
@@ -104,7 +107,9 @@ const Theme = ({ state }) => {
       {display.showSocial && <GlobalSocial />} { /* Social section: (optional) */}
 
       <KnobblyKnees /> { /* CTA section: (optional) */}
+
       <FurryBoots /> { /* Assurance section: brands/reviws/offers (optional) */}
+
       <Feet /> { /* footer */}
 
     </App>
