@@ -47,7 +47,9 @@ const settings = {
       name: "@frontity/wp-source",
       state: {
         source: {
-          api: "https://api.primitivedigital.uk/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
+          //api: "https://api.primitivedigital.uk/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
+            
+          url: "https://api.primitivedigital.uk/wp-json", // required: Your WP REST API EndPoint (no trailing slash)
           
           homepage: "/home", // optional: set when using a page as the site homepage (wp hp settings ignored)
           postsPage: "/blog", // optional: set when using a page as the site homepage
@@ -65,9 +67,9 @@ const settings = {
               archive: "/evolution-of-digital-stuff" // router link: list view of these custom post types
             },
             {
-              type: "things", // custom post type slug
-              endpoint: "things", // WP REST API endpoint
-              archive: "/things" // router link: list view of these custom post types
+              type: "things", // further CPTs
+              endpoint: "things",
+              archive: "/things"
             }
           ],
           taxonomies: [
@@ -83,7 +85,10 @@ const settings = {
     "@frontity/tiny-router",
     "@frontity/html2react",
     "@frontity/yoast",
-    "frontity-contact-form-7"
+    //"frontity-contact-form-7",
+    "primitiverocks",
+    "primitivepebbles",
+    "primitivescenes"
   ]
 };
 
