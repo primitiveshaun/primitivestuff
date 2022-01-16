@@ -2,14 +2,14 @@
 # primitivescenes
 
 ***The Log of Change***
-
  🔥️ HOT 🥔 POTATO,  🔥️ HOT 🥔 POTATO,  🔥️ HOT 🥔 POTATO.
-
 To whom it may concern. Some odd comments may be documented here.
-
 Commit messages are loosly following [Conventional Commits](https://conventionalcommits.org).
 
 ## History
+
+**v1.0.6 > Housekeeping (Apr 11, 2021):**
+- [x] rename and refine jungle scene
 
 **v1.0.5 > Housekeeping (Oct 04, 2020):**
 - [x] remove local img dir / update readme
@@ -36,6 +36,7 @@ Commit messages are loosly following [Conventional Commits](https://conventional
 ```     
 ooh, ooh. aah, aah! - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 - 🐒 
 ```     
+
 ```                                                                              
  _____       _        _                        _               
 |     |___ _| |___   | |_ _ _    _____ ___ ___| |_ ___ _ _ ___ 
