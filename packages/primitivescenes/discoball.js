@@ -4,7 +4,7 @@ import { rotateDiscoBall, rotateDiscoBallMiddle, reflect, glowball } from "./gla
 
 // nod to original concept by Marty: https://codepen.io/okra/pen/fDuzC
 
-const JungleDiscoBall = () => {
+const DiscoBall = () => {
 
   /* do disco planning */
 
@@ -99,7 +99,7 @@ const JungleDiscoBall = () => {
   )
 };
 
-export default JungleDiscoBall;
+export default DiscoBall;
 
 const backgroundlinear = (top, bottom) => css`
   background: linear-gradient( to bottom,${top} 0%,${bottom} 100% );  
