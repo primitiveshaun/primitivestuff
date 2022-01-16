@@ -17,8 +17,8 @@ const PostList = ({ state }) => {
       <Container>
 
         <Row>
-          <Col>
-            <PageHead className="mb-4 text-center">
+          <Col className="p-4">
+            <PageHead className="mb-2 text-center">
               Cavetalk
             </PageHead>
           </Col>
